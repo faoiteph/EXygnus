@@ -67,7 +67,7 @@
                     <div class="m-auto grid h-[100vh] max-w-[362px] items-end">
                         <div class="grid gap-4">
                             <img
-                                src="{{ bagisto_asset('images/installer/bagisto-logo.svg', 'installer') }}"
+                                src="{{ bagisto_asset('images/installer/logo.svg', 'installer') }}"
                                 alt="@lang('installer::app.installer.index.bagisto-logo')"
                             >
 
@@ -208,7 +208,7 @@
                         <p class="mb-6 w-full place-self-end text-left">
                             <a
                                 class="bg-white text-blue-600 underline"
-                                href="https://bagisto.com/en/"
+                                href="https://exygnus.com"
                             >
                                 @lang('installer::app.installer.index.bagisto')
                             </a>
@@ -217,7 +217,7 @@
 
                             <a
                                 class="bg-white text-blue-600 underline"
-                                href="https://webkul.com/"
+                                href="https://faoite.com/"
                             >
                                 @lang('installer::app.installer.index.webkul')
                             </a>

@@ -806,7 +806,7 @@ return [
         'index' => [
             'create-administrator' => [
                 'admin' => 'Admin',
-                'bagisto' => 'Bagisto',
+                'bagisto' => 'EXygnus',
                 'confirm-password' => 'Confirm Password',
                 'email' => 'Email',
                 'email-address' => 'admin@example.com',
@@ -821,7 +821,7 @@ return [
                 'application-name' => 'Application Name',
                 'argentine-peso' => 'Argentine Peso (ARS)',
                 'australian-dollar' => 'Australian Dollar (AUD)',
-                'bagisto' => 'Bagisto',
+                'bagisto' => 'EXygnus',
                 'bangladeshi-taka' => 'Bangladeshi Taka (BDT)',
                 'bahraini-dinar' => 'Bahraini Dinar (BHD)',
                 'brazilian-real' => 'Brazilian Real (BRL)',
@@ -914,25 +914,25 @@ return [
             ],
 
             'installation-processing' => [
-                'bagisto' => 'Installation Bagisto',
+                'bagisto' => 'Installation EXygnus',
                 'bagisto-info' => 'Creating the database tables, this can take a few moments',
                 'title' => 'Installation',
             ],
 
             'installation-completed' => [
                 'admin-panel' => 'Admin Panel',
-                'bagisto-forums' => 'Bagisto Forum',
+                'bagisto-forums' => 'EXygnus Forum',
                 'customer-panel' => 'Customer Panel',
-                'explore-bagisto-extensions' => 'Explore Bagisto Extension',
+                'explore-bagisto-extensions' => 'Explore EXygnus Extension',
                 'title' => 'Installation Completed',
-                'title-info' => 'Bagisto is Successfully installed on your system.',
+                'title-info' => 'EXygnus is Successfully installed on your system.',
             ],
 
             'ready-for-installation' => [
                 'create-database-tables' => 'Create the database tables',
                 'drop-existing-tables' => 'Drop any existing tables present',
                 'install' => 'Installation',
-                'install-info' => 'Bagisto For Installation',
+                'install-info' => 'EXygnus For Installation',
                 'install-info-button' => 'Click the button below to',
                 'populate-database-tables' => 'Populate the database tables',
                 'start-installation' => 'Start Installation',
@@ -944,8 +944,8 @@ return [
                 'locale' => 'Locale',
                 'main' => 'Start',
                 'select-locale' => 'Select Locale',
-                'title' => 'Your Bagisto install',
-                'welcome-title' => 'Welcome to Bagisto',
+                'title' => 'Your EXygnus install',
+                'welcome-title' => 'Welcome to EXygnus',
             ],
 
             'server-requirements' => [
@@ -973,9 +973,9 @@ return [
 
             'arabic' => 'Arabic',
             'back' => 'Back',
-            'bagisto' => 'Bagisto',
+            'bagisto' => 'EXygnus',
             'bagisto-info' => 'a Community Project by',
-            'bagisto-logo' => 'Bagisto Logo',
+            'bagisto-logo' => 'EXygnus Logo',
             'bengali' => 'Bengali',
             'catalan' => 'Catalan',
             'chinese' => 'Chinese',
@@ -987,7 +987,7 @@ return [
             'hebrew' => 'Hebrew',
             'hindi' => 'Hindi',
             'indonesian' => 'Indonesian',
-            'installation-description' => 'Bagisto installation typically involves several steps. Here\'s a general outline of the installation process for Bagisto',
+            'installation-description' => 'EXygnus installation typically involves several steps. Here\'s a general outline of the installation process for EXygnus',
             'installation-info' => 'We are happy to see you here!',
             'installation-title' => 'Welcome to Installation',
             'italian' => 'Italian',
@@ -999,10 +999,10 @@ return [
             'russian' => 'Russian',
             'sinhala' => 'Sinhala',
             'spanish' => 'Spanish',
-            'title' => 'Bagisto Installer',
+            'title' => 'EXygnus Installer',
             'turkish' => 'Turkish',
             'ukrainian' => 'Ukrainian',
-            'webkul' => 'Webkul',
+            'webkul' => 'De Faoite',
         ],
     ],
 ];

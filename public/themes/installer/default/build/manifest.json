@@ -8,9 +8,9 @@
     "file": "assets/bagisto-installer-CR1_oTt2.woff",
     "src": "src/Resources/assets/fonts/bagisto-installer.woff"
   },
-  "src/Resources/assets/images/installer/bagisto-logo.svg": {
-    "file": "assets/bagisto-logo-CXf-crI0.svg",
-    "src": "src/Resources/assets/images/installer/bagisto-logo.svg"
+  "src/Resources/assets/images/installer/logo.svg": {
+    "file": "assets/logo.svg",
+    "src": "src/Resources/assets/images/installer/logo.svg"
   },
   "src/Resources/assets/images/installer/favicon.ico": {
     "file": "assets/favicon--PZ4cBiP.ico",
