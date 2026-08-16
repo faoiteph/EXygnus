@@ -26,7 +26,7 @@ class Installer extends Command
      *
      * @var string
      */
-    protected $signature = 'bagisto:install
+    protected $signature = 'exygnus:install
         { --skip-env-check : Skip env check. (Deprecated: use --no-interaction) }
         { --skip-admin-creation : Skip admin creation. (Deprecated: use --no-interaction) }
         { --skip-cloud-promotion : Skip Bagisto Cloud hosting prompt. (Deprecated: use --no-interaction) }
