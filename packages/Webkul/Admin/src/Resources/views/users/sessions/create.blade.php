@@ -100,8 +100,8 @@
             <!-- Powered By -->
             <div class="text-sm font-normal">
                 @lang('admin::app.users.sessions.powered-by-description', [
-                    'bagisto' => '<a class="text-blue-600 hover:underline" href="https://bagisto.com/en/">Bagisto</a>',
-                    'webkul' => '<a class="text-blue-600 hover:underline" href="https://webkul.com/">Webkul</a>',
+                    'exygnus' => '<a class="text-blue-600 hover:underline" href="https://exygnus.com/">EXygnus</a>',
+                    'faoite' => '<a class="text-blue-600 hover:underline" href="https://faoite.com/">De Faoite</a>',
                 ])
             </div>
         </div>

@@ -6,7 +6,7 @@ return [
             'email' => 'Email Address',
             'forget-password-link' => 'Forget Password ?',
             'password' => 'Password',
-            'powered-by-description' => 'Powered by :bagisto, an open-source project by :webkul.',
+            'powered-by-description' => 'Powered by :exygnus, an open-source project by :faoite. Transparent Art Commissions, Built on Open Source.',
             'submit-btn' => 'Sign In',
             'title' => 'Sign In',
         ],
