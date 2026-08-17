@@ -988,7 +988,7 @@ return [
             'hindi' => 'Hindi',
             'indonesian' => 'Indonesian',
             'installation-description' => 'EXygnus installation typically involves several steps. Here\'s a general outline of the installation process for EXygnus',
-            'installation-info' => 'We are happy to see you here!',
+            'installation-info' => 'Let Us Kickstart Your Art Business Journey!',
             'installation-title' => 'Welcome to Installation',
             'italian' => 'Italian',
             'japanese' => 'Japanese',
