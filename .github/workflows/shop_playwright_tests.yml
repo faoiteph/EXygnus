@@ -52,13 +52,13 @@ jobs:
 
       - name: Install Node.js Dependencies
         run: npm install
-        working-directory: packages/Webkul/Shop
+        working-directory: packages/DeFaoite/Shop
 
       - name: Install Playwright Browsers
         run: |
           sudo apt-get update --allow-releaseinfo-change
           npx playwright install --with-deps chromium
-        working-directory: packages/Webkul/Shop
+        working-directory: packages/DeFaoite/Shop
 
       - name: Setting Environment
         run: |
@@ -79,7 +79,7 @@ jobs:
         run: php artisan bagisto:install --no-interaction
 
       - name: Seed Product Table
-        run: php artisan db:seed --class="Webkul\\Installer\\Database\\Seeders\\ProductTableSeeder"
+        run: php artisan db:seed --class="DeFaoite\\Installer\\Database\\Seeders\\ProductTableSeeder"
 
       - name: Indexing Product Table
         run: php artisan indexer:index --mode=full
@@ -95,7 +95,7 @@ jobs:
           BASE_URL: "http://127.0.0.1:8000"
         run: |
           npx playwright test --config=tests/e2e-pw/playwright.config.ts --shard=${{ matrix.shard-index }}/${{ matrix.shard-total }}
-        working-directory: packages/Webkul/Shop
+        working-directory: packages/DeFaoite/Shop
 
       - name: Upload Test Results
         uses: actions/upload-artifact@v4
@@ -103,7 +103,7 @@ jobs:
         with:
           name: test-results-${{ matrix.shard-index }}-${{ github.run_id }}-${{ github.run_number }}
           path: |
-            packages/Webkul/Shop/tests/e2e-pw/playwright-report
-            packages/Webkul/Shop/tests/e2e-pw/test-results
+            packages/DeFaoite/Shop/tests/e2e-pw/playwright-report
+            packages/DeFaoite/Shop/tests/e2e-pw/test-results
             storage/logs/laravel.log
           retention-days: 1

@@ -12285,13 +12285,13 @@
                 "laravel": {
                     "aliases": [],
                     "providers": [
-                        "Webkul\\Faker\\Providers\\FakerServiceProvider"
+                        "DeFaoite\\Faker\\Providers\\FakerServiceProvider"
                     ]
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "Webkul\\Faker\\": "src"
+                    "DeFaoite\\Faker\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",

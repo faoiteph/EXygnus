@@ -3,8 +3,8 @@
 use Spatie\ResponseCache\CacheProfiles\CacheAllSuccessfulGetRequests;
 use Spatie\ResponseCache\Replacers\CsrfTokenReplacer;
 use Spatie\ResponseCache\Serializers\DefaultSerializer;
-use Webkul\FPC\Hasher\DefaultHasher;
-use Webkul\FPC\Replacers\FlashMessagesReplacer;
+use DeFaoite\FPC\Hasher\DefaultHasher;
+use DeFaoite\FPC\Replacers\FlashMessagesReplacer;
 
 return [
     /*

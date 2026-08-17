@@ -1303,12 +1303,12 @@ repository — add them through the admin panel.
 
 ## Using Magic AI in Code
 
-Magic AI is available through the `magic_ai()` helper or the `Webkul\MagicAI\Facades\MagicAI`
+Magic AI is available through the `magic_ai()` helper or the `DeFaoite\MagicAI\Facades\MagicAI`
 facade. The provider is resolved automatically from the model name, and the stored API key is
 injected for you.
 
 ```php
-use Webkul\MagicAI\Facades\MagicAI;
+use DeFaoite\MagicAI\Facades\MagicAI;
 
 // Generate text (uses the configured default model when none is passed)
 $text = magic_ai()->generateContent('Write a product description for a leather wallet.');
@@ -1356,7 +1356,7 @@ if (core()->getConfigData('magic_ai.general.settings.enabled')) {
 ```
 
 ::: tip Extending Magic AI
-Magic AI lives in the `packages/Webkul/MagicAI` package. Provider support is driven by a single
+Magic AI lives in the `packages/DeFaoite/MagicAI` package. Provider support is driven by a single
 registry (`AiProvider`) plus a model enum per provider — adding a provider means adding one
 registry entry and one enum.
 :::
@@ -2125,13 +2125,13 @@ We will assume that the package name is **"RMA"** (Return Merchandise Authorizat
 - If the package directory does not exist:
 
   ```bash
-  php artisan package:make Webkul/RMA
+  php artisan package:make DeFaoite/RMA
   ```
 
 - If the package directory already exists, you can use the `--force` option to overwrite it:
 
   ```bash
-  php artisan package:make Webkul/RMA --force
+  php artisan package:make DeFaoite/RMA --force
   ```
 
 This command will set up the necessary files and directories in the `packages` directory.
@@ -2149,7 +2149,7 @@ Add your package's namespace to the `psr-4` section in the `composer.json` file 
     ...
     "psr-4": {
         // Other PSR-4 namespaces
-        "Webkul\\RMA\\": "packages/Webkul/RMA/src"
+        "DeFaoite\\RMA\\": "packages/DeFaoite/RMA/src"
     }
 }
 ```
@@ -2164,7 +2164,7 @@ This ensures that the new namespace mapping is properly loaded by Composer's aut
 
 #### Register Service Provider
 
-Register your package's service provider in the `bootstrap/providers.php` file located in the root directory of your Bagisto application. Add the following line `Webkul\RMA\Providers\RMAServiceProvider::class,` just like other Bagisto service providers:
+Register your package's service provider in the `bootstrap/providers.php` file located in the root directory of your Bagisto application. Add the following line `DeFaoite\RMA\Providers\RMAServiceProvider::class,` just like other Bagisto service providers:
 
 ```php{16}
 <?php
@@ -2182,7 +2182,7 @@ return [
     /**
      * RMA service providers.
      */
-    Webkul\RMA\Providers\RMAServiceProvider::class,
+    DeFaoite\RMA\Providers\RMAServiceProvider::class,
 ];
 ```
 
@@ -2208,7 +2208,7 @@ Manual setup requires good understanding of Laravel package development. If you'
 
 ### Create Package Directory
 
-Inside the `packages/Webkul` folder, create a folder with your package name. Your structure should look like this:
+Inside the `packages/DeFaoite` folder, create a folder with your package name. Your structure should look like this:
 
 ```
 └── packages
@@ -2243,7 +2243,7 @@ Copy the following code and paste it into `RMAServiceProvider.php`:
 ```php
 <?php
 
-namespace Webkul\RMA\Providers;
+namespace DeFaoite\RMA\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -2286,7 +2286,7 @@ Add your package's namespace to the `psr-4` section in the `composer.json` file 
     ...
     "psr-4": {
         // Other PSR-4 namespaces
-        "Webkul\\RMA\\": "packages/Webkul/RMA/src"
+        "DeFaoite\\RMA\\": "packages/DeFaoite/RMA/src"
     }
 }
 ```
@@ -2299,7 +2299,7 @@ composer dump-autoload
 
 #### Register Service Provider
 
-Register your package's service provider in the `bootstrap/providers.php` file located in the root directory of your Bagisto application. Add the following line `Webkul\RMA\Providers\RMAServiceProvider::class,` just like other Bagisto service providers:
+Register your package's service provider in the `bootstrap/providers.php` file located in the root directory of your Bagisto application. Add the following line `DeFaoite\RMA\Providers\RMAServiceProvider::class,` just like other Bagisto service providers:
 
 ```php{16}
 <?php
@@ -2317,7 +2317,7 @@ return [
     /**
      * RMA service providers.
      */
-    Webkul\RMA\Providers\RMAServiceProvider::class,
+    DeFaoite\RMA\Providers\RMAServiceProvider::class,
 ];
 ```
 
@@ -2373,7 +2373,7 @@ Before creating migrations, we need to configure our service provider to load th
 ```php{26}
 <?php
 
-namespace Webkul\RMA\Providers;
+namespace DeFaoite\RMA\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -2411,15 +2411,15 @@ Now that we have configured our service provider to load migrations, let's creat
 
 ### Using Bagisto Package Generator
 
-This command creates a new migration class in the `packages/Webkul/RMA/src/Database/Migrations` directory.
+This command creates a new migration class in the `packages/DeFaoite/RMA/src/Database/Migrations` directory.
 
 ```bash
-php artisan package:make-migration CreateRmaRequestsTable Webkul/RMA
+php artisan package:make-migration CreateRmaRequestsTable DeFaoite/RMA
 ```
 
 **Command Parameters:**
 - `CreateRmaRequestsTable`: specifies the name of the migration file for our RMA requests table
-- `Webkul/RMA`: specifies the package name
+- `DeFaoite/RMA`: specifies the package name
 
 The package generator will automatically create the migration file with a basic structure. You'll see a new file created like this:
 
@@ -2468,7 +2468,7 @@ Using `--path` ensures the migration is created inside your package rather than 
 :::
 
 ```bash
-php artisan make:migration CreateRmaRequestsTable --path=packages/Webkul/RMA/src/Database/Migrations
+php artisan make:migration CreateRmaRequestsTable --path=packages/DeFaoite/RMA/src/Database/Migrations
 ```
 
 This will automatically create the following directory structure if it doesn't exist:
@@ -2586,7 +2586,7 @@ As you continue developing your RMA package, you'll frequently need to manage yo
 php artisan migrate:status
 
 # Run only package migrations
-php artisan migrate --path=packages/Webkul/RMA/src/Database/Migrations
+php artisan migrate --path=packages/DeFaoite/RMA/src/Database/Migrations
 
 # Rollback last migration batch
 php artisan migrate:rollback
@@ -2638,7 +2638,7 @@ Below, we'll create a `ReturnRequest` model for an RMA package to demonstrate bo
 The fastest way to create a complete model structure is using Bagisto's package generator. This command creates all three required components in one go:
 
 ```bash
-php artisan package:make-model ReturnRequest Webkul/RMA
+php artisan package:make-model ReturnRequest DeFaoite/RMA
 ```
 
 ::: tip Package Generator Benefits
@@ -2649,22 +2649,22 @@ The generator automatically creates the proper file structure, namespaces, and b
 
 The package generator creates three interconnected files that work together:
 
-**1. Model Contract** - `packages/Webkul/RMA/src/Contracts/ReturnRequest.php`
+**1. Model Contract** - `packages/DeFaoite/RMA/src/Contracts/ReturnRequest.php`
 ```php
 <?php
 
-namespace Webkul\RMA\Contracts;
+namespace DeFaoite\RMA\Contracts;
 
 interface ReturnRequest
 {
 }
 ```
 
-**2. Model Proxy** - `packages/Webkul/RMA/src/Models/ReturnRequestProxy.php`
+**2. Model Proxy** - `packages/DeFaoite/RMA/src/Models/ReturnRequestProxy.php`
 ```php
 <?php
 
-namespace Webkul\RMA\Models;
+namespace DeFaoite\RMA\Models;
 
 use Konekt\Concord\Proxies\ModelProxy;
 
@@ -2673,14 +2673,14 @@ class ReturnRequestProxy extends ModelProxy
 }
 ```
 
-**3. Base Model** - `packages/Webkul/RMA/src/Models/ReturnRequest.php`
+**3. Base Model** - `packages/DeFaoite/RMA/src/Models/ReturnRequest.php`
 ```php
 <?php
 
-namespace Webkul\RMA\Models;
+namespace DeFaoite\RMA\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Webkul\RMA\Contracts\ReturnRequest as ReturnRequestContract;
+use DeFaoite\RMA\Contracts\ReturnRequest as ReturnRequestContract;
 
 class ReturnRequest extends Model implements ReturnRequestContract
 {
@@ -2694,16 +2694,16 @@ If you prefer understanding each component or need more control, you can create 
 
 #### Step 1: Create the Contract
 
-**File:** `packages/Webkul/RMA/src/Contracts/ReturnRequest.php`
+**File:** `packages/DeFaoite/RMA/src/Contracts/ReturnRequest.php`
 
 ```bash
-mkdir -p packages/Webkul/RMA/src/Contracts
+mkdir -p packages/DeFaoite/RMA/src/Contracts
 ```
 
 ```php
 <?php
 
-namespace Webkul\RMA\Contracts;
+namespace DeFaoite\RMA\Contracts;
 
 interface ReturnRequest
 {
@@ -2712,16 +2712,16 @@ interface ReturnRequest
 
 #### Step 2: Create the Proxy
 
-**File:** `packages/Webkul/RMA/src/Models/ReturnRequestProxy.php`
+**File:** `packages/DeFaoite/RMA/src/Models/ReturnRequestProxy.php`
 
 ```bash
-mkdir -p packages/Webkul/RMA/src/Models
+mkdir -p packages/DeFaoite/RMA/src/Models
 ```
 
 ```php
 <?php
 
-namespace Webkul\RMA\Models;
+namespace DeFaoite\RMA\Models;
 
 use Konekt\Concord\Proxies\ModelProxy;
 
@@ -2732,20 +2732,20 @@ class ReturnRequestProxy extends ModelProxy
 
 #### Step 3: Create the Base Model
 
-**File:** `packages/Webkul/RMA/src/Models/ReturnRequest.php`
+**File:** `packages/DeFaoite/RMA/src/Models/ReturnRequest.php`
 
 ```bash
 php artisan make:model ReturnRequest
-# Move from app/Models to packages/Webkul/RMA/src/Models
+# Move from app/Models to packages/DeFaoite/RMA/src/Models
 ```
 
 ```php
 <?php
 
-namespace Webkul\RMA\Models;
+namespace DeFaoite\RMA\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Webkul\RMA\Contracts\ReturnRequest as ReturnRequestContract;
+use DeFaoite\RMA\Contracts\ReturnRequest as ReturnRequestContract;
 
 class ReturnRequest extends Model implements ReturnRequestContract
 {
@@ -2768,10 +2768,10 @@ Whether you used the package generator or manual approach, you now have the same
 ```php{10-21}
 <?php
 
-namespace Webkul\RMA\Models;
+namespace DeFaoite\RMA\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Webkul\RMA\Contracts\ReturnRequest as ReturnRequestContract;
+use DeFaoite\RMA\Contracts\ReturnRequest as ReturnRequestContract;
 
 class ReturnRequest extends Model implements ReturnRequestContract
 {
@@ -2825,7 +2825,7 @@ Without this registration, Bagisto won't know about your models and they won't b
 
 ### Creating the ModuleServiceProvider
 
-Create `packages/Webkul/RMA/src/Providers/ModuleServiceProvider.php`:
+Create `packages/DeFaoite/RMA/src/Providers/ModuleServiceProvider.php`:
 
 ```text
 packages
@@ -2841,14 +2841,14 @@ packages
 ```php
 <?php
 
-namespace Webkul\RMA\Providers;
+namespace DeFaoite\RMA\Providers;
 
 use Konekt\Concord\BaseModuleServiceProvider;
 
 class ModuleServiceProvider extends BaseModuleServiceProvider
 {
     protected $models = [
-        \Webkul\RMA\Models\ReturnRequest::class,
+        \DeFaoite\RMA\Models\ReturnRequest::class,
     ];
 }
 ```
@@ -2876,7 +2876,7 @@ Finally, register your ModuleServiceProvider with Bagisto's Concord system by ad
 return [
     'modules' => [
         // Other service providers...
-        \Webkul\RMA\Providers\ModuleServiceProvider::class,
+        \DeFaoite\RMA\Providers\ModuleServiceProvider::class,
     ],
 ];
 ```
@@ -2891,7 +2891,7 @@ php artisan tinker
 
 ```php
 // Test model creation via direct model
-\Webkul\RMA\Models\ReturnRequest::create([
+\DeFaoite\RMA\Models\ReturnRequest::create([
     'customer_id' => 1,
     'order_id' => 1,
     'product_sku' => 'SAMPLE-001',
@@ -2901,7 +2901,7 @@ php artisan tinker
 ]);
 
 // Test model creation via proxy
-\Webkul\RMA\Models\ReturnRequestProxy::create([
+\DeFaoite\RMA\Models\ReturnRequestProxy::create([
     'customer_id' => 2,
     'order_id' => 2,
     'product_sku' => 'SAMPLE-002',
@@ -2935,14 +2935,14 @@ TypeError: Konekt\Concord\Proxies\ModelProxy::targetClass(): Return value must b
    ```php
    // Check config/concord.php contains your provider
    'modules' => [
-       \Webkul\RMA\Providers\ModuleServiceProvider::class,
+       \DeFaoite\RMA\Providers\ModuleServiceProvider::class,
    ],
    ```
 
 2. **Ensure Model is Listed in ModuleServiceProvider:**
    ```php
    protected $models = [
-       \Webkul\RMA\Models\ReturnRequest::class, // Must be the actual model, not proxy
+       \DeFaoite\RMA\Models\ReturnRequest::class, // Must be the actual model, not proxy
    ];
    ```
 
@@ -2978,7 +2978,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'bagisto.rma_requests'
 
 **Error:**
 ```
-Class 'Webkul\RMA\Models\ReturnRequest' not found
+Class 'DeFaoite\RMA\Models\ReturnRequest' not found
 ```
 
 **Solution:**
@@ -2986,7 +2986,7 @@ Class 'Webkul\RMA\Models\ReturnRequest' not found
    ```json
    "autoload": {
        "psr-4": {
-           "Webkul\\RMA\\": "packages/Webkul/RMA/src/"
+           "DeFaoite\\RMA\\": "packages/DeFaoite/RMA/src/"
        }
    }
    ```
@@ -3022,7 +3022,7 @@ protected $fillable = [
 
 **Error:**
 ```
-Class must implement interface Webkul\RMA\Contracts\ReturnRequest
+Class must implement interface DeFaoite\RMA\Contracts\ReturnRequest
 ```
 
 **Solution:**
@@ -3052,14 +3052,14 @@ Here's how to override the core `Product` model to add custom functionality:
 
 **1. Create Your Extended Model**
 
-Create `packages/Webkul/RMA/src/Models/Product.php`:
+Create `packages/DeFaoite/RMA/src/Models/Product.php`:
 
 ```php
 <?php
 
-namespace Webkul\RMA\Models;
+namespace DeFaoite\RMA\Models;
 
-use Webkul\Product\Models\Product as BaseProduct;
+use DeFaoite\Product\Models\Product as BaseProduct;
 
 class Product extends BaseProduct
 {
@@ -3088,7 +3088,7 @@ Register the model override in your main service provider:
 ```php{15-18}
 <?php
 
-namespace Webkul\RMA\Providers;
+namespace DeFaoite\RMA\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -3101,8 +3101,8 @@ class RMAServiceProvider extends ServiceProvider
         // Other boot logic...
 
         $this->app->concord->registerModel(
-            \Webkul\Product\Contracts\Product::class,
-            \Webkul\RMA\Models\Product::class
+            \DeFaoite\Product\Contracts\Product::class,
+            \DeFaoite\RMA\Models\Product::class
         );
     }
 }
@@ -3118,7 +3118,7 @@ Following Bagisto's best practices, access your extended model through repositor
 
 ```php
 // In controllers, services, etc.
-use Webkul\Product\Repositories\ProductRepository;
+use DeFaoite\Product\Repositories\ProductRepository;
 
 class SomeController extends Controller
 {
@@ -3147,7 +3147,7 @@ class SomeController extends Controller
 
 ```php
 // For specific cases where you need direct model access
-use Webkul\Product\Contracts\Product as ProductContract;
+use DeFaoite\Product\Contracts\Product as ProductContract;
 
 class SpecialService
 {
@@ -3193,21 +3193,21 @@ When creating repositories in Bagisto, you have two approaches: using the packag
 The fastest way to create a repository is using Bagisto's package generator:
 
 ```bash
-php artisan package:make-repository ReturnRequestRepository Webkul/RMA
+php artisan package:make-repository ReturnRequestRepository DeFaoite/RMA
 ```
 
 **Command Parameters:**
 - `ReturnRequestRepository`: The name of the repository class
-- `Webkul/RMA`: The package where the repository will be created
+- `DeFaoite/RMA`: The package where the repository will be created
 
-This will create a repository file at `packages/Webkul/RMA/src/Repositories/ReturnRequestRepository.php`:
+This will create a repository file at `packages/DeFaoite/RMA/src/Repositories/ReturnRequestRepository.php`:
 
 ```php
 <?php
 
-namespace Webkul\RMA\Repositories;
+namespace DeFaoite\RMA\Repositories;
 
-use Webkul\Core\Eloquent\Repository;
+use DeFaoite\Core\Eloquent\Repository;
 
 class ReturnRequestRepository extends Repository
 {
@@ -3216,7 +3216,7 @@ class ReturnRequestRepository extends Repository
      */
     public function model(): string
     {
-        return 'Webkul\RMA\Contracts\ReturnRequest';
+        return 'DeFaoite\RMA\Contracts\ReturnRequest';
     }
 }
 ```
@@ -3234,12 +3234,12 @@ If you prefer understanding each component or need more control, you can create 
 Create a `Repositories` folder within your package:
 
 ```bash
-mkdir -p packages/Webkul/RMA/src/Repositories
+mkdir -p packages/DeFaoite/RMA/src/Repositories
 ```
 
 #### Step 2: Create Repository File
 
-Create `packages/Webkul/RMA/src/Repositories/ReturnRequestRepository.php`:
+Create `packages/DeFaoite/RMA/src/Repositories/ReturnRequestRepository.php`:
 
 ```text
 packages
@@ -3256,9 +3256,9 @@ packages
 ```php
 <?php
 
-namespace Webkul\RMA\Repositories;
+namespace DeFaoite\RMA\Repositories;
 
-use Webkul\Core\Eloquent\Repository;
+use DeFaoite\Core\Eloquent\Repository;
 
 class ReturnRequestRepository extends Repository
 {
@@ -3269,7 +3269,7 @@ class ReturnRequestRepository extends Repository
      */
     public function model(): string
     {
-        return 'Webkul\RMA\Contracts\ReturnRequest';
+        return 'DeFaoite\RMA\Contracts\ReturnRequest';
     }
 }
 ```
@@ -3278,7 +3278,7 @@ class ReturnRequestRepository extends Repository
 **Key Components:**
 
 - **Namespace**: Follows PSR-4 autoloading standards
-- **Base Class**: Extends `Webkul\Core\Eloquent\Repository` which provides all repository methods
+- **Base Class**: Extends `DeFaoite\Core\Eloquent\Repository` which provides all repository methods
 - **Model Contract**: References the model contract (not the model directly) for better flexibility
 - **Return Type**: The `model()` method must return the full class path of your model contract
 :::
@@ -3391,9 +3391,9 @@ You can add custom methods to your repository for complex business logic:
 ```php{16-49}
 <?php
 
-namespace Webkul\RMA\Repositories;
+namespace DeFaoite\RMA\Repositories;
 
-use Webkul\Core\Eloquent\Repository;
+use DeFaoite\Core\Eloquent\Repository;
 
 class ReturnRequestRepository extends Repository
 {
@@ -3402,7 +3402,7 @@ class ReturnRequestRepository extends Repository
      */
     public function model(): string
     {
-        return 'Webkul\RMA\Contracts\ReturnRequest';
+        return 'DeFaoite\RMA\Contracts\ReturnRequest';
     }
 
     /**
@@ -3451,7 +3451,7 @@ php artisan tinker
 
 ```php
 // Test repository through service container
-$repository = app('Webkul\RMA\Repositories\ReturnRequestRepository');
+$repository = app('DeFaoite\RMA\Repositories\ReturnRequestRepository');
 
 // Create a test record
 $return = $repository->create([
@@ -3475,7 +3475,7 @@ echo $updated->status; // Should output: approved
 
 ::: info Testing Tips
 **Quick Verification Commands:**
-- Check if repository resolves: `php artisan tinker` then `app('Webkul\RMA\Repositories\ReturnRequestRepository')`
+- Check if repository resolves: `php artisan tinker` then `app('DeFaoite\RMA\Repositories\ReturnRequestRepository')`
 - Test basic operations: Create, read, update, delete operations
 - Verify relationships work if you've defined them in your model
 :::
@@ -3523,7 +3523,7 @@ Let's create the route structure for our RMA package. We'll organize routes into
 Create the following directory structure in your package:
 
 ```bash
-mkdir -p packages/Webkul/RMA/src/Routes
+mkdir -p packages/DeFaoite/RMA/src/Routes
 ```
 
 ```text
@@ -3539,7 +3539,7 @@ packages
 
 ### Admin Routes File
 
-Create `packages/Webkul/RMA/src/Routes/admin-routes.php`:
+Create `packages/DeFaoite/RMA/src/Routes/admin-routes.php`:
 
 ```php
 <?php
@@ -3579,7 +3579,7 @@ Route::group([
 
 ### Shop Routes File
 
-Create `packages/Webkul/RMA/src/Routes/shop-routes.php`:
+Create `packages/DeFaoite/RMA/src/Routes/shop-routes.php`:
 
 ```php
 <?php
@@ -3609,12 +3609,12 @@ Route::group([
 
 Now we need to register these route files with our RMA service provider so Laravel can load them.
 
-Update your `packages/Webkul/RMA/src/Providers/RMAServiceProvider.php`:
+Update your `packages/DeFaoite/RMA/src/Providers/RMAServiceProvider.php`:
 
 ```php{27-29}
 <?php
 
-namespace Webkul\RMA\Providers;
+namespace DeFaoite\RMA\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -3711,8 +3711,8 @@ Let's create the controller structure for our RMA package, starting with the bas
 Create the following directory structure in your package:
 
 ```bash
-mkdir -p packages/Webkul/RMA/src/Http/Controllers/Admin
-mkdir -p packages/Webkul/RMA/src/Http/Controllers/Shop
+mkdir -p packages/DeFaoite/RMA/src/Http/Controllers/Admin
+mkdir -p packages/DeFaoite/RMA/src/Http/Controllers/Shop
 ```
 
 ```text
@@ -3732,12 +3732,12 @@ packages
 
 ### Base Controller
 
-Create `packages/Webkul/RMA/src/Http/Controllers/Controller.php`:
+Create `packages/DeFaoite/RMA/src/Http/Controllers/Controller.php`:
 
 ```php
 <?php
 
-namespace Webkul\RMA\Http\Controllers;
+namespace DeFaoite\RMA\Http\Controllers;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
@@ -3767,15 +3767,15 @@ Now let's create the actual controllers that will handle our RMA functionality, 
 
 ### Admin Controller
 
-Create `packages/Webkul/RMA/src/Http/Controllers/Admin/ReturnRequestController.php`:
+Create `packages/DeFaoite/RMA/src/Http/Controllers/Admin/ReturnRequestController.php`:
 
 ```php
 <?php
 
-namespace Webkul\RMA\Http\Controllers\Admin;
+namespace DeFaoite\RMA\Http\Controllers\Admin;
 
-use Webkul\RMA\Http\Controllers\Controller;
-use Webkul\RMA\Repositories\ReturnRequestRepository;
+use DeFaoite\RMA\Http\Controllers\Controller;
+use DeFaoite\RMA\Repositories\ReturnRequestRepository;
 
 class ReturnRequestController extends Controller
 {
@@ -3811,15 +3811,15 @@ class ReturnRequestController extends Controller
 
 ### Shop Controller
 
-Create `packages/Webkul/RMA/src/Http/Controllers/Shop/ReturnRequestController.php`:
+Create `packages/DeFaoite/RMA/src/Http/Controllers/Shop/ReturnRequestController.php`:
 
 ```php
 <?php
 
-namespace Webkul\RMA\Http\Controllers\Shop;
+namespace DeFaoite\RMA\Http\Controllers\Shop;
 
-use Webkul\RMA\Http\Controllers\Controller;
-use Webkul\RMA\Repositories\ReturnRequestRepository;
+use DeFaoite\RMA\Http\Controllers\Controller;
+use DeFaoite\RMA\Repositories\ReturnRequestRepository;
 
 class ReturnRequestController extends Controller
 {
@@ -3858,13 +3858,13 @@ Now that we have our controllers, let's update the route files we created earlie
 
 ### Update Admin Routes
 
-Update `packages/Webkul/RMA/src/Routes/admin-routes.php`:
+Update `packages/DeFaoite/RMA/src/Routes/admin-routes.php`:
 
 ```php{17-18}
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Webkul\RMA\Http\Controllers\Admin\ReturnRequestController;
+use DeFaoite\RMA\Http\Controllers\Admin\ReturnRequestController;
 
 Route::group([
     'middleware' => ['web', 'admin'], 
@@ -3885,13 +3885,13 @@ Route::group([
 
 ### Update Shop Routes
 
-Update `packages/Webkul/RMA/src/Routes/shop-routes.php`:
+Update `packages/DeFaoite/RMA/src/Routes/shop-routes.php`:
 
 ```php{16-17}
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Webkul\RMA\Http\Controllers\Shop\ReturnRequestController;
+use DeFaoite\RMA\Http\Controllers\Shop\ReturnRequestController;
 
 Route::group([
     'middleware' => ['web', 'locale', 'theme', 'currency']
@@ -3981,8 +3981,8 @@ Let's create the view structure for our RMA package, starting with the essential
 Create the following directory structure in your package:
 
 ```bash
-mkdir -p packages/Webkul/RMA/src/Resources/views/admin/return-requests
-mkdir -p packages/Webkul/RMA/src/Resources/views/shop/return-requests
+mkdir -p packages/DeFaoite/RMA/src/Resources/views/admin/return-requests
+mkdir -p packages/DeFaoite/RMA/src/Resources/views/shop/return-requests
 ```
 
 ```text
@@ -4017,12 +4017,12 @@ packages
 
 Before creating view templates, we need to register our views with the service provider so Laravel can find them.
 
-Update your `packages/Webkul/RMA/src/Providers/RMAServiceProvider.php`:
+Update your `packages/DeFaoite/RMA/src/Providers/RMAServiceProvider.php`:
 
 ```php{30-31}
 <?php
 
-namespace Webkul\RMA\Providers;
+namespace DeFaoite\RMA\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -4065,7 +4065,7 @@ Let's start with the most important view - the admin listing page that displays 
 
 ### Admin Index View
 
-Create `packages/Webkul/RMA/src/Resources/views/admin/return-requests/index.blade.php`:
+Create `packages/DeFaoite/RMA/src/Resources/views/admin/return-requests/index.blade.php`:
 
 ```blade
 <x-admin::layouts>
@@ -4094,15 +4094,15 @@ Now let's update our controllers to render these views instead of returning simp
 
 ### Update Admin Controller
 
-Update `packages/Webkul/RMA/src/Http/Controllers/Admin/ReturnRequestController.php`:
+Update `packages/DeFaoite/RMA/src/Http/Controllers/Admin/ReturnRequestController.php`:
 
 ```php{22-24}
 <?php
 
-namespace Webkul\RMA\Http\Controllers\Admin;
+namespace DeFaoite\RMA\Http\Controllers\Admin;
 
-use Webkul\RMA\Http\Controllers\Controller;
-use Webkul\RMA\Repositories\ReturnRequestRepository;
+use DeFaoite\RMA\Http\Controllers\Controller;
+use DeFaoite\RMA\Repositories\ReturnRequestRepository;
 
 class ReturnRequestController extends Controller
 {
@@ -4139,7 +4139,7 @@ The shop views would follow a similar structure:
 
 ```bash
 # Shop view creation (for reference)
-# packages/Webkul/RMA/src/Resources/views/shop/return-requests/index.blade.php
+# packages/DeFaoite/RMA/src/Resources/views/shop/return-requests/index.blade.php
 ```
 
 ```blade
@@ -4278,7 +4278,7 @@ Now let's create a comprehensive localization structure for our RMA package that
 Create a simple language directory structure for our basic translations:
 
 ```bash
-mkdir -p packages/Webkul/RMA/src/Resources/lang/en
+mkdir -p packages/DeFaoite/RMA/src/Resources/lang/en
 ```
 
 ```text
@@ -4307,7 +4307,7 @@ Let's create a simple translation file that matches our basic view implementatio
 
 #### Basic Translation File
 
-Create `packages/Webkul/RMA/src/Resources/lang/en/app.php` with just the translations we need for our basic view:
+Create `packages/DeFaoite/RMA/src/Resources/lang/en/app.php` with just the translations we need for our basic view:
 
 ```php
 <?php
@@ -4330,12 +4330,12 @@ We're keeping the translations minimal to match our basic view implementation. T
 
 Register your package translations in the service provider so they're available throughout the application. This step is crucial for Laravel to recognize and load your translation files.
 
-Update `packages/Webkul/RMA/src/Providers/RMAServiceProvider.php`:
+Update `packages/DeFaoite/RMA/src/Providers/RMAServiceProvider.php`:
 
 ```php{32-33}
 <?php
 
-namespace Webkul\RMA\Providers;
+namespace DeFaoite\RMA\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -4409,7 +4409,7 @@ Now that we've set up our translation structure, let's see how to use these tran
 
 Update your views to use translations instead of hardcoded text. Let's update the admin index view we created earlier to use our simple translations:
 
-**Update:** `packages/Webkul/RMA/src/Resources/views/admin/return-requests/index.blade.php`
+**Update:** `packages/DeFaoite/RMA/src/Resources/views/admin/return-requests/index.blade.php`
 
 ```blade{3,6}
 <x-admin::layouts>
@@ -4432,10 +4432,10 @@ Use translations in controller methods for basic responses:
 ```php{16-20}
 <?php
 
-namespace Webkul\RMA\Http\Controllers\Admin;
+namespace DeFaoite\RMA\Http\Controllers\Admin;
 
-use Webkul\RMA\Http\Controllers\Controller;
-use Webkul\RMA\Repositories\ReturnRequestRepository;
+use DeFaoite\RMA\Http\Controllers\Controller;
+use DeFaoite\RMA\Repositories\ReturnRequestRepository;
 
 class ReturnRequestController extends Controller
 {
@@ -4590,7 +4590,7 @@ Let's create a DataGrid for our RMA package that displays return requests in the
 Create the DataGrid directory structure in your package:
 
 ```bash
-mkdir -p packages/Webkul/RMA/src/DataGrids/Admin
+mkdir -p packages/DeFaoite/RMA/src/DataGrids/Admin
 ```
 
 ```text
@@ -4606,15 +4606,15 @@ packages
 
 ### Creating the DataGrid Class
 
-Create `packages/Webkul/RMA/src/DataGrids/Admin/ReturnRequestDataGrid.php`:
+Create `packages/DeFaoite/RMA/src/DataGrids/Admin/ReturnRequestDataGrid.php`:
 
 ```php
 <?php
 
-namespace Webkul\RMA\DataGrids\Admin;
+namespace DeFaoite\RMA\DataGrids\Admin;
 
 use Illuminate\Support\Facades\DB;
-use Webkul\DataGrid\DataGrid;
+use DeFaoite\DataGrid\DataGrid;
 
 class ReturnRequestDataGrid extends DataGrid
 {
@@ -4660,7 +4660,7 @@ class ReturnRequestDataGrid extends DataGrid
 
 ## Adding DataGrid Translations
 
-Create the necessary translation keys for your DataGrid by updating `packages/Webkul/RMA/src/Resources/lang/en/app.php`:
+Create the necessary translation keys for your DataGrid by updating `packages/DeFaoite/RMA/src/Resources/lang/en/app.php`:
 
 ```php{8-11}
 <?php
@@ -4687,16 +4687,16 @@ The DataGrid translations are nested under `return-requests` since they're speci
 
 Update your admin controller to use the DataGrid:
 
-**Update:** `packages/Webkul/RMA/src/Http/Controllers/Admin/ReturnRequestController.php`
+**Update:** `packages/DeFaoite/RMA/src/Http/Controllers/Admin/ReturnRequestController.php`
 
 ```php{23-26}
 <?php
 
-namespace Webkul\RMA\Http\Controllers\Admin;
+namespace DeFaoite\RMA\Http\Controllers\Admin;
 
-use Webkul\RMA\Http\Controllers\Controller;
-use Webkul\RMA\Repositories\ReturnRequestRepository;
-use Webkul\RMA\DataGrids\Admin\ReturnRequestDataGrid;
+use DeFaoite\RMA\Http\Controllers\Controller;
+use DeFaoite\RMA\Repositories\ReturnRequestRepository;
+use DeFaoite\RMA\DataGrids\Admin\ReturnRequestDataGrid;
 
 class ReturnRequestController extends Controller
 {
@@ -4734,10 +4734,10 @@ This pattern allows the same controller method to handle both initial page loads
 Create the admin view that will display your DataGrid. First, ensure the views directory structure exists:
 
 ```bash
-mkdir -p packages/Webkul/RMA/src/Resources/views/admin/return-requests
+mkdir -p packages/DeFaoite/RMA/src/Resources/views/admin/return-requests
 ```
 
-**Create:** `packages/Webkul/RMA/src/Resources/views/admin/return-requests/index.blade.php`
+**Create:** `packages/DeFaoite/RMA/src/Resources/views/admin/return-requests/index.blade.php`
 
 ```blade{5-6}
 <x-admin::layouts>
@@ -5029,7 +5029,7 @@ public function prepareColumns()
 
 #### Step 3: Add Translation Keys
 
-Update your translation file `packages/Webkul/RMA/src/Resources/lang/en/app.php`:
+Update your translation file `packages/DeFaoite/RMA/src/Resources/lang/en/app.php`:
 
 ```php{3}
 'datagrid' => [
@@ -5257,7 +5257,7 @@ When you're ready for user interactions, let's start by adding a simple view act
 
 #### Step 1: Add Basic View Route
 
-First, add a simple view route in your package's route file `packages/Webkul/RMA/src/Routes/admin-routes.php`:
+First, add a simple view route in your package's route file `packages/DeFaoite/RMA/src/Routes/admin-routes.php`:
 
 ```php{5-7}
 Route::group(['middleware' => ['admin']], function () {
@@ -5297,7 +5297,7 @@ class ReturnRequestController extends Controller
 
 Create the view template for displaying individual return requests:
 
-**Create:** `packages/Webkul/RMA/src/Resources/views/admin/return-requests/show.blade.php`
+**Create:** `packages/DeFaoite/RMA/src/Resources/views/admin/return-requests/show.blade.php`
 
 ::: tip Quick Implementation
 Don't worry about understanding every part of this view template right now. Simply copy and paste the code below - it's a standard admin detail page that follows Bagisto's design patterns. Focus on understanding how the DataGrid action connects to this view.
@@ -5575,7 +5575,7 @@ Let's create a simple admin menu for our RMA package that provides access to the
 Create the configuration directory structure in your package:
 
 ```bash
-mkdir -p packages/Webkul/RMA/src/Config
+mkdir -p packages/DeFaoite/RMA/src/Config
 ```
 
 ```text
@@ -5590,7 +5590,7 @@ packages
 
 ### Creating the Menu Configuration
 
-Create `packages/Webkul/RMA/src/Config/admin-menu.php`:
+Create `packages/DeFaoite/RMA/src/Config/admin-menu.php`:
 
 ```php
 <?php
@@ -5620,7 +5620,7 @@ return [
 
 ### Adding Menu Translations
 
-Update your translation file `packages/Webkul/RMA/src/Resources/lang/en/app.php` to include menu translations:
+Update your translation file `packages/DeFaoite/RMA/src/Resources/lang/en/app.php` to include menu translations:
 
 ```php{6-9}
 <?php
@@ -5656,12 +5656,12 @@ return [
 
 Update your package's service provider to register the admin menu configuration:
 
-**Update:** `packages/Webkul/RMA/src/Providers/RMAServiceProvider.php`
+**Update:** `packages/DeFaoite/RMA/src/Providers/RMAServiceProvider.php`
 
 ```php{14-17}
 <?php
 
-namespace Webkul\RMA\Providers;
+namespace DeFaoite\RMA\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -5843,7 +5843,7 @@ To configure Access Control List (ACL) settings in Bagisto, follow these structu
 
 ### Create Configuration File
 
- Begin by creating a new file named `acl.php` within the `Config` directory of your package located at `packages/Webkul/RMA/src/Config`:
+ Begin by creating a new file named `acl.php` within the `Config` directory of your package located at `packages/DeFaoite/RMA/src/Config`:
 
 ```
 └── packages
@@ -5893,7 +5893,7 @@ Once you have the basic ACL working, you can implement translations for better i
 
 ### Step 1: Add Translation File
 
-Create or update your translation file `packages/Webkul/RMA/src/Resources/lang/en/app.php`:
+Create or update your translation file `packages/DeFaoite/RMA/src/Resources/lang/en/app.php`:
 
 ```php{11-15}
 <?php
@@ -5952,12 +5952,12 @@ return [
 
 Update your package's service provider to register the ACL:
 
-**Update:** `packages/Webkul/RMA/src/Providers/RMAServiceProvider.php`
+**Update:** `packages/DeFaoite/RMA/src/Providers/RMAServiceProvider.php`
 
 ```php{18-22}
 <?php
 
-namespace Webkul\RMA\Providers;
+namespace DeFaoite\RMA\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -6121,9 +6121,9 @@ To check permissions in your controllers or views, use Bagisto's built-in method
 ```php
 <?php
 
-namespace Webkul\RMA\Http\Controllers\Admin;
+namespace DeFaoite\RMA\Http\Controllers\Admin;
 
-use Webkul\Admin\Http\Controllers\Controller;
+use DeFaoite\Admin\Http\Controllers\Controller;
 
 class ReturnRequestController extends Controller
 {
@@ -6196,7 +6196,7 @@ To create system configuration for your package, follow these structured steps:
 
 ### Create Configuration File
 
-Begin by creating a new file named `system.php` within the `Config` directory of your package located at `packages/Webkul/RMA/src/Config`:
+Begin by creating a new file named `system.php` within the `Config` directory of your package located at `packages/DeFaoite/RMA/src/Config`:
 
 ```
 └── packages
@@ -6265,7 +6265,7 @@ In the `register` method, add the following code to merge your system configurat
 ```php{23-27}
 <?php
 
-namespace Webkul\RMA\Providers;
+namespace DeFaoite\RMA\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -6347,7 +6347,7 @@ Once you have the basic configuration working, you can implement translations fo
 
 ### Step 1: Add Configuration Translations
 
-Update your translation file `packages/Webkul/RMA/src/Resources/lang/en/app.php`:
+Update your translation file `packages/DeFaoite/RMA/src/Resources/lang/en/app.php`:
 
 ```php{16-27}
 <?php
@@ -6915,7 +6915,7 @@ Once you've defined your system configuration, you can access these values throu
 ```php{11,13}
 <?php
 
-namespace Webkul\RMA\Http\Controllers;
+namespace DeFaoite\RMA\Http\Controllers;
 
 use Illuminate\Http\Request;
 
@@ -7126,18 +7126,18 @@ composer require bagisto/bagisto-package-generator
 Navigate to your Bagisto root directory and run:
 
 ```bash
-php artisan package:make-shipping-method Webkul/CustomExpressShipping
+php artisan package:make-shipping-method DeFaoite/CustomExpressShipping
 ```
 
 **Command Parameters:**
-- `Webkul/CustomExpressShipping`: The vendor/package name for your shipping method
+- `DeFaoite/CustomExpressShipping`: The vendor/package name for your shipping method
 
 ### Step 3: Handle Existing Package (If Needed)
 
 If the package directory already exists, use the `--force` flag:
 
 ```bash
-php artisan package:make-shipping-method Webkul/CustomExpressShipping --force
+php artisan package:make-shipping-method DeFaoite/CustomExpressShipping --force
 ```
 
 ::: tip Package Generator Benefits
@@ -7160,7 +7160,7 @@ After generating the package, you need to register it with Bagisto:
     "autoload": {
         "psr-4": {
             // Other PSR-4 namespaces...
-            "Webkul\\CustomExpressShipping\\": "packages/Webkul/CustomExpressShipping/src"
+            "DeFaoite\\CustomExpressShipping\\": "packages/DeFaoite/CustomExpressShipping/src"
         }
     }
 }
@@ -7182,7 +7182,7 @@ return [
     
     // ... other providers ...
     
-    Webkul\CustomExpressShipping\Providers\CustomExpressShippingServiceProvider::class,
+    DeFaoite\CustomExpressShipping\Providers\CustomExpressShippingServiceProvider::class,
 ];
 ```
 
@@ -7222,7 +7222,7 @@ For developers who want to understand every component, let's create the shipping
 Create the complete directory structure for your shipping method package:
 
 ```bash
-mkdir -p packages/Webkul/CustomExpressShipping/src/{Carriers,Config,Providers}
+mkdir -p packages/DeFaoite/CustomExpressShipping/src/{Carriers,Config,Providers}
 ```
 
 This creates the following structure:
@@ -7241,7 +7241,7 @@ packages
 
 Create the carriers configuration file that defines your shipping method properties:
 
-**Create:** `packages/Webkul/CustomExpressShipping/src/Config/carriers.php`
+**Create:** `packages/DeFaoite/CustomExpressShipping/src/Config/carriers.php`
 
 ```php
 <?php
@@ -7254,7 +7254,7 @@ return [
         'active'       => true,
         'default_rate' => '19.99',
         'type'         => 'per_order',
-        'class'        => 'Webkul\CustomExpressShipping\Carriers\CustomExpressShipping',
+        'class'        => 'DeFaoite\CustomExpressShipping\Carriers\CustomExpressShipping',
     ]
 ];
 ```
@@ -7273,7 +7273,7 @@ return [
 
 Create the main carrier class that handles rate calculation:
 
-**Create:** `packages/Webkul/CustomExpressShipping/src/Carriers/CustomExpressShipping.php`
+**Create:** `packages/DeFaoite/CustomExpressShipping/src/Carriers/CustomExpressShipping.php`
 
 ::: tip Don't Get Overwhelmed!
 Don't worry about understanding every line of code right now - just go with the flow! We'll cover all these concepts in detail in the following sections:
@@ -7288,11 +7288,11 @@ Focus on getting your shipping method working first, then dive deeper into each 
 ```php
 <?php
 
-namespace Webkul\CustomExpressShipping\Carriers;
+namespace DeFaoite\CustomExpressShipping\Carriers;
 
-use Webkul\Shipping\Carriers\AbstractShipping;
-use Webkul\Checkout\Models\CartShippingRate;
-use Webkul\Checkout\Facades\Cart;
+use DeFaoite\Shipping\Carriers\AbstractShipping;
+use DeFaoite\Checkout\Models\CartShippingRate;
+use DeFaoite\Checkout\Facades\Cart;
 
 class CustomExpressShipping extends AbstractShipping
 {
@@ -7355,7 +7355,7 @@ class CustomExpressShipping extends AbstractShipping
 
 Create the admin interface configuration for your shipping method:
 
-**Create:** `packages/Webkul/CustomExpressShipping/src/Config/system.php`
+**Create:** `packages/DeFaoite/CustomExpressShipping/src/Config/system.php`
 
 ```php
 <?php
@@ -7424,12 +7424,12 @@ return [
 
 Create the service provider to register your shipping method with Bagisto:
 
-**Create:** `packages/Webkul/CustomExpressShipping/src/Providers/CustomExpressShippingServiceProvider.php`
+**Create:** `packages/DeFaoite/CustomExpressShipping/src/Providers/CustomExpressShippingServiceProvider.php`
 
 ```php
 <?php
 
-namespace Webkul\CustomExpressShipping\Providers;
+namespace DeFaoite\CustomExpressShipping\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -7473,7 +7473,7 @@ After creating all the files, you need to register your package with Bagisto:
     "autoload": {
         "psr-4": {
             // Other PSR-4 namespaces...
-            "Webkul\\CustomExpressShipping\\": "packages/Webkul/CustomExpressShipping/src"
+            "DeFaoite\\CustomExpressShipping\\": "packages/DeFaoite/CustomExpressShipping/src"
         }
     }
 }
@@ -7495,7 +7495,7 @@ return [
     
     // ... other providers ...
     
-    Webkul\CustomExpressShipping\Providers\CustomExpressShippingServiceProvider::class,
+    DeFaoite\CustomExpressShipping\Providers\CustomExpressShippingServiceProvider::class,
 ];
 ```
 
@@ -7628,7 +7628,7 @@ This comprehensive guide covers:
 
 The carrier configuration file defines all the essential properties of your shipping method. Let's examine each component in detail:
 
-**File:** `packages/Webkul/CustomExpressShipping/src/Config/carriers.php`
+**File:** `packages/DeFaoite/CustomExpressShipping/src/Config/carriers.php`
 
 ```php
 <?php
@@ -7641,7 +7641,7 @@ return [
         'active'       => true,
         'default_rate' => '19.99',
         'type'         => 'per_order',
-        'class'        => 'Webkul\CustomExpressShipping\Carriers\CustomExpressShipping',
+        'class'        => 'DeFaoite\CustomExpressShipping\Carriers\CustomExpressShipping',
     ]
 ];
 ```
@@ -7706,7 +7706,7 @@ return [
         'title'        => 'Express Delivery (1-2 Days)',
         'description'  => 'Premium express shipping with tracking and insurance',
         'active'       => true,
-        'class'        => 'Webkul\CustomExpressShipping\Carriers\CustomExpressShipping',
+        'class'        => 'DeFaoite\CustomExpressShipping\Carriers\CustomExpressShipping',
         
         // pricing configuration
         'default_rate'            => '19.99',
@@ -7786,7 +7786,7 @@ When needed, Bagisto creates your carrier instance:
 
 ```php
 // bagisto uses the 'class' property...
-$carrier = new \Webkul\CustomExpressShipping\Carriers\CustomExpressShipping;
+$carrier = new \DeFaoite\CustomExpressShipping\Carriers\CustomExpressShipping;
 ```
 
 ### 4. Configuration Access
@@ -8164,15 +8164,15 @@ This guide covers:
 
 Every shipping method extends `AbstractShipping` and implements one key method:
 
-**File:** `packages/Webkul/CustomExpressShipping/src/Carriers/CustomExpressShipping.php`
+**File:** `packages/DeFaoite/CustomExpressShipping/src/Carriers/CustomExpressShipping.php`
 
 ```php
 <?php
 
-namespace Webkul\CustomExpressShipping\Carriers;
+namespace DeFaoite\CustomExpressShipping\Carriers;
 
-use Webkul\Shipping\Carriers\AbstractShipping;
-use Webkul\Checkout\Models\CartShippingRate;
+use DeFaoite\Shipping\Carriers\AbstractShipping;
+use DeFaoite\Checkout\Models\CartShippingRate;
 
 class CustomExpressShipping extends AbstractShipping
 {
@@ -8325,7 +8325,7 @@ This guide covers:
 
 System configuration creates admin interface fields for your shipping method:
 
-**File:** `packages/Webkul/CustomExpressShipping/src/Config/system.php`
+**File:** `packages/DeFaoite/CustomExpressShipping/src/Config/system.php`
 
 ```php
 <?php
@@ -8545,7 +8545,7 @@ composer require bagisto/bagisto-package-generator
 Navigate to your Bagisto root directory and run:
 
 ```bash
-php artisan package:make-payment-method Webkul/CustomStripePayment
+php artisan package:make-payment-method DeFaoite/CustomStripePayment
 ```
 
 ### Step 3: Handle Existing Package (If Needed)
@@ -8553,7 +8553,7 @@ php artisan package:make-payment-method Webkul/CustomStripePayment
 If the package directory already exists, use the `--force` flag:
 
 ```bash
-php artisan package:make-payment-method Webkul/CustomStripePayment --force
+php artisan package:make-payment-method DeFaoite/CustomStripePayment --force
 ```
 
 ::: tip Package Generator Benefits
@@ -8577,7 +8577,7 @@ After generating the package, you need to register it with Bagisto:
         ...
         "psr-4": {
             // Other PSR-4 namespaces
-            "Webkul\\CustomStripePayment\\": "packages/Webkul/CustomStripePayment/src"
+            "DeFaoite\\CustomStripePayment\\": "packages/DeFaoite/CustomStripePayment/src"
         }
     }
 }
@@ -8599,7 +8599,7 @@ return [
     
     // ... other providers ...
     
-    Webkul\CustomStripePayment\Providers\CustomStripePaymentServiceProvider::class,
+    DeFaoite\CustomStripePayment\Providers\CustomStripePaymentServiceProvider::class,
 ];
 ```
 
@@ -8639,14 +8639,14 @@ For developers who want to understand every component, let's create the payment 
 Create the directory structure for your payment method package:
 
 ```bash
-mkdir -p packages/Webkul/CustomStripePayment/src/{Payment,Config,Providers}
+mkdir -p packages/DeFaoite/CustomStripePayment/src/{Payment,Config,Providers}
 ```
 
 ### Step 2: Create Payment Method Configuration
 
 Create the payment methods configuration file:
 
-**Create:** `packages/Webkul/CustomStripePayment/src/Config/payment-methods.php`
+**Create:** `packages/DeFaoite/CustomStripePayment/src/Config/payment-methods.php`
 
 ```php
 <?php
@@ -8656,7 +8656,7 @@ return [
         'code'        => 'custom_stripe_payment',
         'title'       => 'Credit Card (Stripe)',
         'description' => 'Secure credit card payments powered by Stripe',
-        'class'       => 'Webkul\CustomStripePayment\Payment\CustomStripePayment',
+        'class'       => 'DeFaoite\CustomStripePayment\Payment\CustomStripePayment',
         'active'      => true,
         'sort'        => 1,
     ],
@@ -8667,14 +8667,14 @@ return [
 
 Create the main payment class:
 
-**Create:** `packages/Webkul/CustomStripePayment/src/Payment/CustomStripePayment.php`
+**Create:** `packages/DeFaoite/CustomStripePayment/src/Payment/CustomStripePayment.php`
 
 ```php
 <?php
 
-namespace Webkul\CustomStripePayment\Payment;
+namespace DeFaoite\CustomStripePayment\Payment;
 
-use Webkul\Payment\Payment\Payment;
+use DeFaoite\Payment\Payment\Payment;
 
 class CustomStripePayment extends Payment
 {
@@ -8725,7 +8725,7 @@ If you uncomment the `getRedirectUrl()` method to return a route, make sure to c
 
 Create the admin interface configuration:
 
-**Create:** `packages/Webkul/CustomStripePayment/src/Config/system.php`
+**Create:** `packages/DeFaoite/CustomStripePayment/src/Config/system.php`
 
 ```php
 <?php
@@ -8775,12 +8775,12 @@ return [
 
 Create the service provider to register your payment method:
 
-**Create:** `packages/Webkul/CustomStripePayment/src/Providers/CustomStripePaymentServiceProvider.php`
+**Create:** `packages/DeFaoite/CustomStripePayment/src/Providers/CustomStripePaymentServiceProvider.php`
 
 ```php
 <?php
 
-namespace Webkul\CustomStripePayment\Providers;
+namespace DeFaoite\CustomStripePayment\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -8825,7 +8825,7 @@ After creating all the files, you need to register your package with Bagisto:
         ...
         "psr-4": {
             // Other PSR-4 namespaces
-            "Webkul\\CustomStripePayment\\": "packages/Webkul/CustomStripePayment/src"
+            "DeFaoite\\CustomStripePayment\\": "packages/DeFaoite/CustomStripePayment/src"
         }
     }
 }
@@ -8847,7 +8847,7 @@ return [
     
     // ... other providers ...
     
-    Webkul\CustomStripePayment\Providers\CustomStripePaymentServiceProvider::class,
+    DeFaoite\CustomStripePayment\Providers\CustomStripePaymentServiceProvider::class,
 ];
 ```
 
@@ -8945,7 +8945,7 @@ return [
         'code'        => 'custom_stripe_payment',
         'title'       => 'Credit Card (Stripe)',
         'description' => 'Secure credit card payments powered by Stripe',
-        'class'       => 'Webkul\CustomStripePayment\Payment\CustomStripePayment',
+        'class'       => 'DeFaoite\CustomStripePayment\Payment\CustomStripePayment',
         'active'      => true,
         'sort'        => 1,
     ],
@@ -9081,9 +9081,9 @@ When you created your first payment method, you built this `CustomStripePayment`
 ```php
 <?php
 
-namespace Webkul\CustomStripePayment\Payment;
+namespace DeFaoite\CustomStripePayment\Payment;
 
-use Webkul\Payment\Payment\Payment;
+use DeFaoite\Payment\Payment\Payment;
 
 class CustomStripePayment extends Payment
 {
@@ -9527,12 +9527,12 @@ Since Bagisto doesn't have a package generator for product types, we'll create e
 Create the package directory structure:
 
 ```bash
-mkdir -p packages/Webkul/SubscriptionProduct/src/{Type,Config,Providers}
+mkdir -p packages/DeFaoite/SubscriptionProduct/src/{Type,Config,Providers}
 ```
 
 ### Step 2: Configure Product Type
 
-Create `packages/Webkul/SubscriptionProduct/src/Config/product-types.php`:
+Create `packages/DeFaoite/SubscriptionProduct/src/Config/product-types.php`:
 
 ```php
 <?php
@@ -9541,7 +9541,7 @@ return [
     'subscription' => [
         'key'   => 'subscription',
         'name'  => 'Subscription',
-        'class' => 'Webkul\SubscriptionProduct\Type\Subscription',
+        'class' => 'DeFaoite\SubscriptionProduct\Type\Subscription',
         'sort'  => 5,
     ],
 ];
@@ -9549,15 +9549,15 @@ return [
 
 ### Step 3: Create Product Type Class
 
-Create `packages/Webkul/SubscriptionProduct/src/Type/Subscription.php`:
+Create `packages/DeFaoite/SubscriptionProduct/src/Type/Subscription.php`:
 
 ```php
 <?php
 
-namespace Webkul\SubscriptionProduct\Type;
+namespace DeFaoite\SubscriptionProduct\Type;
 
-use Webkul\Product\Helpers\Indexers\Price\Simple as SimpleIndexer;
-use Webkul\Product\Type\AbstractType;
+use DeFaoite\Product\Helpers\Indexers\Price\Simple as SimpleIndexer;
+use DeFaoite\Product\Type\AbstractType;
 
 class Subscription extends AbstractType
 {
@@ -9594,12 +9594,12 @@ See the [Understanding Abstract Type Class →](./understanding-abstract-type-cl
 
 ### Step 4: Create Service Provider
 
-Create `packages/Webkul/SubscriptionProduct/src/Providers/SubscriptionServiceProvider.php`:
+Create `packages/DeFaoite/SubscriptionProduct/src/Providers/SubscriptionServiceProvider.php`:
 
 ```php
 <?php
 
-namespace Webkul\SubscriptionProduct\Providers;
+namespace DeFaoite\SubscriptionProduct\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -9639,7 +9639,7 @@ After creating all the files, you need to register your package with Bagisto:
         ...
         "psr-4": {
             // Other PSR-4 namespaces
-            "Webkul\\SubscriptionProduct\\": "packages/Webkul/SubscriptionProduct/src"
+            "DeFaoite\\SubscriptionProduct\\": "packages/DeFaoite/SubscriptionProduct/src"
         }
     }
 }
@@ -9661,7 +9661,7 @@ return [
     
     // ... other providers ...
     
-    Webkul\SubscriptionProduct\Providers\SubscriptionServiceProvider::class,
+    DeFaoite\SubscriptionProduct\Providers\SubscriptionServiceProvider::class,
 ];
 ```
 
@@ -9744,7 +9744,7 @@ return [
     'subscription' => [
         'key'   => 'subscription',
         'name'  => 'Subscription',
-        'class' => 'Webkul\SubscriptionProduct\Type\Subscription',
+        'class' => 'DeFaoite\SubscriptionProduct\Type\Subscription',
         'sort'  => 5,
     ],
 ];
@@ -9758,7 +9758,7 @@ These four properties are all you need for a basic product type:
 |----------|-------------|---------|
 | `key` | Unique identifier (matches array key) | `'subscription'` |
 | `name` | Display name in admin dropdown | `'Subscription'` |
-| `class` | Full namespace to your product type class | `'Webkul\SubscriptionProduct\Type\Subscription'` |
+| `class` | Full namespace to your product type class | `'DeFaoite\SubscriptionProduct\Type\Subscription'` |
 | `sort` | Order in dropdown (optional, default: 0) | `5` |
 
 ## How Bagisto Uses This Configuration
@@ -9799,14 +9799,14 @@ return [
     'subscription' => [
         'key'   => 'subscription',
         'name'  => 'Subscription',
-        'class' => 'Webkul\SubscriptionProduct\Type\Subscription',
+        'class' => 'DeFaoite\SubscriptionProduct\Type\Subscription',
         'sort'  => 5,
     ],
     
     'rental' => [
         'key'   => 'rental',
         'name'  => 'Rental Product',
-        'class' => 'Webkul\RentalProduct\Type\Rental',
+        'class' => 'DeFaoite\RentalProduct\Type\Rental',
         'sort'  => 6,
     ],
 ];
@@ -9851,7 +9851,7 @@ Every product type in Bagisto extends the `AbstractType` class which provides th
 ```php
 <?php
 
-namespace Webkul\Product\Type;
+namespace DeFaoite\Product\Type;
 
 abstract class AbstractType
 {
@@ -10255,7 +10255,7 @@ public function prepareForCart(array $data): array
 The methods covered above are the most commonly overridden ones, but the AbstractType class contains many more methods that you can customize based on your specific requirements. We recommend exploring the full AbstractType class to discover additional methods that might be useful for your custom product type implementation.
 
 ::: tip Pro Tip
-Check out the complete AbstractType class in `packages/Webkul/Product/src/Type/AbstractType.php` to see all available methods and understand their purposes. This will help you identify which methods to override for your specific use case.
+Check out the complete AbstractType class in `packages/DeFaoite/Product/src/Type/AbstractType.php` to see all available methods and understand their purposes. This will help you identify which methods to override for your specific use case.
 :::
 
 ## What's Next?
@@ -10310,9 +10310,9 @@ Remember your basic `Subscription` class? Let's enhance it with the `AbstractTyp
 ```php
 <?php
 
-namespace Webkul\SubscriptionProduct\Type;
+namespace DeFaoite\SubscriptionProduct\Type;
 
-use Webkul\Product\Type\AbstractType;
+use DeFaoite\Product\Type\AbstractType;
 
 class Subscription extends AbstractType
 {
@@ -10331,10 +10331,10 @@ If you're not familiar with the `AbstractType` methods we're implementing below,
 ```php
 <?php
 
-namespace Webkul\SubscriptionProduct\Type;
+namespace DeFaoite\SubscriptionProduct\Type;
 
-use Webkul\Product\Helpers\Indexers\Price\Simple as SimpleIndexer;
-use Webkul\Product\Type\AbstractType;
+use DeFaoite\Product\Helpers\Indexers\Price\Simple as SimpleIndexer;
+use DeFaoite\Product\Type\AbstractType;
 
 class Subscription extends AbstractType
 {
@@ -10436,7 +10436,7 @@ Now test your enhanced subscription product type:
 php artisan tinker
 
 # Test your methods
->>> $product = \Webkul\Product\Models\Product::where('type', 'subscription')->first()
+>>> $product = \DeFaoite\Product\Models\Product::where('type', 'subscription')->first()
 >>> $subscription = $product->getTypeInstance()
 
 # Test each method
@@ -11099,7 +11099,7 @@ Bagisto follows Laravel's package development conventions. A theme package conta
 
 | Basic Theme (Resources) | Package Theme |
 |------------------------|---------------|
-| `resources/themes/custom-theme/` | `packages/Webkul/CustomTheme/` |
+| `resources/themes/custom-theme/` | `packages/DeFaoite/CustomTheme/` |
 | Direct file editing | Service provider publishing |
 | Limited reusability | Easy distribution |
 | Mixed with core files | Self-contained structure |
@@ -11114,15 +11114,15 @@ Create the package directory structure in your Bagisto project:
 
 ```bash
 # Create package directory structure
-mkdir -p packages/Webkul/CustomTheme/src/Providers
-mkdir -p packages/Webkul/CustomTheme/src/Resources/views
+mkdir -p packages/DeFaoite/CustomTheme/src/Providers
+mkdir -p packages/DeFaoite/CustomTheme/src/Resources/views
 ```
 
 Your package structure should look like this:
 
 ```text
 packages/
-└── Webkul/
+└── DeFaoite/
     └── CustomTheme/
         └── src/
             ├── Providers/
@@ -11139,12 +11139,12 @@ The package structure should follow Laravel package conventions with proper PSR-
 
 ### Step 2: Create the Service Provider
 
-Create the service provider at `packages/Webkul/CustomTheme/src/Providers/CustomThemeServiceProvider.php`:
+Create the service provider at `packages/DeFaoite/CustomTheme/src/Providers/CustomThemeServiceProvider.php`:
 
 ```php
 <?php
 
-namespace Webkul\CustomTheme\Providers;
+namespace DeFaoite\CustomTheme\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -11190,10 +11190,10 @@ This guide assumes you have basic theme files to move from the previous tutorial
 **Copy your theme template:**
 
 Take the home page template you created in the basic theme tutorial and move it to:
-`packages/Webkul/CustomTheme/src/Resources/views/home/index.blade.php`
+`packages/DeFaoite/CustomTheme/src/Resources/views/home/index.blade.php`
 
 ::: tip Moving Existing Files
-If you have an existing basic theme, you can simply copy the entire `views` directory from `resources/themes/custom-theme/views/` to `packages/Webkul/CustomTheme/src/Resources/views/` to move all your existing customizations.
+If you have an existing basic theme, you can simply copy the entire `views` directory from `resources/themes/custom-theme/views/` to `packages/DeFaoite/CustomTheme/src/Resources/views/` to move all your existing customizations.
 :::
 
 **Example template content:**
@@ -11239,7 +11239,7 @@ Update your root `composer.json` file to include the package namespace and regen
     ...
     "psr-4": {
         // Other PSR-4 namespaces
-        "Webkul\\CustomTheme\\": "packages/Webkul/CustomTheme/src"
+        "DeFaoite\\CustomTheme\\": "packages/DeFaoite/CustomTheme/src"
     }
 }
 ```
@@ -11266,7 +11266,7 @@ return [
     
     // Other service providers...
     
-    Webkul\CustomTheme\Providers\CustomThemeServiceProvider::class,
+    DeFaoite\CustomTheme\Providers\CustomThemeServiceProvider::class,
 ];
 ```
 
@@ -11317,13 +11317,13 @@ return [
 Publish your package views to the application:
 
 ```bash
-php artisan vendor:publish --provider="Webkul\CustomTheme\Providers\CustomThemeServiceProvider"
+php artisan vendor:publish --provider="DeFaoite\CustomTheme\Providers\CustomThemeServiceProvider"
 ```
 
 If you need to overwrite existing files, use the `--force` flag:
 
 ```bash
-php artisan vendor:publish --provider="Webkul\CustomTheme\Providers\CustomThemeServiceProvider" --force
+php artisan vendor:publish --provider="DeFaoite\CustomTheme\Providers\CustomThemeServiceProvider" --force
 ```
 
 ::: tip When to Use --force
@@ -11356,7 +11356,7 @@ To add new views to your package:
 
 1. **Create the view file** in your package:
    ```text
-   packages/Webkul/CustomTheme/src/Resources/views/catalog/products/index.blade.php
+   packages/DeFaoite/CustomTheme/src/Resources/views/catalog/products/index.blade.php
    ```
 
 ::: warning Directory Structure
@@ -11365,7 +11365,7 @@ The directory structure should follow the same paths as the corresponding views 
 
 2. **Republish the package views**:
    ```bash
-   php artisan vendor:publish --provider="Webkul\CustomTheme\Providers\CustomThemeServiceProvider" --force
+   php artisan vendor:publish --provider="DeFaoite\CustomTheme\Providers\CustomThemeServiceProvider" --force
    ```
 
 ### Updating Existing Views
@@ -11375,11 +11375,11 @@ When you modify views in your package:
 1. **Edit the package file** (not the published file)
 2. **Republish to apply changes**:
    ```bash
-   php artisan vendor:publish --provider="Webkul\CustomTheme\Providers\CustomThemeServiceProvider" --force
+   php artisan vendor:publish --provider="DeFaoite\CustomTheme\Providers\CustomThemeServiceProvider" --force
    ```
 
 ::: warning Development Workflow
-Always edit files in your package directory (`packages/Webkul/CustomTheme/src/Resources/views/`), not in the published location (`resources/themes/custom-theme/views/`). The published files will be overwritten when you republish.
+Always edit files in your package directory (`packages/DeFaoite/CustomTheme/src/Resources/views/`), not in the published location (`resources/themes/custom-theme/views/`). The published files will be overwritten when you republish.
 :::
 
 ## Alternative Development Workflows
@@ -11393,7 +11393,7 @@ This approach lets you develop your theme directly in the published location, th
 **Development Process:**
 1. Develop all your changes directly in `resources/themes/custom-theme/views/`
 2. Test and iterate on your customizations without republishing
-3. Once satisfied, copy all files to your package: `packages/Webkul/CustomTheme/src/Resources/views/`
+3. Once satisfied, copy all files to your package: `packages/DeFaoite/CustomTheme/src/Resources/views/`
 4. Republish once to ensure everything works from the package
 
 **Benefits:**
@@ -11411,7 +11411,7 @@ Create symbolic links to enable real-time development without any republishing.
 rm -rf resources/themes/custom-theme/views
 
 # Create symlink from package to resources (use absolute path)
-ln -s $(pwd)/packages/Webkul/CustomTheme/src/Resources/views resources/themes/custom-theme/views
+ln -s $(pwd)/packages/DeFaoite/CustomTheme/src/Resources/views resources/themes/custom-theme/views
 ```
 
 **Benefits:**
@@ -11496,7 +11496,7 @@ Add the assets directory to your existing theme package:
 
 ```bash
 # Navigate to your theme package
-cd packages/Webkul/CustomTheme
+cd packages/DeFaoite/CustomTheme
 
 # Create asset directories
 mkdir -p src/Resources/assets/{css,js,images,fonts}
@@ -11505,7 +11505,7 @@ mkdir -p src/Resources/assets/{css,js,images,fonts}
 Your package structure will now look like this:
 
 ```text
-packages/Webkul/CustomTheme/
+packages/DeFaoite/CustomTheme/
 ├── src/
 │   ├── Providers/
 │   │   └── CustomThemeServiceProvider.php
@@ -11525,7 +11525,7 @@ In the following steps, we'll create the configuration files (`package.json`, `v
 :::
 
 ::: warning Package Context
-Make sure you're working within your `CustomTheme` package directory. All commands and file paths in this guide assume you're in `packages/Webkul/CustomTheme/`.
+Make sure you're working within your `CustomTheme` package directory. All commands and file paths in this guide assume you're in `packages/DeFaoite/CustomTheme/`.
 :::
 
 ### Step 2: Create Base Asset Files
@@ -11552,7 +11552,7 @@ Now let's set up the build tools to compile and optimize your theme assets.
 
 ### Step 3: Create Configuration Files
 
-Create the following configuration files in your package root (`packages/Webkul/CustomTheme/`):
+Create the following configuration files in your package root (`packages/DeFaoite/CustomTheme/`):
 
 #### Setting Up Node Dependencies
 
@@ -11599,7 +11599,7 @@ Now install the dependencies:
 
 ```bash
 # Make sure you're in your package directory
-cd packages/Webkul/CustomTheme
+cd packages/DeFaoite/CustomTheme
 
 # Install dependencies
 npm install
@@ -11610,7 +11610,7 @@ npm install
 Create `vite.config.js` configured for your `CustomTheme` package:
 
 ::: tip Don't Get Overwhelmed!
-This Vite configuration might look complex, but you don't need to understand every detail right now. This setup is based on Bagisto's shop package configuration with paths adjusted for your custom theme package. You can always refer to `packages/Webkul/Shop/vite.config.js` in your Bagisto installation to see how the core shop package handles Vite configuration.
+This Vite configuration might look complex, but you don't need to understand every detail right now. This setup is based on Bagisto's shop package configuration with paths adjusted for your custom theme package. You can always refer to `packages/DeFaoite/Shop/vite.config.js` in your Bagisto installation to see how the core shop package handles Vite configuration.
 :::
 
 ```javascript
@@ -11665,7 +11665,7 @@ export default defineConfig(({ mode }) => {
 Create `tailwind.config.js` to scan your theme files:
 
 ::: tip Comprehensive Configuration!
-This Tailwind configuration includes all the settings used in Bagisto's shop package, giving you access to custom breakpoints, colors, and fonts that match Bagisto's design system. The `content` array tells Tailwind where to find your CSS classes, and the custom theme extensions provide Bagisto-specific styling. You can reference `packages/Webkul/Shop/tailwind.config.js` in your Bagisto installation to see the original configuration this is based on.
+This Tailwind configuration includes all the settings used in Bagisto's shop package, giving you access to custom breakpoints, colors, and fonts that match Bagisto's design system. The `content` array tells Tailwind where to find your CSS classes, and the custom theme extensions provide Bagisto-specific styling. You can reference `packages/DeFaoite/Shop/tailwind.config.js` in your Bagisto installation to see the original configuration this is based on.
 :::
 
 ```javascript
@@ -11792,7 +11792,7 @@ Create a symbolic link to work directly from your package:
 rm -rf resources/themes/custom-theme
 
 # Create symbolic link to your package views (from Bagisto root directory)
-ln -s $(pwd)/packages/Webkul/CustomTheme/src/Resources/views resources/themes/custom-theme
+ln -s $(pwd)/packages/DeFaoite/CustomTheme/src/Resources/views resources/themes/custom-theme
 ```
 
 **Option B: Direct Package Development (All Platforms)**
@@ -11801,7 +11801,7 @@ You can also work directly in your package and republish as needed:
 
 ```bash
 # After making changes, republish views
-php artisan vendor:publish --provider="Webkul\CustomTheme\Providers\CustomThemeServiceProvider" --force
+php artisan vendor:publish --provider="DeFaoite\CustomTheme\Providers\CustomThemeServiceProvider" --force
 ```
 
 ::: tip Why Symbolic Links?
@@ -11823,7 +11823,7 @@ Now let's test that your asset compilation is working properly:
 
 ```bash
 # Make sure you're in your package directory
-cd packages/Webkul/CustomTheme
+cd packages/DeFaoite/CustomTheme
 
 # Start the development server
 npm run dev
@@ -11885,10 +11885,10 @@ To have full control while building upon Bagisto's foundation, the simplest appr
 
 ```bash
 # Copy entire shop assets folder (from Bagisto root directory)
-cp -r packages/Webkul/Shop/src/Resources/assets/* packages/Webkul/CustomTheme/src/Resources/assets/
+cp -r packages/DeFaoite/Shop/src/Resources/assets/* packages/DeFaoite/CustomTheme/src/Resources/assets/
 
 # Copy entire shop views folder
-cp -r packages/Webkul/Shop/src/Resources/views/* packages/Webkul/CustomTheme/src/Resources/views/
+cp -r packages/DeFaoite/Shop/src/Resources/views/* packages/DeFaoite/CustomTheme/src/Resources/views/
 ```
 
 This copies all shop resources including:
@@ -11900,7 +11900,7 @@ This copies all shop resources including:
 
 **Update your home view to showcase your custom theme:**
 
-Now update `packages/Webkul/CustomTheme/src/Resources/views/home/index.blade.php` with custom content:
+Now update `packages/DeFaoite/CustomTheme/src/Resources/views/home/index.blade.php` with custom content:
 
 ```blade
 <x-shop::layouts>
@@ -11988,7 +11988,7 @@ Now update `packages/Webkul/CustomTheme/src/Resources/views/home/index.blade.php
                 <div class="bg-white p-6 rounded-lg shadow">
                     <h4 class="font-semibold mb-3">Theme Package Structure</h4>
                     
-                    <pre class="text-sm text-gray-600 overflow-x-auto"><code>packages/Webkul/CustomTheme/
+                    <pre class="text-sm text-gray-600 overflow-x-auto"><code>packages/DeFaoite/CustomTheme/
 ├── src/Resources/
 │   ├── assets/     (complete shop assets)
 │   └── views/      (complete shop views)
@@ -12024,7 +12024,7 @@ Now update `packages/Webkul/CustomTheme/src/Resources/views/home/index.blade.php
 After copying the shop assets and views, you can immediately start the development server:
 
 ```bash
-cd packages/Webkul/CustomTheme
+cd packages/DeFaoite/CustomTheme
 npm run dev
 ```
 
@@ -12060,7 +12060,7 @@ Here's how to work efficiently with assets in your theme package:
 
 1. **Start Development Server**:
    ```bash
-   cd packages/Webkul/CustomTheme
+   cd packages/DeFaoite/CustomTheme
    npm run dev
    ```
 
@@ -12157,7 +12157,7 @@ When deploying your theme package:
 
 1. **Build Production Assets**:
    ```bash
-   cd packages/Webkul/CustomTheme
+   cd packages/DeFaoite/CustomTheme
    npm run build
    ```
 
@@ -12267,7 +12267,7 @@ The admin layout automatically provides:
 Here's how you might use the admin layout in your custom theme package:
 
 ```blade
-{{-- File: packages/Webkul/CustomTheme/src/Resources/views/admin/index.blade.php --}}
+{{-- File: packages/DeFaoite/CustomTheme/src/Resources/views/admin/index.blade.php --}}
 <x-admin::layouts>
     <x-slot:title>
         Custom Theme Settings
@@ -12358,7 +12358,7 @@ If you're building a custom theme package (from our [Custom Theme Package](./cre
 Here's how you might use the shop layout in your custom theme package:
 
 ```blade
-{{-- File: packages/Webkul/CustomTheme/src/Resources/views/home/index.blade.php --}}
+{{-- File: packages/DeFaoite/CustomTheme/src/Resources/views/home/index.blade.php --}}
 <x-shop::layouts>
     <x-slot:title>
         Custom Theme Home
@@ -12449,7 +12449,7 @@ While Bagisto's built-in layouts cover most use cases, you might need custom lay
 If you need complete control over the layout structure, you can create your own master layout:
 
 ```blade
-{{-- File: packages/Webkul/CustomTheme/src/Resources/views/layouts/master.blade.php --}}
+{{-- File: packages/DeFaoite/CustomTheme/src/Resources/views/layouts/master.blade.php --}}
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
 <head>
@@ -13662,20 +13662,20 @@ Email templates in Bagisto work through a system of Mailable classes and Blade v
 
 ### Mailable Classes
 
-Bagisto uses mail notification classes located in namespaces like `Webkul\Shop\Mail`. These classes extend Laravel's `Mailable` class and define the email's structure, recipient, and view template.
+Bagisto uses mail notification classes located in namespaces like `DeFaoite\Shop\Mail`. These classes extend Laravel's `Mailable` class and define the email's structure, recipient, and view template.
 
 Here's an example from the order created notification:
 
 ```php{42}
 <?php
 
-namespace Webkul\Shop\Mail\Order;
+namespace DeFaoite\Shop\Mail\Order;
 
 use Illuminate\Mail\Mailables\Address;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
-use Webkul\Sales\Contracts\Order;
-use Webkul\Shop\Mail\Mailable;
+use DeFaoite\Sales\Contracts\Order;
+use DeFaoite\Shop\Mail\Mailable;
 
 class CreatedNotification extends Mailable
 {
@@ -13720,7 +13720,7 @@ The `view: 'shop::emails.orders.created'` follows the same theme resolution patt
 
 1. **Your active theme**: `resources/themes/your-theme/views/emails/orders/created.blade.php`
 2. **Default theme**: `resources/themes/default/views/emails/orders/created.blade.php`  
-3. **Package views**: `packages/Webkul/Shop/src/Resources/views/emails/orders/created.blade.php`
+3. **Package views**: `packages/DeFaoite/Shop/src/Resources/views/emails/orders/created.blade.php`
 
 ### Email Layout System
 
@@ -13758,7 +13758,7 @@ Let's customize the order created email. Create the file:
 **`resources/themes/your-theme/views/emails/orders/created.blade.php`**
 
 ::: warning Path Matching Requirement
-Notice the path we have used: `emails/orders/created.blade.php`. This path is exactly the same as in the shop package (`packages/Webkul/Shop/src/Resources/views/emails/orders/created.blade.php`). We must follow the exact same path structure for view overriding to work. If you use a different path, the view will not be able to override the default template.
+Notice the path we have used: `emails/orders/created.blade.php`. This path is exactly the same as in the shop package (`packages/DeFaoite/Shop/src/Resources/views/emails/orders/created.blade.php`). We must follow the exact same path structure for view overriding to work. If you use a different path, the view will not be able to override the default template.
 :::
 
 ```blade{1,8,15-20}
@@ -14354,12 +14354,12 @@ When products are updated in Bagisto, the FPC system automatically invalidates r
 
 ```php [Product Listener - Real Bagisto Implementation]
 <?php
-namespace Webkul\FPC\Listeners;
+namespace DeFaoite\FPC\Listeners;
 
 use Spatie\ResponseCache\Facades\ResponseCache;
-use Webkul\Product\Repositories\ProductBundleOptionProductRepository;
-use Webkul\Product\Repositories\ProductGroupedProductRepository;
-use Webkul\Product\Repositories\ProductRepository;
+use DeFaoite\Product\Repositories\ProductBundleOptionProductRepository;
+use DeFaoite\Product\Repositories\ProductGroupedProductRepository;
+use DeFaoite\Product\Repositories\ProductRepository;
 
 class Product
 {
@@ -14367,7 +14367,7 @@ class Product
     /**
      * Update or create product page cache
      *
-     * @param \Webkul\Product\Contracts\Product $product
+     * @param \DeFaoite\Product\Contracts\Product $product
      * @return void
      */
     public function afterUpdate($product)
@@ -14383,7 +14383,7 @@ class Product
 ```php [Event Registration - Bagisto FPC]
 <?php
 
-namespace Webkul\FPC\Providers;
+namespace DeFaoite\FPC\Providers;
 
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 
@@ -14397,7 +14397,7 @@ class EventServiceProvider extends ServiceProvider
     protected $listen = [
         ...
         'catalog.product.update.after' => [
-            'Webkul\FPC\Listeners\Product@afterUpdate',
+            'DeFaoite\FPC\Listeners\Product@afterUpdate',
         ],
         ...
     ];
@@ -14481,7 +14481,7 @@ Register the service provider in `bootstrap/providers.php`:
 
 ```php
 'providers' => [
-    Webkul\Varnish\Providers\VarnishServiceProvider::class,
+    DeFaoite\Varnish\Providers\VarnishServiceProvider::class,
 ],
 ```
 
@@ -14490,7 +14490,7 @@ Register the service provider in `bootstrap/providers.php`:
 Publish assets and configuration:
 
 ```bash
-php artisan vendor:publish --provider="Webkul\Varnish\Providers\VarnishServiceProvider"
+php artisan vendor:publish --provider="DeFaoite\Varnish\Providers\VarnishServiceProvider"
 ```
 
 ### Configure Alias
@@ -14500,7 +14500,7 @@ Configure the alias in `config/varnish.php`:
 ```php
 return [
     'aliases' => [
-        'Varnish' => \Webkul\Varnish\Facades\VarnishCache::class,
+        'Varnish' => \DeFaoite\Varnish\Facades\VarnishCache::class,
     ],
 ];
 ```
@@ -15145,7 +15145,7 @@ Bagisto provides a comprehensive helper system built around the Core class to st
 
 ## Introduction
 
-The Core class (`Webkul\Core\Core`) serves as Bagisto's central utility hub, providing a unified interface for accessing system-wide functionality. It acts as a facade that abstracts complex operations into simple, memorable method calls.
+The Core class (`DeFaoite\Core\Core`) serves as Bagisto's central utility hub, providing a unified interface for accessing system-wide functionality. It acts as a facade that abstracts complex operations into simple, memorable method calls.
 
 ### Architecture Overview
 
@@ -16020,12 +16020,12 @@ Create the importer class by extending `AbstractImporter` and implementing the r
 ```php
 <?php
 
-namespace Webkul\AdminImport\Importers;
+namespace DeFaoite\AdminImport\Importers;
 
 use Illuminate\Support\Facades\Event;
-use Webkul\DataTransfer\Helpers\Import;
-use Webkul\DataTransfer\Helpers\Importers\AbstractImporter;
-use Webkul\DataTransfer\Contracts\ImportBatch as ImportBatchContract;
+use DeFaoite\DataTransfer\Helpers\Import;
+use DeFaoite\DataTransfer\Helpers\Importers\AbstractImporter;
+use DeFaoite\DataTransfer\Contracts\ImportBatch as ImportBatchContract;
 
 class AdminImporter extends AbstractImporter
 {
@@ -16119,7 +16119,7 @@ After implementing the importer logic, you need to register it with Bagisto's da
 
 Create a configuration file to define your custom importer settings:
 
-**File:** `packages/Webkul/AdminImport/src/Config/importers.php`
+**File:** `packages/DeFaoite/AdminImport/src/Config/importers.php`
 
 ```php
 <?php
@@ -16127,7 +16127,7 @@ Create a configuration file to define your custom importer settings:
 return [
     'admins' => [
         'title'    => 'Admin Users', // add translation key if needed
-        'importer' => 'Webkul\AdminImport\Importers\AdminImporter',
+        'importer' => 'DeFaoite\AdminImport\Importers\AdminImporter',
 
         'sample_paths' => [
             'csv'  => 'data-transfer/samples/csv/admins.csv',
@@ -16149,12 +16149,12 @@ return [
 
 Update your service provider to merge the importer configuration:
 
-**File:** `packages/Webkul/AdminImport/src/Providers/AdminImportServiceProvider.php`
+**File:** `packages/DeFaoite/AdminImport/src/Providers/AdminImportServiceProvider.php`
 
 ```php
 <?php
 
-namespace Webkul\AdminImport\Providers;
+namespace DeFaoite\AdminImport\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -16437,10 +16437,10 @@ Events are dispatched using `Event::dispatch()` with string identifiers:
 ```php{13,19}
 <?php
 
-namespace Webkul\RMA\Http\Controllers;
+namespace DeFaoite\RMA\Http\Controllers;
 
 use Illuminate\Support\Facades\Event;
-use Webkul\Admin\Http\Controllers\Controller;
+use DeFaoite\Admin\Http\Controllers\Controller;
 
 class RMAController extends Controller
 {
@@ -16500,7 +16500,7 @@ In an RMA package, you would have an event listener to handle order events:
 ```php{9-16,18-24}
 <?php
 
-namespace Webkul\RMA\Listeners;
+namespace DeFaoite\RMA\Listeners;
 
 use Illuminate\Support\Facades\Log;
 
@@ -16549,10 +16549,10 @@ In your RMA package, you would register the listeners in the `EventServiceProvid
 ```php{15-24}
 <?php
 
-namespace Webkul\RMA\Providers;
+namespace DeFaoite\RMA\Providers;
 
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
-use Webkul\RMA\Listeners\RMAOrderListener;
+use DeFaoite\RMA\Listeners\RMAOrderListener;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -16582,7 +16582,7 @@ The `[ClassName::class, 'method']` syntax is the modern Laravel approach for reg
 Your package may not have an `EventServiceProvider` initially. If so, you would need to register the `EventServiceProvider` in the package's main service provider:
 
 ```php
-// In Webkul\RMA\Providers\RMAServiceProvider
+// In DeFaoite\RMA\Providers\RMAServiceProvider
 public function register(): void
 {
     $this->app->register(EventServiceProvider::class);
@@ -16635,9 +16635,9 @@ Here's a complete example showing how to integrate RMA functionality using event
 ```php [RMAOrderListener.php]
 <?php
 
-namespace Webkul\RMA\Listeners;
+namespace DeFaoite\RMA\Listeners;
 
-use Webkul\RMA\Services\RMAService;
+use DeFaoite\RMA\Services\RMAService;
 use Illuminate\Support\Facades\Log;
 
 class RMAOrderListener
@@ -16676,10 +16676,10 @@ class RMAOrderListener
 ```php [EventServiceProvider.php]
 <?php
 
-namespace Webkul\RMA\Providers;
+namespace DeFaoite\RMA\Providers;
 
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
-use Webkul\RMA\Listeners\RMAOrderListener;
+use DeFaoite\RMA\Listeners\RMAOrderListener;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -17012,7 +17012,7 @@ Bagisto strategically places render events throughout its blade templates to pro
 
 ### Shop Layout Events
 
-In the main shop layout (`packages/Webkul/Shop/src/Resources/views/components/layouts/index.blade.php`):
+In the main shop layout (`packages/DeFaoite/Shop/src/Resources/views/components/layouts/index.blade.php`):
 
 ```blade{7,11,18,22,25}
 <!DOCTYPE html>
@@ -17117,7 +17117,7 @@ Here's how to set up event listeners for render events:
 ```php{16-23}
 <?php
 
-namespace Webkul\RMA\Providers;
+namespace DeFaoite\RMA\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Event;
@@ -17509,7 +17509,7 @@ php artisan bagisto:install
 | `--skip-env-check` | Skip environment file validation |
 | `--skip-admin-creation` | Skip the admin user creation step |
 
-**Source:** `Webkul\Installer\Console\Commands\Installer`
+**Source:** `DeFaoite\Installer\Console\Commands\Installer`
 
 ## System Information
 
@@ -17527,7 +17527,7 @@ php artisan bagisto:version
 2.4.0-beta6
 ```
 
-**Source:** `Webkul\Core\Console\Commands\BagistoVersion`
+**Source:** `DeFaoite\Core\Console\Commands\BagistoVersion`
 
 ## Product Indexing
 
@@ -17553,7 +17553,7 @@ php artisan indexer:index --mode=full
 | `--type` | `price`, `inventory`, `flat`, `elastic` | Select which indexer(s) to run (repeatable) |
 | `--mode` | `full`, `selective` | Full reindex vs. incremental |
 
-**Source:** `Webkul\Product\Console\Commands\Indexer`
+**Source:** `DeFaoite\Product\Console\Commands\Indexer`
 
 ::: tip When to Reindex
 Run this after bulk product imports, price changes, or if product listings appear out of sync. For production, consider scheduling periodic reindex via cron.
@@ -17567,7 +17567,7 @@ Reindexes catalog rule pricing (discount rules applied to products at the catalo
 php artisan product:price-rule:index
 ```
 
-**Source:** `Webkul\CatalogRule\Console\Commands\PriceRuleIndex`
+**Source:** `DeFaoite\CatalogRule\Console\Commands\PriceRuleIndex`
 
 ## Currency & Exchange Rates
 
@@ -17581,7 +17581,7 @@ php artisan exchange-rate:update
 
 The frequency can be configured via admin panel under **Settings > Exchange Rates**. Supported update intervals: daily, weekly, monthly.
 
-**Source:** `Webkul\Core\Console\Commands\ExchangeRateUpdate`
+**Source:** `DeFaoite\Core\Console\Commands\ExchangeRateUpdate`
 
 ## Marketing
 
@@ -17593,7 +17593,7 @@ Processes pending marketing campaigns and sends emails to subscribed customers.
 php artisan campaign:process
 ```
 
-**Source:** `Webkul\Marketing\Console\Commands\EmailsCommand`
+**Source:** `DeFaoite\Marketing\Console\Commands\EmailsCommand`
 
 ::: tip Scheduling
 This command should be run periodically via cron to process queued campaigns. Add it to your server's crontab or use Laravel's task scheduler.
@@ -17609,7 +17609,7 @@ Processes overdue invoice reminders. Checks for unpaid invoices past their due d
 php artisan invoice:cron
 ```
 
-**Source:** `Webkul\Core\Console\Commands\InvoiceOverdueCron`
+**Source:** `DeFaoite\Core\Console\Commands\InvoiceOverdueCron`
 
 ## Maintenance Mode
 
@@ -17631,7 +17631,7 @@ Brings the application out of maintenance mode and deactivates maintenance on al
 php artisan up
 ```
 
-**Source:** `Webkul\Core\Console\Commands\DownCommand`, `Webkul\Core\Console\Commands\UpCommand`
+**Source:** `DeFaoite\Core\Console\Commands\DownCommand`, `DeFaoite\Core\Console\Commands\UpCommand`
 
 ::: info Channel-Aware Maintenance
 Unlike standard Laravel, Bagisto's maintenance mode updates the `is_maintenance_on` flag on all channel records in the database, allowing the storefront to show maintenance pages per-channel.
@@ -17665,7 +17665,7 @@ php artisan bagisto:translations:check --details
 | `--package=` | Check only a specific package name |
 | `--details` | Show detailed key-level differences |
 
-**Source:** `Webkul\Core\Console\Commands\TranslationsChecker`
+**Source:** `DeFaoite\Core\Console\Commands\TranslationsChecker`
 
 ## Common Laravel Commands Used with Bagisto
 
@@ -17730,10 +17730,10 @@ These jobs update product indices when products are created, updated, or deleted
 
 | Job Class | Package | Purpose |
 |---|---|---|
-| `UpdateCreateInventoryIndex` | `Webkul\Product` | Reindexes inventory levels for given product IDs |
-| `UpdateCreatePriceIndex` | `Webkul\Product` | Reindexes price data for given product IDs |
-| `ElasticSearch\UpdateCreateIndex` | `Webkul\Product` | Updates Elasticsearch indices for products (only runs when Elasticsearch is the configured search engine) |
-| `ElasticSearch\DeleteIndex` | `Webkul\Product` | Removes products from Elasticsearch across all channel/locale combinations |
+| `UpdateCreateInventoryIndex` | `DeFaoite\Product` | Reindexes inventory levels for given product IDs |
+| `UpdateCreatePriceIndex` | `DeFaoite\Product` | Reindexes price data for given product IDs |
+| `ElasticSearch\UpdateCreateIndex` | `DeFaoite\Product` | Updates Elasticsearch indices for products (only runs when Elasticsearch is the configured search engine) |
+| `ElasticSearch\DeleteIndex` | `DeFaoite\Product` | Removes products from Elasticsearch across all channel/locale combinations |
 
 ### Catalog Rule Jobs
 
@@ -17741,9 +17741,9 @@ These jobs recalculate product pricing when catalog rules change:
 
 | Job Class | Package | Purpose |
 |---|---|---|
-| `UpdateCreateCatalogRuleIndex` | `Webkul\CatalogRule` | Reindexes a catalog rule and reprices associated products in batches of 100 |
-| `DeleteCatalogRuleIndex` | `Webkul\CatalogRule` | Reprices products after a catalog rule is deleted |
-| `UpdateCreateProductIndex` | `Webkul\CatalogRule` | Reindexes a single product against all catalog rules |
+| `UpdateCreateCatalogRuleIndex` | `DeFaoite\CatalogRule` | Reindexes a catalog rule and reprices associated products in batches of 100 |
+| `DeleteCatalogRuleIndex` | `DeFaoite\CatalogRule` | Reprices products after a catalog rule is deleted |
+| `UpdateCreateProductIndex` | `DeFaoite\CatalogRule` | Reindexes a single product against all catalog rules |
 
 ### Data Transfer Jobs
 
@@ -17751,19 +17751,19 @@ The data import system uses Laravel's job batching for large imports:
 
 | Job Class | Package | Purpose |
 |---|---|---|
-| `Import\ImportBatch` | `Webkul\DataTransfer` | Processes a batch of import records |
-| `Import\LinkBatch` | `Webkul\DataTransfer` | Links/associates imported records |
-| `Import\IndexBatch` | `Webkul\DataTransfer` | Indexes a batch of imported records |
-| `Import\Linking` | `Webkul\DataTransfer` | Full linking pass after import |
-| `Import\Indexing` | `Webkul\DataTransfer` | Full indexing pass after import |
-| `Import\Completed` | `Webkul\DataTransfer` | Post-import completion tasks |
+| `Import\ImportBatch` | `DeFaoite\DataTransfer` | Processes a batch of import records |
+| `Import\LinkBatch` | `DeFaoite\DataTransfer` | Links/associates imported records |
+| `Import\IndexBatch` | `DeFaoite\DataTransfer` | Indexes a batch of imported records |
+| `Import\Linking` | `DeFaoite\DataTransfer` | Full linking pass after import |
+| `Import\Indexing` | `DeFaoite\DataTransfer` | Full indexing pass after import |
+| `Import\Completed` | `DeFaoite\DataTransfer` | Post-import completion tasks |
 
 ### Other Jobs
 
 | Job Class | Package | Purpose |
 |---|---|---|
-| `UpdateCreateSearchTerm` | `Webkul\Marketing` | Creates/updates search term records with usage counts |
-| `ProcessSitemap` | `Webkul\Sitemap` | Generates XML sitemaps for products, categories, and CMS pages |
+| `UpdateCreateSearchTerm` | `DeFaoite\Marketing` | Creates/updates search term records with usage counts |
+| `ProcessSitemap` | `DeFaoite\Sitemap` | Generates XML sitemaps for products, categories, and CMS pages |
 
 ## Running the Queue Worker
 
@@ -17823,7 +17823,7 @@ Bagisto's scheduled commands should be triggered via your server's crontab. Add 
 To dispatch a job from your custom package, follow the standard Laravel pattern:
 
 ```php
-use Webkul\Product\Jobs\UpdateCreatePriceIndex;
+use DeFaoite\Product\Jobs\UpdateCreatePriceIndex;
 
 // Dispatch to the queue
 UpdateCreatePriceIndex::dispatch($productIds);
@@ -17835,14 +17835,14 @@ UpdateCreatePriceIndex::dispatchSync($productIds);
 When creating custom jobs, place them in your package's `Jobs/` directory:
 
 ```
-packages/Webkul/YourPackage/src/Jobs/
+packages/DeFaoite/YourPackage/src/Jobs/
 └── YourCustomJob.php
 ```
 
 ```php
 <?php
 
-namespace Webkul\YourPackage\Jobs;
+namespace DeFaoite\YourPackage\Jobs;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -17911,7 +17911,7 @@ Bagisto uses the [Prettus L5 Repository](https://github.com/prettus/l5-repositor
 
 ### Automatic Invalidation
 
-The `Webkul\Core\Listeners\CleanCacheRepository` listener automatically invalidates cached repository data when entities are created, updated, or deleted:
+The `DeFaoite\Core\Listeners\CleanCacheRepository` listener automatically invalidates cached repository data when entities are created, updated, or deleted:
 
 ```
 Event: RepositoryEntityCreated → Cache cleared for that repository
@@ -17919,7 +17919,7 @@ Event: RepositoryEntityUpdated → Cache cleared for that repository
 Event: RepositoryEntityDeleted → Cache cleared for that repository
 ```
 
-This is registered in `Webkul\Core\Providers\EventServiceProvider` and runs globally for all repositories.
+This is registered in `DeFaoite\Core\Providers\EventServiceProvider` and runs globally for all repositories.
 
 ::: tip No Manual Cache Clearing Needed
 When you use the repository pattern (as Bagisto recommends), cache invalidation happens automatically. You don't need to manually clear caches after CRUD operations through repositories.
@@ -17927,7 +17927,7 @@ When you use the repository pattern (as Bagisto recommends), cache invalidation 
 
 ## Full Page Cache (FPC)
 
-The FPC package (`Webkul\FPC`) uses [Spatie ResponseCache](https://github.com/spatie/laravel-responsecache) to cache complete HTTP responses for storefront pages.
+The FPC package (`DeFaoite\FPC`) uses [Spatie ResponseCache](https://github.com/spatie/laravel-responsecache) to cache complete HTTP responses for storefront pages.
 
 ### Enabling FPC
 
@@ -17954,7 +17954,7 @@ The `CacheResponse` middleware in the Shop package caches GET responses for gues
 
 ### FPC Event Listeners
 
-These listeners are in `packages/Webkul/FPC/src/Listeners/` and are registered via `Webkul\FPC\Providers\EventServiceProvider`:
+These listeners are in `packages/DeFaoite/FPC/src/Listeners/` and are registered via `DeFaoite\FPC\Providers\EventServiceProvider`:
 
 - `Product.php` — Invalidates product and category URLs
 - `Category.php` — Invalidates category URLs
@@ -18028,7 +18028,7 @@ tests/
 ├── Pest.php              # Global Pest configuration
 └── TestCase.php          # Base test case
 
-packages/Webkul/
+packages/DeFaoite/
 ├── Admin/tests/
 │   └── Feature/          # Admin panel feature tests
 ├── Core/tests/
@@ -18079,23 +18079,23 @@ Available test suites (from `phpunit.xml`):
 
 | Suite Name | Path | Type |
 |---|---|---|
-| Admin Feature Tests | `packages/Webkul/Admin/tests/Feature` | Feature |
-| Core Unit Tests | `packages/Webkul/Core/tests/Unit` | Unit |
-| Customer Unit Tests | `packages/Webkul/Customer/tests/Unit` | Unit |
-| DataGrid Unit Tests | `packages/Webkul/DataGrid/tests/Unit` | Unit |
-| Installer Feature Tests | `packages/Webkul/Installer/tests/Feature` | Feature |
-| PayU Unit Tests | `packages/Webkul/PayU/tests/Unit` | Unit |
-| PayU Feature Tests | `packages/Webkul/PayU/tests/Feature` | Feature |
-| Razorpay Unit Tests | `packages/Webkul/Razorpay/tests/Unit` | Unit |
-| Razorpay Feature Tests | `packages/Webkul/Razorpay/tests/Feature` | Feature |
-| Shop Feature Tests | `packages/Webkul/Shop/tests/Feature` | Feature |
-| Stripe Unit Tests | `packages/Webkul/Stripe/tests/Unit` | Unit |
-| Stripe Feature Tests | `packages/Webkul/Stripe/tests/Feature` | Feature |
+| Admin Feature Tests | `packages/DeFaoite/Admin/tests/Feature` | Feature |
+| Core Unit Tests | `packages/DeFaoite/Core/tests/Unit` | Unit |
+| Customer Unit Tests | `packages/DeFaoite/Customer/tests/Unit` | Unit |
+| DataGrid Unit Tests | `packages/DeFaoite/DataGrid/tests/Unit` | Unit |
+| Installer Feature Tests | `packages/DeFaoite/Installer/tests/Feature` | Feature |
+| PayU Unit Tests | `packages/DeFaoite/PayU/tests/Unit` | Unit |
+| PayU Feature Tests | `packages/DeFaoite/PayU/tests/Feature` | Feature |
+| Razorpay Unit Tests | `packages/DeFaoite/Razorpay/tests/Unit` | Unit |
+| Razorpay Feature Tests | `packages/DeFaoite/Razorpay/tests/Feature` | Feature |
+| Shop Feature Tests | `packages/DeFaoite/Shop/tests/Feature` | Feature |
+| Stripe Unit Tests | `packages/DeFaoite/Stripe/tests/Unit` | Unit |
+| Stripe Feature Tests | `packages/DeFaoite/Stripe/tests/Feature` | Feature |
 
 ### Run a Single Test File
 
 ```bash
-./vendor/bin/pest packages/Webkul/Admin/tests/Feature/ExampleTest.php
+./vendor/bin/pest packages/DeFaoite/Admin/tests/Feature/ExampleTest.php
 ```
 
 ### Filter by Test Name
@@ -18133,9 +18133,9 @@ The global `tests/Pest.php` file configures which base test case each package us
 
 ```php
 uses(Tests\TestCase::class)->in(__DIR__);
-uses(Webkul\Admin\Tests\AdminTestCase::class)->in('../packages/Webkul/Admin/tests');
-uses(Webkul\Shop\Tests\ShopTestCase::class)->in('../packages/Webkul/Shop/tests');
-uses(Webkul\Core\Tests\CoreTestCase::class)->in('../packages/Webkul/Core/tests');
+uses(DeFaoite\Admin\Tests\AdminTestCase::class)->in('../packages/DeFaoite/Admin/tests');
+uses(DeFaoite\Shop\Tests\ShopTestCase::class)->in('../packages/DeFaoite/Shop/tests');
+uses(DeFaoite\Core\Tests\CoreTestCase::class)->in('../packages/DeFaoite/Core/tests');
 // ... and so on for each package
 ```
 
@@ -18146,7 +18146,7 @@ Each package-specific test case extends `Tests\TestCase` and may bootstrap packa
 Bagisto ships with 40+ model factories in `database/factories/` for generating test data. These follow the standard Laravel factory pattern:
 
 ```php
-use Webkul\Product\Models\Product;
+use DeFaoite\Product\Models\Product;
 
 $product = Product::factory()->create();
 ```
@@ -18208,7 +18208,7 @@ When creating tests for a custom package, follow this pattern:
 5. Register the test path in `tests/Pest.php`
 
 ```php
-// packages/Webkul/YourPackage/tests/Feature/ExampleTest.php
+// packages/DeFaoite/YourPackage/tests/Feature/ExampleTest.php
 
 it('can perform expected action', function () {
     // Arrange
@@ -18232,7 +18232,7 @@ Bagisto includes a custom DebugBar integration and supports standard Laravel deb
 
 ## DebugBar
 
-Bagisto ships with a custom DebugBar package (`Webkul\DebugBar`) that extends [barryvdh/laravel-debugbar](https://github.com/barryvdh/laravel-debugbar) with Bagisto-specific insights.
+Bagisto ships with a custom DebugBar package (`DeFaoite\DebugBar`) that extends [barryvdh/laravel-debugbar](https://github.com/barryvdh/laravel-debugbar) with Bagisto-specific insights.
 
 ### Enabling DebugBar
 
@@ -18254,7 +18254,7 @@ This is configured in `App\Providers\AppServiceProvider`, which checks the clien
 
 ### Bagisto Module Collector
 
-The custom **Modules** tab in DebugBar (`Webkul\DebugBar\DataCollector\ModuleCollector`) provides:
+The custom **Modules** tab in DebugBar (`DeFaoite\DebugBar\DataCollector\ModuleCollector`) provides:
 
 - **Model Tracking** — Which Eloquent models were loaded during the request, grouped by Concord module
 - **View Tracking** — Which Blade templates were rendered, with file paths
@@ -18312,7 +18312,7 @@ php artisan route:list --name=shop
 ```
 
 ::: tip Route Organization
-Admin routes are in `packages/Webkul/Admin/src/Routes/` (split into `catalog-routes.php`, `sales-routes.php`, etc.). Shop routes are in `packages/Webkul/Shop/src/Routes/` (split into `store-front-routes.php`, `customer-routes.php`, `checkout-routes.php`).
+Admin routes are in `packages/DeFaoite/Admin/src/Routes/` (split into `catalog-routes.php`, `sales-routes.php`, etc.). Shop routes are in `packages/DeFaoite/Shop/src/Routes/` (split into `store-front-routes.php`, `customer-routes.php`, `checkout-routes.php`).
 :::
 
 ### Debugging Events
@@ -18358,9 +18358,9 @@ Bagisto includes a **Blade Tracer** (documented in [Theme Development > Blade Tr
 
 The Shop middleware group applies these middleware in order:
 
-1. `Webkul\Shop\Http\Middleware\Theme` — Loads the active theme
-2. `Webkul\Shop\Http\Middleware\Locale` — Sets the current locale
-3. `Webkul\Shop\Http\Middleware\Currency` — Sets the current currency
+1. `DeFaoite\Shop\Http\Middleware\Theme` — Loads the active theme
+2. `DeFaoite\Shop\Http\Middleware\Locale` — Sets the current locale
+3. `DeFaoite\Shop\Http\Middleware\Currency` — Sets the current currency
 
 If the shop looks wrong (wrong theme, language, or currency), check these middleware are running and that the channel/locale/currency configuration is correct.
 
@@ -18471,7 +18471,7 @@ Every Bagisto package needs a service provider registered in the root `composer.
 ```json
 "autoload": {
     "psr-4": {
-        "Webkul\\YourPackage\\": "packages/Webkul/YourPackage/src"
+        "DeFaoite\\YourPackage\\": "packages/DeFaoite/YourPackage/src"
     }
 }
 ```
@@ -18484,7 +18484,7 @@ composer dump-autoload
 
 ### Concord Module Registration
 
-Packages must extend `Webkul\Core\Providers\CoreModuleServiceProvider` (or register as a Concord module) to be properly recognized. Check that your service provider is registered in `config/concord.php` or uses Laravel's package discovery.
+Packages must extend `DeFaoite\Core\Providers\CoreModuleServiceProvider` (or register as a Concord module) to be properly recognized. Check that your service provider is registered in `config/concord.php` or uses Laravel's package discovery.
 
 ### Bypassing the Repository Pattern
 
@@ -18562,7 +18562,7 @@ php artisan queue:work
 
 Bagisto uses a custom `bagisto-dynamic-smtp` mail driver that reads SMTP settings from the database (admin panel configuration) rather than `.env` only. If email settings in the admin panel differ from `.env`, the admin panel values take precedence.
 
-This is handled by `Webkul\Core\Providers\DynamicSmtpServiceProvider`.
+This is handled by `DeFaoite\Core\Providers\DynamicSmtpServiceProvider`.
 
 ## Admin Panel
 

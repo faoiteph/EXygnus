@@ -1,8 +1,8 @@
 <?php
 
-use Webkul\Shop\CacheFilters\Large;
-use Webkul\Shop\CacheFilters\Medium;
-use Webkul\Shop\CacheFilters\Small;
+use DeFaoite\Shop\CacheFilters\Large;
+use DeFaoite\Shop\CacheFilters\Medium;
+use DeFaoite\Shop\CacheFilters\Small;
 
 return [
     /*

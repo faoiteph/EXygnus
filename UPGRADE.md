@@ -427,10 +427,10 @@ Bagisto v2.4 has completely removed the `shetabit/visitor` package and all visit
 - Purchase funnel "Total Visits" and "Product Views" metrics
 - All visitor-related translation keys
 - `config/visitor.php` configuration file
-- `Webkul\Core\Visitor`, `Webkul\Core\Models\Visit`, `Webkul\Core\Repositories\VisitRepository`
-- `Webkul\Core\Jobs\UpdateCreateVisitIndex`, `Webkul\Core\Jobs\UpdateCreateVisitableIndex`
-- `Webkul\Core\Listeners\ResponseCacheHit`
-- `Webkul\Admin\Helpers\Reporting\Visitor`
+- `DeFaoite\Core\Visitor`, `DeFaoite\Core\Models\Visit`, `DeFaoite\Core\Repositories\VisitRepository`
+- `DeFaoite\Core\Jobs\UpdateCreateVisitIndex`, `DeFaoite\Core\Jobs\UpdateCreateVisitableIndex`
+- `DeFaoite\Core\Listeners\ResponseCacheHit`
+- `DeFaoite\Admin\Helpers\Reporting\Visitor`
 
 #### Migration Steps
 
@@ -484,8 +484,8 @@ Bagisto v2.4 has migrated the Magic AI feature from direct OpenAI integration to
 
 **v2.4:**
 - Unified `laravel/ai` SDK supporting 8 providers: Anthropic, DeepSeek, Gemini, Groq, Mistral, Ollama, OpenAI, xAI
-- Per-provider model enums in `Webkul\MagicAI\Enums\Models\`
-- Unified entry point via `Webkul\MagicAI\AiProvider`
+- Per-provider model enums in `DeFaoite\MagicAI\Enums\Models\`
+- Unified entry point via `DeFaoite\MagicAI\AiProvider`
 - Configuration via `config/ai.php`
 
 #### Migration Steps
@@ -498,7 +498,7 @@ Bagisto v2.4 has migrated the Magic AI feature from direct OpenAI integration to
 
    ```diff
    - use OpenAI\Client;
-   + use Webkul\MagicAI\AiProvider;
+   + use DeFaoite\MagicAI\AiProvider;
    ```
 
 3. **Update AI configuration** in Admin > Configuration > Magic AI to select your preferred provider and model.

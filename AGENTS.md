@@ -6,7 +6,7 @@
 - `public/themes/*/build/` — Vite build output
 - `storage/` — runtime caches, logs, compiled views
 - `*.hot` files — Vite HMR markers
-- `packages/Webkul/*/src/Resources/assets/` — only edit if working on frontend; always run `npm run build` from the respective package directory after
+- `packages/DeFaoite/*/src/Resources/assets/` — only edit if working on frontend; always run `npm run build` from the respective package directory after
 
 ## Repository Map
 
@@ -23,7 +23,7 @@
 ├── database/
 │   ├── migrations/             # App-level migrations
 │   └── seeders/
-├── packages/Webkul/            # ★ All Bagisto packages live here (40 packages)
+├── packages/DeFaoite/            # ★ All Bagisto packages live here (40 packages)
 │   ├── Admin/                  # Admin panel (controllers, views, DataGrids, reporting, e2e-pw tests)
 │   ├── Shop/                   # Customer storefront (controllers, views, e2e-pw tests)
 │   ├── Core/                   # Helpers, models, jobs, listeners, exchange rates
@@ -78,7 +78,7 @@
 
 ## Package Internal Structure
 
-Every package in `packages/Webkul/{Name}/src/` follows:
+Every package in `packages/DeFaoite/{Name}/src/` follows:
 
 ```
 ├── Config/                     # admin-menu.php, system.php, acl.php, carriers.php, etc.
@@ -87,7 +87,7 @@ Every package in `packages/Webkul/{Name}/src/` follows:
 │   ├── Migrations/
 │   ├── Factories/
 │   └── Seeders/
-├── DataGrids/                  # DataGrid classes (extends Webkul\DataGrid\DataGrid)
+├── DataGrids/                  # DataGrid classes (extends DeFaoite\DataGrid\DataGrid)
 ├── Http/
 │   ├── Controllers/
 │   ├── Middleware/
@@ -113,7 +113,7 @@ Every package in `packages/Webkul/{Name}/src/` follows:
 ## Key Architecture Patterns
 
 - **Concord Module System**: Models registered in each package's `ModuleServiceProvider`, wired via `config/concord.php`. Every data entity has a Contract (interface), Model, and Proxy (three-component system).
-- **Repository Pattern**: All DB access through repositories extending `Webkul\Core\Eloquent\Repository` (Prettus L5). Repository `model()` returns the Contract class, not the Model.
+- **Repository Pattern**: All DB access through repositories extending `DeFaoite\Core\Eloquent\Repository` (Prettus L5). Repository `model()` returns the Contract class, not the Model.
 - **Path Repositories**: `composer.json` uses `"type": "path"` for `packages/*/*`, packages are symlinked — no `composer update` needed for package code changes. Run `composer dump-autoload` after adding new packages.
 - **Service Providers**: Each package has a main ServiceProvider (routes, views, translations, migrations, config) registered in `bootstrap/providers.php`.
 - **Dual Route Files**: Admin routes (`['web', 'admin']` middleware, `config('app.admin_url')` prefix) and Shop routes (`['web', 'locale', 'theme', 'currency']` middleware).
@@ -126,15 +126,15 @@ Every package in `packages/Webkul/{Name}/src/` follows:
 # Pest (PHP)
 php artisan test --compact                              # Run all tests
 php artisan test --compact --filter=testName             # Run specific test
-php artisan test --compact packages/Webkul/Admin/tests   # Run package tests
+php artisan test --compact packages/DeFaoite/Admin/tests   # Run package tests
 
-# Playwright (E2E) — Admin (run from packages/Webkul/Admin)
-cd packages/Webkul/Admin && npm install && npx playwright install --with-deps chromium
-cd packages/Webkul/Admin && npx playwright test --config=tests/e2e-pw/playwright.config.ts
+# Playwright (E2E) — Admin (run from packages/DeFaoite/Admin)
+cd packages/DeFaoite/Admin && npm install && npx playwright install --with-deps chromium
+cd packages/DeFaoite/Admin && npx playwright test --config=tests/e2e-pw/playwright.config.ts
 
-# Playwright (E2E) — Shop (run from packages/Webkul/Shop)
-cd packages/Webkul/Shop && npm install && npx playwright install --with-deps chromium
-cd packages/Webkul/Shop && npx playwright test --config=tests/e2e-pw/playwright.config.ts
+# Playwright (E2E) — Shop (run from packages/DeFaoite/Shop)
+cd packages/DeFaoite/Shop && npm install && npx playwright install --with-deps chromium
+cd packages/DeFaoite/Shop && npx playwright test --config=tests/e2e-pw/playwright.config.ts
 ```
 
 ### Code Style
@@ -146,10 +146,10 @@ vendor/bin/pint --test           # Check only (CI uses this)
 
 ### Frontend (run from within each package: Admin, Shop, or Installer)
 ```bash
-cd packages/Webkul/Admin && npm install && npm run build    # Admin production build
-cd packages/Webkul/Shop && npm install && npm run build     # Shop production build
-cd packages/Webkul/Admin && npm run dev                     # Admin dev server with HMR
-cd packages/Webkul/Shop && npm run dev                      # Shop dev server with HMR
+cd packages/DeFaoite/Admin && npm install && npm run build    # Admin production build
+cd packages/DeFaoite/Shop && npm install && npm run build     # Shop production build
+cd packages/DeFaoite/Admin && npm run dev                     # Admin dev server with HMR
+cd packages/DeFaoite/Shop && npm run dev                      # Shop dev server with HMR
 ```
 
 ### Database

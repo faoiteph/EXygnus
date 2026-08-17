@@ -1,17 +1,17 @@
 <?php
 
-use Webkul\Admin\Tests\AdminTestCase;
-use Webkul\Core\Tests\CoreTestCase;
-use Webkul\Customer\Tests\CustomerTestCase;
-use Webkul\DataGrid\Tests\DataGridTestCase;
-use Webkul\EUWithdrawal\Tests\EUWithdrawalTestCase;
-use Webkul\Installer\Tests\InstallerTestCase;
-use Webkul\PayGlocal\Tests\PayGlocalTestCase;
-use Webkul\Payment\Tests\PaymentTestCase;
-use Webkul\PayU\Tests\PayUTestCase;
-use Webkul\Razorpay\Tests\RazorpayTestCase;
-use Webkul\Shop\Tests\ShopTestCase;
-use Webkul\Stripe\Tests\StripeTestCase;
+use DeFaoite\Admin\Tests\AdminTestCase;
+use DeFaoite\Core\Tests\CoreTestCase;
+use DeFaoite\Customer\Tests\CustomerTestCase;
+use DeFaoite\DataGrid\Tests\DataGridTestCase;
+use DeFaoite\EUWithdrawal\Tests\EUWithdrawalTestCase;
+use DeFaoite\Installer\Tests\InstallerTestCase;
+use DeFaoite\PayGlocal\Tests\PayGlocalTestCase;
+use DeFaoite\Payment\Tests\PaymentTestCase;
+use DeFaoite\PayU\Tests\PayUTestCase;
+use DeFaoite\Razorpay\Tests\RazorpayTestCase;
+use DeFaoite\Shop\Tests\ShopTestCase;
+use DeFaoite\Stripe\Tests\StripeTestCase;
 
 ini_set('memory_limit', '1024M');
 
@@ -26,18 +26,18 @@ ini_set('memory_limit', '1024M');
 |
 */
 
-uses(AdminTestCase::class)->in('../packages/Webkul/Admin/tests');
-uses(CoreTestCase::class)->in('../packages/Webkul/Core/tests');
-uses(CustomerTestCase::class)->in('../packages/Webkul/Customer/tests');
-uses(DataGridTestCase::class)->in('../packages/Webkul/DataGrid/tests');
-uses(EUWithdrawalTestCase::class)->in('../packages/Webkul/EUWithdrawal/tests');
-uses(InstallerTestCase::class)->in('../packages/Webkul/Installer/tests');
-uses(PayGlocalTestCase::class)->in('../packages/Webkul/PayGlocal/tests');
-uses(PaymentTestCase::class)->in('../packages/Webkul/Payment/tests');
-uses(PayUTestCase::class)->in('../packages/Webkul/PayU/tests');
-uses(RazorpayTestCase::class)->in('../packages/Webkul/Razorpay/tests');
-uses(ShopTestCase::class)->in('../packages/Webkul/Shop/tests');
-uses(StripeTestCase::class)->in('../packages/Webkul/Stripe/tests');
+uses(AdminTestCase::class)->in('../packages/DeFaoite/Admin/tests');
+uses(CoreTestCase::class)->in('../packages/DeFaoite/Core/tests');
+uses(CustomerTestCase::class)->in('../packages/DeFaoite/Customer/tests');
+uses(DataGridTestCase::class)->in('../packages/DeFaoite/DataGrid/tests');
+uses(EUWithdrawalTestCase::class)->in('../packages/DeFaoite/EUWithdrawal/tests');
+uses(InstallerTestCase::class)->in('../packages/DeFaoite/Installer/tests');
+uses(PayGlocalTestCase::class)->in('../packages/DeFaoite/PayGlocal/tests');
+uses(PaymentTestCase::class)->in('../packages/DeFaoite/Payment/tests');
+uses(PayUTestCase::class)->in('../packages/DeFaoite/PayU/tests');
+uses(RazorpayTestCase::class)->in('../packages/DeFaoite/Razorpay/tests');
+uses(ShopTestCase::class)->in('../packages/DeFaoite/Shop/tests');
+uses(StripeTestCase::class)->in('../packages/DeFaoite/Stripe/tests');
 
 /*
 |--------------------------------------------------------------------------

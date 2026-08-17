@@ -1,7 +1,7 @@
 <?php
 
 use Stevebauman\Purify\Cache\CacheDefinitionCache;
-use Webkul\Core\Purifier\Definitions\ExtendedHtml5Definition;
+use DeFaoite\Core\Purifier\Definitions\ExtendedHtml5Definition;
 
 return [
 

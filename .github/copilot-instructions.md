@@ -12,7 +12,7 @@ This is a **Bagisto** e-commerce platform - an open-source Laravel-based e-comme
 
 ### Modular Package Structure
 
-Bagisto follows a modular, package-based architecture. All core features are organized into Laravel packages located in `packages/Webkul/`.
+Bagisto follows a modular, package-based architecture. All core features are organized into Laravel packages located in `packages/DeFaoite/`.
 
 ### Available Packages
 
@@ -102,7 +102,7 @@ Models use proxy classes (e.g., `ProductProxy`) for extensibility.
 
 ### Naming Conventions
 
-- **Namespace**: `Webkul\<PackageName>`
+- **Namespace**: `DeFaoite\<PackageName>`
 - **Routes**: Separate `admin-routes.php` and `shop-routes.php`
 - **Views**: Organized in `admin/` and `shop/` folders
 - **Models**: Singular name (e.g., `Product`, `Category`)
@@ -122,23 +122,23 @@ Models use proxy classes (e.g., `ProductProxy`) for extensibility.
 Use Bagisto Package Generator:
 ```bash
 composer require bagisto/bagisto-package-generator
-php artisan package:make Webkul/<PackageName>
+php artisan package:make DeFaoite/<PackageName>
 ```
 
 Or manually create:
-1. Create `packages/Webkul/<PackageName>/src/`
+1. Create `packages/DeFaoite/<PackageName>/src/`
 2. Create Service Provider in `src/Providers/`
 3. Update composer.json and register provider
 
 ## Working with Features
 
 ### Shipping Methods
-- Extend `Webkul\Shipping\Carriers\AbstractCarrier`
+- Extend `DeFaoite\Shipping\Carriers\AbstractCarrier`
 - Configure in `Config/system.php`
 - Register in service provider
 
 ### Payment Methods
-- Extend `Webkul\Payment\Payment\AbstractPayment`
+- Extend `DeFaoite\Payment\Payment\AbstractPayment`
 - Configure in `Config/system.php`
 
 ### Product Types
@@ -146,7 +146,7 @@ Or manually create:
 - Configure in `Config/product_types.php`
 
 ### Themes
-- Create in `packages/Webkul/<Theme>/`
+- Create in `packages/DeFaoite/<Theme>/`
 - Use Vite for asset bundling — run `npm install` and `npm run build` from within the respective package directory (Admin, Shop, or Installer), not from the project root
 - Follow Blade templating conventions
 
@@ -163,21 +163,21 @@ Or manually create:
 ```bash
 vendor/bin/pest                                         # Run all tests
 vendor/bin/pest --testsuite="Admin Feature Test"        # Run a specific test suite
-vendor/bin/pest packages/Webkul/Admin/tests/Feature     # Run tests in a directory
+vendor/bin/pest packages/DeFaoite/Admin/tests/Feature     # Run tests in a directory
 vendor/bin/pest --filter="test name"                    # Run a single test by name
 ```
-Tests use **Pest 3** with package-specific TestCase classes. Each package's tests live in `packages/Webkul/<Package>/tests/`.
+Tests use **Pest 3** with package-specific TestCase classes. Each package's tests live in `packages/DeFaoite/<Package>/tests/`.
 
 ### E2E Tests (Playwright)
 Run from within each package directory:
 ```bash
 # Admin
-cd packages/Webkul/Admin && npm install && npx playwright install --with-deps chromium
-cd packages/Webkul/Admin && npx playwright test --config=tests/e2e-pw/playwright.config.ts
+cd packages/DeFaoite/Admin && npm install && npx playwright install --with-deps chromium
+cd packages/DeFaoite/Admin && npx playwright test --config=tests/e2e-pw/playwright.config.ts
 
 # Shop
-cd packages/Webkul/Shop && npm install && npx playwright install --with-deps chromium
-cd packages/Webkul/Shop && npx playwright test --config=tests/e2e-pw/playwright.config.ts
+cd packages/DeFaoite/Shop && npm install && npx playwright install --with-deps chromium
+cd packages/DeFaoite/Shop && npx playwright test --config=tests/e2e-pw/playwright.config.ts
 ```
 Tests require a running Laravel server (`php artisan serve`) and seeded database.
 

@@ -1,7 +1,7 @@
 <?php
 
-use Webkul\Customer\Models\Customer;
-use Webkul\User\Models\Admin;
+use DeFaoite\Customer\Models\Customer;
+use DeFaoite\User\Models\Admin;
 
 return [
 
