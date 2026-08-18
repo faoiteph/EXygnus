@@ -1002,7 +1002,7 @@ return [
             'title' => 'EXygnus ස්තුරාකුල',
             'turkish' => 'තුර්කි',
             'ukrainian' => 'යුක්රේනියානු',
-            'webkul' => 'වෙබ්කුල්',
+            'webkul' => 'ඩි ෆාඕයිට්',
         ],
     ],
 ];
