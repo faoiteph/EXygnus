@@ -5,7 +5,7 @@ return [
         'forgot-password' => [
             'already-sent' => 'از قبل بازنشانی رمز عبور ایمیل ارسال شده است.',
             'back' => 'بازگشت به صفحه ورود؟',
-            'bagisto' => 'بگیستو',
+            'bagisto' => 'اگزیگنوس',
             'email' => 'ایمیل',
             'email-not-exist' => 'ما نمی‌توانیم کاربری با این آدرس ایمیل پیدا کنیم.',
             'footer' => '© حق تألیف 2010 - :current_year، نرم‌افزار وب‌کول (ثبت شده در هند). تمامی حقوق محفوظ است.',
@@ -19,7 +19,7 @@ return [
 
         'reset-password' => [
             'back-link-title' => 'بازگشت به صفحه ورود',
-            'bagisto' => 'بگیستو',
+            'bagisto' => 'اگزیگنوس',
             'confirm-password' => 'تأیید رمز عبور',
             'email' => 'ایمیل ثبت‌شده',
             'footer' => '© حق تألیف 2010 - :current_year، نرم‌افزار وب‌کول (ثبت شده در هند). تمامی حقوق محفوظ است.',
@@ -29,7 +29,7 @@ return [
         ],
 
         'login-form' => [
-            'bagisto' => 'بگیستو',
+            'bagisto' => 'اگزیگنوس',
             'button-title' => 'ورود',
             'create-your-account' => 'حساب کاربری خود را ایجاد کنید',
             'email' => 'ایمیل',
@@ -49,7 +49,7 @@ return [
 
         'signup-form' => [
             'account-exists' => 'قبلاً حساب دارید؟',
-            'bagisto' => 'بگیستو',
+            'bagisto' => 'اگزیگنوس',
             'button-title' => 'ثبت نام',
             'click-here' => 'اینجا کلیک کنید',
             'confirm-pass' => 'تأیید رمز عبور',
@@ -625,7 +625,7 @@ return [
                 'customer-service' => 'خدمات مشتری',
                 'email' => 'ایمیل',
                 'footer-content' => 'محتوای فوتر',
-                'footer-text' => '© حق تکثیر 2010 - :current_year ، نرم‌افزار Webkul (ثبت‌شده در هند). تمام حقوق محفوظ است.',
+                'footer-text' => '© حق تکثیر 2010 - :current_year ، نرم‌افزار DeFaoite (ثبت‌شده در هند). تمام حقوق محفوظ است.',
                 'locale' => 'زبان و محل',
                 'newsletter-text' => 'برای دریافت خبرنامه‌ی جذاب ما آماده شوید!',
                 'order-return' => 'سفارش و بازگشت',
@@ -1078,7 +1078,7 @@ return [
             'suspended-account-message' => 'حساب کاربری شما مسدود شده است.',
 
             'index' => [
-                'bagisto' => 'بگیستو',
+                'bagisto' => 'اگزیگنوس',
                 'cart' => 'سبد خرید',
                 'continue-shopping' => 'ادامه خرید',
                 'empty-product' => 'شما هیچ محصولی در سبد خرید خود ندارید.',

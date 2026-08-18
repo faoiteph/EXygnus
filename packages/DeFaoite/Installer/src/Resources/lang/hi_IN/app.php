@@ -806,7 +806,7 @@ return [
         'index' => [
             'create-administrator' => [
                 'admin' => 'व्यवस्थापक',
-                'bagisto' => 'बैगिस्टो',
+                'bagisto' => 'एक्सिग्नस',
                 'confirm-password' => 'पासवर्ड की पुष्टि करें',
                 'email' => 'ईमेल',
                 'email-address' => 'admin@example.com',
@@ -821,7 +821,7 @@ return [
                 'application-name' => 'एप्लिकेशन का नाम',
                 'argentine-peso' => 'अर्जेंटीनी पेसो (ARS)',
                 'australian-dollar' => 'ऑस्ट्रेलियाई डॉलर (AUD)',
-                'bagisto' => 'बैगिस्टो',
+                'bagisto' => 'एक्सिग्नस',
                 'bangladeshi-taka' => 'बांगलादेशी टाका (BDT)',
                 'bahraini-dinar' => 'बहरीन दीनार (BHD)',
                 'brazilian-real' => 'ब्राज़ीली रियाल (BRL)',
@@ -914,25 +914,25 @@ return [
             ],
 
             'installation-processing' => [
-                'bagisto' => 'बैगिस्टो स्थापना',
+                'bagisto' => 'एक्सिग्नस स्थापना',
                 'bagisto-info' => 'डेटाबेस तालिकाएँ बनाने का प्रक्रियाण, इसमें कुछ क्षण लग सकते हैं',
                 'title' => 'स्थापना',
             ],
 
             'installation-completed' => [
                 'admin-panel' => 'व्यवस्थापक पैनल',
-                'bagisto-forums' => 'Bagisto फ़ोरम',
+                'bagisto-forums' => 'EXygnus फ़ोरम',
                 'customer-panel' => 'ग्राहक पैनल',
-                'explore-bagisto-extensions' => 'Bagisto एक्सटेंशन अन्वेषण करें',
+                'explore-bagisto-extensions' => 'EXygnus एक्सटेंशन अन्वेषण करें',
                 'title' => 'स्थापना पूर्ण',
-                'title-info' => 'बैगिस्टो को आपके सिस्टम पर सफलतापूर्वक स्थापित किया गया है।',
+                'title-info' => 'एक्सिग्नस को आपके सिस्टम पर सफलतापूर्वक स्थापित किया गया है।',
             ],
 
             'ready-for-installation' => [
                 'create-database-tables' => 'डेटाबेस तालिकाएँ बनाएँ',
                 'drop-existing-tables' => 'मौजूदा किसी भी त को हटाएं',
                 'install' => 'स्थापना',
-                'install-info' => 'स्थापना के लिए Bagisto',
+                'install-info' => 'स्थापना के लिए EXygnus',
                 'install-info-button' => 'नीचे दिए गए बटन पर क्लिक करें',
                 'populate-database-tables' => 'डेटाबेस तालिकाओं को पॉप्युलेट करें',
                 'start-installation' => 'स्थापना शुरू करें',
@@ -944,8 +944,8 @@ return [
                 'locale' => 'स्थान',
                 'main' => 'शुरू',
                 'select-locale' => 'स्थान चुनें',
-                'title' => 'आपका Bagisto स्थापित करें',
-                'welcome-title' => 'Bagisto में आपका स्वागत है।',
+                'title' => 'आपका EXygnus स्थापित करें',
+                'welcome-title' => 'EXygnus में आपका स्वागत है।',
             ],
 
             'server-requirements' => [
@@ -973,9 +973,9 @@ return [
 
             'arabic' => 'अरबी',
             'back' => 'वापस',
-            'bagisto' => 'बैगिस्टो',
+            'bagisto' => 'एक्सिग्नस',
             'bagisto-info' => 'एक सामुदायिक परियोजना द्वारा',
-            'bagisto-logo' => 'बैगिस्टो लोगो',
+            'bagisto-logo' => 'एक्सिग्नस लोगो',
             'bengali' => 'बंगाली',
             'catalan' => 'कातालान',
             'chinese' => 'चीनी',
@@ -987,7 +987,7 @@ return [
             'hebrew' => 'हिब्रू',
             'hindi' => 'हिंदी',
             'indonesian' => 'इंडोनेशियाई',
-            'installation-description' => 'बैगिस्टो स्थापना आमतौर पर कई कदमों में होती है। यहां बैगिस्टो के लिए स्थापना प्रक्रिया की सामान्य रूपरेखा है',
+            'installation-description' => 'एक्सिग्नस स्थापना आमतौर पर कई कदमों में होती है। यहां एक्सिग्नस के लिए स्थापना प्रक्रिया की सामान्य रूपरेखा है',
             'installation-info' => 'हमें यहाँ आपको खुश देखकर अच्छा लग रहा है!',
             'installation-title' => 'स्थापना में आपका स्वागत है',
             'italian' => 'इतालवी',
@@ -999,7 +999,7 @@ return [
             'russian' => 'रूसी',
             'sinhala' => 'सिंहला',
             'spanish' => 'स्पेनिश',
-            'title' => 'बैगिस्टो स्थापक',
+            'title' => 'एक्सिग्नस स्थापक',
             'turkish' => 'तुर्की',
             'ukrainian' => 'यूक्रेनी',
             'webkul' => 'वेबकुल',

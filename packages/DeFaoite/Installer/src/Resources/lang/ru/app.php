@@ -806,7 +806,7 @@ return [
         'index' => [
             'create-administrator' => [
                 'admin' => 'Администратор',
-                'bagisto' => 'Bagisto',
+                'bagisto' => 'EXygnus',
                 'confirm-password' => 'Подтвердите пароль',
                 'email' => 'Email',
                 'email-address' => 'admin@example.com',
@@ -821,7 +821,7 @@ return [
                 'application-name' => 'Название приложения',
                 'argentine-peso' => 'Аргентинское песо (ARS)',
                 'australian-dollar' => 'Австралийский доллар (AUD)',
-                'bagisto' => 'Bagisto',
+                'bagisto' => 'EXygnus',
                 'bangladeshi-taka' => 'Бангладешская така (BDT)',
                 'bahraini-dinar' => 'Бахрейнский динар (BHD)',
                 'brazilian-real' => 'Бразильский реал (BRL)',
@@ -914,25 +914,25 @@ return [
             ],
 
             'installation-processing' => [
-                'bagisto' => 'Установка Bagisto',
+                'bagisto' => 'Установка EXygnus',
                 'bagisto-info' => 'Создание таблиц в базе данных может занять несколько моментов',
                 'title' => 'Установка',
             ],
 
             'installation-completed' => [
                 'admin-panel' => 'Панель администратора',
-                'bagisto-forums' => 'Форум Bagisto',
+                'bagisto-forums' => 'Форум EXygnus',
                 'customer-panel' => 'Панель клиента',
-                'explore-bagisto-extensions' => 'Изучите расширения Bagisto',
+                'explore-bagisto-extensions' => 'Изучите расширения EXygnus',
                 'title' => 'Установка завершена',
-                'title-info' => 'Bagisto успешно установлен на вашей системе.',
+                'title-info' => 'EXygnus успешно установлен на вашей системе.',
             ],
 
             'ready-for-installation' => [
                 'create-database-tables' => 'Создать таблицы баз данных',
                 'drop-existing-tables' => 'Удалить существующие таблицы',
                 'install' => 'Установка',
-                'install-info' => 'Bagisto для установки',
+                'install-info' => 'EXygnus для установки',
                 'install-info-button' => 'Нажмите кнопку ниже, чтобы',
                 'populate-database-tables' => 'Заполнить таблицы базы данных',
                 'start-installation' => 'Начать установку',
@@ -944,8 +944,8 @@ return [
                 'locale' => 'Локаль',
                 'main' => 'Начало',
                 'select-locale' => 'Выбрать локаль',
-                'title' => 'Ваша установка Bagisto',
-                'welcome-title' => 'Добро пожаловать в Bagisto',
+                'title' => 'Ваша установка EXygnus',
+                'welcome-title' => 'Добро пожаловать в EXygnus',
             ],
 
             'server-requirements' => [
@@ -973,9 +973,9 @@ return [
 
             'arabic' => 'Арабский',
             'back' => 'Назад',
-            'bagisto' => 'Bagisto',
+            'bagisto' => 'EXygnus',
             'bagisto-info' => 'Проект сообщества от',
-            'bagisto-logo' => 'Логотип Bagisto',
+            'bagisto-logo' => 'Логотип EXygnus',
             'bengali' => 'Бенгальский',
             'catalan' => 'Каталонский',
             'chinese' => 'Китайский',
@@ -987,7 +987,7 @@ return [
             'hebrew' => 'Иврит',
             'hindi' => 'Хинди',
             'indonesian' => 'Индонезийский',
-            'installation-description' => 'Установка Bagisto обычно включает несколько шагов. Вот общий обзор процесса установки Bagisto',
+            'installation-description' => 'Установка EXygnus обычно включает несколько шагов. Вот общий обзор процесса установки EXygnus',
             'installation-info' => 'Мы рады видеть вас здесь!',
             'installation-title' => 'Добро пожаловать к установке',
             'italian' => 'Итальянский',
@@ -999,10 +999,10 @@ return [
             'russian' => 'Русский',
             'sinhala' => 'Сингальский',
             'spanish' => 'Испанский',
-            'title' => 'Установщик Bagisto',
+            'title' => 'Установщик EXygnus',
             'turkish' => 'Турецкий',
             'ukrainian' => 'Украинский',
-            'webkul' => 'Webkul',
+            'webkul' => 'DeFaoite',
         ],
     ],
 ];

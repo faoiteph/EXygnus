@@ -806,7 +806,7 @@ return [
         'index' => [
             'create-administrator' => [
                 'admin' => 'Адміністратор',
-                'bagisto' => 'Bagisto',
+                'bagisto' => 'EXygnus',
                 'confirm-password' => 'Підтвердити пароль',
                 'email' => 'Електронна пошта',
                 'email-address' => 'admin@example.com',
@@ -821,7 +821,7 @@ return [
                 'application-name' => 'Назва програми',
                 'argentine-peso' => 'Аргентинський песо (ARS)',
                 'australian-dollar' => 'Австралійський долар (AUD)',
-                'bagisto' => 'Bagisto',
+                'bagisto' => 'EXygnus',
                 'bangladeshi-taka' => 'Бангладеська така (BDT)',
                 'bahraini-dinar' => 'бахрейнський динар (BHD)',
                 'brazilian-real' => 'Бразильський реал (BRL)',
@@ -914,25 +914,25 @@ return [
             ],
 
             'installation-processing' => [
-                'bagisto' => 'Установка Bagisto',
+                'bagisto' => 'Установка EXygnus',
                 'bagisto-info' => 'Створення таблиць бази даних, це може зайняти кілька хвилин',
                 'title' => 'Установка',
             ],
 
             'installation-completed' => [
                 'admin-panel' => 'Панель адміністратора',
-                'bagisto-forums' => 'Форум Bagisto',
+                'bagisto-forums' => 'Форум EXygnus',
                 'customer-panel' => 'Панель клієнта',
-                'explore-bagisto-extensions' => 'Досліджуйте розширення Bagisto',
+                'explore-bagisto-extensions' => 'Досліджуйте розширення EXygnus',
                 'title' => 'Установка завершена',
-                'title-info' => 'Bagisto успішно встановлено на вашій системі.',
+                'title-info' => 'EXygnus успішно встановлено на вашій системі.',
             ],
 
             'ready-for-installation' => [
                 'create-database-tables' => 'Створити таблиці бази даних',
                 'drop-existing-tables' => 'Видалити існуючі таблиці',
                 'install' => 'Встановлення',
-                'install-info' => 'Bagisto для встановлення',
+                'install-info' => 'EXygnus для встановлення',
                 'install-info-button' => 'Натисніть кнопку нижче, щоб',
                 'populate-database-tables' => 'Заповнення таблиць бази даних',
                 'start-installation' => 'Почати встановлення',
@@ -944,8 +944,8 @@ return [
                 'locale' => 'Локаль',
                 'main' => 'Початок',
                 'select-locale' => 'Вибір локалі',
-                'title' => 'Ваша установка Bagisto',
-                'welcome-title' => 'Ласкаво просимо до Bagisto',
+                'title' => 'Ваша установка EXygnus',
+                'welcome-title' => 'Ласкаво просимо до EXygnus',
             ],
 
             'server-requirements' => [
@@ -973,9 +973,9 @@ return [
 
             'arabic' => 'Арабська',
             'back' => 'Назад',
-            'bagisto' => 'Bagisto',
-            'bagisto-info' => 'Спільний проект спільноти від Webkul',
-            'bagisto-logo' => 'Логотип Bagisto',
+            'bagisto' => 'EXygnus',
+            'bagisto-info' => 'Спільний проект спільноти від DeFaoite',
+            'bagisto-logo' => 'Логотип EXygnus',
             'bengali' => 'Бенгальська',
             'catalan' => 'Каталонська',
             'chinese' => 'Китайська',
@@ -987,9 +987,9 @@ return [
             'hebrew' => 'Іврит',
             'hindi' => 'Гінді',
             'indonesian' => 'Індонезійська',
-            'installation-description' => 'Встановлення Bagisto зазвичай включає кілька етапів. Ось загальний огляд процесу встановлення для Bagisto',
+            'installation-description' => 'Встановлення EXygnus зазвичай включає кілька етапів. Ось загальний огляд процесу встановлення для EXygnus',
             'installation-info' => 'Ми раді вас бачити тут!',
-            'installation-title' => 'Ласкаво просимо до встановлення Bagisto',
+            'installation-title' => 'Ласкаво просимо до встановлення EXygnus',
             'italian' => 'Італійська',
             'japanese' => 'Японська',
             'persian' => 'Перська',
@@ -999,10 +999,10 @@ return [
             'russian' => 'Російська',
             'sinhala' => 'Сингальська',
             'spanish' => 'Іспанська',
-            'title' => 'Установник Bagisto',
+            'title' => 'Установник EXygnus',
             'turkish' => 'Турецька',
             'ukrainian' => 'Українська',
-            'webkul' => 'Webkul',
+            'webkul' => 'DeFaoite',
         ],
     ],
 ];

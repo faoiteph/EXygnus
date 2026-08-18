@@ -6,7 +6,7 @@ return [
             'email' => 'Email Address',
             'forget-password-link' => 'Forget Password ?',
             'password' => 'Password',
-            'powered-by-description' => 'Powered by :bagisto, an open-source project by :webkul.',
+            'powered-by-description' => 'Powered by :exygnus, an open-source project by :faoite.',
             'submit-btn' => 'Sign In',
             'title' => 'Sign In',
         ],
@@ -16,7 +16,7 @@ return [
                 'email' => 'Registered Email',
                 'email-not-exist' => 'Email Not Exists',
                 'page-title' => 'Forget Password',
-                'powered-by-description' => 'Powered by :bagisto, an open-source project by :webkul.',
+                'powered-by-description' => 'Powered by :exygnus, an open-source project by :faoite.',
                 'reset-link-sent' => 'Reset Password link sent',
                 'sign-in-link' => 'Back to Sign In ?',
                 'submit-btn' => 'Reset',
@@ -29,7 +29,7 @@ return [
             'confirm-password' => 'Confirm Password',
             'email' => 'Registered Email',
             'password' => 'Password',
-            'powered-by-description' => 'Powered by :bagisto, an open-source project by :webkul.',
+            'powered-by-description' => 'Powered by :exygnus, an open-source project by :faoite.',
             'submit-btn' => 'Reset Password',
             'title' => 'Reset Password',
         ],
@@ -124,13 +124,13 @@ return [
     'help' => [
         'index' => [
             'title' => 'Ajutor și resurse',
-            'description' => 'Tot ce ai nevoie pentru a profita la maximum de Bagisto — găzduire, asistență și servicii profesionale, plus extensii și documentație pentru dezvoltatori.',
+            'description' => 'Tot ce ai nevoie pentru a profita la maximum de EXygnus — găzduire, asistență și servicii profesionale, plus extensii și documentație pentru dezvoltatori.',
 
             'services-title' => 'Servicii',
             'resources-title' => 'Resurse și documentație',
 
             'cloud-hosting' => 'Găzduire în cloud',
-            'cloud-hosting-info' => 'Găzduire în cloud gestionată și rentabilă — lansează-ți magazinul Bagisto în cloud în câteva minute, complet optimizat și scalabil.',
+            'cloud-hosting-info' => 'Găzduire în cloud gestionată și rentabilă — lansează-ți magazinul EXygnus în cloud în câteva minute, complet optimizat și scalabil.',
 
             'support' => 'Asistență și mentenanță',
             'support-info' => 'Asistență tehnică dedicată și planuri de mentenanță continuă pentru a-ți menține magazinul securizat, actualizat și funcțional.',
@@ -139,22 +139,22 @@ return [
             'paid-services-info' => 'Ajutor de la experți pentru integrarea modulelor, personalizare, migrarea datelor, actualizări de versiune și dezvoltare la comandă.',
 
             'extensions' => 'Extensii',
-            'extensions-info' => 'Explorează suplimente oficiale și ale comunității pentru a extinde Bagisto cu noi conectori, canale și funcționalități.',
+            'extensions-info' => 'Explorează suplimente oficiale și ale comunității pentru a extinde EXygnus cu noi conectori, canale și funcționalități.',
 
             'docs' => 'Documentație dev și bloguri',
             'docs-info' => 'Ghiduri pentru dezvoltatori, tutoriale și cele mai recente articole care te ajută să construiești, să configurezi și să rămâi la curent.',
 
             'api-docs' => 'Documentație API',
-            'api-docs-info' => 'Referință completă pentru API-urile REST și GraphQL cu endpoint-uri, autentificare și exemple pentru a integra Bagisto cu sistemul tău.',
+            'api-docs-info' => 'Referință completă pentru API-urile REST și GraphQL cu endpoint-uri, autentificare și exemple pentru a integra EXygnus cu sistemul tău.',
 
             'community' => 'Forumul comunității',
-            'community-info' => 'Pune întrebări, împărtășește idei și conectează-te cu mii de dezvoltatori și comercianți Bagisto din întreaga lume.',
+            'community-info' => 'Pune întrebări, împărtășește idei și conectează-te cu mii de dezvoltatori și comercianți EXygnus din întreaga lume.',
 
             'video-tutorials' => 'Tutoriale video',
             'video-tutorials-info' => 'Ghiduri video pas cu pas care acoperă instalarea, configurarea și gestionarea zilnică a magazinului.',
 
             'cta-title' => 'Ai nevoie în continuare de ajutor?',
-            'cta-description' => 'Discută cu echipa Bagisto despre găzduire, dezvoltare personalizată sau orice altceva.',
+            'cta-description' => 'Discută cu echipa EXygnus despre găzduire, dezvoltare personalizată sau orice altceva.',
             'cta-btn' => 'Contactează-ne',
         ],
     ],
@@ -4847,7 +4847,7 @@ return [
                 'title' => 'Email',
 
                 'smtp' => [
-                    'driver-mismatch-info' => 'Your mail driver is set to ":driver" instead of "bagisto-dynamic-smtp". Any changes made here will have no effect. Please update MAIL_MAILER=bagisto-dynamic-smtp in your .env file to activate these settings.',
+                    'driver-mismatch-info' => 'Your mail driver is set to ":driver" instead of "exygnus-dynamic-smtp". Any changes made here will have no effect. Please update MAIL_MAILER=exygnus-dynamic-smtp in your .env file to activate these settings.',
                     'driver-mismatch-title' => 'These settings are currently inactive.',
                     'encryption' => 'Encryption',
                     'host' => 'Host',
@@ -5401,7 +5401,7 @@ return [
             ],
 
             'powered-by' => [
-                'description' => 'Powered by :bagisto, an open-source project by :webkul.',
+                'description' => 'Powered by :exygnus, an open-source project by :faoite.',
             ],
         ],
 
@@ -5730,7 +5730,7 @@ return [
     ],
 
     'footer' => [
-        'copy-right' => 'Powered by <a href="https://bagisto.com/" target="_blank">Bagisto</a>, A Community Project by <a href="https://webkul.com/" target="_blank">Webkul</a>',
+        'copy-right' => 'Powered by <a href="https://exygnus.com/" target="_blank">EXygnus</a>, A Community Project by <a href="https://faoite.com/" target="_blank">DeFaoite</a>',
     ],
 
     'emails' => [
@@ -5933,7 +5933,7 @@ return [
             'refunded_at' => 'Rambursată la',
 
             'actions' => 'Acțiuni',
-            'actions_note' => 'Rambursările sunt procesate manual prin instrumentele existente comandă / rambursare / RMA din Bagisto. Folosiți aceste acțiuni pentru a înregistra rezultatul pe dovada retragerii.',
+            'actions_note' => 'Rambursările sunt procesate manual prin instrumentele existente comandă / rambursare / RMA din EXygnus. Folosiți aceste acțiuni pentru a înregistra rezultatul pe dovada retragerii.',
             'resend_confirmation' => 'Retrimite e-mailul de confirmare',
             'mark_refunded' => 'Marchează ca rambursată',
             'refund_note_label' => 'Referință rambursare (opțional)',

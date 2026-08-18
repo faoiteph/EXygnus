@@ -18560,7 +18560,7 @@ php artisan queue:work
 
 ### Dynamic SMTP
 
-Bagisto uses a custom `bagisto-dynamic-smtp` mail driver that reads SMTP settings from the database (admin panel configuration) rather than `.env` only. If email settings in the admin panel differ from `.env`, the admin panel values take precedence.
+Bagisto uses a custom `exygnus-dynamic-smtp` mail driver that reads SMTP settings from the database (admin panel configuration) rather than `.env` only. If email settings in the admin panel differ from `.env`, the admin panel values take precedence.
 
 This is handled by `DeFaoite\Core\Providers\DynamicSmtpServiceProvider`.
 

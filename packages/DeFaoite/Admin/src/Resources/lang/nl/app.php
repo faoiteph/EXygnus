@@ -6,7 +6,7 @@ return [
             'email' => 'E-mailadres',
             'forget-password-link' => 'Wachtwoord Vergeten?',
             'password' => 'Wachtwoord',
-            'powered-by-description' => 'Aangedreven door :bagisto, een open-source project van :webkul.',
+            'powered-by-description' => 'Aangedreven door :exygnus, een open-source project van :faoite.',
             'submit-btn' => 'Aanmelden',
             'title' => 'Aanmelden',
         ],
@@ -16,7 +16,7 @@ return [
                 'email' => 'Geregistreerd E-mailadres',
                 'email-not-exist' => 'E-mailadres Bestaat Niet',
                 'page-title' => 'Wachtwoord Vergeten',
-                'powered-by-description' => 'Aangedreven door :bagisto, een open-source project van :webkul.',
+                'powered-by-description' => 'Aangedreven door :exygnus, een open-source project van :faoite.',
                 'reset-link-sent' => 'Reset Wachtwoordlink Verzonden',
                 'sign-in-link' => 'Terug naar Aanmelden?',
                 'submit-btn' => 'Herstellen',
@@ -29,7 +29,7 @@ return [
             'confirm-password' => 'Bevestig Wachtwoord',
             'email' => 'Geregistreerd E-mailadres',
             'password' => 'Wachtwoord',
-            'powered-by-description' => 'Aangedreven door :bagisto, een open-source project van :webkul.',
+            'powered-by-description' => 'Aangedreven door :exygnus, een open-source project van :faoite.',
             'submit-btn' => 'Wachtwoord Herstellen',
             'title' => 'Wachtwoord Herstellen',
         ],
@@ -124,13 +124,13 @@ return [
     'help' => [
         'index' => [
             'title' => 'Help & Bronnen',
-            'description' => 'Alles wat u nodig hebt om het meeste uit Bagisto te halen — hosting, ondersteuning en professionele diensten, plus extensies en ontwikkelaarsdocumentatie.',
+            'description' => 'Alles wat u nodig hebt om het meeste uit EXygnus te halen — hosting, ondersteuning en professionele diensten, plus extensies en ontwikkelaarsdocumentatie.',
 
             'services-title' => 'Diensten',
             'resources-title' => 'Bronnen & Documentatie',
 
             'cloud-hosting' => 'Cloudhosting',
-            'cloud-hosting-info' => 'Kosteneffectieve, beheerde cloudhosting — lanceer uw Bagisto-winkel binnen enkele minuten in de cloud, volledig geoptimaliseerd en schaalbaar.',
+            'cloud-hosting-info' => 'Kosteneffectieve, beheerde cloudhosting — lanceer uw EXygnus-winkel binnen enkele minuten in de cloud, volledig geoptimaliseerd en schaalbaar.',
 
             'support' => 'Ondersteuning & Onderhoud',
             'support-info' => 'Toegewijde technische ondersteuning en doorlopende onderhoudsplannen om uw winkel veilig, up-to-date en soepel draaiend te houden.',
@@ -139,22 +139,22 @@ return [
             'paid-services-info' => 'Deskundige hulp bij module-integratie, maatwerk, datamigratie, versie-upgrades en op maat gemaakte ontwikkeling.',
 
             'extensions' => 'Extensies',
-            'extensions-info' => 'Blader door officiële en community add-ons om Bagisto uit te breiden met nieuwe connectoren, kanalen en functies.',
+            'extensions-info' => 'Blader door officiële en community add-ons om EXygnus uit te breiden met nieuwe connectoren, kanalen en functies.',
 
             'docs' => 'Dev-documentatie & Blogs',
             'docs-info' => 'Ontwikkelaarshandleidingen, tutorials en de nieuwste artikelen om u te helpen bouwen, configureren en up-to-date te blijven.',
 
             'api-docs' => 'API-documentatie',
-            'api-docs-info' => 'Volledige REST- & GraphQL-API-referentie met endpoints, authenticatie en voorbeelden om Bagisto met uw stack te integreren.',
+            'api-docs-info' => 'Volledige REST- & GraphQL-API-referentie met endpoints, authenticatie en voorbeelden om EXygnus met uw stack te integreren.',
 
             'community' => 'Communityforum',
-            'community-info' => 'Stel vragen, deel ideeën en maak verbinding met duizenden Bagisto-ontwikkelaars en -verkopers wereldwijd.',
+            'community-info' => 'Stel vragen, deel ideeën en maak verbinding met duizenden EXygnus-ontwikkelaars en -verkopers wereldwijd.',
 
             'video-tutorials' => 'Videotutorials',
             'video-tutorials-info' => 'Stapsgewijze videohandleidingen over installatie, configuratie en dagelijks winkelbeheer.',
 
             'cta-title' => 'Toch nog hulp nodig?',
-            'cta-description' => 'Praat met het Bagisto-team over hosting, maatwerkontwikkeling of iets anders.',
+            'cta-description' => 'Praat met het EXygnus-team over hosting, maatwerkontwikkeling of iets anders.',
             'cta-btn' => 'Neem Contact Op',
         ],
     ],
@@ -4847,7 +4847,7 @@ return [
                 'title' => 'E-mail',
 
                 'smtp' => [
-                    'driver-mismatch-info' => 'Uw maildriver is ingesteld op ":driver" in plaats van "bagisto-dynamic-smtp". Eventuele wijzigingen hier hebben geen effect. Werk MAIL_MAILER=bagisto-dynamic-smtp bij in uw .env-bestand om deze instellingen te activeren.',
+                    'driver-mismatch-info' => 'Uw maildriver is ingesteld op ":driver" in plaats van "exygnus-dynamic-smtp". Eventuele wijzigingen hier hebben geen effect. Werk MAIL_MAILER=exygnus-dynamic-smtp bij in uw .env-bestand om deze instellingen te activeren.',
                     'driver-mismatch-title' => 'Deze instellingen zijn momenteel inactief.',
                     'encryption' => 'Versleuteling',
                     'host' => 'Host',
@@ -5401,7 +5401,7 @@ return [
             ],
 
             'powered-by' => [
-                'description' => 'Aangedreven door :bagisto, een open-source project van :webkul.',
+                'description' => 'Aangedreven door :exygnus, een open-source project van :faoite.',
             ],
         ],
 
@@ -5730,7 +5730,7 @@ return [
     ],
 
     'footer' => [
-        'copy-right' => 'Aangedreven door <a href="https://bagisto.com/" target="_blank">Bagisto</a>, een Community Project van <a href="https://webkul.com/" target="_blank">Webkul</a>',
+        'copy-right' => 'Aangedreven door <a href="https://exygnus.com/" target="_blank">EXygnus</a>, een Community Project van <a href="https://faoite.com/" target="_blank">DeFaoite</a>',
     ],
 
     'emails' => [
@@ -5933,7 +5933,7 @@ return [
             'refunded_at' => 'Terugbetaald op',
 
             'actions' => 'Acties',
-            'actions_note' => 'Terugbetalingen worden handmatig verwerkt via de bestaande bestel-, terugbetalings- en RMA-functies van Bagisto. Gebruik deze acties om het resultaat in het herroepingsbewijs vast te leggen.',
+            'actions_note' => 'Terugbetalingen worden handmatig verwerkt via de bestaande bestel-, terugbetalings- en RMA-functies van EXygnus. Gebruik deze acties om het resultaat in het herroepingsbewijs vast te leggen.',
             'resend_confirmation' => 'Bevestigingsmail opnieuw versturen',
             'mark_refunded' => 'Als terugbetaald markeren',
             'refund_note_label' => 'Terugbetalingsreferentie (optioneel)',

@@ -6,7 +6,7 @@ return [
             'email' => 'Alamat Email',
             'forget-password-link' => 'Lupa Kata Sandi?',
             'password' => 'Kata Sandi',
-            'powered-by-description' => 'Dibuat oleh :bagisto, proyek open-source dari :webkul.',
+            'powered-by-description' => 'Dibuat oleh :exygnus, proyek open-source dari :faoite.',
             'submit-btn' => 'Masuk',
             'title' => 'Masuk',
         ],
@@ -16,7 +16,7 @@ return [
                 'email' => 'Email Terdaftar',
                 'email-not-exist' => 'Email Tidak Ditemukan',
                 'page-title' => 'Lupa Kata Sandi',
-                'powered-by-description' => 'Dibuat oleh :bagisto, proyek open-source dari :webkul.',
+                'powered-by-description' => 'Dibuat oleh :exygnus, proyek open-source dari :faoite.',
                 'reset-link-sent' => 'Tautan Reset Kata Sandi telah dikirim',
                 'sign-in-link' => 'Kembali ke Halaman Masuk?',
                 'submit-btn' => 'Atur Ulang',
@@ -29,7 +29,7 @@ return [
             'confirm-password' => 'Konfirmasi Kata Sandi',
             'email' => 'Email Terdaftar',
             'password' => 'Kata Sandi',
-            'powered-by-description' => 'Dibuat oleh :bagisto, proyek open-source dari :webkul.',
+            'powered-by-description' => 'Dibuat oleh :exygnus, proyek open-source dari :faoite.',
             'submit-btn' => 'Atur Ulang Kata Sandi',
             'title' => 'Atur Ulang Kata Sandi',
         ],
@@ -124,13 +124,13 @@ return [
     'help' => [
         'index' => [
             'title' => 'Bantuan & Sumber Daya',
-            'description' => 'Semua yang Anda butuhkan untuk memaksimalkan Bagisto — hosting, dukungan dan layanan profesional, serta ekstensi dan dokumentasi pengembang.',
+            'description' => 'Semua yang Anda butuhkan untuk memaksimalkan EXygnus — hosting, dukungan dan layanan profesional, serta ekstensi dan dokumentasi pengembang.',
 
             'services-title' => 'Layanan',
             'resources-title' => 'Sumber Daya & Dokumentasi',
 
             'cloud-hosting' => 'Cloud Hosting',
-            'cloud-hosting-info' => 'Cloud hosting terkelola yang hemat biaya — luncurkan toko Bagisto Anda di cloud dalam hitungan menit, sepenuhnya dioptimalkan dan dapat diskalakan.',
+            'cloud-hosting-info' => 'Cloud hosting terkelola yang hemat biaya — luncurkan toko EXygnus Anda di cloud dalam hitungan menit, sepenuhnya dioptimalkan dan dapat diskalakan.',
 
             'support' => 'Dukungan & Pemeliharaan',
             'support-info' => 'Dukungan teknis khusus dan paket pemeliharaan berkelanjutan untuk menjaga toko Anda tetap aman, diperbarui dan berjalan lancar.',
@@ -139,22 +139,22 @@ return [
             'paid-services-info' => 'Bantuan ahli untuk integrasi modul, kustomisasi, migrasi data, peningkatan versi dan pengembangan khusus.',
 
             'extensions' => 'Ekstensi',
-            'extensions-info' => 'Jelajahi add-on resmi dan komunitas untuk memperluas Bagisto dengan konektor, saluran dan fitur baru.',
+            'extensions-info' => 'Jelajahi add-on resmi dan komunitas untuk memperluas EXygnus dengan konektor, saluran dan fitur baru.',
 
             'docs' => 'Dokumen Dev & Blog',
             'docs-info' => 'Panduan pengembang, tutorial dan artikel terbaru untuk membantu Anda membangun, mengonfigurasi dan tetap mutakhir.',
 
             'api-docs' => 'Dokumen API',
-            'api-docs-info' => 'Referensi API REST & GraphQL lengkap dengan endpoint, autentikasi dan contoh untuk mengintegrasikan Bagisto dengan stack Anda.',
+            'api-docs-info' => 'Referensi API REST & GraphQL lengkap dengan endpoint, autentikasi dan contoh untuk mengintegrasikan EXygnus dengan stack Anda.',
 
             'community' => 'Forum Komunitas',
-            'community-info' => 'Ajukan pertanyaan, bagikan ide dan terhubung dengan ribuan pengembang dan pedagang Bagisto di seluruh dunia.',
+            'community-info' => 'Ajukan pertanyaan, bagikan ide dan terhubung dengan ribuan pengembang dan pedagang EXygnus di seluruh dunia.',
 
             'video-tutorials' => 'Tutorial Video',
             'video-tutorials-info' => 'Panduan video langkah demi langkah yang mencakup instalasi, konfigurasi dan pengelolaan toko sehari-hari.',
 
             'cta-title' => 'Masih butuh bantuan?',
-            'cta-description' => 'Bicaralah dengan tim Bagisto tentang hosting, pengembangan khusus atau hal lainnya.',
+            'cta-description' => 'Bicaralah dengan tim EXygnus tentang hosting, pengembangan khusus atau hal lainnya.',
             'cta-btn' => 'Hubungi Kami',
         ],
     ],
@@ -4847,7 +4847,7 @@ return [
                 'title' => 'Email',
 
                 'smtp' => [
-                    'driver-mismatch-info' => 'Driver email Anda diatur ke ":driver" alih-alih "bagisto-dynamic-smtp". Setiap perubahan yang dilakukan di sini tidak akan berpengaruh. Harap perbarui MAIL_MAILER=bagisto-dynamic-smtp di file .env Anda untuk mengaktifkan pengaturan ini.',
+                    'driver-mismatch-info' => 'Driver email Anda diatur ke ":driver" alih-alih "exygnus-dynamic-smtp". Setiap perubahan yang dilakukan di sini tidak akan berpengaruh. Harap perbarui MAIL_MAILER=exygnus-dynamic-smtp di file .env Anda untuk mengaktifkan pengaturan ini.',
                     'driver-mismatch-title' => 'Pengaturan ini saat ini tidak aktif.',
                     'encryption' => 'Enkripsi',
                     'host' => 'Host',
@@ -5401,7 +5401,7 @@ return [
             ],
 
             'powered-by' => [
-                'description' => 'Dibuat oleh :bagisto, proyek open-source dari :webkul.',
+                'description' => 'Dibuat oleh :exygnus, proyek open-source dari :faoite.',
             ],
         ],
 
@@ -5730,7 +5730,7 @@ return [
     ],
 
     'footer' => [
-        'copy-right' => 'Didukung oleh <a href="https://bagisto.com/" target="_blank">Bagisto</a>, proyek komunitas yang dikembangkan oleh <a href="https://webkul.com/" target="_blank">Webkul</a>',
+        'copy-right' => 'Didukung oleh <a href="https://exygnus.com/" target="_blank">EXygnus</a>, proyek komunitas yang dikembangkan oleh <a href="https://faoite.com/" target="_blank">DeFaoite</a>',
     ],
 
     'emails' => [
@@ -5933,7 +5933,7 @@ return [
             'refunded_at' => 'Dikembalikan pada',
 
             'actions' => 'Tindakan',
-            'actions_note' => 'Pengembalian dana diproses secara manual melalui peranti pesanan / refund / RMA Bagisto yang sudah ada. Gunakan tindakan ini untuk mencatat hasil pada bukti penarikan diri.',
+            'actions_note' => 'Pengembalian dana diproses secara manual melalui peranti pesanan / refund / RMA EXygnus yang sudah ada. Gunakan tindakan ini untuk mencatat hasil pada bukti penarikan diri.',
             'resend_confirmation' => 'Kirim Ulang Email Konfirmasi',
             'mark_refunded' => 'Tandai sebagai Dikembalikan',
             'refund_note_label' => 'Referensi pengembalian dana (opsional)',

@@ -1,4 +1,4 @@
-@if (config('mail.default') !== 'bagisto-dynamic-smtp')
+@if (config('mail.default') !== 'exygnus-dynamic-smtp')
     <div class="mb-4 flex gap-3 rounded border border-amber-200 bg-amber-50 p-4 dark:border-amber-800 dark:bg-amber-950">
         <span class="icon-warning mt-0.5 text-xl text-amber-600 dark:text-amber-400"></span>
 

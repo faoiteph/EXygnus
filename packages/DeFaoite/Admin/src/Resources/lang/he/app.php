@@ -6,7 +6,7 @@ return [
             'email' => 'כתובת אימייל',
             'forget-password-link' => 'שכחת סיסמה?',
             'password' => 'סיסמה',
-            'powered-by-description' => 'מופעל על ידי :bagisto, פרויקט קוד פתוח על ידי :webkul.',
+            'powered-by-description' => 'מופעל על ידי :exygnus, פרויקט קוד פתוח על ידי :faoite.',
             'submit-btn' => 'כניסה',
             'title' => 'כניסה',
         ],
@@ -16,7 +16,7 @@ return [
                 'email' => 'אימייל רשום',
                 'email-not-exist' => 'אימייל לא קיים',
                 'page-title' => 'שכחתי סיסמה',
-                'powered-by-description' => 'מופעל על ידי :bagisto, פרויקט קוד פתוח על ידי :webkul.',
+                'powered-by-description' => 'מופעל על ידי :exygnus, פרויקט קוד פתוח על ידי :faoite.',
                 'reset-link-sent' => 'קישור לאיפוס סיסמה נשלח',
                 'sign-in-link' => 'חזור להתחברות?',
                 'submit-btn' => 'איפוס',
@@ -29,7 +29,7 @@ return [
             'confirm-password' => 'אימות סיסמה',
             'email' => 'אימייל רשום',
             'password' => 'סיסמה',
-            'powered-by-description' => 'מופעל על ידי :bagisto, פרויקט קוד פתוח על ידי :webkul.',
+            'powered-by-description' => 'מופעל על ידי :exygnus, פרויקט קוד פתוח על ידי :faoite.',
             'submit-btn' => 'איפוס סיסמה',
             'title' => 'איפוס סיסמה',
         ],
@@ -124,13 +124,13 @@ return [
     'help' => [
         'index' => [
             'title' => 'עזרה ומשאבים',
-            'description' => 'כל מה שאתם צריכים כדי להפיק את המרב מ-Bagisto — אירוח, תמיכה ושירותים מקצועיים, וכן הרחבות ותיעוד למפתחים.',
+            'description' => 'כל מה שאתם צריכים כדי להפיק את המרב מ-EXygnus — אירוח, תמיכה ושירותים מקצועיים, וכן הרחבות ותיעוד למפתחים.',
 
             'services-title' => 'שירותים',
             'resources-title' => 'משאבים ותיעוד',
 
             'cloud-hosting' => 'אירוח בענן',
-            'cloud-hosting-info' => 'אירוח ענן מנוהל וחסכוני — השיקו את חנות Bagisto שלכם בענן תוך דקות, מותאם ומדרגי לחלוטין.',
+            'cloud-hosting-info' => 'אירוח ענן מנוהל וחסכוני — השיקו את חנות EXygnus שלכם בענן תוך דקות, מותאם ומדרגי לחלוטין.',
 
             'support' => 'תמיכה ותחזוקה',
             'support-info' => 'תמיכה טכנית ייעודית ותוכניות תחזוקה שוטפת כדי לשמור על החנות שלכם מאובטחת, מעודכנת ופועלת באופן חלק.',
@@ -139,22 +139,22 @@ return [
             'paid-services-info' => 'עזרה מקצועית לשילוב מודולים, התאמה אישית, העברת נתונים, שדרוגי גרסה ופיתוח מותאם אישית.',
 
             'extensions' => 'הרחבות',
-            'extensions-info' => 'עיינו בתוספים רשמיים וקהילתיים כדי להרחיב את Bagisto עם מחברים, ערוצים ותכונות חדשות.',
+            'extensions-info' => 'עיינו בתוספים רשמיים וקהילתיים כדי להרחיב את EXygnus עם מחברים, ערוצים ותכונות חדשות.',
 
             'docs' => 'תיעוד למפתחים ובלוגים',
             'docs-info' => 'מדריכים למפתחים, הדרכות והמאמרים האחרונים שיעזרו לכם לבנות, להגדיר ולהישאר מעודכנים.',
 
             'api-docs' => 'תיעוד API',
-            'api-docs-info' => 'הפניית API מלאה של REST ו-GraphQL עם נקודות קצה, אימות ודוגמאות לשילוב Bagisto במערכת שלכם.',
+            'api-docs-info' => 'הפניית API מלאה של REST ו-GraphQL עם נקודות קצה, אימות ודוגמאות לשילוב EXygnus במערכת שלכם.',
 
             'community' => 'פורום הקהילה',
-            'community-info' => 'שאלו שאלות, שתפו רעיונות והתחברו עם אלפי מפתחים וסוחרים של Bagisto ברחבי העולם.',
+            'community-info' => 'שאלו שאלות, שתפו רעיונות והתחברו עם אלפי מפתחים וסוחרים של EXygnus ברחבי העולם.',
 
             'video-tutorials' => 'הדרכות וידאו',
             'video-tutorials-info' => 'הדרכות וידאו שלב אחר שלב המכסות התקנה, הגדרה וניהול יומיומי של החנות.',
 
             'cta-title' => 'עדיין צריכים עזרה?',
-            'cta-description' => 'דברו עם צוות Bagisto על אירוח, פיתוח מותאם אישית או כל דבר אחר.',
+            'cta-description' => 'דברו עם צוות EXygnus על אירוח, פיתוח מותאם אישית או כל דבר אחר.',
             'cta-btn' => 'צרו קשר',
         ],
     ],
@@ -4847,7 +4847,7 @@ return [
                 'title' => 'אימייל',
 
                 'smtp' => [
-                    'driver-mismatch-info' => 'מנהל הדואר שלך מוגדר כ-":driver" במקום "bagisto-dynamic-smtp". כל שינוי שייעשה כאן לא יהיה לו כל אפקט. אנא עדכן את MAIL_MAILER=bagisto-dynamic-smtp בקובץ .env שלך כדי להפעיל את ההגדרות האלה.',
+                    'driver-mismatch-info' => 'מנהל הדואר שלך מוגדר כ-":driver" במקום "exygnus-dynamic-smtp". כל שינוי שייעשה כאן לא יהיה לו כל אפקט. אנא עדכן את MAIL_MAILER=exygnus-dynamic-smtp בקובץ .env שלך כדי להפעיל את ההגדרות האלה.',
                     'driver-mismatch-title' => 'הגדרות אלו כרגע לא פעילות.',
                     'encryption' => 'הצפנה',
                     'host' => 'מארח',
@@ -5401,7 +5401,7 @@ return [
             ],
 
             'powered-by' => [
-                'description' => 'מופעל על ידי :bagisto, פרויקט קוד פתוח על ידי :webkul.',
+                'description' => 'מופעל על ידי :exygnus, פרויקט קוד פתוח על ידי :faoite.',
             ],
         ],
 
@@ -5730,7 +5730,7 @@ return [
     ],
 
     'footer' => [
-        'copy-right' => 'מופעל על ידי <a href="https://bagisto.com/" target="_blank">Bagisto</a>, פרויקט קהילתי על ידי <a href="https://webkul.com/" target="_blank">Webkul</a>',
+        'copy-right' => 'מופעל על ידי <a href="https://exygnus.com/" target="_blank">EXygnus</a>, פרויקט קהילתי על ידי <a href="https://faoite.com/" target="_blank">DeFaoite</a>',
     ],
 
     'emails' => [
@@ -5933,7 +5933,7 @@ return [
             'refunded_at' => 'מועד ההחזר',
 
             'actions' => 'פעולות',
-            'actions_note' => 'החזרים מטופלים ידנית באמצעות כלי ההזמנה / החזר / RMA הקיימים ב-Bagisto. השתמש בפעולות אלו כדי לתעד את התוצאה ברישומי הביטול.',
+            'actions_note' => 'החזרים מטופלים ידנית באמצעות כלי ההזמנה / החזר / RMA הקיימים ב-EXygnus. השתמש בפעולות אלו כדי לתעד את התוצאה ברישומי הביטול.',
             'resend_confirmation' => 'שליחה חוזרת של דוא"ל האישור',
             'mark_refunded' => 'סימון כהוחזר',
             'refund_note_label' => 'אסמכתת החזר (לא חובה)',

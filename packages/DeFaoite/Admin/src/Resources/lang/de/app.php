@@ -6,7 +6,7 @@ return [
             'email' => 'E-Mail-Adresse',
             'forget-password-link' => 'Passwort vergessen?',
             'password' => 'Passwort',
-            'powered-by-description' => 'Powered by :bagisto, ein Open-Source-Projekt von :webkul.',
+            'powered-by-description' => 'Powered by :exygnus, ein Open-Source-Projekt von :faoite.',
             'submit-btn' => 'Anmelden',
             'title' => 'Anmelden',
         ],
@@ -16,7 +16,7 @@ return [
                 'email' => 'Registrierte E-Mail',
                 'email-not-exist' => 'E-Mail existiert nicht',
                 'page-title' => 'Passwort vergessen',
-                'powered-by-description' => 'Powered by :bagisto, ein Open-Source-Projekt von :webkul.',
+                'powered-by-description' => 'Powered by :exygnus, ein Open-Source-Projekt von :faoite.',
                 'reset-link-sent' => 'Link zum Zurücksetzen des Passworts gesendet',
                 'sign-in-link' => 'Zurück zur Anmeldung?',
                 'submit-btn' => 'Zurücksetzen',
@@ -29,7 +29,7 @@ return [
             'confirm-password' => 'Passwort bestätigen',
             'email' => 'Registrierte E-Mail',
             'password' => 'Passwort',
-            'powered-by-description' => 'Powered by :bagisto, ein Open-Source-Projekt von :webkul.',
+            'powered-by-description' => 'Powered by :exygnus, ein Open-Source-Projekt von :faoite.',
             'submit-btn' => 'Passwort zurücksetzen',
             'title' => 'Passwort zurücksetzen',
         ],
@@ -124,13 +124,13 @@ return [
     'help' => [
         'index' => [
             'title' => 'Hilfe & Ressourcen',
-            'description' => 'Alles, was Sie brauchen, um das Beste aus Bagisto herauszuholen — Hosting, Support und professionelle Dienstleistungen sowie Erweiterungen und Entwicklerdokumentation.',
+            'description' => 'Alles, was Sie brauchen, um das Beste aus EXygnus herauszuholen — Hosting, Support und professionelle Dienstleistungen sowie Erweiterungen und Entwicklerdokumentation.',
 
             'services-title' => 'Dienstleistungen',
             'resources-title' => 'Ressourcen & Dokumentation',
 
             'cloud-hosting' => 'Cloud-Hosting',
-            'cloud-hosting-info' => 'Kostengünstiges, verwaltetes Cloud-Hosting — starten Sie Ihren Bagisto-Shop in wenigen Minuten in der Cloud, vollständig optimiert und skalierbar.',
+            'cloud-hosting-info' => 'Kostengünstiges, verwaltetes Cloud-Hosting — starten Sie Ihren EXygnus-Shop in wenigen Minuten in der Cloud, vollständig optimiert und skalierbar.',
 
             'support' => 'Support & Wartung',
             'support-info' => 'Engagierter technischer Support und laufende Wartungspläne, damit Ihr Shop sicher, aktuell und reibungslos läuft.',
@@ -139,22 +139,22 @@ return [
             'paid-services-info' => 'Fachkundige Hilfe bei Modulintegration, Anpassung, Datenmigration, Versions-Upgrades und maßgeschneiderter Entwicklung.',
 
             'extensions' => 'Erweiterungen',
-            'extensions-info' => 'Durchsuchen Sie offizielle und Community-Add-ons, um Bagisto mit neuen Konnektoren, Kanälen und Funktionen zu erweitern.',
+            'extensions-info' => 'Durchsuchen Sie offizielle und Community-Add-ons, um EXygnus mit neuen Konnektoren, Kanälen und Funktionen zu erweitern.',
 
             'docs' => 'Entwicklerdokumentation & Blogs',
             'docs-info' => 'Entwicklerhandbücher, Tutorials und die neuesten Artikel, die Ihnen beim Erstellen, Konfigurieren und Aktualisieren helfen.',
 
             'api-docs' => 'API-Dokumentation',
-            'api-docs-info' => 'Vollständige REST- & GraphQL-API-Referenz mit Endpunkten, Authentifizierung und Beispielen zur Integration von Bagisto in Ihren Stack.',
+            'api-docs-info' => 'Vollständige REST- & GraphQL-API-Referenz mit Endpunkten, Authentifizierung und Beispielen zur Integration von EXygnus in Ihren Stack.',
 
             'community' => 'Community-Forum',
-            'community-info' => 'Stellen Sie Fragen, teilen Sie Ideen und vernetzen Sie sich mit Tausenden von Bagisto-Entwicklern und -Händlern weltweit.',
+            'community-info' => 'Stellen Sie Fragen, teilen Sie Ideen und vernetzen Sie sich mit Tausenden von EXygnus-Entwicklern und -Händlern weltweit.',
 
             'video-tutorials' => 'Video-Tutorials',
             'video-tutorials-info' => 'Schritt-für-Schritt-Video-Anleitungen zu Installation, Konfiguration und alltäglicher Shop-Verwaltung.',
 
             'cta-title' => 'Brauchen Sie noch Hilfe?',
-            'cta-description' => 'Sprechen Sie mit dem Bagisto-Team über Hosting, individuelle Entwicklung oder alles andere.',
+            'cta-description' => 'Sprechen Sie mit dem EXygnus-Team über Hosting, individuelle Entwicklung oder alles andere.',
             'cta-btn' => 'Kontaktieren Sie uns',
         ],
     ],
@@ -4847,7 +4847,7 @@ return [
                 'title' => 'E-Mail',
 
                 'smtp' => [
-                    'driver-mismatch-info' => 'Ihr Mail-Treiber ist auf ":driver" statt auf "bagisto-dynamic-smtp" eingestellt. Alle hier vorgenommenen Änderungen haben keine Auswirkung. Bitte aktualisieren Sie MAIL_MAILER=bagisto-dynamic-smtp in Ihrer .env-Datei, um diese Einstellungen zu aktivieren.',
+                    'driver-mismatch-info' => 'Ihr Mail-Treiber ist auf ":driver" statt auf "exygnus-dynamic-smtp" eingestellt. Alle hier vorgenommenen Änderungen haben keine Auswirkung. Bitte aktualisieren Sie MAIL_MAILER=exygnus-dynamic-smtp in Ihrer .env-Datei, um diese Einstellungen zu aktivieren.',
                     'driver-mismatch-title' => 'Diese Einstellungen sind derzeit inaktiv.',
                     'encryption' => 'Verschlüsselung',
                     'host' => 'Host',
@@ -5401,7 +5401,7 @@ return [
             ],
 
             'powered-by' => [
-                'description' => 'Bereitgestellt von :bagisto, ein Open-Source-Projekt von :webkul.',
+                'description' => 'Bereitgestellt von :exygnus, ein Open-Source-Projekt von :faoite.',
             ],
         ],
 
@@ -5730,7 +5730,7 @@ return [
     ],
 
     'footer' => [
-        'copy-right' => 'Powered by <a href="https://bagisto.com/" target="_blank">Bagisto</a>, ein Community-Projekt von <a href="https://webkul.com/" target="_blank">Webkul</a>',
+        'copy-right' => 'Powered by <a href="https://exygnus.com/" target="_blank">EXygnus</a>, ein Community-Projekt von <a href="https://faoite.com/" target="_blank">DeFaoite</a>',
     ],
 
     'emails' => [
@@ -5933,7 +5933,7 @@ return [
             'refunded_at' => 'Erstattet am',
 
             'actions' => 'Aktionen',
-            'actions_note' => 'Erstattungen werden manuell über die bestehenden Bestell-, Erstattungs- und RMA-Werkzeuge von Bagisto bearbeitet. Verwenden Sie diese Aktionen, um das Ergebnis im Widerrufsnachweis festzuhalten.',
+            'actions_note' => 'Erstattungen werden manuell über die bestehenden Bestell-, Erstattungs- und RMA-Werkzeuge von EXygnus bearbeitet. Verwenden Sie diese Aktionen, um das Ergebnis im Widerrufsnachweis festzuhalten.',
             'resend_confirmation' => 'Bestätigungs-E-Mail erneut senden',
             'mark_refunded' => 'Als erstattet markieren',
             'refund_note_label' => 'Erstattungsreferenz (optional)',

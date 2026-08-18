@@ -12,7 +12,7 @@ class DynamicSmtpServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        $this->app['mail.manager']->extend('bagisto-dynamic-smtp', function () {
+        $this->app['mail.manager']->extend('exygnus-dynamic-smtp', function () {
             return new DynamicSmtpTransport;
         });
     }

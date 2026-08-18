@@ -806,7 +806,7 @@ return [
         'index' => [
             'create-administrator' => [
                 'admin' => 'Beheerder',
-                'bagisto' => 'Bagisto',
+                'bagisto' => 'EXygnus',
                 'confirm-password' => 'Bevestig wachtwoord',
                 'email' => 'E-mail',
                 'email-address' => 'admin@example.com',
@@ -821,7 +821,7 @@ return [
                 'application-name' => 'Toepassingsnaam',
                 'argentine-peso' => 'Argentijnse Peso (ARS)',
                 'australian-dollar' => 'Australische Dollar (AUD)',
-                'bagisto' => 'Bagisto',
+                'bagisto' => 'EXygnus',
                 'bangladeshi-taka' => 'Bangladesh Taka (BDT)',
                 'bahraini-dinar' => 'Bahreinse Dinar (BHD)',
                 'brazilian-real' => 'Braziliaanse Real (BRL)',
@@ -914,25 +914,25 @@ return [
             ],
 
             'installation-processing' => [
-                'bagisto' => 'Bagisto installatie',
+                'bagisto' => 'EXygnus installatie',
                 'bagisto-info' => 'Het maken van database tabellen kan even duren',
                 'title' => 'Installatie',
             ],
 
             'installation-completed' => [
                 'admin-panel' => 'Beheerderspaneel',
-                'bagisto-forums' => 'Bagisto Forum',
+                'bagisto-forums' => 'EXygnus Forum',
                 'customer-panel' => 'Klantenpaneel',
-                'explore-bagisto-extensions' => 'Verken Bagisto-extensies',
+                'explore-bagisto-extensions' => 'Verken EXygnus-extensies',
                 'title' => 'Installatie voltooid',
-                'title-info' => 'Bagisto is succesvol geïnstalleerd op uw systeem.',
+                'title-info' => 'EXygnus is succesvol geïnstalleerd op uw systeem.',
             ],
 
             'ready-for-installation' => [
                 'create-database-tables' => 'Database tabellen aanmaken',
                 'drop-existing-tables' => 'Verwijder bestaande tabellen',
                 'install' => 'Installatie',
-                'install-info' => 'Bagisto Voor Installatie',
+                'install-info' => 'EXygnus Voor Installatie',
                 'install-info-button' => 'Klik op de knop hieronder om',
                 'populate-database-tables' => 'Vul de databasetabellen',
                 'start-installation' => 'Start Installatie',
@@ -944,8 +944,8 @@ return [
                 'locale' => 'Locatie',
                 'main' => 'Start',
                 'select-locale' => 'Selecteer Locatie',
-                'title' => 'Uw Bagisto-installatie',
-                'welcome-title' => 'Welkom bij Bagisto',
+                'title' => 'Uw EXygnus-installatie',
+                'welcome-title' => 'Welkom bij EXygnus',
             ],
 
             'server-requirements' => [
@@ -973,9 +973,9 @@ return [
 
             'arabic' => 'Arabisch',
             'back' => 'Terug',
-            'bagisto' => 'Bagisto',
+            'bagisto' => 'EXygnus',
             'bagisto-info' => 'Een communityproject van',
-            'bagisto-logo' => 'Bagisto Logo',
+            'bagisto-logo' => 'EXygnus Logo',
             'bengali' => 'Bengaals',
             'catalan' => 'Catalaans',
             'chinese' => 'Chinees',
@@ -987,9 +987,9 @@ return [
             'hebrew' => 'Hebreeuws',
             'hindi' => 'Hindi',
             'indonesian' => 'Indonesisch',
-            'installation-description' => 'De installatie van Bagisto omvat doorgaans verschillende stappen. Hier is een algemeen overzicht van het installatieproces voor Bagisto',
+            'installation-description' => 'De installatie van EXygnus omvat doorgaans verschillende stappen. Hier is een algemeen overzicht van het installatieproces voor EXygnus',
             'installation-info' => 'We zijn blij je hier te zien!',
-            'installation-title' => 'Welkom bij de Bagisto-installatie',
+            'installation-title' => 'Welkom bij de EXygnus-installatie',
             'italian' => 'Italiaans',
             'japanese' => 'Japans',
             'persian' => 'Perzisch',
@@ -999,10 +999,10 @@ return [
             'russian' => 'Russisch',
             'sinhala' => 'Singalees',
             'spanish' => 'Spaans',
-            'title' => 'Bagisto Installer',
+            'title' => 'EXygnus Installer',
             'turkish' => 'Turks',
             'ukrainian' => 'Oekraïens',
-            'webkul' => 'Webkul',
+            'webkul' => 'DeFaoite',
         ],
     ],
 ];

@@ -806,7 +806,7 @@ return [
         'index' => [
             'create-administrator' => [
                 'admin' => 'অ্যাডমিন',
-                'bagisto' => 'বাগিস্তো',
+                'bagisto' => 'এক্সিগনাস',
                 'confirm-password' => 'পাসওয়ার্ড নিশ্চিত করুন',
                 'email' => 'ইমেইল',
                 'email-address' => 'admin@example.com',
@@ -821,7 +821,7 @@ return [
                 'application-name' => 'অ্যাপ্লিকেশন নাম',
                 'argentine-peso' => 'আর্জেন্টিনা পেসো (ARS)',
                 'australian-dollar' => 'অস্ট্রেলিয়ান ডলার (AUD)',
-                'bagisto' => 'বাগিস্তো',
+                'bagisto' => 'এক্সিগনাস',
                 'bangladeshi-taka' => 'বাংলাদেশী টাকা (BDT)',
                 'bahraini-dinar' => 'বাহরাইন দিনার (BHD)',
                 'brazilian-real' => 'ব্রাজিলিয়ান রিয়েল (BRL)',
@@ -914,25 +914,25 @@ return [
             ],
 
             'installation-processing' => [
-                'bagisto' => 'ইনস্টলেশন বাগিস্তো',
+                'bagisto' => 'ইনস্টলেশন এক্সিগনাস',
                 'bagisto-info' => 'ডাটাবেস টেবিল তৈরি করা হচ্ছে, এটি কিছুটা সময় নিতে পারে',
                 'title' => 'ইনস্টলেশন',
             ],
 
             'installation-completed' => [
                 'admin-panel' => 'অ্যাডমিন প্যানেল',
-                'bagisto-forums' => 'বাগিস্তো ফোরাম',
+                'bagisto-forums' => 'এক্সিগনাস ফোরাম',
                 'customer-panel' => 'কাস্টমার প্যানেল',
-                'explore-bagisto-extensions' => 'বাগিস্তো এক্সটেনশন অন্বেষণ করুন',
+                'explore-bagisto-extensions' => 'এক্সিগনাস এক্সটেনশন অন্বেষণ করুন',
                 'title' => 'ইনস্টলেশন সম্পন্ন',
-                'title-info' => 'বাগিস্তো সফলভাবে আপনার সিস্টেমে ইনস্টল করা হয়েছে।',
+                'title-info' => 'এক্সিগনাস সফলভাবে আপনার সিস্টেমে ইনস্টল করা হয়েছে।',
             ],
 
             'ready-for-installation' => [
                 'create-database-tables' => 'ডাটাবেস টেবিলগুলি তৈরি করুন',
                 'drop-existing-tables' => 'বিদ্যমান কোনো টেবিল মুছে ফেলুন',
                 'install' => 'ইনস্টলেশন',
-                'install-info' => 'ইনস্টলেশনের জন্য Bagisto',
+                'install-info' => 'ইনস্টলেশনের জন্য EXygnus',
                 'install-info-button' => 'নীচের বাটনে ক্লিক করুন',
                 'populate-database-tables' => 'ডাটাবেস টেবিল পূর্ণ করুন',
                 'start-installation' => 'ইনস্টলেশন শুরু করুন',
@@ -944,8 +944,8 @@ return [
                 'locale' => 'লোকেল',
                 'main' => 'শুরু',
                 'select-locale' => 'লোকেল নির্বাচন করুন',
-                'title' => 'আপনার Bagisto ইনস্টলেশন',
-                'welcome-title' => 'Bagisto এ আপনাকে স্বাগতম',
+                'title' => 'আপনার EXygnus ইনস্টলেশন',
+                'welcome-title' => 'EXygnus এ আপনাকে স্বাগতম',
             ],
 
             'server-requirements' => [
@@ -973,9 +973,9 @@ return [
 
             'arabic' => 'আরবি',
             'back' => 'পিছনে',
-            'bagisto' => 'বাগিস্তো',
+            'bagisto' => 'এক্সিগনাস',
             'bagisto-info' => 'একটি সম্প্রদায়িক প্রকল্প দ্বারা',
-            'bagisto-logo' => 'বাগিস্তো লোগো',
+            'bagisto-logo' => 'এক্সিগনাস লোগো',
             'bengali' => 'বাংলা',
             'catalan' => 'কাতালান',
             'chinese' => 'চীনা',
@@ -987,7 +987,7 @@ return [
             'hebrew' => 'হিব্রু',
             'hindi' => 'হিন্দি',
             'indonesian' => 'ইন্দোনেশীয়',
-            'installation-description' => 'বাগিস্তো ইনস্টলেশন সাধারণত একাধিক পদক্ষেপ শামিল করে। বাগিস্তোর ইনস্টলেশন প্রক্রিয়ার জন্য এটি সাধারণ বর্ণনা',
+            'installation-description' => 'এক্সিগনাস ইনস্টলেশন সাধারণত একাধিক পদক্ষেপ শামিল করে। এক্সিগনাসর ইনস্টলেশন প্রক্রিয়ার জন্য এটি সাধারণ বর্ণনা',
             'installation-info' => 'আমরা আপনাকে এখানে দেখা দেখার খুশি!',
             'installation-title' => 'ইনস্টলেশনে আপনাকে স্বাগতম',
             'italian' => 'ইটালিয়ান',
@@ -999,7 +999,7 @@ return [
             'russian' => 'রুশ',
             'sinhala' => 'সিংহলি',
             'spanish' => 'স্পেনীয়',
-            'title' => 'বাগিস্তো ইনস্টলার',
+            'title' => 'এক্সিগনাস ইনস্টলার',
             'turkish' => 'তুর্কি',
             'ukrainian' => 'ইউক্রেনীয়',
             'webkul' => 'ওয়েবকুল',

@@ -6,7 +6,7 @@ return [
             'email' => 'Adreça de correu electrònic',
             'forget-password-link' => 'Has oblidat la contrasenya?',
             'password' => 'Contrasenya',
-            'powered-by-description' => 'Impulsat per :bagisto, un projecte de codi obert de :webkul.',
+            'powered-by-description' => 'Impulsat per :exygnus, un projecte de codi obert de :faoite.',
             'submit-btn' => 'Iniciar sessió',
             'title' => 'Iniciar sessió',
         ],
@@ -16,7 +16,7 @@ return [
                 'email' => 'Correu electrònic registrat',
                 'email-not-exist' => 'El correu electrònic no existeix',
                 'page-title' => 'Oblidar contrasenya',
-                'powered-by-description' => 'Impulsat per :bagisto, un projecte de codi obert de :webkul.',
+                'powered-by-description' => 'Impulsat per :exygnus, un projecte de codi obert de :faoite.',
                 'reset-link-sent' => 'Enllaç per restablir la contrasenya enviat',
                 'sign-in-link' => 'Tornar a iniciar sessió?',
                 'submit-btn' => 'Restablir',
@@ -29,7 +29,7 @@ return [
             'confirm-password' => 'Confirmar contrasenya',
             'email' => 'Correu electrònic registrat',
             'password' => 'Contrasenya',
-            'powered-by-description' => 'Impulsat per :bagisto, un projecte de codi obert de :webkul.',
+            'powered-by-description' => 'Impulsat per :exygnus, un projecte de codi obert de :faoite.',
             'submit-btn' => 'Restablir contrasenya',
             'title' => 'Restablir contrasenya',
         ],
@@ -124,13 +124,13 @@ return [
     'help' => [
         'index' => [
             'title' => 'Ajuda i recursos',
-            'description' => 'Tot el que necessites per treure el màxim profit de Bagisto: allotjament, suport i serveis professionals, a més d\'extensions i documentació per a desenvolupadors.',
+            'description' => 'Tot el que necessites per treure el màxim profit de EXygnus: allotjament, suport i serveis professionals, a més d\'extensions i documentació per a desenvolupadors.',
 
             'services-title' => 'Serveis',
             'resources-title' => 'Recursos i documentació',
 
             'cloud-hosting' => 'Allotjament al núvol',
-            'cloud-hosting-info' => 'Allotjament al núvol gestionat i rendible: posa en marxa la teva botiga Bagisto al núvol en minuts, totalment optimitzada i escalable.',
+            'cloud-hosting-info' => 'Allotjament al núvol gestionat i rendible: posa en marxa la teva botiga EXygnus al núvol en minuts, totalment optimitzada i escalable.',
 
             'support' => 'Suport i manteniment',
             'support-info' => 'Suport tècnic dedicat i plans de manteniment continu per mantenir la teva botiga segura, actualitzada i funcionant sense problemes.',
@@ -139,22 +139,22 @@ return [
             'paid-services-info' => 'Ajuda experta per a la integració de mòduls, personalització, migració de dades, actualitzacions de versió i desenvolupament a mida.',
 
             'extensions' => 'Extensions',
-            'extensions-info' => 'Explora complements oficials i de la comunitat per ampliar Bagisto amb nous connectors, canals i funcionalitats.',
+            'extensions-info' => 'Explora complements oficials i de la comunitat per ampliar EXygnus amb nous connectors, canals i funcionalitats.',
 
             'docs' => 'Documentació i blogs per a desenvolupadors',
             'docs-info' => 'Guies per a desenvolupadors, tutorials i els articles més recents per ajudar-te a construir, configurar i mantenir-te al dia.',
 
             'api-docs' => 'Documentació de l\'API',
-            'api-docs-info' => 'Referència completa de l\'API REST i GraphQL amb punts d\'accés, autenticació i exemples per integrar Bagisto amb el teu sistema.',
+            'api-docs-info' => 'Referència completa de l\'API REST i GraphQL amb punts d\'accés, autenticació i exemples per integrar EXygnus amb el teu sistema.',
 
             'community' => 'Fòrum de la comunitat',
-            'community-info' => 'Fes preguntes, comparteix idees i connecta amb milers de desenvolupadors i comerciants de Bagisto de tot el món.',
+            'community-info' => 'Fes preguntes, comparteix idees i connecta amb milers de desenvolupadors i comerciants de EXygnus de tot el món.',
 
             'video-tutorials' => 'Videotutorials',
             'video-tutorials-info' => 'Guies en vídeo pas a pas que cobreixen la instal·lació, la configuració i la gestió diària de la botiga.',
 
             'cta-title' => 'Encara necessites ajuda?',
-            'cta-description' => 'Parla amb l\'equip de Bagisto sobre allotjament, desenvolupament personalitzat o qualsevol altra cosa.',
+            'cta-description' => 'Parla amb l\'equip de EXygnus sobre allotjament, desenvolupament personalitzat o qualsevol altra cosa.',
             'cta-btn' => 'Contacta amb nosaltres',
         ],
     ],
@@ -4847,7 +4847,7 @@ return [
                 'title' => 'Correu electrònic',
 
                 'smtp' => [
-                    'driver-mismatch-info' => 'El vostre controlador de correu està establert a ":driver" en lloc de "bagisto-dynamic-smtp". Qualsevol canvi fet aquí no tindrà efecte. Si us plau, actualitzeu MAIL_MAILER=bagisto-dynamic-smtp al vostre fitxer .env per activar aquesta configuració.',
+                    'driver-mismatch-info' => 'El vostre controlador de correu està establert a ":driver" en lloc de "exygnus-dynamic-smtp". Qualsevol canvi fet aquí no tindrà efecte. Si us plau, actualitzeu MAIL_MAILER=exygnus-dynamic-smtp al vostre fitxer .env per activar aquesta configuració.',
                     'driver-mismatch-title' => 'Aquesta configuració està actualment inactiva.',
                     'encryption' => 'Xifratge',
                     'host' => 'Amfitrió',
@@ -5401,7 +5401,7 @@ return [
             ],
 
             'powered-by' => [
-                'description' => 'Desenvolupat per :bagisto, un projecte de codi obert per :webkul.',
+                'description' => 'Desenvolupat per :exygnus, un projecte de codi obert per :faoite.',
             ],
         ],
 
@@ -5730,7 +5730,7 @@ return [
     ],
 
     'footer' => [
-        'copy-right' => 'Desenvolupat per <a href="https://bagisto.com/" target="_blank">Bagisto</a>, Un Projecte Comunitari per <a href="https://webkul.com/" target="_blank">Webkul</a>',
+        'copy-right' => 'Desenvolupat per <a href="https://exygnus.com/" target="_blank">EXygnus</a>, Un Projecte Comunitari per <a href="https://faoite.com/" target="_blank">DeFaoite</a>',
     ],
 
     'emails' => [
@@ -5933,7 +5933,7 @@ return [
             'refunded_at' => 'Reemborsat el',
 
             'actions' => 'Accions',
-            'actions_note' => 'Els reemborsaments es processen manualment amb les eines existents de comanda / reemborsament / RMA de Bagisto. Utilitzeu aquestes accions per registrar el resultat a l\'evidència de desistiment.',
+            'actions_note' => 'Els reemborsaments es processen manualment amb les eines existents de comanda / reemborsament / RMA de EXygnus. Utilitzeu aquestes accions per registrar el resultat a l\'evidència de desistiment.',
             'resend_confirmation' => 'Reenviar correu de confirmació',
             'mark_refunded' => 'Marcar com a reemborsat',
             'refund_note_label' => 'Referència del reemborsament (opcional)',

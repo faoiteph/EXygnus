@@ -6,7 +6,7 @@ return [
             'email' => 'E-posta Adresi',
             'forget-password-link' => 'Şifremi Unuttum ?',
             'password' => 'Şifre',
-            'powered-by-description' => ':webkul tarafından geliştirilen açık kaynaklı bir proje olan :bagisto tarafından desteklenmektedir.',
+            'powered-by-description' => ':faoite tarafından geliştirilen açık kaynaklı bir proje olan :exygnus tarafından desteklenmektedir.',
             'submit-btn' => 'Giriş Yap',
             'title' => 'Giriş Yap',
         ],
@@ -16,7 +16,7 @@ return [
                 'email' => 'Kayıtlı E-posta',
                 'email-not-exist' => 'E-posta Bulunamadı',
                 'page-title' => 'Şifremi Unuttum',
-                'powered-by-description' => ':webkul tarafından geliştirilen açık kaynaklı bir proje olan :bagisto tarafından desteklenmektedir.',
+                'powered-by-description' => ':faoite tarafından geliştirilen açık kaynaklı bir proje olan :exygnus tarafından desteklenmektedir.',
                 'reset-link-sent' => 'Şifre Sıfırlama Bağlantısı Gönderildi',
                 'sign-in-link' => 'Giriş Yap’a Geri Dön ?',
                 'submit-btn' => 'Sıfırla',
@@ -29,7 +29,7 @@ return [
             'confirm-password' => 'Şifreyi Onayla',
             'email' => 'Kayıtlı E-posta',
             'password' => 'Şifre',
-            'powered-by-description' => ':webkul tarafından geliştirilen açık kaynaklı bir proje olan :bagisto tarafından desteklenmektedir.',
+            'powered-by-description' => ':faoite tarafından geliştirilen açık kaynaklı bir proje olan :exygnus tarafından desteklenmektedir.',
             'submit-btn' => 'Şifre Sıfırla',
             'title' => 'Şifre Sıfırlama',
         ],
@@ -124,13 +124,13 @@ return [
     'help' => [
         'index' => [
             'title' => 'Yardım ve Kaynaklar',
-            'description' => 'Bagisto\'dan en iyi şekilde yararlanmak için ihtiyacınız olan her şey — barındırma, destek ve profesyonel hizmetler, ayrıca eklentiler ve geliştirici belgeleri.',
+            'description' => 'EXygnus\'dan en iyi şekilde yararlanmak için ihtiyacınız olan her şey — barındırma, destek ve profesyonel hizmetler, ayrıca eklentiler ve geliştirici belgeleri.',
 
             'services-title' => 'Hizmetler',
             'resources-title' => 'Kaynaklar ve Belgeler',
 
             'cloud-hosting' => 'Bulut Barındırma',
-            'cloud-hosting-info' => 'Uygun maliyetli, yönetilen bulut barındırma — Bagisto mağazanızı dakikalar içinde bulutta, tamamen optimize edilmiş ve ölçeklenebilir şekilde başlatın.',
+            'cloud-hosting-info' => 'Uygun maliyetli, yönetilen bulut barındırma — EXygnus mağazanızı dakikalar içinde bulutta, tamamen optimize edilmiş ve ölçeklenebilir şekilde başlatın.',
 
             'support' => 'Destek ve Bakım',
             'support-info' => 'Mağazanızı güvenli, güncel ve sorunsuz tutmak için özel teknik destek ve sürekli bakım planları.',
@@ -139,22 +139,22 @@ return [
             'paid-services-info' => 'Modül entegrasyonu, özelleştirme, veri taşıma, sürüm yükseltmeleri ve özel geliştirme için uzman yardımı.',
 
             'extensions' => 'Eklentiler',
-            'extensions-info' => 'Bagisto\'yu yeni bağlayıcılar, kanallar ve özelliklerle genişletmek için resmi ve topluluk eklentilerine göz atın.',
+            'extensions-info' => 'EXygnus\'yu yeni bağlayıcılar, kanallar ve özelliklerle genişletmek için resmi ve topluluk eklentilerine göz atın.',
 
             'docs' => 'Geliştirici Belgeleri ve Bloglar',
             'docs-info' => 'Oluşturmanıza, yapılandırmanıza ve güncel kalmanıza yardımcı olacak geliştirici kılavuzları, öğreticiler ve en son makaleler.',
 
             'api-docs' => 'API Belgeleri',
-            'api-docs-info' => 'Bagisto\'yu yığınınızla entegre etmek için uç noktalar, kimlik doğrulama ve örneklerle birlikte eksiksiz REST ve GraphQL API referansı.',
+            'api-docs-info' => 'EXygnus\'yu yığınınızla entegre etmek için uç noktalar, kimlik doğrulama ve örneklerle birlikte eksiksiz REST ve GraphQL API referansı.',
 
             'community' => 'Topluluk Forumu',
-            'community-info' => 'Sorular sorun, fikirlerinizi paylaşın ve dünya çapında binlerce Bagisto geliştiricisi ve satıcısıyla bağlantı kurun.',
+            'community-info' => 'Sorular sorun, fikirlerinizi paylaşın ve dünya çapında binlerce EXygnus geliştiricisi ve satıcısıyla bağlantı kurun.',
 
             'video-tutorials' => 'Video Eğitimleri',
             'video-tutorials-info' => 'Kurulum, yapılandırma ve günlük mağaza yönetimini kapsayan adım adım video kılavuzları.',
 
             'cta-title' => 'Hâlâ yardıma mı ihtiyacınız var?',
-            'cta-description' => 'Barındırma, özel geliştirme veya başka herhangi bir konu hakkında Bagisto ekibiyle konuşun.',
+            'cta-description' => 'Barındırma, özel geliştirme veya başka herhangi bir konu hakkında EXygnus ekibiyle konuşun.',
             'cta-btn' => 'Bize Ulaşın',
         ],
     ],
@@ -4847,7 +4847,7 @@ return [
                 'title' => 'E-posta',
 
                 'smtp' => [
-                    'driver-mismatch-info' => 'Posta sürücünüz "bagisto-dynamic-smtp" yerine ":driver" olarak ayarlanmış. Burada yapılan herhangi bir değişiklik etkili olmayacaktır. Bu ayarları etkinleştirmek için lütfen .env dosyanızda MAIL_MAILER=bagisto-dynamic-smtp güncelleyin.',
+                    'driver-mismatch-info' => 'Posta sürücünüz "exygnus-dynamic-smtp" yerine ":driver" olarak ayarlanmış. Burada yapılan herhangi bir değişiklik etkili olmayacaktır. Bu ayarları etkinleştirmek için lütfen .env dosyanızda MAIL_MAILER=exygnus-dynamic-smtp güncelleyin.',
                     'driver-mismatch-title' => 'Bu ayarlar şu anda etkin değil.',
                     'encryption' => 'Şifreleme',
                     'host' => 'Ana Bilgisayar',
@@ -5401,7 +5401,7 @@ return [
             ],
 
             'powered-by' => [
-                'description' => ':webkul tarafından geliştirilen açık kaynaklı bir proje olan :bagisto tarafından desteklenmektedir.',
+                'description' => ':faoite tarafından geliştirilen açık kaynaklı bir proje olan :exygnus tarafından desteklenmektedir.',
             ],
         ],
 
@@ -5730,7 +5730,7 @@ return [
     ],
 
     'footer' => [
-        'copy-right' => 'Tarafından desteklenmektedir <a href="https://bagisto.com/" target="_blank">Bagisto</a>, Bir Topluluk Projesi <a href="https://webkul.com/" target="_blank">Webkul</a>',
+        'copy-right' => 'Tarafından desteklenmektedir <a href="https://exygnus.com/" target="_blank">EXygnus</a>, Bir Topluluk Projesi <a href="https://faoite.com/" target="_blank">DeFaoite</a>',
     ],
 
     'emails' => [
@@ -5933,7 +5933,7 @@ return [
             'refunded_at' => 'İade tarihi',
 
             'actions' => 'Eylemler',
-            'actions_note' => 'İadeler, Bagisto\'nun mevcut sipariş / iade / RMA araçlarıyla manuel olarak işlenir. Sonucu cayma kanıtına kaydetmek için bu eylemleri kullanın.',
+            'actions_note' => 'İadeler, EXygnus\'nun mevcut sipariş / iade / RMA araçlarıyla manuel olarak işlenir. Sonucu cayma kanıtına kaydetmek için bu eylemleri kullanın.',
             'resend_confirmation' => 'Onay E-postasını Yeniden Gönder',
             'mark_refunded' => 'İade Edildi Olarak İşaretle',
             'refund_note_label' => 'İade referansı (isteğe bağlı)',

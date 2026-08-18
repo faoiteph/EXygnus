@@ -5,7 +5,7 @@ return [
         'forgot-password' => [
             'already-sent' => 'पासवर्ड रीसेट मेल पहले ही भेजा जा चुका है।',
             'back' => 'साइन इन पर वापस जाएं?',
-            'bagisto' => 'बागिस्तो',
+            'bagisto' => 'एक्सिग्नस',
             'email' => 'ईमेल',
             'email-not-exist' => 'हम उस ईमेल पते के साथ कोई उपयोगकर्ता नहीं ढूंढ सकते।',
             'footer' => '© कॉपीराइट 2010 - :current_year, वेबकुल सॉफ़्टवेयर (भारत में पंजीकृत)। सभी अधिकार सुरक्षित हैं।',
@@ -19,7 +19,7 @@ return [
 
         'reset-password' => [
             'back-link-title' => 'साइन इन पर वापस जाएं',
-            'bagisto' => 'बागिस्तो',
+            'bagisto' => 'एक्सिग्नस',
             'confirm-password' => 'पासवर्ड की पुष्टि करें',
             'email' => 'पंजीकृत ईमेल',
             'footer' => '© कॉपीराइट 2010 - :current_year, वेबकुल सॉफ़्टवेयर (भारत में पंजीकृत)। सभी अधिकार सुरक्षित हैं।',
@@ -29,7 +29,7 @@ return [
         ],
 
         'login-form' => [
-            'bagisto' => 'बागिस्तो',
+            'bagisto' => 'एक्सिग्नस',
             'button-title' => 'साइन इन करें',
             'create-your-account' => 'अपना खाता बनाएं',
             'email' => 'ईमेल',
@@ -49,7 +49,7 @@ return [
 
         'signup-form' => [
             'account-exists' => 'पहले से ही खाता है?',
-            'bagisto' => 'बागिस्तो',
+            'bagisto' => 'एक्सिग्नस',
             'button-title' => 'रजिस्टर करें',
             'click-here' => 'यहां क्लिक करें',
             'confirm-pass' => 'पासवर्ड की पुष्टि करें',
@@ -564,7 +564,7 @@ return [
                     'bottom' => [
                         'all' => 'सभी',
                         'back-button' => 'मुख्य मेनू पर वापस जाएं',
-                        'bagisto' => 'बैगिस्टो',
+                        'bagisto' => 'एक्सिग्नस',
                         'categories' => 'श्रेणियाँ',
                         'compare' => 'तुलना करें',
                         'dropdown-text' => 'कार्ट, ऑर्डर और विशलिस्ट प्रबंधित करें',
@@ -585,7 +585,7 @@ return [
                 'mobile' => [
                     'account' => 'खाता',
                     'back-button' => 'मुख्य मेनू पर वापस जाएं',
-                    'bagisto' => 'बैगिस्टो',
+                    'bagisto' => 'एक्सिग्नस',
                     'compare' => 'तुलना करें',
                     'currencies' => 'मुद्राएँ',
                     'dropdown-text' => 'कार्ट, ऑर्डर और विशलिस्ट प्रबंधित करें',
@@ -1078,7 +1078,7 @@ return [
             'suspended-account-message' => 'आपका खाता निलंबित कर दिया गया है।',
 
             'index' => [
-                'bagisto' => 'बागिस्तो',
+                'bagisto' => 'एक्सिग्नस',
                 'cart' => 'कार्ट',
                 'continue-shopping' => 'खरीदारी जारी रखें',
                 'empty-product' => 'आपके पास आपके कार्ट में कोई उत्पाद नहीं है।',

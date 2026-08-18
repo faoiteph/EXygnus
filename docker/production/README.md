@@ -262,7 +262,7 @@ docker tag   <your-dockerhub-username>/bagisto:2.4.0 <your-dockerhub-username>/b
 | Bad | Why |
 |---|---|
 | `bagisto:v2.4.0` | Inconsistent with Docker Hub convention (no `v` prefix). |
-| `bagisto:bagisto-2.4.0` | Redundant — the repository name already says `bagisto`. |
+| `bagisto:exygnus-2.4.0` | Redundant — the repository name already says `bagisto`. |
 | `bagisto:prod-2.4.0` | Unnecessary prefix — all images in this repo are production. |
 
 ---

@@ -54,6 +54,6 @@ class DynamicSmtpTransport extends AbstractTransport
      */
     public function __toString(): string
     {
-        return 'bagisto-dynamic-smtp';
+        return 'exygnus-dynamic-smtp';
     }
 }

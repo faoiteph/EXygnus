@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'default' => env('MAIL_MAILER', 'bagisto-dynamic-smtp'),
+    'default' => env('MAIL_MAILER', 'exygnus-dynamic-smtp'),
 
     /*
     |--------------------------------------------------------------------------
@@ -49,8 +49,8 @@ return [
             'local_domain' => env('MAIL_EHLO_DOMAIN', parse_url(env('APP_URL', 'http://localhost'), PHP_URL_HOST)),
         ],
 
-        'bagisto-dynamic-smtp' => [
-            'transport' => 'bagisto-dynamic-smtp',
+        'exygnus-dynamic-smtp' => [
+            'transport' => 'exygnus-dynamic-smtp',
         ],
 
         'ses' => [
