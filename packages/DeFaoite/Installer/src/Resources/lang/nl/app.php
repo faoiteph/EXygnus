@@ -806,7 +806,7 @@ return [
         'index' => [
             'create-administrator' => [
                 'admin' => 'Beheerder',
-                'bagisto' => 'EXygnus',
+                'exygnus' => 'EXygnus',
                 'confirm-password' => 'Bevestig wachtwoord',
                 'email' => 'E-mail',
                 'email-address' => 'admin@example.com',
@@ -821,7 +821,7 @@ return [
                 'application-name' => 'Toepassingsnaam',
                 'argentine-peso' => 'Argentijnse Peso (ARS)',
                 'australian-dollar' => 'Australische Dollar (AUD)',
-                'bagisto' => 'EXygnus',
+                'exygnus' => 'EXygnus',
                 'bangladeshi-taka' => 'Bangladesh Taka (BDT)',
                 'bahraini-dinar' => 'Bahreinse Dinar (BHD)',
                 'brazilian-real' => 'Braziliaanse Real (BRL)',
@@ -914,16 +914,16 @@ return [
             ],
 
             'installation-processing' => [
-                'bagisto' => 'EXygnus installatie',
-                'bagisto-info' => 'Het maken van database tabellen kan even duren',
+                'exygnus' => 'EXygnus installatie',
+                'exygnus-info' => 'Het maken van database tabellen kan even duren',
                 'title' => 'Installatie',
             ],
 
             'installation-completed' => [
                 'admin-panel' => 'Beheerderspaneel',
-                'bagisto-forums' => 'EXygnus Forum',
+                'exygnus-forums' => 'EXygnus Forum',
                 'customer-panel' => 'Klantenpaneel',
-                'explore-bagisto-extensions' => 'Verken EXygnus-extensies',
+                'explore-exygnus-extensions' => 'Verken EXygnus-extensies',
                 'title' => 'Installatie voltooid',
                 'title-info' => 'EXygnus is succesvol geïnstalleerd op uw systeem.',
             ],
@@ -973,9 +973,9 @@ return [
 
             'arabic' => 'Arabisch',
             'back' => 'Terug',
-            'bagisto' => 'EXygnus',
-            'bagisto-info' => 'Een communityproject van',
-            'bagisto-logo' => 'EXygnus Logo',
+            'exygnus' => 'EXygnus',
+            'exygnus-info' => 'Een communityproject van',
+            'exygnus-logo' => 'EXygnus Logo',
             'bengali' => 'Bengaals',
             'catalan' => 'Catalaans',
             'chinese' => 'Chinees',
@@ -1002,7 +1002,7 @@ return [
             'title' => 'EXygnus Installer',
             'turkish' => 'Turks',
             'ukrainian' => 'Oekraïens',
-            'webkul' => 'DeFaoite',
+            'defaoite' => 'DeFaoite',
         ],
     ],
 ];

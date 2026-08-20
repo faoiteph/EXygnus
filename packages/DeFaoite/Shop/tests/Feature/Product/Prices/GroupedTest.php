@@ -792,7 +792,7 @@ it('should fails the validation error when certain inputs not provided when add 
 
     $cartRuleCoupon = CartRuleCoupon::factory()->create([
         'cart_rule_id' => $cartRule->id,
-        'code' => $couponCode = fake()->numerify('bagisto-########'),
+        'code' => $couponCode = fake()->numerify('exygnus-########'),
         'type' => 0,
         'is_primary' => 1,
     ]);
@@ -895,7 +895,7 @@ it('should add a grouped product to the cart with a cart rule of the specific co
 
     $cartRuleCoupon = CartRuleCoupon::factory()->create([
         'cart_rule_id' => $cartRule->id,
-        'code' => $couponCode = fake()->numerify('bagisto-########'),
+        'code' => $couponCode = fake()->numerify('exygnus-########'),
         'type' => 0,
         'is_primary' => 1,
     ]);
@@ -1008,7 +1008,7 @@ it('should fails the validation error when the certain inputs not provided when 
 
     $cartRuleCoupon = CartRuleCoupon::factory()->create([
         'cart_rule_id' => $cartRule->id,
-        'code' => $couponCode = fake()->numerify('bagisto-########'),
+        'code' => $couponCode = fake()->numerify('exygnus-########'),
         'type' => 0,
         'is_primary' => 1,
     ]);
@@ -1111,7 +1111,7 @@ it('should add a grouped product to the cart with a cart rule of the specific co
 
     $cartRuleCoupon = CartRuleCoupon::factory()->create([
         'cart_rule_id' => $cartRule->id,
-        'code' => $couponCode = fake()->numerify('bagisto-########'),
+        'code' => $couponCode = fake()->numerify('exygnus-########'),
         'type' => 0,
         'is_primary' => 1,
     ]);
@@ -1226,7 +1226,7 @@ it('should fails the validation error when the certain inputs not provided when 
 
     $cartRuleCoupon = CartRuleCoupon::factory()->create([
         'cart_rule_id' => $cartRule->id,
-        'code' => $couponCode = fake()->numerify('bagisto-########'),
+        'code' => $couponCode = fake()->numerify('exygnus-########'),
         'type' => 0,
         'is_primary' => 1,
     ]);
@@ -1333,7 +1333,7 @@ it('should add a grouped product to the cart with a cart rule of the specific co
 
     $cartRuleCoupon = CartRuleCoupon::factory()->create([
         'cart_rule_id' => $cartRule->id,
-        'code' => $couponCode = fake()->numerify('bagisto-########'),
+        'code' => $couponCode = fake()->numerify('exygnus-########'),
         'type' => 0,
         'is_primary' => 1,
     ]);
@@ -1451,7 +1451,7 @@ it('should fails the validation error when the certain inputs not provided when 
 
     $cartRuleCoupon = CartRuleCoupon::factory()->create([
         'cart_rule_id' => $cartRule->id,
-        'code' => $couponCode = fake()->numerify('bagisto-########'),
+        'code' => $couponCode = fake()->numerify('exygnus-########'),
         'type' => 0,
         'is_primary' => 1,
     ]);
@@ -1557,7 +1557,7 @@ it('should add a grouped product to the cart with a cart rule of the specific co
 
     $cartRuleCoupon = CartRuleCoupon::factory()->create([
         'cart_rule_id' => $cartRule->id,
-        'code' => $couponCode = fake()->numerify('bagisto-########'),
+        'code' => $couponCode = fake()->numerify('exygnus-########'),
         'type' => 0,
         'is_primary' => 1,
     ]);

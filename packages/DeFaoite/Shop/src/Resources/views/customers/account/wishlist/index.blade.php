@@ -34,7 +34,7 @@
                     <x-shop::shimmer.customers.account.wishlist :count="4" />
                 </template>
 
-                {!! view_render_event('bagisto.shop.customers.account.wishlist.list.before') !!}
+                {!! view_render_event('exygnus.shop.customers.account.wishlist.list.before') !!}
 
                 <!-- Wishlist Information -->
                 <template v-else>
@@ -53,7 +53,7 @@
                             </h2>
                         </div>
 
-                        {!! view_render_event('bagisto.shop.customers.account.wishlist.delete_all.before') !!}
+                        {!! view_render_event('exygnus.shop.customers.account.wishlist.delete_all.before') !!}
 
                         <div
                             class="secondary-button border-zinc-200 px-5 py-3 font-normal max-md:rounded-lg max-md:py-2 max-sm:py-1.5 max-sm:text-sm"
@@ -63,7 +63,7 @@
                             @lang('shop::app.customers.account.wishlist.delete-all')
                         </div>
 
-                        {!! view_render_event('bagisto.shop.customers.account.wishlist.delete_all.after') !!}
+                        {!! view_render_event('exygnus.shop.customers.account.wishlist.delete_all.after') !!}
                     </div>
 
                     <!-- Wishlist Items -->
@@ -83,7 +83,7 @@
                         <div class="m-auto grid w-full place-content-center items-center justify-items-center py-32 text-center">
                             <img
                                 class="max-md:h-[100px] max-md:w-[100px]"
-                                src="{{ bagisto_asset('images/wishlist.png') }}"
+                                src="{{ exygnus_asset('images/wishlist.png') }}"
                                 alt="Empty wishlist"
                             >
 
@@ -97,7 +97,7 @@
                     </template>
                 </template>
 
-                {!! view_render_event('bagisto.shop.customers.account.wishlist.list.after') !!}
+                {!! view_render_event('exygnus.shop.customers.account.wishlist.list.after') !!}
             </div>
         </script>
 
@@ -112,7 +112,7 @@
                         <div class="flex justify-between gap-x-2.5 border-b border-zinc-200 pb-5">
                             <div class="flex gap-x-5 max-md:w-full max-md:gap-x-5">
                                 <div>
-                                    {!! view_render_event('bagisto.shop.customers.account.wishlist.image.before') !!}
+                                    {!! view_render_event('exygnus.shop.customers.account.wishlist.image.before') !!}
 
                                     <a :href="'{{ route('shop.product_or_category.index', ':slug') }}'.replace(':slug', wishlist.product.url_key)">
                                         <!-- Wishlist Item Image -->
@@ -123,7 +123,7 @@
                                         />
                                     </a>
 
-                                    {!! view_render_event('bagisto.shop.customers.account.wishlist.image.after') !!}
+                                    {!! view_render_event('exygnus.shop.customers.account.wishlist.image.after') !!}
                                 </div>
 
                                 <div class="grid gap-y-2.5 max-md:w-full max-md:gap-y-0">
@@ -197,7 +197,7 @@
                                             v-html="wishlist.product.price_html"
                                         ></p>
 
-                                        {!! view_render_event('bagisto.shop.customers.account.wishlist.remove_button.before') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.wishlist.remove_button.before') !!}
 
                                         <!--Wishlist Item removed button-->
                                         <a
@@ -207,10 +207,10 @@
                                             @lang('shop::app.customers.account.wishlist.remove')
                                         </a>
 
-                                        {!! view_render_event('bagisto.shop.customers.account.wishlist.remove_button.after') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.wishlist.remove_button.after') !!}
                                     </div>
 
-                                    {!! view_render_event('bagisto.shop.customers.account.wishlist.perform_actions.before') !!}
+                                    {!! view_render_event('exygnus.shop.customers.account.wishlist.perform_actions.before') !!}
 
                                     <div class="flex gap-5 max-md:mt-2.5">
                                         <x-shop::quantity-changer
@@ -234,7 +234,7 @@
                                         @endif
                                     </div>
 
-                                    {!! view_render_event('bagisto.shop.customers.account.wishlist.perform_actions.after') !!}
+                                    {!! view_render_event('exygnus.shop.customers.account.wishlist.perform_actions.after') !!}
                                 </div>
                             </div>
 

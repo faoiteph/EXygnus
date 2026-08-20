@@ -1,8 +1,8 @@
-{!! view_render_event('bagisto.admin.catalog.product.edit.form.links.before', ['product' => $product]) !!}
+{!! view_render_event('exygnus.admin.catalog.product.edit.form.links.before', ['product' => $product]) !!}
     
 <v-product-links></v-product-links>
 
-{!! view_render_event('bagisto.admin.catalog.product.edit.form.links.after', ['product' => $product]) !!}
+{!! view_render_event('exygnus.admin.catalog.product.edit.form.links.after', ['product' => $product]) !!}
 
 @pushOnce('scripts')
     <script
@@ -61,7 +61,7 @@
                                 :class="{'border border-dashed border-gray-300 dark:border-gray-800 dark:mix-blend-exclusion dark:invert': ! product.images.length}"
                             >
                                 <template v-if="! product.images.length">
-                                    <img src="{{ bagisto_asset('images/product-placeholders/front.svg') }}">
+                                    <img src="{{ exygnus_asset('images/product-placeholders/front.svg') }}">
                                 
                                     <p class="absolute bottom-1.5 w-full text-center text-[6px] font-semibold text-gray-400">
                                         @lang('admin::app.catalog.products.edit.links.image-placeholder')
@@ -108,7 +108,7 @@
                 >
                     <!-- Placeholder Image -->
                     <img
-                        src="{{ bagisto_asset('images/icon-add-product.svg') }}"
+                        src="{{ exygnus_asset('images/icon-add-product.svg') }}"
                         class="h-20 w-20 dark:mix-blend-exclusion dark:invert"
                     />
 

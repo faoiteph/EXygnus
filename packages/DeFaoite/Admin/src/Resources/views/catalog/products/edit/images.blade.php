@@ -1,4 +1,4 @@
-{!! view_render_event('bagisto.admin.catalog.product.edit.form.images.before', ['product' => $product]) !!}
+{!! view_render_event('exygnus.admin.catalog.product.edit.form.images.before', ['product' => $product]) !!}
 
 <div class="box-shadow relative rounded bg-white p-4 dark:bg-gray-900">
     <!-- Panel Header -->
@@ -25,4 +25,4 @@
     <x-admin::form.control-group.error control-name='images.files[0]' />
 </div>
 
-{!! view_render_event('bagisto.admin.catalog.product.edit.form.images.after', ['product' => $product]) !!}
+{!! view_render_event('exygnus.admin.catalog.product.edit.form.images.after', ['product' => $product]) !!}

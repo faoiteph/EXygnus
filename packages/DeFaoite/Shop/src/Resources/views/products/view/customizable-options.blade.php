@@ -17,14 +17,14 @@
     @endphp
 
     @if ($options->isNotEmpty())
-        {!! view_render_event('bagisto.shop.products.view.customizable-options.before', ['product' => $product]) !!}
+        {!! view_render_event('exygnus.shop.products.view.customizable-options.before', ['product' => $product]) !!}
 
         <v-product-customizable-options
             :initial-price="{{ core()->convertPrice($product->getTypeInstance()->getMinimalPrice()) }}"
         >
         </v-product-customizable-options>
 
-        {!! view_render_event('bagisto.shop.products.view.customizable-options.after', ['product' => $product]) !!}
+        {!! view_render_event('exygnus.shop.products.view.customizable-options.after', ['product' => $product]) !!}
 
         @pushOnce('scripts')
             <script

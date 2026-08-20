@@ -7,11 +7,11 @@
     ])->get();
 @endphp
 
-{!! view_render_event('bagisto.admin.catalog.product.edit.form.types.bundle.before', ['product' => $product]) !!}
+{!! view_render_event('exygnus.admin.catalog.product.edit.form.types.bundle.before', ['product' => $product]) !!}
 
 <v-bundle-options :errors="errors"></v-bundle-options>
 
-{!! view_render_event('bagisto.admin.catalog.product.edit.form.types.bundle.after', ['product' => $product]) !!}
+{!! view_render_event('exygnus.admin.catalog.product.edit.form.types.bundle.after', ['product' => $product]) !!}
 
 @pushOnce('scripts')
     <script
@@ -67,7 +67,7 @@
             >
                 <!-- Placeholder Image -->
                 <img
-                    src="{{ bagisto_asset('images/icon-options.svg') }}"
+                    src="{{ exygnus_asset('images/icon-options.svg') }}"
                     class="h-20 w-20 rounded border border-dashed dark:border-gray-800 dark:mix-blend-exclusion dark:invert"
                 />
 
@@ -318,7 +318,7 @@
                                     :class="{'overflow-hidden rounded border border-dashed border-gray-300 dark:border-gray-800 dark:mix-blend-exclusion dark:invert': ! element.product.images.length}"
                                 >
                                     <template v-if="! element.product.images.length">
-                                        <img src="{{ bagisto_asset('images/product-placeholders/front.svg') }}">
+                                        <img src="{{ exygnus_asset('images/product-placeholders/front.svg') }}">
 
                                         <p class="absolute bottom-1.5 w-full text-center text-[6px] font-semibold text-gray-400">
                                             @lang('admin::app.catalog.products.edit.types.bundle.image-placeholder')
@@ -405,7 +405,7 @@
             >
                 <!-- Placeholder Image -->
                 <img
-                    src="{{ bagisto_asset('images/icon-add-product.svg') }}"
+                    src="{{ exygnus_asset('images/icon-add-product.svg') }}"
                     class="h-20 w-20 dark:mix-blend-exclusion dark:invert"
                 />
 

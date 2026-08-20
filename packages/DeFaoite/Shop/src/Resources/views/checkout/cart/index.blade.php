@@ -15,28 +15,28 @@
         @lang('shop::app.checkout.cart.index.cart')
     </x-slot>
 
-    {!! view_render_event('bagisto.shop.checkout.cart.header.before') !!}
+    {!! view_render_event('exygnus.shop.checkout.cart.header.before') !!}
 
     <!-- Page Header -->
     <div class="flex flex-wrap">
         <div class="flex w-full justify-between border border-b border-l-0 border-r-0 border-t-0 px-[60px] py-4 max-lg:px-8 max-md:px-4">
             <div class="flex items-center gap-x-14 max-[1180px]:gap-x-9">
-                {!! view_render_event('bagisto.shop.checkout.cart.logo.before') !!}
+                {!! view_render_event('exygnus.shop.checkout.cart.logo.before') !!}
 
                 <a
                     href="{{ route('shop.home.index') }}"
                     class="flex min-h-[30px]"
-                    aria-label="@lang('shop::app.checkout.cart.index.bagisto')"
+                    aria-label="@lang('shop::app.checkout.cart.index.exygnus')"
                 >
                     <img
-                        src="{{ core()->getCurrentChannel()->logo_url ?? bagisto_asset('images/logo.svg') }}"
+                        src="{{ core()->getCurrentChannel()->logo_url ?? exygnus_asset('images/logo.svg') }}"
                         alt="{{ config('app.name') }}"
                         width="131"
                         height="29"
                     >
                 </a>
 
-                {!! view_render_event('bagisto.shop.checkout.cart.logo.after') !!}
+                {!! view_render_event('exygnus.shop.checkout.cart.logo.after') !!}
             </div>
 
             @guest('customer')
@@ -45,19 +45,19 @@
         </div>
     </div>
 
-    {!! view_render_event('bagisto.shop.checkout.cart.header.after') !!}
+    {!! view_render_event('exygnus.shop.checkout.cart.header.after') !!}
 
     <div class="flex-auto">
         <div class="container px-[60px] max-lg:px-8 max-md:px-4">
 
-            {!! view_render_event('bagisto.shop.checkout.cart.breadcrumbs.before') !!}
+            {!! view_render_event('exygnus.shop.checkout.cart.breadcrumbs.before') !!}
 
             <!-- Breadcrumbs -->
             @if ((core()->getConfigData('general.general.breadcrumbs.shop')))
                 <x-shop::breadcrumbs name="cart" />
             @endif
 
-            {!! view_render_event('bagisto.shop.checkout.cart.breadcrumbs.after') !!}
+            {!! view_render_event('exygnus.shop.checkout.cart.breadcrumbs.after') !!}
 
             @php
                 $errors = \DeFaoite\Checkout\Facades\Cart::getErrors();
@@ -77,7 +77,7 @@
     </div>
 
     @if (core()->getConfigData('sales.checkout.shopping_cart.cross_sell'))
-        {!! view_render_event('bagisto.shop.checkout.cart.cross_sell_carousel.before') !!}
+        {!! view_render_event('exygnus.shop.checkout.cart.cross_sell_carousel.before') !!}
 
         <!-- Cross-sell Product Carousal -->
         <x-shop::products.carousel
@@ -86,7 +86,7 @@
         >
         </x-shop::products.carousel>
 
-        {!! view_render_event('bagisto.shop.checkout.cart.cross_sell_carousel.after') !!}
+        {!! view_render_event('exygnus.shop.checkout.cart.cross_sell_carousel.after') !!}
     @endif
 
     @pushOnce('scripts')
@@ -108,7 +108,7 @@
                     >
                         <div class="flex flex-1 flex-col gap-6 max-md:gap-5">
 
-                            {!! view_render_event('bagisto.shop.checkout.cart.cart_mass_actions.before') !!}
+                            {!! view_render_event('exygnus.shop.checkout.cart.cart_mass_actions.before') !!}
 
                             <!-- Cart Mass Action Container -->
                             <div class="flex items-center justify-between border-b border-zinc-200 pb-2.5 max-md:py-2.5">
@@ -164,9 +164,9 @@
                                 </div>
                             </div>
 
-                            {!! view_render_event('bagisto.shop.checkout.cart.cart_mass_actions.after') !!}
+                            {!! view_render_event('exygnus.shop.checkout.cart.cart_mass_actions.after') !!}
 
-                            {!! view_render_event('bagisto.shop.checkout.cart.item.listing.before') !!}
+                            {!! view_render_event('exygnus.shop.checkout.cart.item.listing.before') !!}
 
                             <!-- Cart Item Listing Container -->
                             <div
@@ -193,7 +193,7 @@
                                             ></label>
                                         </div>
 
-                                        {!! view_render_event('bagisto.shop.checkout.cart.item_image.before') !!}
+                                        {!! view_render_event('exygnus.shop.checkout.cart.item_image.before') !!}
 
                                         <!-- Cart Item Image -->
                                         <a :href="'{{ route('shop.product_or_category.index', ':slug') }}'.replace(':slug', item.product_url_key)">
@@ -208,11 +208,11 @@
                                             />
                                         </a>
 
-                                        {!! view_render_event('bagisto.shop.checkout.cart.item_image.after') !!}
+                                        {!! view_render_event('exygnus.shop.checkout.cart.item_image.after') !!}
 
                                         <!-- Cart Item Options Container -->
                                         <div class="grid place-content-start gap-y-2.5 max-md:gap-y-0">
-                                            {!! view_render_event('bagisto.shop.checkout.cart.item_name.before') !!}
+                                            {!! view_render_event('exygnus.shop.checkout.cart.item_name.before') !!}
 
                                             <a :href="'{{ route('shop.product_or_category.index', ':slug') }}'.replace(':slug', item.product_url_key)">
                                                 <p class="text-base font-medium max-sm:text-sm">
@@ -220,9 +220,9 @@
                                                 </p>
                                             </a>
 
-                                            {!! view_render_event('bagisto.shop.checkout.cart.item_name.after') !!}
+                                            {!! view_render_event('exygnus.shop.checkout.cart.item_name.after') !!}
 
-                                            {!! view_render_event('bagisto.shop.checkout.cart.item_details.before') !!}
+                                            {!! view_render_event('exygnus.shop.checkout.cart.item_details.before') !!}
 
                                             <!-- Cart Item Options Container -->
                                             <div
@@ -276,9 +276,9 @@
                                                 </div>
                                             </div>
 
-                                            {!! view_render_event('bagisto.shop.checkout.cart.item_details.after') !!}
+                                            {!! view_render_event('exygnus.shop.checkout.cart.item_details.after') !!}
 
-                                            {!! view_render_event('bagisto.shop.checkout.cart.formatted_total.before') !!}
+                                            {!! view_render_event('exygnus.shop.checkout.cart.formatted_total.before') !!}
 
                                             <div class="md:hidden">
                                                 <p class="text-lg font-semibold max-md:text-sm">
@@ -311,9 +311,9 @@
                                                 </span>
                                             </div>
 
-                                            {!! view_render_event('bagisto.shop.checkout.cart.formatted_total.after') !!}
+                                            {!! view_render_event('exygnus.shop.checkout.cart.formatted_total.after') !!}
 
-                                            {!! view_render_event('bagisto.shop.checkout.cart.quantity_changer.before') !!}
+                                            {!! view_render_event('exygnus.shop.checkout.cart.quantity_changer.before') !!}
 
                                             <div class="flex items-center gap-2.5 max-md:mt-2.5">
                                                 <x-shop::quantity-changer
@@ -338,12 +338,12 @@
                                                 </span>
                                             </div>
 
-                                            {!! view_render_event('bagisto.shop.checkout.cart.quantity_changer.after') !!}
+                                            {!! view_render_event('exygnus.shop.checkout.cart.quantity_changer.after') !!}
                                         </div>
                                     </div>
 
                                     <div class="text-right max-md:hidden">
-                                        {!! view_render_event('bagisto.shop.checkout.cart.total.before') !!}
+                                        {!! view_render_event('exygnus.shop.checkout.cart.total.before') !!}
 
                                         <template v-if="displayTax.prices == 'including_tax'">
                                             <p class="text-lg font-semibold">
@@ -369,9 +369,9 @@
                                             </p>
                                         </template>
 
-                                        {!! view_render_event('bagisto.shop.checkout.cart.total.after') !!}
+                                        {!! view_render_event('exygnus.shop.checkout.cart.total.after') !!}
 
-                                        {!! view_render_event('bagisto.shop.checkout.cart.remove_button.before') !!}
+                                        {!! view_render_event('exygnus.shop.checkout.cart.remove_button.before') !!}
 
                                         <!-- Cart Item Remove Button -->
                                         <span
@@ -383,18 +383,18 @@
                                             @lang('shop::app.checkout.cart.index.remove')
                                         </span>
 
-                                        {!! view_render_event('bagisto.shop.checkout.cart.remove_button.after') !!}
+                                        {!! view_render_event('exygnus.shop.checkout.cart.remove_button.after') !!}
                                     </div>
                                 </div>
                             </div>
 
-                            {!! view_render_event('bagisto.shop.checkout.cart.item.listing.after') !!}
+                            {!! view_render_event('exygnus.shop.checkout.cart.item.listing.after') !!}
 
-                            {!! view_render_event('bagisto.shop.checkout.cart.controls.before') !!}
+                            {!! view_render_event('exygnus.shop.checkout.cart.controls.before') !!}
 
                             <!-- Cart Item Actions -->
                             <div class="flex flex-wrap justify-end gap-8 max-md:justify-between max-md:gap-5">
-                                {!! view_render_event('bagisto.shop.checkout.cart.continue_shopping.before') !!}
+                                {!! view_render_event('exygnus.shop.checkout.cart.continue_shopping.before') !!}
 
                                 <a
                                     class="secondary-button max-h-14 rounded-2xl max-md:rounded-lg max-md:px-6 max-md:py-3 max-md:text-sm max-sm:py-2"
@@ -403,9 +403,9 @@
                                     @lang('shop::app.checkout.cart.index.continue-shopping')
                                 </a>
 
-                                {!! view_render_event('bagisto.shop.checkout.cart.continue_shopping.after') !!}
+                                {!! view_render_event('exygnus.shop.checkout.cart.continue_shopping.after') !!}
 
-                                {!! view_render_event('bagisto.shop.checkout.cart.update_cart.before') !!}
+                                {!! view_render_event('exygnus.shop.checkout.cart.update_cart.before') !!}
 
                                 <x-shop::button
                                     class="secondary-button max-h-14 rounded-2xl max-md:rounded-lg max-md:px-6 max-md:py-3 max-md:text-sm max-sm:py-2"
@@ -415,18 +415,18 @@
                                     @click="update()"
                                 />
 
-                                {!! view_render_event('bagisto.shop.checkout.cart.update_cart.after') !!}
+                                {!! view_render_event('exygnus.shop.checkout.cart.update_cart.after') !!}
                             </div>
 
-                            {!! view_render_event('bagisto.shop.checkout.cart.controls.after') !!}
+                            {!! view_render_event('exygnus.shop.checkout.cart.controls.after') !!}
                         </div>
 
-                        {!! view_render_event('bagisto.shop.checkout.cart.summary.before') !!}
+                        {!! view_render_event('exygnus.shop.checkout.cart.summary.before') !!}
 
                         <!-- Cart Summary Blade File -->
                         @include('shop::checkout.cart.summary')
 
-                        {!! view_render_event('bagisto.shop.checkout.cart.summary.after') !!}
+                        {!! view_render_event('exygnus.shop.checkout.cart.summary.after') !!}
                     </div>
 
                     <!-- Empty Cart Section -->
@@ -436,7 +436,7 @@
                     >
                         <img
                             class="max-md:h-[100px] max-md:w-[100px]"
-                            src="{{ bagisto_asset('images/thank-you.png') }}"
+                            src="{{ exygnus_asset('images/thank-you.png') }}"
                             alt="@lang('shop::app.checkout.cart.index.empty-product')"
                             loading="lazy"
                             decoding="async"

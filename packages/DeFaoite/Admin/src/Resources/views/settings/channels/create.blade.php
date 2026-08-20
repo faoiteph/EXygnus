@@ -4,7 +4,7 @@
         @lang('admin::app.settings.channels.create.title')
     </x-slot>
 
-    {!! view_render_event('bagisto.admin.settings.channels.create.before') !!}
+    {!! view_render_event('exygnus.admin.settings.channels.create.before') !!}
 
     <x-admin::form
         action="{{ route('admin.settings.channels.store') }}"
@@ -42,7 +42,7 @@
             <!-- Left sub-component -->
             <div class="flex flex-1 flex-col gap-2 max-xl:flex-auto">
 
-                {!! view_render_event('bagisto.admin.settings.channels.create.card.general.before') !!}
+                {!! view_render_event('exygnus.admin.settings.channels.create.card.general.before') !!}
 
                 <!-- General Information -->
                 <div class="box-shadow rounded bg-white p-4 dark:bg-gray-900">
@@ -190,9 +190,9 @@
                     </x-admin::form.control-group>
                 </div>
 
-                {!! view_render_event('bagisto.admin.settings.channels.create.card.general.after') !!}
+                {!! view_render_event('exygnus.admin.settings.channels.create.card.general.after') !!}
 
-                {!! view_render_event('bagisto.admin.settings.channels.create.card.design.before') !!}
+                {!! view_render_event('exygnus.admin.settings.channels.create.card.design.before') !!}
 
                 <!-- Logo and Design -->
                 <div class="box-shadow rounded bg-white p-4 dark:bg-gray-900">
@@ -269,9 +269,9 @@
                     </div>
                 </div>
 
-                {!! view_render_event('bagisto.admin.settings.channels.create.card.design.after') !!}
+                {!! view_render_event('exygnus.admin.settings.channels.create.card.design.after') !!}
 
-                {!! view_render_event('bagisto.admin.settings.channels.create.card.seo.before') !!}
+                {!! view_render_event('exygnus.admin.settings.channels.create.card.seo.before') !!}
 
                 <!-- Home Page SEO -->
                 <div class="box-shadow rounded bg-white p-4 dark:bg-gray-900">
@@ -345,14 +345,14 @@
                     </x-admin::form.control-group>
                 </div>
 
-                {!! view_render_event('bagisto.admin.settings.channels.create.card.seo.after') !!}
+                {!! view_render_event('exygnus.admin.settings.channels.create.card.seo.after') !!}
 
             </div>
 
             <!-- Right sub-component -->
             <div class="flex w-[360px] max-w-full flex-col gap-2 max-sm:w-full">
 
-                {!! view_render_event('bagisto.admin.settings.channels.create.card.accordion.currencies_and_locales.before') !!}
+                {!! view_render_event('exygnus.admin.settings.channels.create.card.accordion.currencies_and_locales.before') !!}
 
                 <!-- Currencies and Locales -->
                 <x-admin::accordion>
@@ -493,9 +493,9 @@
                     </x-slot>
                 </x-admin::accordion>
 
-                {!! view_render_event('bagisto.admin.settings.channels.create.card.accordion.currencies_and_locales.after') !!}
+                {!! view_render_event('exygnus.admin.settings.channels.create.card.accordion.currencies_and_locales.after') !!}
 
-                {!! view_render_event('bagisto.admin.settings.channels.create.card.accordion.settings.before') !!}
+                {!! view_render_event('exygnus.admin.settings.channels.create.card.accordion.settings.before') !!}
 
                 <!-- settings -->
                 <x-admin::accordion>
@@ -562,7 +562,7 @@
                     </x-slot>
                 </x-admin::accordion>
 
-                {!! view_render_event('bagisto.admin.settings.channels.create.card.accordion.settings.after') !!}
+                {!! view_render_event('exygnus.admin.settings.channels.create.card.accordion.settings.after') !!}
 
             </div>
         </div>
@@ -571,5 +571,5 @@
 
     </x-admin::form>
 
-    {!! view_render_event('bagisto.admin.settings.channels.create.after') !!}
+    {!! view_render_event('exygnus.admin.settings.channels.create.after') !!}
 </x-admin::layouts>

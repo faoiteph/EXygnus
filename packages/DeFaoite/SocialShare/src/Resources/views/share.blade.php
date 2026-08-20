@@ -4,7 +4,7 @@
     @endphp
 
     <div class="flex gap-6">
-        {!! view_render_event('bagisto.shop.products.view.share.before', ['product' => $product]) !!}
+        {!! view_render_event('exygnus.shop.products.view.share.before', ['product' => $product]) !!}
 
         <!-- For Mobile View -->
         <div class="md:hidden flex gap-2.5 justify-center items-center max-sm:gap-1.5">
@@ -31,7 +31,7 @@
             </ul>
         </div>
 
-        {!! view_render_event('bagisto.shop.products.view.share.after', ['product' => $product]) !!}
+        {!! view_render_event('exygnus.shop.products.view.share.after', ['product' => $product]) !!}
     </div>
 
     @push('scripts')

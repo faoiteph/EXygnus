@@ -1,4 +1,4 @@
-{!! view_render_event('bagisto.admin.sales.order.create.cart.items.before') !!}
+{!! view_render_event('exygnus.admin.sales.order.create.cart.items.before') !!}
 
 <!-- Vue JS Component -->
 <v-cart-items
@@ -12,7 +12,7 @@
     <x-admin::shimmer.sales.orders.create.cart.items />
 </v-cart-items>
 
-{!! view_render_event('bagisto.admin.sales.order.create.cart.items.after') !!}
+{!! view_render_event('exygnus.admin.sales.order.create.cart.items.after') !!}
 
 @pushOnce('scripts')
     <script
@@ -29,7 +29,7 @@
                     <template v-if="isAddingToCart || isUpdating">
                         <img
                             class="h-5 w-5 animate-spin"
-                            src="{{ bagisto_asset('images/spinner.svg') }}"
+                            src="{{ exygnus_asset('images/spinner.svg') }}"
                         />
                     </template>
 
@@ -84,7 +84,7 @@
                                 <template v-if="! item.product.images.length">
                                     <img
                                         class="relative h-[60px] max-h-[60px] w-full max-w-[60px] rounded" 
-                                        src="{{ bagisto_asset('images/product-placeholders/front.svg') }}"
+                                        src="{{ exygnus_asset('images/product-placeholders/front.svg') }}"
                                     >
 
                                     <p class="absolute bottom-1.5 w-full text-center text-[6px] font-semibold text-gray-400">
@@ -200,7 +200,7 @@
                 class="grid justify-center justify-items-center gap-3.5 px-2.5 py-10"
                 v-else
             >
-                <img src="{{ bagisto_asset('images/icon-add-product.svg') }}" class="h-20 w-20 dark:mix-blend-exclusion dark:invert">
+                <img src="{{ exygnus_asset('images/icon-add-product.svg') }}" class="h-20 w-20 dark:mix-blend-exclusion dark:invert">
                 
                 <div class="flex flex-col items-center gap-1.5">
                     <p class="text-base font-semibold text-gray-400">
@@ -237,7 +237,7 @@
                             <template v-if="isSearching">
                                 <img
                                     class="absolute top-2.5 h-5 w-5 animate-spin ltr:right-3 rtl:left-3"
-                                    src="{{ bagisto_asset('images/spinner.svg') }}"
+                                    src="{{ exygnus_asset('images/spinner.svg') }}"
                                 />
                             </template>
 
@@ -268,7 +268,7 @@
                                     <template v-if="! product.images.length">
                                         <img
                                             class="relative h-[60px] max-h-[60px] w-full max-w-[60px] rounded" 
-                                            src="{{ bagisto_asset('images/product-placeholders/front.svg') }}"
+                                            src="{{ exygnus_asset('images/product-placeholders/front.svg') }}"
                                         >
                                     
                                         <p class="absolute bottom-1.5 w-full text-center text-[6px] font-semibold text-gray-400">
@@ -357,7 +357,7 @@
                     >
                         <!-- Placeholder Image -->
                         <img
-                            src="{{ bagisto_asset('images/icon-add-product.svg') }}"
+                            src="{{ exygnus_asset('images/icon-add-product.svg') }}"
                             class="h-20 w-20 dark:mix-blend-exclusion dark:invert"
                         />
 

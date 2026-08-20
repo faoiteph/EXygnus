@@ -4,18 +4,18 @@
         @lang('shop::app.components.layouts.cookie.consent.your-cookie-consent-preferences')
     </x-slot>
 
-    {!! view_render_event('bagisto.shop.settings.gdpr.consent.before') !!}
+    {!! view_render_event('exygnus.shop.settings.gdpr.consent.before') !!}
 
     <v-cookie-consent ref="cookie-consent"></v-cookie-consent>
 
-    {!! view_render_event('bagisto.shop.settings.gdpr.consent.after') !!}
+    {!! view_render_event('exygnus.shop.settings.gdpr.consent.after') !!}
 
     @pushOnce('scripts')
         <script
             type="text/x-template"
             id="v-cookie-consent-template"
         >
-            {!! view_render_event('bagisto.shop.settings.gdpr.consent.form.before') !!}
+            {!! view_render_event('exygnus.shop.settings.gdpr.consent.form.before') !!}
 
             <div class="container mt-8 max-1180:px-5 max-md:mt-6 max-md:px-4">
                 <div class="m-auto w-full max-w-[870px] rounded-xl border border-zinc-200 p-16 px-[90px] max-md:px-8 max-md:py-8 max-sm:border-none max-sm:p-0">
@@ -104,7 +104,7 @@
                 </div>
             </div>
 
-            {!! view_render_event('bagisto.shop.settings.gdpr.consent.form.after') !!}
+            {!! view_render_event('exygnus.shop.settings.gdpr.consent.form.after') !!}
         </script>
 
         <script type="module">

@@ -3,14 +3,14 @@
         @lang('admin::app.marketing.promotions.cart-rules.create.title')
     </x-slot>
 
-    {!! view_render_event('bagisto.admin.marketing.promotions.cart_rules.create.before') !!}
+    {!! view_render_event('exygnus.admin.marketing.promotions.cart_rules.create.before') !!}
 
     <x-admin::form
         :action="route('admin.marketing.promotions.cart_rules.store')"
         enctype="multipart/form-data"
     >
 
-        {!! view_render_event('bagisto.admin.marketing.promotions.cart_rules.create.create_form_controls.before') !!}
+        {!! view_render_event('exygnus.admin.marketing.promotions.cart_rules.create.create_form_controls.before') !!}
 
         <div class="mt-3 flex items-center justify-between gap-4 max-sm:flex-wrap">
             <p class="text-xl font-bold text-gray-800 dark:text-white">
@@ -41,11 +41,11 @@
             <x-admin::shimmer.marketing.promotions.cart-rules />
         </v-cart-rule-create-form>
 
-        {!! view_render_event('bagisto.admin.marketing.promotions.cart_rules.create.create_form_controls.after') !!}
+        {!! view_render_event('exygnus.admin.marketing.promotions.cart_rules.create.create_form_controls.after') !!}
 
     </x-admin::form>
 
-    {!! view_render_event('bagisto.admin.marketing.promotions.cart_rules.create.after') !!}
+    {!! view_render_event('exygnus.admin.marketing.promotions.cart_rules.create.after') !!}
 
 
     @pushOnce('scripts')
@@ -59,7 +59,7 @@
                 <!-- Left sub-component -->
                 <div class="flex flex-1 flex-col gap-2 max-xl:flex-auto">
 
-                    {!! view_render_event('bagisto.admin.marketing.promotions.cart_rules.create.card.general.before') !!}
+                    {!! view_render_event('exygnus.admin.marketing.promotions.cart_rules.create.card.general.before') !!}
 
                     <!-- General -->
                     <div class="box-shadow rounded bg-white p-4 dark:bg-gray-900">
@@ -227,9 +227,9 @@
                         </x-admin::form.control-group>
                     </div>
 
-                    {!! view_render_event('bagisto.admin.marketing.promotions.cart_rules.create.card.general.after') !!}
+                    {!! view_render_event('exygnus.admin.marketing.promotions.cart_rules.create.card.general.after') !!}
 
-                    {!! view_render_event('bagisto.admin.marketing.promotions.cart_rules.create.card.conditions.before') !!}
+                    {!! view_render_event('exygnus.admin.marketing.promotions.cart_rules.create.card.conditions.before') !!}
 
                     <!-- Conditions -->
                     <div class="box-shadow rounded bg-white p-4 dark:bg-gray-900">
@@ -284,9 +284,9 @@
 
                     </div>
 
-                    {!! view_render_event('bagisto.admin.marketing.promotions.cart_rules.create.card.conditions.after') !!}
+                    {!! view_render_event('exygnus.admin.marketing.promotions.cart_rules.create.card.conditions.after') !!}
 
-                    {!! view_render_event('bagisto.admin.marketing.promotions.cart_rules.create.card.conditions.before') !!}
+                    {!! view_render_event('exygnus.admin.marketing.promotions.cart_rules.create.card.conditions.before') !!}
 
                     <!-- Action -->
                     <div class="box-shadow rounded bg-white p-4 dark:bg-gray-900">
@@ -557,14 +557,14 @@
                         </div>
                     </div>
 
-                    {!! view_render_event('bagisto.admin.marketing.promotions.cart_rules.create.card.conditions.after') !!}
+                    {!! view_render_event('exygnus.admin.marketing.promotions.cart_rules.create.card.conditions.after') !!}
 
                 </div>
 
                 <!-- Right sub-component -->
                 <div class="flex w-[360px] max-w-full flex-col gap-2 max-sm:w-full">
 
-                    {!! view_render_event('bagisto.admin.marketing.promotions.cart_rules.create.card.accordion.settings.before') !!}
+                    {!! view_render_event('exygnus.admin.marketing.promotions.cart_rules.create.card.accordion.settings.before') !!}
 
                     <!-- Settings -->
                     <x-admin::accordion>
@@ -676,9 +676,9 @@
                         </x-slot>
                     </x-admin::accordion>
 
-                    {!! view_render_event('bagisto.admin.marketing.promotions.cart_rules.create.card.accordion.settings.after') !!}
+                    {!! view_render_event('exygnus.admin.marketing.promotions.cart_rules.create.card.accordion.settings.after') !!}
 
-                    {!! view_render_event('bagisto.admin.marketing.promotions.cart_rules.create.card.accordion.marketing_time.before') !!}
+                    {!! view_render_event('exygnus.admin.marketing.promotions.cart_rules.create.card.accordion.marketing_time.before') !!}
 
                     <!-- Marketing Time -->
                     <x-admin::accordion>
@@ -727,7 +727,7 @@
                         </x-slot>
                     </x-admin::accordion>
 
-                    {!! view_render_event('bagisto.admin.marketing.promotions.cart_rules.create.card.accordion.marketing_time.after') !!}
+                    {!! view_render_event('exygnus.admin.marketing.promotions.cart_rules.create.card.accordion.marketing_time.after') !!}
 
                 </div>
             </div>

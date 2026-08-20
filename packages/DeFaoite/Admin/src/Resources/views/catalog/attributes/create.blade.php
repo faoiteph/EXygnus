@@ -3,14 +3,14 @@
         @lang('admin::app.catalog.attributes.create.title')
     </x-slot>
 
-    {!! view_render_event('bagisto.admin.catalog.attributes.create.before') !!}
+    {!! view_render_event('exygnus.admin.catalog.attributes.create.before') !!}
 
     <!-- Input Form -->
     <x-admin::form
         :action="route('admin.catalog.attributes.store')"
         enctype="multipart/form-data"
     >
-        {!! view_render_event('bagisto.admin.catalog.attributes.create.create_form_controls.before') !!}
+        {!! view_render_event('exygnus.admin.catalog.attributes.create.create_form_controls.before') !!}
 
         <!-- Actions Buttons -->
         <div class="flex items-center justify-between gap-4 max-sm:flex-wrap">
@@ -43,10 +43,10 @@
             <x-admin::shimmer.catalog.attributes />
         </v-create-attributes>
 
-        {!! view_render_event('bagisto.admin.catalog.attributes.create_form_controls.after') !!}
+        {!! view_render_event('exygnus.admin.catalog.attributes.create_form_controls.after') !!}
     </x-admin::form>
 
-    {!! view_render_event('bagisto.admin.catalog.attributes.create.after') !!}
+    {!! view_render_event('exygnus.admin.catalog.attributes.create.after') !!}
 
     @pushOnce('scripts')
         <script
@@ -56,7 +56,7 @@
             <!-- Body Content -->
             <div class="mt-3.5 flex gap-2.5 max-xl:flex-wrap">
 
-                {!! view_render_event('bagisto.admin.catalog.attributes.create.card.label.before') !!}
+                {!! view_render_event('exygnus.admin.catalog.attributes.create.card.label.before') !!}
 
                 <!-- Left Sub Component -->
                 <div class="flex flex-1 flex-col gap-2 overflow-auto max-xl:flex-auto">
@@ -247,7 +247,7 @@
                                                     <!-- Swatch Image -->
                                                     <div v-if="swatchType == 'image'">
                                                         <img
-                                                            src="{{ bagisto_asset('images/product-placeholders/front.svg') }}"
+                                                            src="{{ exygnus_asset('images/product-placeholders/front.svg') }}"
                                                             class="h-[50px] w-[50px] dark:mix-blend-exclusion dark:invert"
                                                             :ref="'image_' + element.params.id"
                                                         />
@@ -328,7 +328,7 @@
                                     <!-- Attribute Option Image -->
                                     <img
                                         class="h-[120px] w-[120px] dark:mix-blend-exclusion dark:invert"
-                                        src="{{ bagisto_asset('images/icon-add-product.svg') }}"
+                                        src="{{ exygnus_asset('images/icon-add-product.svg') }}"
                                         alt="@lang('admin::app.catalog.attributes.create.add-attribute-options')"
                                     />
 
@@ -348,9 +348,9 @@
                     </div>
                 </div>
 
-                {!! view_render_event('bagisto.admin.catalog.attributes.create.card.label.after') !!}
+                {!! view_render_event('exygnus.admin.catalog.attributes.create.card.label.after') !!}
 
-                {!! view_render_event('bagisto.admin.catalog.attributes.create.card.general.before') !!}
+                {!! view_render_event('exygnus.admin.catalog.attributes.create.card.general.before') !!}
 
                 <!-- Right Sub Component -->
                 <div class="flex w-[360px] max-w-full flex-col gap-2">
@@ -696,7 +696,7 @@
                     </x-admin::accordion>
                 </div>
 
-                {!! view_render_event('bagisto.admin.catalog.attributes.create.card.general.after') !!}
+                {!! view_render_event('exygnus.admin.catalog.attributes.create.card.general.after') !!}
 
             </div>
 

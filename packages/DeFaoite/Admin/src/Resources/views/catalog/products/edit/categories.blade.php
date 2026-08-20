@@ -1,4 +1,4 @@
-{!! view_render_event('bagisto.admin.catalog.product.edit.form.categories.before', ['product' => $product]) !!}
+{!! view_render_event('exygnus.admin.catalog.product.edit.form.categories.before', ['product' => $product]) !!}
 
 @php
     /**
@@ -23,7 +23,7 @@
         @lang('admin::app.catalog.products.edit.categories.title')
     </p>
 
-    {!! view_render_event('bagisto.admin.catalog.product.edit.form.categories.controls.before', ['product' => $product]) !!}
+    {!! view_render_event('exygnus.admin.catalog.product.edit.form.categories.controls.before', ['product' => $product]) !!}
 
     @foreach ($preservedCategoryIds as $categoryId)
         <input
@@ -42,10 +42,10 @@
 
     </div>
 
-    {!! view_render_event('bagisto.admin.catalog.product.edit.form.categories.controls.after', ['product' => $product]) !!}
+    {!! view_render_event('exygnus.admin.catalog.product.edit.form.categories.controls.after', ['product' => $product]) !!}
 </div>
 
-{!! view_render_event('bagisto.admin.catalog.product.edit.form.categories.after', ['product' => $product]) !!}
+{!! view_render_event('exygnus.admin.catalog.product.edit.form.categories.after', ['product' => $product]) !!}
 
 @pushOnce('scripts')
     <script

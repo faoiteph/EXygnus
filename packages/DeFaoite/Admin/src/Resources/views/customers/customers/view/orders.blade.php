@@ -159,7 +159,7 @@
                     <div class="grid justify-center justify-items-center gap-3.5 px-2.5 py-10">
                         <!-- Placeholder Image -->
                         <img
-                            src="{{ bagisto_asset('images/empty-placeholders/orders.svg') }}"
+                            src="{{ exygnus_asset('images/empty-placeholders/orders.svg') }}"
                             class="h-20 w-20 dark:mix-blend-exclusion dark:invert"
                         />
 

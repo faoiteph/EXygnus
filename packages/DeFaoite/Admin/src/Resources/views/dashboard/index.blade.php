@@ -30,7 +30,7 @@
     <div class="mt-3.5 flex gap-2.5 max-xl:flex-wrap">
         <!-- Left Section -->
         <div class="flex flex-col flex-1 gap-8 max-xl:flex-auto">
-            {!! view_render_event('bagisto.admin.dashboard.overall_details.before') !!}
+            {!! view_render_event('exygnus.admin.dashboard.overall_details.before') !!}
 
             <!-- Overall Details -->
             <div class="flex flex-col gap-2">
@@ -42,9 +42,9 @@
                 @include('admin::dashboard.over-all-details')
             </div>
 
-            {!! view_render_event('bagisto.admin.dashboard.overall_details.after') !!}
+            {!! view_render_event('exygnus.admin.dashboard.overall_details.after') !!}
 
-            {!! view_render_event('bagisto.admin.dashboard.todays_details.before') !!}
+            {!! view_render_event('exygnus.admin.dashboard.todays_details.before') !!}
 
             <!-- Todays Details -->
             <div class="flex flex-col gap-2">
@@ -56,9 +56,9 @@
                 @include('admin::dashboard.todays-details')
             </div>
 
-            {!! view_render_event('bagisto.admin.dashboard.todays_details.after') !!}
+            {!! view_render_event('exygnus.admin.dashboard.todays_details.after') !!}
 
-            {!! view_render_event('bagisto.admin.dashboard.stock_threshold.before') !!}
+            {!! view_render_event('exygnus.admin.dashboard.stock_threshold.before') !!}
 
             <!-- Stock Threshold -->
             <div class="flex flex-col gap-2">
@@ -70,7 +70,7 @@
                 @include('admin::dashboard.stock-threshold-products')
             </div>
             
-            {!! view_render_event('bagisto.admin.dashboard.stock_threshold.after') !!}
+            {!! view_render_event('exygnus.admin.dashboard.stock_threshold.after') !!}
         </div>
 
         <!-- Right Section -->
@@ -80,7 +80,7 @@
                 @lang('admin::app.dashboard.index.store-stats')
             </p>
 
-            {!! view_render_event('bagisto.admin.dashboard.store_stats.before') !!}
+            {!! view_render_event('exygnus.admin.dashboard.store_stats.before') !!}
 
             <!-- Store Stats -->
             <div class="bg-white rounded box-shadow dark:bg-gray-900">
@@ -94,14 +94,14 @@
                 @include('admin::dashboard.top-customers')
             </div>
 
-            {!! view_render_event('bagisto.admin.dashboard.store_stats.after') !!}
+            {!! view_render_event('exygnus.admin.dashboard.store_stats.after') !!}
         </div>
     </div>
     
     @pushOnce('scripts')
         <script
             type="module"
-            src="{{ bagisto_asset('js/chart.js') }}"
+            src="{{ exygnus_asset('js/chart.js') }}"
         >
         </script>
 

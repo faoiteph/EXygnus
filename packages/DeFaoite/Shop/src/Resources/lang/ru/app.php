@@ -5,7 +5,7 @@ return [
         'forgot-password' => [
             'already-sent' => 'Письмо для сброса пароля уже отправлено.',
             'back' => 'Вернуться к входу?',
-            'bagisto' => 'экзигнус',
+            'exygnus' => 'экзигнус',
             'email' => 'Электронная почта',
             'email-not-exist' => 'Мы не можем найти пользователя с этим адресом электронной почты.',
             'footer' => '© Авторское право 2010 - :current_year, DeFaoite Software (зарегистрировано в Индии). Все права защищены.',
@@ -19,7 +19,7 @@ return [
 
         'reset-password' => [
             'back-link-title' => 'Вернуться к входу',
-            'bagisto' => 'экзигнус',
+            'exygnus' => 'экзигнус',
             'confirm-password' => 'Подтвердите пароль',
             'email' => 'Зарегистрированная почта',
             'footer' => '© Авторское право 2010 - :current_year, DeFaoite Software (зарегистрировано в Индии). Все права защищены.',
@@ -29,7 +29,7 @@ return [
         ],
 
         'login-form' => [
-            'bagisto' => 'экзигнус',
+            'exygnus' => 'экзигнус',
             'button-title' => 'Войти',
             'create-your-account' => 'Создайте свой аккаунт',
             'email' => 'Электронная почта',
@@ -49,7 +49,7 @@ return [
 
         'signup-form' => [
             'account-exists' => 'Уже есть аккаунт?',
-            'bagisto' => 'экзигнус',
+            'exygnus' => 'экзигнус',
             'button-title' => 'Зарегистрироваться',
             'click-here' => 'Нажмите здесь',
             'confirm-pass' => 'Подтвердите пароль',
@@ -564,7 +564,7 @@ return [
                     'bottom' => [
                         'all' => 'Все',
                         'back-button' => 'Назад к главному меню',
-                        'bagisto' => 'экзигнус',
+                        'exygnus' => 'экзигнус',
                         'categories' => 'Категории',
                         'compare' => 'Сравнить',
                         'dropdown-text' => 'Управление корзиной, заказами и избранным',
@@ -585,7 +585,7 @@ return [
                 'mobile' => [
                     'account' => 'Аккаунт',
                     'back-button' => 'Назад к главному меню',
-                    'bagisto' => 'экзигнус',
+                    'exygnus' => 'экзигнус',
                     'compare' => 'Сравнить',
                     'currencies' => 'Валюты',
                     'dropdown-text' => 'Управление корзиной, заказами и избранным',
@@ -1078,7 +1078,7 @@ return [
             'suspended-account-message' => 'Ваш аккаунт был приостановлен.',
 
             'index' => [
-                'bagisto' => 'экзигнус',
+                'exygnus' => 'экзигнус',
                 'cart' => 'Корзина',
                 'continue-shopping' => 'Продолжить покупки',
                 'empty-product' => 'В вашей корзине нет товаров.',

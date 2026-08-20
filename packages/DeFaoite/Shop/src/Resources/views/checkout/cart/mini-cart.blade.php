@@ -12,13 +12,13 @@
         type="text/x-template"
         id="v-mini-cart-template"
     >
-        {!! view_render_event('bagisto.shop.checkout.mini-cart.drawer.before') !!}
+        {!! view_render_event('exygnus.shop.checkout.mini-cart.drawer.before') !!}
 
         @if (core()->getConfigData('sales.checkout.mini_cart.display_mini_cart'))
             <x-shop::drawer>
                 <!-- Drawer Toggler -->
                 <x-slot:toggle>
-                    {!! view_render_event('bagisto.shop.checkout.mini-cart.drawer.toggle.before') !!}
+                    {!! view_render_event('exygnus.shop.checkout.mini-cart.drawer.toggle.before') !!}
 
                     <span class="relative">
                         <span
@@ -46,12 +46,12 @@
                         @endif
                     </span>
 
-                    {!! view_render_event('bagisto.shop.checkout.mini-cart.drawer.toggle.after') !!}
+                    {!! view_render_event('exygnus.shop.checkout.mini-cart.drawer.toggle.after') !!}
                 </x-slot>
 
                 <!-- Drawer Header -->
                 <x-slot:header>
-                    {!! view_render_event('bagisto.shop.checkout.mini-cart.drawer.header.before') !!}
+                    {!! view_render_event('exygnus.shop.checkout.mini-cart.drawer.header.before') !!}
 
                     <div class="flex items-center justify-between">
                         <p class="text-2xl font-medium max-md:text-xl max-sm:text-xl">
@@ -63,12 +63,12 @@
                         {{ core()->getConfigData('sales.checkout.mini_cart.offer_info')}}
                     </p>
 
-                    {!! view_render_event('bagisto.shop.checkout.mini-cart.drawer.header.after') !!}
+                    {!! view_render_event('exygnus.shop.checkout.mini-cart.drawer.header.after') !!}
                 </x-slot>
 
                 <!-- Drawer Content -->
                 <x-slot:content>
-                    {!! view_render_event('bagisto.shop.checkout.mini-cart.drawer.content.before') !!}
+                    {!! view_render_event('exygnus.shop.checkout.mini-cart.drawer.content.before') !!}
 
                     <!-- Cart Item Listing -->
                     <div
@@ -80,7 +80,7 @@
                             v-for="item in cart?.items"
                         >
                             <!-- Cart Item Image -->
-                            {!! view_render_event('bagisto.shop.checkout.mini-cart.drawer.content.image.before') !!}
+                            {!! view_render_event('exygnus.shop.checkout.mini-cart.drawer.content.image.before') !!}
 
                             <div class="">
                                 <a :href="'{{ route('shop.product_or_category.index', ':slug') }}'.replace(':slug', item.product_url_key)">
@@ -91,13 +91,13 @@
                                 </a>
                             </div>
 
-                            {!! view_render_event('bagisto.shop.checkout.mini-cart.drawer.content.image.after') !!}
+                            {!! view_render_event('exygnus.shop.checkout.mini-cart.drawer.content.image.after') !!}
 
                         <!-- Cart Item Information -->
                         <div class="grid flex-1 place-content-start justify-stretch gap-y-2.5">
                             <div class="flex justify-between gap-2 max-md:gap-0 max-sm:flex-wrap">
 
-                                    {!! view_render_event('bagisto.shop.checkout.mini-cart.drawer.content.name.before') !!}
+                                    {!! view_render_event('exygnus.shop.checkout.mini-cart.drawer.content.name.before') !!}
 
                                     <a
                                     class="max-w-4/5 max-md:w-full"
@@ -108,9 +108,9 @@
                                         </p>
                                     </a>
 
-                                    {!! view_render_event('bagisto.shop.checkout.mini-cart.drawer.content.name.after') !!}
+                                    {!! view_render_event('exygnus.shop.checkout.mini-cart.drawer.content.name.after') !!}
 
-                                    {!! view_render_event('bagisto.shop.checkout.mini-cart.drawer.content.price.before') !!}
+                                    {!! view_render_event('exygnus.shop.checkout.mini-cart.drawer.content.price.before') !!}
 
                                     <template v-if="displayTax.prices == 'including_tax'">
                                         <p class="text-lg max-md:font-semibold max-sm:text-sm">
@@ -136,7 +136,7 @@
                                         </p>
                                     </template>
 
-                                    {!! view_render_event('bagisto.shop.checkout.mini-cart.drawer.content.price.after') !!}
+                                    {!! view_render_event('exygnus.shop.checkout.mini-cart.drawer.content.price.after') !!}
                                 </div>
 
                                 <!-- Cart Item Options Container -->
@@ -145,7 +145,7 @@
                                     v-if="item.options.length"
                                 >
 
-                                    {!! view_render_event('bagisto.shop.checkout.mini-cart.drawer.content.product_details.before') !!}
+                                    {!! view_render_event('exygnus.shop.checkout.mini-cart.drawer.content.product_details.before') !!}
 
                                     <!-- Details Toggler -->
                                     <div class="">
@@ -193,11 +193,11 @@
                                         </template>
                                     </div>
 
-                                    {!! view_render_event('bagisto.shop.checkout.mini-cart.drawer.content.product_details.after') !!}
+                                    {!! view_render_event('exygnus.shop.checkout.mini-cart.drawer.content.product_details.after') !!}
                                 </div>
 
                                 <div class="flex flex-wrap items-center gap-5 max-md:gap-2.5">
-                                    {!! view_render_event('bagisto.shop.checkout.mini-cart.drawer.content.quantity_changer.before') !!}
+                                    {!! view_render_event('exygnus.shop.checkout.mini-cart.drawer.content.quantity_changer.before') !!}
 
                                 <!-- Cart Item Quantity Changer -->
                                 <x-shop::quantity-changer
@@ -211,9 +211,9 @@
                                     @remove="removeItem(item.id)"
                                 />
 
-                                    {!! view_render_event('bagisto.shop.checkout.mini-cart.drawer.content.quantity_changer.after') !!}
+                                    {!! view_render_event('exygnus.shop.checkout.mini-cart.drawer.content.quantity_changer.after') !!}
 
-                                {!! view_render_event('bagisto.shop.checkout.mini-cart.drawer.content.remove_button.before') !!}
+                                {!! view_render_event('exygnus.shop.checkout.mini-cart.drawer.content.remove_button.before') !!}
 
                                 <!-- Cart Item Remove Button -->
                                 <button
@@ -224,7 +224,7 @@
                                     @lang('shop::app.checkout.cart.mini-cart.remove')
                                 </button>
 
-                                    {!! view_render_event('bagisto.shop.checkout.mini-cart.drawer.content.remove_button.after') !!}
+                                    {!! view_render_event('exygnus.shop.checkout.mini-cart.drawer.content.remove_button.after') !!}
                                 </div>
                             </div>
                         </div>
@@ -238,7 +238,7 @@
                         <div class="b-0 grid place-items-center gap-y-5 max-md:gap-y-0">
                             <img
                                 class="max-md:h-[100px] max-md:w-[100px]"
-                                src="{{ bagisto_asset('images/thank-you.png') }}"
+                                src="{{ exygnus_asset('images/thank-you.png') }}"
                                 loading="lazy"
                                 decoding="async"
                             >
@@ -252,7 +252,7 @@
                         </div>
                     </div>
 
-                    {!! view_render_event('bagisto.shop.checkout.mini-cart.drawer.content.after') !!}
+                    {!! view_render_event('exygnus.shop.checkout.mini-cart.drawer.content.after') !!}
                 </x-slot>
 
             <!-- Drawer Footer -->
@@ -265,7 +265,7 @@
                         class="my-8 flex items-center justify-between border-b border-zinc-200 px-6 pb-2 max-md:my-0 max-md:border-t max-md:px-5 max-md:py-2"
                         :class="{'!justify-end': isLoading}"
                     >
-                        {!! view_render_event('bagisto.shop.checkout.mini-cart.subtotal.before') !!}
+                        {!! view_render_event('exygnus.shop.checkout.mini-cart.subtotal.before') !!}
 
                         <template v-if="! isLoading">
                             <p class="text-sm font-medium text-zinc-500">
@@ -323,14 +323,14 @@
                             </svg>
                         </template>
 
-                            {!! view_render_event('bagisto.shop.checkout.mini-cart.subtotal.after') !!}
+                            {!! view_render_event('exygnus.shop.checkout.mini-cart.subtotal.after') !!}
                         </div>
 
-                        {!! view_render_event('bagisto.shop.checkout.mini-cart.action.before') !!}
+                        {!! view_render_event('exygnus.shop.checkout.mini-cart.action.before') !!}
 
                         <!-- Cart Action Container -->
                         <div class="grid gap-2.5 px-6 max-md:px-4 max-sm:gap-1.5">
-                            {!! view_render_event('bagisto.shop.checkout.mini-cart.continue_to_checkout.before') !!}
+                            {!! view_render_event('exygnus.shop.checkout.mini-cart.continue_to_checkout.before') !!}
 
                         <a
                             href="{{ route('shop.checkout.onepage.index') }}"
@@ -339,7 +339,7 @@
                             @lang('shop::app.checkout.cart.mini-cart.continue-to-checkout')
                         </a>
 
-                            {!! view_render_event('bagisto.shop.checkout.mini-cart.continue_to_checkout.after') !!}
+                            {!! view_render_event('exygnus.shop.checkout.mini-cart.continue_to_checkout.after') !!}
 
                             <div class="block cursor-pointer text-center text-base font-medium max-md:py-1.5">
                                 <a href="{{ route('shop.checkout.cart.index') }}">
@@ -348,14 +348,14 @@
                             </div>
                         </div>
 
-                        {!! view_render_event('bagisto.shop.checkout.mini-cart.action.after') !!}
+                        {!! view_render_event('exygnus.shop.checkout.mini-cart.action.after') !!}
                     </div>
                 </x-slot>
             </x-shop::drawer>
 
         @else
             <a href="{{ route('shop.checkout.onepage.index') }}">
-                {!! view_render_event('bagisto.shop.checkout.mini-cart.drawer.toggle.before') !!}
+                {!! view_render_event('exygnus.shop.checkout.mini-cart.drawer.toggle.before') !!}
 
                     <span class="relative">
                         <span
@@ -373,11 +373,11 @@
                         </span>
                     </span>
 
-                {!! view_render_event('bagisto.shop.checkout.mini-cart.drawer.toggle.after') !!}
+                {!! view_render_event('exygnus.shop.checkout.mini-cart.drawer.toggle.after') !!}
             </a>
         @endif
 
-        {!! view_render_event('bagisto.shop.checkout.mini-cart.drawer.after') !!}
+        {!! view_render_event('exygnus.shop.checkout.mini-cart.drawer.after') !!}
     </script>
 
     @php

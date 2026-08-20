@@ -4,13 +4,13 @@
         @lang('admin::app.sales.rma.rules.index.title')
     </x-slot>
 
-    {!! view_render_event('bagisto.admin.catalog.rma.rules.list.before') !!}
+    {!! view_render_event('exygnus.admin.catalog.rma.rules.list.before') !!}
 
     <v-rma-rules>
         <!-- DataGrid Shimmer -->
         <x-admin::shimmer.datagrid />
     </v-rma-rules>
-    {!! view_render_event('bagisto.admin.catalog.rma.rules.list.after') !!}
+    {!! view_render_event('exygnus.admin.catalog.rma.rules.list.after') !!}
 
     @pushOnce('scripts')
         <script
@@ -131,7 +131,7 @@
                         @submit="handleSubmit($event, updateOrCreate)"
                         ref="createRulesForm"
                     >
-                        {!! view_render_event('bagisto.admin.catalog.rma.rules.create_form_controls.before') !!}
+                        {!! view_render_event('exygnus.admin.catalog.rma.rules.create_form_controls.before') !!}
 
                             <x-admin::modal ref="rulesModal">
                                 <!-- Modal Header -->
@@ -147,7 +147,7 @@
 
                                 <!-- Modal Content -->
                                 <x-slot:content>
-                                    {!! view_render_event('bagisto.admin.catalog.rma.rules.create.before') !!}
+                                    {!! view_render_event('exygnus.admin.catalog.rma.rules.create.before') !!}
                                     <x-admin::form.control-group.control
                                         type="hidden"
                                         name="id"
@@ -247,7 +247,7 @@
                                         <x-admin::form.control-group.error control-name="return_period" />
                                     </x-admin::form.control-group>
 
-                                    {!! view_render_event('bagisto.admin.catalog.rma.rules.create.after') !!}
+                                    {!! view_render_event('exygnus.admin.catalog.rma.rules.create.after') !!}
                                 </x-slot>
 
                                 <!-- Modal Footer -->
@@ -265,7 +265,7 @@
                             </x-admin::modal>
 
 
-                        {!! view_render_event('bagisto.admin.catalog.rma.rules.create_form_controls.after') !!}
+                        {!! view_render_event('exygnus.admin.catalog.rma.rules.create_form_controls.after') !!}
                     </form>
                 </x-admin::form>
             </div>

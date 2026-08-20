@@ -1,4 +1,4 @@
-{!! view_render_event('bagisto.admin.sales.order.create.cart.shipping.before') !!}
+{!! view_render_event('exygnus.admin.sales.order.create.cart.shipping.before') !!}
 
 <v-cart-shipping-methods
     :methods="shippingMethods"
@@ -9,7 +9,7 @@
     <x-admin::shimmer.sales.orders.create.cart.shipping />
 </v-cart-shipping-methods>
 
-{!! view_render_event('bagisto.admin.sales.order.create.cart.shipping.after') !!}
+{!! view_render_event('exygnus.admin.sales.order.create.cart.shipping.after') !!}
 
 @pushOnce('scripts')
     <script
@@ -35,7 +35,7 @@
 
                 <template v-else>
                     <template v-for="method in methods">
-                        {!! view_render_event('bagisto.admin.sales.order.create.cart.shipping.before') !!}
+                        {!! view_render_event('exygnus.admin.sales.order.create.cart.shipping.before') !!}
 
                         <label
                             class="grid cursor-pointer gap-4 border-b p-4 transition-all hover:bg-gray-50 dark:border-gray-800 dark:hover:bg-gray-950"
@@ -68,7 +68,7 @@
                             </p>
                         </label>
 
-                        {!! view_render_event('bagisto.admin.sales.order.create.cart.shipping.after') !!}
+                        {!! view_render_event('exygnus.admin.sales.order.create.cart.shipping.after') !!}
                     </template>
                 </template>
             </div>

@@ -71,7 +71,7 @@
     </div>
 
     @pushOnce('scripts')
-        <script type="module" src="{{ bagisto_asset('js/chart.js') }}"></script>
+        <script type="module" src="{{ exygnus_asset('js/chart.js') }}"></script>
 
         <script
             type="text/x-template"

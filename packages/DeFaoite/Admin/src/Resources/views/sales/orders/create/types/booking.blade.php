@@ -1,11 +1,11 @@
-{!! view_render_event('bagisto.admin.sales.order.create.types.booking.before') !!}
+{!! view_render_event('exygnus.admin.sales.order.create.types.booking.before') !!}
 
 <v-booking-product-options
     :errors="errors"
     :product-options="selectedProductOptions"
 ></v-booking-product-options>
 
-{!! view_render_event('bagisto.admin.sales.order.create.types.booking.after') !!}
+{!! view_render_event('exygnus.admin.sales.order.create.types.booking.after') !!}
 
 @pushOnce('scripts')
     <script

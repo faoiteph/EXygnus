@@ -6,7 +6,7 @@ use Exception;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
-use DeFaoite\Installer\Database\Seeders\DatabaseSeeder as BagistoDatabaseSeeder;
+use DeFaoite\Installer\Database\Seeders\DatabaseSeeder as EXygnusDatabaseSeeder;
 use DeFaoite\Installer\Database\Seeders\ProductTableSeeder;
 use DeFaoite\Product\Console\Commands\Indexer;
 
@@ -106,7 +106,7 @@ class DatabaseManager
     public function seed($parameter): bool
     {
         try {
-            app(BagistoDatabaseSeeder::class)->run($parameter);
+            app(EXygnusDatabaseSeeder::class)->run($parameter);
 
             return true;
         } catch (Exception $e) {

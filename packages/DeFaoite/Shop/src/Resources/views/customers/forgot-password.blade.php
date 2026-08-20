@@ -16,17 +16,17 @@
     </x-slot>
 
     <div class="container mt-20 max-1180:px-5 max-md:mt-12">
-        {!! view_render_event('bagisto.shop.customers.forget_password.logo.before') !!}
+        {!! view_render_event('exygnus.shop.customers.forget_password.logo.before') !!}
 
         <!-- Company Logo -->
         <div class="flex items-center gap-x-14 max-[1180px]:gap-x-9">
             <a
                 href="{{ route('shop.home.index') }}"
                 class="m-[0_auto_20px_auto]"
-                aria-label="@lang('shop::app.customers.forgot-password.bagisto')"
+                aria-label="@lang('shop::app.customers.forgot-password.exygnus')"
             >
                 <img
-                    src="{{ core()->getCurrentChannel()->logo_url ?? bagisto_asset('images/logo.svg') }}"
+                    src="{{ core()->getCurrentChannel()->logo_url ?? exygnus_asset('images/logo.svg') }}"
                     alt="{{ config('app.name') }}"
                     width="131"
                     height="29"
@@ -34,7 +34,7 @@
             </a>
         </div>
 
-        {!! view_render_event('bagisto.shop.customers.forget_password.logo.after') !!}
+        {!! view_render_event('exygnus.shop.customers.forget_password.logo.after') !!}
 
         <!-- Form Container -->
         <div
@@ -48,11 +48,11 @@
                 @lang('shop::app.customers.forgot-password.forgot-password-text')
             </p>
 
-            {!! view_render_event('bagisto.shop.customers.forget_password.before') !!}
+            {!! view_render_event('exygnus.shop.customers.forget_password.before') !!}
 
             <div class="mt-14 rounded max-sm:mt-8">
                 <x-shop::form :action="route('shop.customers.forgot_password.store')">
-                    {!! view_render_event('bagisto.shop.customers.forget_password_form_controls.before') !!}
+                    {!! view_render_event('exygnus.shop.customers.forget_password_form_controls.before') !!}
 
                     <!-- Email -->
                     <x-shop::form.control-group class="max-sm:mb-1.5">
@@ -75,7 +75,7 @@
                         <x-shop::form.control-group.error control-name="email" />
                     </x-shop::form.control-group>
 
-                    {!! view_render_event('bagisto.shop.customers.forget_password_form_controls.email.after') !!}
+                    {!! view_render_event('exygnus.shop.customers.forget_password_form_controls.email.after') !!}
 
                     <!-- Captcha -->
                     @if (core()->getConfigData('customer.captcha.credentials.status'))
@@ -107,12 +107,12 @@
                         </a>
                     </p>
 
-                    {!! view_render_event('bagisto.shop.customers.forget_password_form_controls.after') !!}
+                    {!! view_render_event('exygnus.shop.customers.forget_password_form_controls.after') !!}
 
                 </x-shop::form>
             </div>
 
-            {!! view_render_event('bagisto.shop.customers.forget_password.after') !!}
+            {!! view_render_event('exygnus.shop.customers.forget_password.after') !!}
 
         </div>
 

@@ -3,7 +3,7 @@
         @lang('admin::app.settings.taxes.rates.create.title')
     </x-slot>
 
-    {!! view_render_event('bagisto.admin.settings.taxes.rates.create.before') !!}
+    {!! view_render_event('exygnus.admin.settings.taxes.rates.create.before') !!}
 
     <x-admin::form :action="route('admin.settings.taxes.rates.store')">
         <div class="flex items-center justify-between">
@@ -36,7 +36,7 @@
         </v-create-taxrate>
     </x-admin::form>
 
-    {!! view_render_event('bagisto.admin.settings.taxes.rates.create.after') !!}
+    {!! view_render_event('exygnus.admin.settings.taxes.rates.create.after') !!}
 
     @pushOnce('scripts')
         <script
@@ -44,7 +44,7 @@
             id="v-create-taxrate-template"
         >
 
-            {!! view_render_event('bagisto.admin.settings.taxes.rates.create.create_form_controls.before') !!}
+            {!! view_render_event('exygnus.admin.settings.taxes.rates.create.create_form_controls.before') !!}
 
             <!-- Tax Rates information's -->
             <div class="mt-3.5 flex gap-2.5 max-xl:flex-wrap">
@@ -259,7 +259,7 @@
                 </div>
             </div>
 
-            {!! view_render_event('bagisto.admin.settings.taxes.rates.create.create_form_controls.after') !!}
+            {!! view_render_event('exygnus.admin.settings.taxes.rates.create.create_form_controls.after') !!}
 
         </script>
 

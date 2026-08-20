@@ -37,7 +37,7 @@
         >
             <div class="mt-3.5 flex gap-2.5 max-xl:flex-wrap">
                 <!-- Left Component -->
-                {!! view_render_event('bagisto.admin.sales.order.create.left_component.before') !!}
+                {!! view_render_event('exygnus.admin.sales.order.create.left_component.before') !!}
 
                 <div
                     class="flex flex-1 flex-col gap-2 overflow-y-auto max-xl:flex-auto"
@@ -91,7 +91,7 @@
 
                                 <!-- Drawer Content -->
                                 <x-slot:content class="!p-0">
-                                    {!! view_render_event('bagisto.admin.sales.order.create.product_options.before') !!}
+                                    {!! view_render_event('exygnus.admin.sales.order.create.product_options.before') !!}
 
                                     <!-- Included Simple Product Configuration Blade File -->
                                     <template v-if="selectedProductOptions.product.type == 'simple'">
@@ -128,17 +128,17 @@
                                         @include('admin::sales.orders.create.types.booking')
                                     </template>
 
-                                    {!! view_render_event('bagisto.admin.sales.order.create.product_options.after') !!}
+                                    {!! view_render_event('exygnus.admin.sales.order.create.product_options.after') !!}
                                 </x-slot>
                             </x-admin::drawer>
                         </form>
                     </x-admin::form>
                 </div>
 
-                {!! view_render_event('bagisto.admin.sales.order.create.left_component.after') !!}
+                {!! view_render_event('exygnus.admin.sales.order.create.left_component.after') !!}
 
                 <!-- Right Component -->
-                {!! view_render_event('bagisto.admin.sales.order.right_component.before') !!}
+                {!! view_render_event('exygnus.admin.sales.order.right_component.before') !!}
 
                 <div class="flex w-[360px] max-w-full flex-col gap-2 max-sm:w-full">
                     <!-- Cart Items Component -->
@@ -154,7 +154,7 @@
                     @include('admin::sales.orders.create.recent-order-items')
                 </div>
 
-                {!! view_render_event('bagisto.admin.sales.order.create.right_component.after') !!}
+                {!! view_render_event('exygnus.admin.sales.order.create.right_component.after') !!}
             </div>
         </script>
 

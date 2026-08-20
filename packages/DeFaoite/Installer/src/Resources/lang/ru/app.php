@@ -806,7 +806,7 @@ return [
         'index' => [
             'create-administrator' => [
                 'admin' => 'Администратор',
-                'bagisto' => 'EXygnus',
+                'exygnus' => 'EXygnus',
                 'confirm-password' => 'Подтвердите пароль',
                 'email' => 'Email',
                 'email-address' => 'admin@example.com',
@@ -821,7 +821,7 @@ return [
                 'application-name' => 'Название приложения',
                 'argentine-peso' => 'Аргентинское песо (ARS)',
                 'australian-dollar' => 'Австралийский доллар (AUD)',
-                'bagisto' => 'EXygnus',
+                'exygnus' => 'EXygnus',
                 'bangladeshi-taka' => 'Бангладешская така (BDT)',
                 'bahraini-dinar' => 'Бахрейнский динар (BHD)',
                 'brazilian-real' => 'Бразильский реал (BRL)',
@@ -914,16 +914,16 @@ return [
             ],
 
             'installation-processing' => [
-                'bagisto' => 'Установка EXygnus',
-                'bagisto-info' => 'Создание таблиц в базе данных может занять несколько моментов',
+                'exygnus' => 'Установка EXygnus',
+                'exygnus-info' => 'Создание таблиц в базе данных может занять несколько моментов',
                 'title' => 'Установка',
             ],
 
             'installation-completed' => [
                 'admin-panel' => 'Панель администратора',
-                'bagisto-forums' => 'Форум EXygnus',
+                'exygnus-forums' => 'Форум EXygnus',
                 'customer-panel' => 'Панель клиента',
-                'explore-bagisto-extensions' => 'Изучите расширения EXygnus',
+                'explore-exygnus-extensions' => 'Изучите расширения EXygnus',
                 'title' => 'Установка завершена',
                 'title-info' => 'EXygnus успешно установлен на вашей системе.',
             ],
@@ -973,9 +973,9 @@ return [
 
             'arabic' => 'Арабский',
             'back' => 'Назад',
-            'bagisto' => 'EXygnus',
-            'bagisto-info' => 'Проект сообщества от',
-            'bagisto-logo' => 'Логотип EXygnus',
+            'exygnus' => 'EXygnus',
+            'exygnus-info' => 'Проект сообщества от',
+            'exygnus-logo' => 'Логотип EXygnus',
             'bengali' => 'Бенгальский',
             'catalan' => 'Каталонский',
             'chinese' => 'Китайский',
@@ -1002,7 +1002,7 @@ return [
             'title' => 'Установщик EXygnus',
             'turkish' => 'Турецкий',
             'ukrainian' => 'Украинский',
-            'webkul' => 'DeFaoite',
+            'defaoite' => 'DeFaoite',
         ],
     ],
 ];

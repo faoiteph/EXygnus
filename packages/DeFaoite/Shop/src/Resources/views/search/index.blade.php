@@ -117,7 +117,7 @@
                                     <div class="m-auto grid w-full place-content-center items-center justify-items-center py-32 text-center">
                                         <img
                                             class="max-sm:h-[100px] max-sm:w-[100px]"
-                                            src="{{ bagisto_asset('images/thank-you.png') }}"
+                                            src="{{ exygnus_asset('images/thank-you.png') }}"
                                             alt="Empty result"
                                             loading="lazy"
                                             decoding="async"
@@ -160,7 +160,7 @@
                                     <div class="m-auto grid w-full place-content-center items-center justify-items-center py-32 text-center">
                                         <img
                                             class="max-sm:h-[100px] max-sm:w-[100px]"
-                                            src="{{ bagisto_asset('images/thank-you.png') }}"
+                                            src="{{ exygnus_asset('images/thank-you.png') }}"
                                             alt="Empty result"
                                             loading="lazy"
                                             decoding="async"

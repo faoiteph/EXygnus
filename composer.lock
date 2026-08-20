@@ -12267,16 +12267,16 @@
     ],
     "packages-dev": [
         {
-            "name": "bagisto/laravel-datafaker",
+            "name": "exygnus/laravel-datafaker",
             "version": "v2.3.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/bagisto/laravel-data-faker.git",
+                "url": "https://github.com/faoiteph/laravel-data-faker.git",
                 "reference": "b3c33334f6b6e0acd4e5f06360f2fd1f5661d289"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bagisto/laravel-data-faker/zipball/b3c33334f6b6e0acd4e5f06360f2fd1f5661d289",
+                "url": "https://api.github.com/repos/faoiteph/laravel-data-faker/zipball/b3c33334f6b6e0acd4e5f06360f2fd1f5661d289",
                 "reference": "b3c33334f6b6e0acd4e5f06360f2fd1f5661d289",
                 "shasum": ""
             },
@@ -12300,21 +12300,21 @@
             ],
             "authors": [
                 {
-                    "name": "Bagisto Data Faker",
-                    "email": "support@bagisto.com"
+                    "name": "EXygnus Data Faker",
+                    "email": "support@exygnus.com"
                 }
             ],
-            "description": "Create fake customers, categories and products in Bagisto.",
-            "homepage": "https://github.com/bagisto/laravel-data-faker",
+            "description": "Create fake customers, categories and products in EXygnus.",
+            "homepage": "https://github.com/faoiteph/laravel-data-faker",
             "keywords": [
-                "bagisto",
+                "exygnus",
                 "fake categories",
                 "fake customers",
                 "fake products"
             ],
             "support": {
-                "issues": "https://github.com/bagisto/laravel-data-faker/issues",
-                "source": "https://github.com/bagisto/laravel-data-faker/tree/v2.3.0"
+                "issues": "https://github.com/faoiteph/laravel-data-faker/issues",
+                "source": "https://github.com/faoiteph/laravel-data-faker/tree/v2.3.0"
             },
             "time": "2025-08-05T12:30:38+00:00"
         },

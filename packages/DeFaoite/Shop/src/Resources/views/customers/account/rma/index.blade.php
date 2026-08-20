@@ -37,7 +37,7 @@
             </a>
         </div>
 
-        {!! view_render_event('bagisto.shop.customers.account.rma.list.before') !!}
+        {!! view_render_event('exygnus.shop.customers.account.rma.list.before') !!}
 
         <!-- Datagrid -->
         <div class="max-md:hidden">
@@ -154,6 +154,6 @@
             </x-shop::datagrid>
         </div>
 
-        {!! view_render_event('bagisto.shop.customers.account.rma.list.after') !!}
+        {!! view_render_event('exygnus.shop.customers.account.rma.list.after') !!}
     </div>
 </x-shop::layouts.account>

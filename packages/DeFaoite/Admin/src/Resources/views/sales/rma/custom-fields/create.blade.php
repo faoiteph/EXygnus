@@ -4,11 +4,11 @@
         @lang('admin::app.sales.rma.custom-field.create.create-title')
     </x-slot>
 
-    {!! view_render_event('bagisto.admin.catalog.rma.custom-field.list.before') !!}
+    {!! view_render_event('exygnus.admin.catalog.rma.custom-field.list.before') !!}
 
     <v-rma-custom-field></v-rma-custom-field>
 
-    {!! view_render_event('bagisto.admin.catalog.rma.custom-field.list.after') !!}
+    {!! view_render_event('exygnus.admin.catalog.rma.custom-field.list.after') !!}
 
     @pushOnce('scripts')
         <script

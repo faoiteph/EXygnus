@@ -1,4 +1,4 @@
-{!! view_render_event('bagisto.shop.layout.features.before') !!}
+{!! view_render_event('exygnus.shop.layout.features.before') !!}
 
 <!--
     The ThemeCustomizationRepository repository is injected directly here because there is no way
@@ -49,4 +49,4 @@
     </div>
 @endif
 
-{!! view_render_event('bagisto.shop.layout.features.after') !!}
+{!! view_render_event('exygnus.shop.layout.features.after') !!}

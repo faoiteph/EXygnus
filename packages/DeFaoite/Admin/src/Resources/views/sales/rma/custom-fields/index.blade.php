@@ -23,10 +23,10 @@
         </div>
     </div>
 
-    {!! view_render_event('bagisto.admin.catalog.rma.custom-field.list.before') !!}
+    {!! view_render_event('exygnus.admin.catalog.rma.custom-field.list.before') !!}
 
     <x-admin::datagrid :src="route('admin.sales.rma.custom-fields.index')"/>
 
-    {!! view_render_event('bagisto.admin.catalog.rma.custom-field.list.after') !!}
+    {!! view_render_event('exygnus.admin.catalog.rma.custom-field.list.after') !!}
 
 </x-admin::layouts>

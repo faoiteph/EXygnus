@@ -7,7 +7,7 @@
 >
 
 <head>
-    {!! view_render_event('bagisto.admin.layout.head.before') !!}
+    {!! view_render_event('exygnus.admin.layout.head.before') !!}
 
     <title>{{ $title ?? '' }}</title>
 
@@ -35,12 +35,12 @@
     >
     <meta
         name="generator"
-        content="Bagisto"
+        content="EXygnus"
     >
 
     @stack('meta')
 
-    @bagistoVite(['src/Resources/assets/css/app.css', 'src/Resources/assets/js/app.js'])
+    @exygnusVite(['src/Resources/assets/css/app.css', 'src/Resources/assets/js/app.js'])
 
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
@@ -55,7 +55,7 @@
     <link
         rel="preload"
         as="image"
-        href="{{ url('cache/logo/bagisto.png') }}"
+        href="{{ url('cache/logo/exygnus.png') }}"
     >
 
     @if ($favicon = core()->getConfigData('general.design.admin_logo.favicon'))
@@ -68,7 +68,7 @@
     @else
         <link
             type="image/x-icon"
-            href="{{ bagisto_asset('images/favicon.ico') }}"
+            href="{{ exygnus_asset('images/favicon.ico') }}"
             rel="shortcut icon"
             sizes="16x16"
         />
@@ -80,13 +80,13 @@
         {!! core()->getConfigData('general.content.custom_scripts.custom_css') !!}
     </style>
 
-    {!! view_render_event('bagisto.admin.layout.head.after') !!}
+    {!! view_render_event('exygnus.admin.layout.head.after') !!}
 </head>
 
 <body class="h-full dark:bg-gray-950">
-    {!! view_render_event('bagisto.admin.layout.body.before') !!}
+    {!! view_render_event('exygnus.admin.layout.body.before') !!}
 
-    <!-- Built With Bagisto -->
+    <!-- Built With EXygnus -->
     <div
         id="app"
         class="h-full"
@@ -97,7 +97,7 @@
         <!-- Confirm Modal Blade Component -->
         <x-admin::modal.confirm />
 
-        {!! view_render_event('bagisto.admin.layout.content.before') !!}
+        {!! view_render_event('exygnus.admin.layout.content.before') !!}
 
         <!-- Page Header Blade Component -->
         <x-admin::layouts.header />
@@ -124,22 +124,22 @@
                 <div class="mt-auto">
                     <div class="border-t bg-white py-2 text-center text-xs sm:text-sm dark:border-gray-800 dark:bg-gray-900 dark:text-white">
                         @lang('admin::app.components.layouts.powered-by.description', [
-                            'bagisto' => '<a class="text-blue-600 hover:underline dark:text-darkBlue" href="https://bagisto.com/en/">Bagisto</a>',
-                            'webkul' => '<a class="text-blue-600 hover:underline dark:text-darkBlue" href="https://webkul.com/">Webkul</a>',
+                            'exygnus' => '<a class="text-blue-600 hover:underline dark:text-darkBlue" href="https://exygnus.com/en/">EXygnus</a>',
+                            'defaoite' => '<a class="text-blue-600 hover:underline dark:text-darkBlue" href="https://defaoite.com/">De Faoite</a>',
                         ])
                     </div>
                 </div>
             </div>
         </div>
 
-        {!! view_render_event('bagisto.admin.layout.content.after') !!}
+        {!! view_render_event('exygnus.admin.layout.content.after') !!}
     </div>
 
-    {!! view_render_event('bagisto.admin.layout.body.after') !!}
+    {!! view_render_event('exygnus.admin.layout.body.after') !!}
 
     @stack('scripts')
 
-    {!! view_render_event('bagisto.admin.layout.vue-app-mount.before') !!}
+    {!! view_render_event('exygnus.admin.layout.vue-app-mount.before') !!}
 
     <script>
         /**
@@ -153,7 +153,7 @@
         });
     </script>
 
-    {!! view_render_event('bagisto.admin.layout.vue-app-mount.after') !!}
+    {!! view_render_event('exygnus.admin.layout.vue-app-mount.after') !!}
 </body>
 
 </html>

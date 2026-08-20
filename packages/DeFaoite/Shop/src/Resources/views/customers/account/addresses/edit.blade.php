@@ -35,7 +35,7 @@
             </h2>
         </div>
 
-        {!! view_render_event('bagisto.shop.customers.account.address.edit.before', ['address' => $address]) !!}
+        {!! view_render_event('exygnus.shop.customers.account.address.edit.before', ['address' => $address]) !!}
 
         <!-- Customer Address edit Component-->
         <v-edit-customer-address>
@@ -43,7 +43,7 @@
             <x-shop::shimmer.form.control-group :count="10" />
         </v-edit-customer-address>
 
-        {!! view_render_event('bagisto.shop.customers.account.address.edit.after', ['address' => $address]) !!}
+        {!! view_render_event('exygnus.shop.customers.account.address.edit.after', ['address' => $address]) !!}
     </div>
 
     @push('scripts')
@@ -56,7 +56,7 @@
                 method="PUT"
                 :action="route('shop.customers.account.addresses.update',  $address->id)"
             >
-                {!! view_render_event('bagisto.shop.customers.account.address.edit_form_controls.before', ['address' => $address]) !!}
+                {!! view_render_event('exygnus.shop.customers.account.address.edit_form_controls.before', ['address' => $address]) !!}
 
                 <!-- Company Name -->
                 <x-shop::form.control-group>
@@ -75,7 +75,7 @@
                     <x-shop::form.control-group.error control-name="company_name" />
                 </x-shop::form.control-group>
 
-                {!! view_render_event('bagisto.shop.customers.account.addresses.edit_form_controls.company_name.after', ['address' => $address]) !!}
+                {!! view_render_event('exygnus.shop.customers.account.addresses.edit_form_controls.company_name.after', ['address' => $address]) !!}
 
                 <!-- First Name -->
                 <x-shop::form.control-group>
@@ -95,7 +95,7 @@
                     <x-shop::form.control-group.error control-name="first_name" />
                 </x-shop::form.control-group>
 
-                {!! view_render_event('bagisto.shop.customers.account.addresses.edit_form_controls.first_name.after', ['address' => $address]) !!}
+                {!! view_render_event('exygnus.shop.customers.account.addresses.edit_form_controls.first_name.after', ['address' => $address]) !!}
 
                 <!-- Last Name -->
                 <x-shop::form.control-group>
@@ -115,7 +115,7 @@
                     <x-shop::form.control-group.error control-name="last_name" />
                 </x-shop::form.control-group>
 
-                {!! view_render_event('bagisto.shop.customers.account.addresses.edit_form_controls.last_name.after', ['address' => $address]) !!}
+                {!! view_render_event('exygnus.shop.customers.account.addresses.edit_form_controls.last_name.after', ['address' => $address]) !!}
 
                 <!-- E-mail -->
                 <x-shop::form.control-group>
@@ -135,7 +135,7 @@
                     <x-shop::form.control-group.error control-name="email" />
                 </x-shop::form.control-group>
 
-                {!! view_render_event('bagisto.shop.customers.account.addresses.edit_form_controls.email.after', ['address' => $address]) !!}
+                {!! view_render_event('exygnus.shop.customers.account.addresses.edit_form_controls.email.after', ['address' => $address]) !!}
 
                 <!-- Vat ID -->
                 <x-shop::form.control-group>
@@ -154,7 +154,7 @@
                     <x-shop::form.control-group.error control-name="vat_id" />
                 </x-shop::form.control-group>
 
-                {!! view_render_event('bagisto.shop.customers.account.addresses.edit_form_controls.vat_id.after', ['address' => $address]) !!}
+                {!! view_render_event('exygnus.shop.customers.account.addresses.edit_form_controls.vat_id.after', ['address' => $address]) !!}
 
                 @php
                     $addresses = explode(PHP_EOL, $address->address);
@@ -199,7 +199,7 @@
                     @endfor
                 @endif
 
-                {!! view_render_event('bagisto.shop.customers.account.addresses.edit_form_controls.street-addres.after', ['address' => $address]) !!}
+                {!! view_render_event('exygnus.shop.customers.account.addresses.edit_form_controls.street-addres.after', ['address' => $address]) !!}
 
                 <!-- Country Name -->
                 <x-shop::form.control-group>
@@ -228,7 +228,7 @@
                     <x-shop::form.control-group.error control-name="country" />
                 </x-shop::form.control-group>
 
-                {!! view_render_event('bagisto.shop.customers.account.addresses.edit_form_controls.country.after', ['address' => $address]) !!}
+                {!! view_render_event('exygnus.shop.customers.account.addresses.edit_form_controls.country.after', ['address' => $address]) !!}
 
                 <!-- State Name -->
                 <x-shop::form.control-group>
@@ -268,7 +268,7 @@
                     <x-shop::form.control-group.error control-name="state" />
                 </x-shop::form.control-group>
 
-                {!! view_render_event('bagisto.shop.customers.account.addresses.edit_form_controls.state.after', ['address' => $address]) !!}
+                {!! view_render_event('exygnus.shop.customers.account.addresses.edit_form_controls.state.after', ['address' => $address]) !!}
 
                 <x-shop::form.control-group>
                     <x-shop::form.control-group.label class="required">
@@ -287,7 +287,7 @@
                     <x-shop::form.control-group.error control-name="city" />
                 </x-shop::form.control-group>
 
-                {!! view_render_event('bagisto.shop.customers.account.addresses.edit_form_controls.city.after', ['address' => $address]) !!}
+                {!! view_render_event('exygnus.shop.customers.account.addresses.edit_form_controls.city.after', ['address' => $address]) !!}
 
                 <x-shop::form.control-group>
                     <x-shop::form.control-group.label class="{{ core()->isPostCodeRequired() ? 'required' : '' }}">
@@ -306,7 +306,7 @@
                     <x-shop::form.control-group.error control-name="postcode" />
                 </x-shop::form.control-group>
 
-                {!! view_render_event('bagisto.shop.customers.account.addresses.edit_form_controls.postcode.after', ['address' => $address]) !!}
+                {!! view_render_event('exygnus.shop.customers.account.addresses.edit_form_controls.postcode.after', ['address' => $address]) !!}
 
                 <x-shop::form.control-group>
                     <x-shop::form.control-group.label class="required">
@@ -325,7 +325,7 @@
                     <x-shop::form.control-group.error control-name="phone" />
                 </x-shop::form.control-group>
 
-                {!! view_render_event('bagisto.shop.customers.account.addresses.edit_form_controls.phone.after', ['address' => $address]) !!}
+                {!! view_render_event('exygnus.shop.customers.account.addresses.edit_form_controls.phone.after', ['address' => $address]) !!}
 
                 <button
                     type="submit"
@@ -334,7 +334,7 @@
                     @lang('shop::app.customers.account.addresses.edit.update-btn')
                 </button>
                 
-                {!! view_render_event('bagisto.shop.customers.account.address.edit_form_controls.after', ['address' => $address]) !!}
+                {!! view_render_event('exygnus.shop.customers.account.address.edit_form_controls.after', ['address' => $address]) !!}
 
             </x-shop::form>
         </script>

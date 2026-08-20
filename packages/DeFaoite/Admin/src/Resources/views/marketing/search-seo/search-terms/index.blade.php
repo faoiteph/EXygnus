@@ -3,7 +3,7 @@
         @lang('admin::app.marketing.search-seo.search-terms.index.title')
     </x-slot>
 
-    {!! view_render_event('bagisto.admin.marketing.search_seo.search_terms.create.before') !!}
+    {!! view_render_event('exygnus.admin.marketing.search_seo.search_terms.create.before') !!}
 
     <!-- Create Sitemap Vue Component -->
     <v-create-sitemaps>
@@ -24,7 +24,7 @@
         <x-admin::shimmer.datagrid />
     </v-create-sitemaps>
 
-    {!! view_render_event('bagisto.admin.marketing.search_seo.search_terms.create.after') !!}
+    {!! view_render_event('exygnus.admin.marketing.search_seo.search_terms.create.after') !!}
 
     @pushOnce('scripts')
         <script

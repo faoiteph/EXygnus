@@ -53,7 +53,7 @@
         {{ trim($product->meta_title) != "" ? $product->meta_title : $product->name }}
     </x-slot>
 
-    {!! view_render_event('bagisto.shop.products.view.before', ['product' => $product]) !!}
+    {!! view_render_event('exygnus.shop.products.view.before', ['product' => $product]) !!}
 
     <!-- Breadcrumbs -->
     @if ((core()->getConfigData('general.general.breadcrumbs.shop')))
@@ -78,7 +78,7 @@
                 ref="productTabs"
             >
                 <!-- Description Tab -->
-                {!! view_render_event('bagisto.shop.products.view.description.before', ['product' => $product]) !!}
+                {!! view_render_event('exygnus.shop.products.view.description.before', ['product' => $product]) !!}
 
                 <x-shop::tabs.item
                     id="descritpion-tab"
@@ -93,7 +93,7 @@
                     </div>
                 </x-shop::tabs.item>
 
-                {!! view_render_event('bagisto.shop.products.view.description.after', ['product' => $product]) !!}
+                {!! view_render_event('exygnus.shop.products.view.description.after', ['product' => $product]) !!}
 
                 <!-- Additional Information Tab -->
                 @if(count($attributeData))
@@ -261,7 +261,7 @@
 
     <v-product-associations></v-product-associations>
 
-    {!! view_render_event('bagisto.shop.products.view.after', ['product' => $product]) !!}
+    {!! view_render_event('exygnus.shop.products.view.after', ['product' => $product]) !!}
 
     @pushOnce('scripts')
         <script
@@ -295,7 +295,7 @@
 
                             <!-- Details -->
                             <div class="relative max-w-[590px] max-1180:w-full max-1180:max-w-full max-1180:px-5 max-sm:px-4">
-                                {!! view_render_event('bagisto.shop.products.name.before', ['product' => $product]) !!}
+                                {!! view_render_event('exygnus.shop.products.name.before', ['product' => $product]) !!}
 
                                 <div class="flex justify-between gap-4">
                                     <h1 class="break-words text-3xl font-medium max-sm:text-xl" v-pre>
@@ -315,10 +315,10 @@
                                     @endif
                                 </div>
 
-                                {!! view_render_event('bagisto.shop.products.name.after', ['product' => $product]) !!}
+                                {!! view_render_event('exygnus.shop.products.name.after', ['product' => $product]) !!}
 
                                 <!-- Rating -->
-                                {!! view_render_event('bagisto.shop.products.rating.before', ['product' => $product]) !!}
+                                {!! view_render_event('exygnus.shop.products.rating.before', ['product' => $product]) !!}
 
                                 @if ($totalRatings = $reviewHelper->getTotalFeedback($product))
                                     <!-- Scroll To Reviews Section and Activate Reviews Tab -->
@@ -337,10 +337,10 @@
                                     </div>
                                 @endif
 
-                                {!! view_render_event('bagisto.shop.products.rating.after', ['product' => $product]) !!}
+                                {!! view_render_event('exygnus.shop.products.rating.after', ['product' => $product]) !!}
 
                                 <!-- Pricing -->
-                                {!! view_render_event('bagisto.shop.products.price.before', ['product' => $product]) !!}
+                                {!! view_render_event('exygnus.shop.products.price.before', ['product' => $product]) !!}
 
                                 <p class="mt-[22px] flex items-center gap-2.5 text-2xl !font-medium max-sm:mt-2 max-sm:gap-x-2.5 max-sm:gap-y-0 max-sm:text-lg">
                                     {!! $product->getTypeInstance()->getPriceHtml() !!}
@@ -362,15 +362,15 @@
                                     </div>
                                 @endif
 
-                                {!! view_render_event('bagisto.shop.products.price.after', ['product' => $product]) !!}
+                                {!! view_render_event('exygnus.shop.products.price.after', ['product' => $product]) !!}
 
-                                {!! view_render_event('bagisto.shop.products.short_description.before', ['product' => $product]) !!}
+                                {!! view_render_event('exygnus.shop.products.short_description.before', ['product' => $product]) !!}
 
                                 <p class="mt-6 text-lg text-zinc-500 max-sm:mt-1.5 max-sm:text-sm">
                                     {!! $product->short_description !!}
                                 </p>
 
-                                {!! view_render_event('bagisto.shop.products.short_description.after', ['product' => $product]) !!}
+                                {!! view_render_event('exygnus.shop.products.short_description.after', ['product' => $product]) !!}
 
                                 @include('shop::products.view.types.simple')
 
@@ -387,7 +387,7 @@
                                 <!-- Product Actions and Quantity Box -->
                                 <div class="mt-8 flex max-w-[470px] gap-4 max-sm:mt-4 max-sm:flex-wrap">
 
-                                    {!! view_render_event('bagisto.shop.products.view.quantity.before', ['product' => $product]) !!}
+                                    {!! view_render_event('exygnus.shop.products.view.quantity.before', ['product' => $product]) !!}
 
                                     @if ($product->getTypeInstance()->showQuantityBox())
                                         <x-shop::quantity-changer
@@ -397,11 +397,11 @@
                                         />
                                     @endif
 
-                                    {!! view_render_event('bagisto.shop.products.view.quantity.after', ['product' => $product]) !!}
+                                    {!! view_render_event('exygnus.shop.products.view.quantity.after', ['product' => $product]) !!}
 
                                     @if (core()->getConfigData('sales.checkout.shopping_cart.cart_page'))
                                         <!-- Add To Cart Button -->
-                                        {!! view_render_event('bagisto.shop.products.view.add_to_cart.before', ['product' => $product]) !!}
+                                        {!! view_render_event('exygnus.shop.products.view.add_to_cart.before', ['product' => $product]) !!}
 
                                         <x-shop::button
                                             type="submit"
@@ -415,7 +415,7 @@
                                             @click="is_buy_now=0;"
                                         />
 
-                                        {!! view_render_event('bagisto.shop.products.view.add_to_cart.after', ['product' => $product]) !!}
+                                        {!! view_render_event('exygnus.shop.products.view.add_to_cart.after', ['product' => $product]) !!}
                                     @else
                                         <button
                                             type="button"
@@ -429,7 +429,7 @@
 
                                 <!-- Buy Now Button -->
                                 @if (core()->getConfigData('sales.checkout.shopping_cart.cart_page'))
-                                    {!! view_render_event('bagisto.shop.products.view.buy_now.before', ['product' => $product]) !!}
+                                    {!! view_render_event('exygnus.shop.products.view.buy_now.before', ['product' => $product]) !!}
 
                                     @if (core()->getConfigData('catalog.products.storefront.buy_now_button_display'))
                                         <x-shop::button
@@ -444,14 +444,14 @@
                                         />
                                     @endif
 
-                                    {!! view_render_event('bagisto.shop.products.view.buy_now.after', ['product' => $product]) !!}
+                                    {!! view_render_event('exygnus.shop.products.view.buy_now.after', ['product' => $product]) !!}
                                 @endif
 
-                                {!! view_render_event('bagisto.shop.products.view.additional_actions.before', ['product' => $product]) !!}
+                                {!! view_render_event('exygnus.shop.products.view.additional_actions.before', ['product' => $product]) !!}
 
                                 <!-- Share Buttons -->
                                 <div class="mt-10 flex gap-9 max-md:mt-4 max-md:flex-wrap max-sm:justify-center max-sm:gap-3">
-                                    {!! view_render_event('bagisto.shop.products.view.compare.before', ['product' => $product]) !!}
+                                    {!! view_render_event('exygnus.shop.products.view.compare.before', ['product' => $product]) !!}
 
                                     <div
                                         class="flex cursor-pointer items-center justify-center gap-2.5 max-sm:gap-1.5 max-sm:text-base"
@@ -469,10 +469,10 @@
                                         @endif
                                     </div>
 
-                                    {!! view_render_event('bagisto.shop.products.view.compare.after', ['product' => $product]) !!}
+                                    {!! view_render_event('exygnus.shop.products.view.compare.after', ['product' => $product]) !!}
                                 </div>
 
-                                {!! view_render_event('bagisto.shop.products.view.additional_actions.after', ['product' => $product]) !!}
+                                {!! view_render_event('exygnus.shop.products.view.additional_actions.after', ['product' => $product]) !!}
                             </div>
                         </div>
                     </div>

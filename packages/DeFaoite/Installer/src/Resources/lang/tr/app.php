@@ -806,7 +806,7 @@ return [
         'index' => [
             'create-administrator' => [
                 'admin' => 'Yönetici',
-                'bagisto' => 'EXygnus',
+                'exygnus' => 'EXygnus',
                 'confirm-password' => 'Şifreyi Onayla',
                 'email' => 'E-posta',
                 'email-address' => 'admin@ornek.com',
@@ -821,7 +821,7 @@ return [
                 'application-name' => 'Uygulama Adı',
                 'argentine-peso' => 'Arjantin Pezosu (ARS)',
                 'australian-dollar' => 'Avustralya Doları (AUD)',
-                'bagisto' => 'EXygnus',
+                'exygnus' => 'EXygnus',
                 'bangladeshi-taka' => 'Bangladeş Takası (BDT)',
                 'bahraini-dinar' => 'Bahreyn Dinarı (BHD)',
                 'brazilian-real' => 'Brezilya Reali (BRL)',
@@ -914,16 +914,16 @@ return [
             ],
 
             'installation-processing' => [
-                'bagisto' => 'EXygnus Kurulumu',
-                'bagisto-info' => 'Veritabanı tabloları oluşturuluyor, bu birkaç dakika sürebilir',
+                'exygnus' => 'EXygnus Kurulumu',
+                'exygnus-info' => 'Veritabanı tabloları oluşturuluyor, bu birkaç dakika sürebilir',
                 'title' => 'Kurulum',
             ],
 
             'installation-completed' => [
                 'admin-panel' => 'Yönetici Paneli',
-                'bagisto-forums' => 'EXygnus Forumu',
+                'exygnus-forums' => 'EXygnus Forumu',
                 'customer-panel' => 'Müşteri Paneli',
-                'explore-bagisto-extensions' => 'EXygnus Uzantılarını Keşfedin',
+                'explore-exygnus-extensions' => 'EXygnus Uzantılarını Keşfedin',
                 'title' => 'Kurulum Tamamlandı',
                 'title-info' => 'EXygnus sisteminize başarıyla kuruldu.',
             ],
@@ -973,9 +973,9 @@ return [
 
             'arabic' => 'Arapça',
             'back' => 'Geri',
-            'bagisto' => 'EXygnus',
-            'bagisto-info' => 'DeFaoite tarafından geliştirilen bir Topluluk Projesi',
-            'bagisto-logo' => 'EXygnus Logosu',
+            'exygnus' => 'EXygnus',
+            'exygnus-info' => 'DeFaoite tarafından geliştirilen bir Topluluk Projesi',
+            'exygnus-logo' => 'EXygnus Logosu',
             'bengali' => 'Bengalce',
             'catalan' => 'Katalanca',
             'chinese' => 'Çince',
@@ -1002,7 +1002,7 @@ return [
             'title' => 'EXygnus Kurulum Sihirbazı',
             'turkish' => 'Türkçe',
             'ukrainian' => 'Ukraynaca',
-            'webkul' => 'DeFaoite',
+            'defaoite' => 'DeFaoite',
         ],
     ],
 ];

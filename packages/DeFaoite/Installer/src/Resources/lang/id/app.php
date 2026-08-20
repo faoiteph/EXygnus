@@ -806,7 +806,7 @@ return [
         'index' => [
             'create-administrator' => [
                 'admin' => 'Admin',
-                'bagisto' => 'EXygnus',
+                'exygnus' => 'EXygnus',
                 'confirm-password' => 'Konfirmasi Kata Sandi',
                 'email' => 'Email',
                 'email-address' => 'admin@example.com',
@@ -821,7 +821,7 @@ return [
                 'application-name' => 'Nama Aplikasi',
                 'argentine-peso' => 'Peso Argentina (ARS)',
                 'australian-dollar' => 'Dolar Australia (AUD)',
-                'bagisto' => 'EXygnus',
+                'exygnus' => 'EXygnus',
                 'bangladeshi-taka' => 'Taka Bangladesh (BDT)',
                 'bahraini-dinar' => 'Dinar Bahrain (BHD)',
                 'brazilian-real' => 'Real Brasil (BRL)',
@@ -914,16 +914,16 @@ return [
             ],
 
             'installation-processing' => [
-                'bagisto' => 'Instalasi EXygnus',
-                'bagisto-info' => 'Membuat tabel database, ini dapat memakan waktu beberapa saat',
+                'exygnus' => 'Instalasi EXygnus',
+                'exygnus-info' => 'Membuat tabel database, ini dapat memakan waktu beberapa saat',
                 'title' => 'Instalasi',
             ],
 
             'installation-completed' => [
                 'admin-panel' => 'Panel Admin',
-                'bagisto-forums' => 'Forum EXygnus',
+                'exygnus-forums' => 'Forum EXygnus',
                 'customer-panel' => 'Panel Pelanggan',
-                'explore-bagisto-extensions' => 'Jelajahi Ekstensi EXygnus',
+                'explore-exygnus-extensions' => 'Jelajahi Ekstensi EXygnus',
                 'title' => 'Instalasi Selesai',
                 'title-info' => 'EXygnus berhasil diinstal di sistem Anda.',
             ],
@@ -973,9 +973,9 @@ return [
 
             'arabic' => 'Arab',
             'back' => 'Kembali',
-            'bagisto' => 'EXygnus',
-            'bagisto-info' => 'Proyek Komunitas oleh',
-            'bagisto-logo' => 'Logo EXygnus',
+            'exygnus' => 'EXygnus',
+            'exygnus-info' => 'Proyek Komunitas oleh',
+            'exygnus-logo' => 'Logo EXygnus',
             'bengali' => 'Bengali',
             'catalan' => 'Katalan',
             'chinese' => 'Cina',
@@ -1002,7 +1002,7 @@ return [
             'title' => 'Pemasang EXygnus',
             'turkish' => 'Turki',
             'ukrainian' => 'Ukraina',
-            'webkul' => 'DeFaoite',
+            'defaoite' => 'DeFaoite',
         ],
     ],
 ];

@@ -3,7 +3,7 @@
         @lang('admin::app.marketing.promotions.cart-rules.edit.title')
     </x-slot>
 
-    {!! view_render_event('bagisto.admin.marketing.promotions.cart_rules.edit.before', ['cartRule' => $cartRule]) !!}
+    {!! view_render_event('exygnus.admin.marketing.promotions.cart_rules.edit.before', ['cartRule' => $cartRule]) !!}
 
     <x-admin::form
         :action="route('admin.marketing.promotions.cart_rules.update', $cartRule->id)"
@@ -12,7 +12,7 @@
         id="update-cart-rule"
     >
 
-        {!! view_render_event('bagisto.admin.marketing.promotions.cart_rules.edit.edit_form_controls.before', ['cartRule' => $cartRule]) !!}
+        {!! view_render_event('exygnus.admin.marketing.promotions.cart_rules.edit.edit_form_controls.before', ['cartRule' => $cartRule]) !!}
 
         <div class="mt-3 flex items-center justify-between gap-4 max-sm:flex-wrap">
             <p class="text-xl font-bold text-gray-800 dark:text-white">
@@ -46,11 +46,11 @@
         </v-cart-rule-edit-form>
 
 
-        {!! view_render_event('bagisto.admin.marketing.promotions.cart_rules.edit.edit_form_controls.after', ['cartRule' => $cartRule]) !!}
+        {!! view_render_event('exygnus.admin.marketing.promotions.cart_rules.edit.edit_form_controls.after', ['cartRule' => $cartRule]) !!}
 
     </x-admin::form>
 
-    {!! view_render_event('bagisto.admin.marketing.promotions.cart_rules.edit.card.generated_coupons.before', ['cartRule' => $cartRule]) !!}
+    {!! view_render_event('exygnus.admin.marketing.promotions.cart_rules.edit.card.generated_coupons.before', ['cartRule' => $cartRule]) !!}
 
     <div class="mt-2.5 flex gap-2.5 max-xl:flex-wrap">
         <div class="flex flex-1 flex-col gap-2 max-xl:flex-auto">
@@ -60,9 +60,9 @@
         <div class="w-[360px] max-w-full max-sm:hidden"></div>
     </div>
 
-    {!! view_render_event('bagisto.admin.marketing.promotions.cart_rules.edit.card.generated_coupons.after', ['cartRule' => $cartRule]) !!}
+    {!! view_render_event('exygnus.admin.marketing.promotions.cart_rules.edit.card.generated_coupons.after', ['cartRule' => $cartRule]) !!}
 
-    {!! view_render_event('bagisto.admin.marketing.promotions.cart_rules.edit.after', ['cartRule' => $cartRule]) !!}
+    {!! view_render_event('exygnus.admin.marketing.promotions.cart_rules.edit.after', ['cartRule' => $cartRule]) !!}
 
     @pushOnce('scripts')
         <script
@@ -74,7 +74,7 @@
                 <!-- Left Sub Component -->
                 <div class="flex flex-1 flex-col gap-2 max-xl:flex-auto">
 
-                    {!! view_render_event('bagisto.admin.marketing.promotions.cart_rules.edit.card.general.before', ['cartRule' => $cartRule]) !!}
+                    {!! view_render_event('exygnus.admin.marketing.promotions.cart_rules.edit.card.general.before', ['cartRule' => $cartRule]) !!}
 
                     <!-- General -->
                     <div class="box-shadow rounded bg-white p-4 dark:bg-gray-900">
@@ -280,9 +280,9 @@
                         </x-admin::form.control-group>
                     </div>
 
-                    {!! view_render_event('bagisto.admin.marketing.promotions.cart_rules.edit.card.general.after', ['cartRule' => $cartRule]) !!}
+                    {!! view_render_event('exygnus.admin.marketing.promotions.cart_rules.edit.card.general.after', ['cartRule' => $cartRule]) !!}
 
-                    {!! view_render_event('bagisto.admin.marketing.promotions.cart_rules.edit.card.conditions.before', ['cartRule' => $cartRule]) !!}
+                    {!! view_render_event('exygnus.admin.marketing.promotions.cart_rules.edit.card.conditions.before', ['cartRule' => $cartRule]) !!}
 
                     <!-- Conditions -->
                     <div class="box-shadow rounded bg-white p-4 dark:bg-gray-900">
@@ -338,9 +338,9 @@
 
                     </div>
 
-                    {!! view_render_event('bagisto.admin.marketing.promotions.cart_rules.edit.card.conditions.after', ['cartRule' => $cartRule]) !!}
+                    {!! view_render_event('exygnus.admin.marketing.promotions.cart_rules.edit.card.conditions.after', ['cartRule' => $cartRule]) !!}
 
-                    {!! view_render_event('bagisto.admin.marketing.promotions.cart_rules.edit.card.actions.before', ['cartRule' => $cartRule]) !!}
+                    {!! view_render_event('exygnus.admin.marketing.promotions.cart_rules.edit.card.actions.before', ['cartRule' => $cartRule]) !!}
 
                     <!-- Action -->
                     <div class="box-shadow rounded bg-white p-4 dark:bg-gray-900">
@@ -623,14 +623,14 @@
                         </div>
                     </div>
 
-                    {!! view_render_event('bagisto.admin.marketing.promotions.cart_rules.edit.card.actions.after', ['cartRule' => $cartRule]) !!}
+                    {!! view_render_event('exygnus.admin.marketing.promotions.cart_rules.edit.card.actions.after', ['cartRule' => $cartRule]) !!}
 
                 </div>
 
                 <!-- Right Sub Component -->
                 <div class="flex w-[360px] max-w-full flex-col gap-2 max-sm:w-full">
 
-                    {!! view_render_event('bagisto.admin.marketing.promotions.cart_rules.edit.card.accordion.settings.before', ['cartRule' => $cartRule]) !!}
+                    {!! view_render_event('exygnus.admin.marketing.promotions.cart_rules.edit.card.accordion.settings.before', ['cartRule' => $cartRule]) !!}
 
                     <!-- Settings -->
                     <x-admin::accordion>
@@ -747,9 +747,9 @@
                         </x-slot>
                     </x-admin::accordion>
 
-                    {!! view_render_event('bagisto.admin.marketing.promotions.cart_rules.edit.card.accordion.settings.after', ['cartRule' => $cartRule]) !!}
+                    {!! view_render_event('exygnus.admin.marketing.promotions.cart_rules.edit.card.accordion.settings.after', ['cartRule' => $cartRule]) !!}
 
-                    {!! view_render_event('bagisto.admin.marketing.promotions.cart_rules.edit.card.accordion.marketing_time.before', ['cartRule' => $cartRule]) !!}
+                    {!! view_render_event('exygnus.admin.marketing.promotions.cart_rules.edit.card.accordion.marketing_time.before', ['cartRule' => $cartRule]) !!}
 
                     <!-- Marketing Time -->
                     <x-admin::accordion>
@@ -798,7 +798,7 @@
                         </x-slot>
                     </x-admin::accordion>
 
-                    {!! view_render_event('bagisto.admin.marketing.promotions.cart_rules.edit.card.accordion.marketing_time.after', ['cartRule' => $cartRule]) !!}
+                    {!! view_render_event('exygnus.admin.marketing.promotions.cart_rules.edit.card.accordion.marketing_time.after', ['cartRule' => $cartRule]) !!}
                 </div>
             </div>
         </script>

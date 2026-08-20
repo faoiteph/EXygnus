@@ -10,7 +10,7 @@ class FlashMessagesReplacer implements Replacer
     /**
      * Replacement string.
      */
-    protected string $replacementString = '\'<bagisto-response-cache-session-flashes>\'';
+    protected string $replacementString = '\'<exygnus-response-cache-session-flashes>\'';
 
     /**
      * Prepare the response to be cached by replacing flash messages with marker.

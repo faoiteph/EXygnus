@@ -24,11 +24,11 @@ class Core
     use CurrencyFormatter;
 
     /**
-     * The Bagisto version.
+     * The EXygnus version.
      *
      * @var string
      */
-    const BAGISTO_VERSION = '2.4.x-dev';
+    const EXYGNUS_VERSION = '2.4.x-dev';
 
     /**
      * Current Channel.
@@ -110,13 +110,13 @@ class Core
     ) {}
 
     /**
-     * Get the version number of the Bagisto.
+     * Get the version number of the EXygnus.
      *
      * @return string
      */
     public function version()
     {
-        return static::BAGISTO_VERSION;
+        return static::EXYGNUS_VERSION;
     }
 
     /**

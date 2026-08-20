@@ -30,7 +30,7 @@
             </h2>
         </div>
 
-        {!! view_render_event('bagisto.shop.customers.account.orders.list.before') !!}
+        {!! view_render_event('exygnus.shop.customers.account.orders.list.before') !!}
 
         <!-- For Desktop View -->
         <div class="max-md:hidden">
@@ -95,7 +95,7 @@
             </x-shop::datagrid>
         </div>
     
-        {!! view_render_event('bagisto.shop.customers.account.orders.list.after') !!}
+        {!! view_render_event('exygnus.shop.customers.account.orders.list.after') !!}
 
     </div>
 </x-shop::layouts.account>

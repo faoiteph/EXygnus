@@ -1,11 +1,11 @@
-{!! view_render_event('bagisto.admin.sales.order.create.types.bundle.before') !!}
+{!! view_render_event('exygnus.admin.sales.order.create.types.bundle.before') !!}
 
 <v-product-bundle-options
     :errors="errors"
     :product-options="selectedProductOptions"
 ></v-product-bundle-options>
 
-{!! view_render_event('bagisto.admin.sales.order.create.types.bundle.after') !!}
+{!! view_render_event('exygnus.admin.sales.order.create.types.bundle.after') !!}
 
 @pushOnce('scripts')
     <script

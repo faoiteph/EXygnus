@@ -22,10 +22,10 @@
         </div>
     </div>
 
-    {!! view_render_event('bagisto.settings.channels.list.before') !!}
+    {!! view_render_event('exygnus.settings.channels.list.before') !!}
     
     <x-admin::datagrid :src="route('admin.settings.channels.index')" />
 
-    {!! view_render_event('bagisto.settings.channels.list.after') !!}
+    {!! view_render_event('exygnus.settings.channels.list.after') !!}
 
 </x-admin::layouts>

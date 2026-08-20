@@ -3,7 +3,7 @@
         @lang('admin::app.catalog.attributes.edit.title')
     </x-slot>
 
-    {!! view_render_event('bagisto.admin.catalog.attributes.edit.before', ['attribute' => $attribute]) !!}
+    {!! view_render_event('exygnus.admin.catalog.attributes.edit.before', ['attribute' => $attribute]) !!}
 
     <!-- Input Form -->
     <x-admin::form
@@ -42,7 +42,7 @@
         </v-edit-attributes>
     </x-admin::form>
 
-    {!! view_render_event('bagisto.admin.catalog.attributes.edit.after', ['attribute' => $attribute]) !!}
+    {!! view_render_event('exygnus.admin.catalog.attributes.edit.after', ['attribute' => $attribute]) !!}
 
     @pushOnce('scripts')
         <script
@@ -54,7 +54,7 @@
                 <!-- Left Sub Component -->
                 <div class="flex flex-1 flex-col gap-2 overflow-auto max-xl:flex-auto">
 
-                    {!! view_render_event('bagisto.admin.catalog.attributes.edit.card.label.before', ['attribute' => $attribute]) !!}
+                    {!! view_render_event('exygnus.admin.catalog.attributes.edit.card.label.before', ['attribute' => $attribute]) !!}
 
                     <!-- Label -->
                     <div class="box-shadow rounded bg-white p-4 dark:bg-gray-900">
@@ -99,7 +99,7 @@
                         @endforeach
                     </div>
 
-                    {!! view_render_event('bagisto.admin.catalog.attributes.edit.card.label.after', ['attribute' => $attribute]) !!}
+                    {!! view_render_event('exygnus.admin.catalog.attributes.edit.card.label.after', ['attribute' => $attribute]) !!}
 
                     <!-- Options -->
                     <div
@@ -261,7 +261,7 @@
                                                         <!-- Swatch Image -->
                                                         <div v-if="swatchType == 'image'">
                                                             <img
-                                                                :src="element.swatch_value_url || '{{ bagisto_asset('images/product-placeholders/front.svg') }}'"
+                                                                :src="element.swatch_value_url || '{{ exygnus_asset('images/product-placeholders/front.svg') }}'"
                                                                 :ref="'image_' + element.id"
                                                                 class="h-[50px] w-[50px]"
                                                             >
@@ -343,7 +343,7 @@
                                     <!-- Attribute Option Image -->
                                     <img
                                         class="h-[120px] w-[120px] dark:mix-blend-exclusion dark:invert"
-                                        src="{{ bagisto_asset('images/icon-add-product.svg') }}"
+                                        src="{{ exygnus_asset('images/icon-add-product.svg') }}"
                                         alt="{{ trans('admin::app.catalog.attributes.edit.add-attribute-options') }}"
                                     >
 
@@ -373,7 +373,7 @@
 
                 <!-- Right Sub Component -->
                 <div class="flex w-[360px] max-w-full flex-col gap-2 max-sm:w-full">
-                    {!! view_render_event('bagisto.admin.catalog.attributes.edit.card.accordion.general.before', ['attribute' => $attribute]) !!}
+                    {!! view_render_event('exygnus.admin.catalog.attributes.edit.card.accordion.general.before', ['attribute' => $attribute]) !!}
 
                     <!-- General -->
                     <x-admin::accordion>
@@ -495,9 +495,9 @@
                         </x-slot>
                     </x-admin::accordion>
 
-                    {!! view_render_event('bagisto.admin.catalog.attributes.edit.card.accordion.general.after', ['attribute' => $attribute]) !!}
+                    {!! view_render_event('exygnus.admin.catalog.attributes.edit.card.accordion.general.after', ['attribute' => $attribute]) !!}
 
-                    {!! view_render_event('bagisto.admin.catalog.attributes.edit.card.accordion.validations.before', ['attribute' => $attribute]) !!}
+                    {!! view_render_event('exygnus.admin.catalog.attributes.edit.card.accordion.validations.before', ['attribute' => $attribute]) !!}
 
                     <!-- Validations -->
                     <x-admin::accordion>
@@ -618,9 +618,9 @@
                         </x-slot>
                     </x-admin::accordion>
 
-                    {!! view_render_event('bagisto.admin.catalog.attributes.edit.card.accordion.validations.after', ['attribute' => $attribute]) !!}
+                    {!! view_render_event('exygnus.admin.catalog.attributes.edit.card.accordion.validations.after', ['attribute' => $attribute]) !!}
 
-                    {!! view_render_event('bagisto.admin.catalog.attributes.edit.card.accordion.configuration.before', ['attribute' => $attribute]) !!}
+                    {!! view_render_event('exygnus.admin.catalog.attributes.edit.card.accordion.configuration.before', ['attribute' => $attribute]) !!}
 
                     <!-- Configurations -->
                     <x-admin::accordion>
@@ -835,7 +835,7 @@
                         </x-slot>
                     </x-admin::accordion>
 
-                    {!! view_render_event('bagisto.admin.catalog.attributes.edit.card.accordion.configuration.configuration.after', ['attribute' => $attribute]) !!}
+                    {!! view_render_event('exygnus.admin.catalog.attributes.edit.card.accordion.configuration.configuration.after', ['attribute' => $attribute]) !!}
                 </div>
             </div>
 

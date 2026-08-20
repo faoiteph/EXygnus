@@ -1,8 +1,8 @@
-{!! view_render_event('bagisto.admin.catalog.product.edit.form.types.grouped.before', ['product' => $product]) !!}
+{!! view_render_event('exygnus.admin.catalog.product.edit.form.types.grouped.before', ['product' => $product]) !!}
 
 <v-group-products :errors="errors"></v-group-products>
 
-{!! view_render_event('bagisto.admin.catalog.product.edit.form.types.grouped.after', ['product' => $product]) !!}
+{!! view_render_event('exygnus.admin.catalog.product.edit.form.types.grouped.after', ['product' => $product]) !!}
 
 @pushOnce('scripts')
     <script
@@ -59,7 +59,7 @@
                                     :class="{'overflow-hidden rounded border border-dashed border-gray-300 dark:border-gray-800 dark:mix-blend-exclusion dark:invert': ! element.associated_product.images.length}"
                                 >
                                     <template v-if="! element.associated_product.images.length">
-                                        <img src="{{ bagisto_asset('images/product-placeholders/front.svg') }}">
+                                        <img src="{{ exygnus_asset('images/product-placeholders/front.svg') }}">
 
                                         <p class="absolute bottom-1.5 w-full text-center text-[6px] font-semibold text-gray-400">
                                             @lang('admin::app.catalog.products.edit.types.grouped.image-placeholder')
@@ -147,7 +147,7 @@
             >
                 <!-- Placeholder Image -->
                 <img
-                    src="{{ bagisto_asset('images/icon-add-product.svg') }}"
+                    src="{{ exygnus_asset('images/icon-add-product.svg') }}"
                     class="h-20 w-20 dark:mix-blend-exclusion dark:invert"
                 />
 

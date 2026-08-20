@@ -1,17 +1,17 @@
 # =============================================================================
-# Bagisto Production Image (Single-stage)
+# EXygnus Production Image (Single-stage)
 # Single container: Nginx + PHP 8.3 FPM + MySQL 8.0 + Supervisor
 #
 # Default mode  : Internal MySQL (ready-to-boot, Docker Hub style)
 # Override mode : Set DB_HOST to an external address to skip internal MySQL
 #
-# Bagisto is FULLY INSTALLED at build time — migrations, seeding, and all.
+# EXygnus is FULLY INSTALLED at build time — migrations, seeding, and all.
 # The image boots instantly with no first-run setup needed.
 # =============================================================================
 
 FROM ubuntu:24.04
 
-ARG BAGISTO_VERSION=v2.4.7
+ARG EXYGNUS_VERSION=v2.4.7
 ARG PHP_VERSION=8.3
 
 ENV DEBIAN_FRONTEND=noninteractive
@@ -70,12 +70,12 @@ COPY --from=composer:2 /usr/bin/composer /usr/local/bin/composer
 
 
 # ---------------------------------------------------------------------------
-# Clone Bagisto + Composer install
+# Clone EXygnus + Composer install
 # ---------------------------------------------------------------------------
-WORKDIR /var/www/bagisto
+WORKDIR /var/www/exygnus
 
-RUN git clone --depth 1 --branch ${BAGISTO_VERSION} \
-        https://github.com/bagisto/bagisto.git . \
+RUN git clone --depth 1 --branch ${EXYGNUS_VERSION} \
+        https://github.com/exygnus/exygnus.git . \
     && composer install \
         --no-dev \
         --no-interaction \
@@ -92,14 +92,14 @@ RUN cp .env.example .env \
     && sed -i 's/^APP_DEBUG=.*/APP_DEBUG=false/' .env \
     && sed -i 's/^DB_HOST=.*/DB_HOST=127.0.0.1/' .env \
     && sed -i 's/^DB_PORT=.*/DB_PORT=3306/' .env \
-    && sed -i 's/^DB_DATABASE=.*/DB_DATABASE=bagisto/' .env \
-    && sed -i 's/^DB_USERNAME=.*/DB_USERNAME=bagisto/' .env \
-    && sed -i 's/^DB_PASSWORD=.*/DB_PASSWORD=bagisto/' .env \
+    && sed -i 's/^DB_DATABASE=.*/DB_DATABASE=exygnus/' .env \
+    && sed -i 's/^DB_USERNAME=.*/DB_USERNAME=exygnus/' .env \
+    && sed -i 's/^DB_PASSWORD=.*/DB_PASSWORD=exygnus/' .env \
     && sed -i 's|^APP_URL=.*|APP_URL=http://localhost|' .env
 
 
 # ---------------------------------------------------------------------------
-# Install Bagisto at BUILD TIME
+# Install EXygnus at BUILD TIME
 #
 # 1. Initialize MySQL data directory
 # 2. Start MySQL temporarily
@@ -128,25 +128,25 @@ COPY nginx/config/php-fpm.conf /etc/php/${PHP_VERSION}/fpm/pool.d/www.conf
 # Nginx configuration
 # ---------------------------------------------------------------------------
 RUN rm -f /etc/nginx/sites-enabled/default /etc/nginx/conf.d/default.conf
-COPY nginx/config/nginx.conf /etc/nginx/conf.d/bagisto.conf
+COPY nginx/config/nginx.conf /etc/nginx/conf.d/exygnus.conf
 
 
 # ---------------------------------------------------------------------------
 # Supervisor configuration
 # ---------------------------------------------------------------------------
-COPY nginx/config/supervisord.conf /etc/supervisor/conf.d/bagisto.conf
+COPY nginx/config/supervisord.conf /etc/supervisor/conf.d/exygnus.conf
 
 
 # ---------------------------------------------------------------------------
 # Runtime directories
 # ---------------------------------------------------------------------------
-RUN mkdir -p /run/php /var/log/supervisor /var/log/bagisto
+RUN mkdir -p /run/php /var/log/supervisor /var/log/exygnus
 
 
 # ---------------------------------------------------------------------------
 # Permissions
 # ---------------------------------------------------------------------------
-RUN chown -R www-data:www-data /var/www/bagisto \
+RUN chown -R www-data:www-data /var/www/exygnus \
     && chmod -R 775 storage bootstrap/cache \
     && find storage bootstrap/cache -type d -exec chmod g+s {} +
 

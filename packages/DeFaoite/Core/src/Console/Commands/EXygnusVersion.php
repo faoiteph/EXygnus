@@ -4,21 +4,21 @@ namespace DeFaoite\Core\Console\Commands;
 
 use Illuminate\Console\Command;
 
-class BagistoVersion extends Command
+class EXygnusVersion extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'bagisto:version';
+    protected $signature = 'exygnus:version';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Displays current version of Bagisto installed';
+    protected $description = 'Displays current version of EXygnus installed';
 
     /**
      * Create a new command instance.

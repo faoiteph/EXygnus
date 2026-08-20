@@ -12,36 +12,36 @@
     <div class="flex items-center justify-between w-full">
         <!-- Left Navigation -->
         <div class="flex items-center gap-x-1.5">
-            {!! view_render_event('bagisto.shop.components.layouts.header.mobile.drawer.before') !!}
+            {!! view_render_event('exygnus.shop.components.layouts.header.mobile.drawer.before') !!}
 
             <!-- Drawer -->
             <v-mobile-drawer></v-mobile-drawer>
 
-            {!! view_render_event('bagisto.shop.components.layouts.header.mobile.drawer.after') !!}
+            {!! view_render_event('exygnus.shop.components.layouts.header.mobile.drawer.after') !!}
 
-            {!! view_render_event('bagisto.shop.components.layouts.header.mobile.logo.before') !!}
+            {!! view_render_event('exygnus.shop.components.layouts.header.mobile.logo.before') !!}
 
             <a
                 href="{{ route('shop.home.index') }}"
                 class="flex max-h-[30px] items-center"
-                aria-label="@lang('shop::app.components.layouts.header.mobile.bagisto')"
+                aria-label="@lang('shop::app.components.layouts.header.mobile.exygnus')"
             >
                 <img
                     class="block"
-                    src="{{ core()->getCurrentChannel()->logo_url ?? bagisto_asset('images/logo.svg') }}"
+                    src="{{ core()->getCurrentChannel()->logo_url ?? exygnus_asset('images/logo.svg') }}"
                     alt="{{ config('app.name') }}"
                     width="131"
                     height="29"
                 >
             </a>
 
-            {!! view_render_event('bagisto.shop.components.layouts.header.mobile.logo.after') !!}
+            {!! view_render_event('exygnus.shop.components.layouts.header.mobile.logo.after') !!}
         </div>
 
         <!-- Right Navigation -->
         <div>
             <div class="flex items-center gap-x-5 max-md:gap-x-4">
-                {!! view_render_event('bagisto.shop.components.layouts.header.mobile.compare.before') !!}
+                {!! view_render_event('exygnus.shop.components.layouts.header.mobile.compare.before') !!}
 
                 @if($showCompare)
                     <a
@@ -52,15 +52,15 @@
                     </a>
                 @endif
 
-                {!! view_render_event('bagisto.shop.components.layouts.header.mobile.compare.after') !!}
+                {!! view_render_event('exygnus.shop.components.layouts.header.mobile.compare.after') !!}
 
-                {!! view_render_event('bagisto.shop.components.layouts.header.mobile.mini_cart.before') !!}
+                {!! view_render_event('exygnus.shop.components.layouts.header.mobile.mini_cart.before') !!}
 
                 @if(core()->getConfigData('sales.checkout.shopping_cart.cart_page'))
                     @include('shop::checkout.cart.mini-cart')
                 @endif
 
-                {!! view_render_event('bagisto.shop.components.layouts.header.mobile.mini_cart.after') !!}
+                {!! view_render_event('exygnus.shop.components.layouts.header.mobile.mini_cart.after') !!}
 
                 <!-- For Large screens -->
                 <div class="max-md:hidden">
@@ -84,10 +84,10 @@
 
                                     <p class="w-full mt-3 border border-zinc-200"></p>
 
-                                    {!! view_render_event('bagisto.shop.components.layouts.header.mobile.index.customers_action.before') !!}
+                                    {!! view_render_event('exygnus.shop.components.layouts.header.mobile.index.customers_action.before') !!}
 
                                     <div class="flex gap-4 mt-6">
-                                        {!! view_render_event('bagisto.shop.components.layouts.header.mobile.index.sign_in_button.before') !!}
+                                        {!! view_render_event('exygnus.shop.components.layouts.header.mobile.index.sign_in_button.before') !!}
 
                                     <a
                                         href="{{ route('shop.customer.session.create') }}"
@@ -103,10 +103,10 @@
                                             @lang('shop::app.components.layouts.header.mobile.sign-up')
                                         </a>
 
-                                        {!! view_render_event('bagisto.shop.components.layouts.header.mobile.index.sign_in_button.after') !!}
+                                        {!! view_render_event('exygnus.shop.components.layouts.header.mobile.index.sign_in_button.after') !!}
                                     </div>
 
-                                    {!! view_render_event('bagisto.shop.components.layouts.header.mobile.index.customers_action.after') !!}
+                                    {!! view_render_event('exygnus.shop.components.layouts.header.mobile.index.customers_action.after') !!}
                                     </x-slot>
                             @endguest
 
@@ -127,7 +127,7 @@
                                         <p class="w-full mt-3 border border-zinc-200"></p>
 
                                         <div class="mt-2.5 grid gap-1 pb-2.5">
-                                            {!! view_render_event('bagisto.shop.components.layouts.header.mobile.index.profile_dropdown.links.before') !!}
+                                            {!! view_render_event('exygnus.shop.components.layouts.header.mobile.index.profile_dropdown.links.before') !!}
 
                                     <a
                                         class="px-5 py-2 text-base cursor-pointer"
@@ -169,7 +169,7 @@
                                                 </a>
                                             @endauth
 
-                                            {!! view_render_event('bagisto.shop.components.layouts.header.mobile.index.profile_dropdown.links.after') !!}
+                                            {!! view_render_event('exygnus.shop.components.layouts.header.mobile.index.profile_dropdown.links.after') !!}
                                         </div>
                                         </x-slot>
                                 @endauth
@@ -201,7 +201,7 @@
         </div>
     </div>
 
-    {!! view_render_event('bagisto.shop.components.layouts.header.mobile.search.before') !!}
+    {!! view_render_event('exygnus.shop.components.layouts.header.mobile.search.before') !!}
 
     <!-- Serach Catalog Form -->
     <form action="{{ route('shop.search.index') }}" class="flex items-center w-full">
@@ -230,7 +230,7 @@
         </div>
     </form>
 
-    {!! view_render_event('bagisto.shop.components.layouts.header.mobile.search.after') !!}
+    {!! view_render_event('exygnus.shop.components.layouts.header.mobile.search.after') !!}
 </div>
 
 @pushOnce('scripts')
@@ -248,7 +248,7 @@
                     <div class="flex items-center justify-between">
                         <a href="{{ route('shop.home.index') }}">
                             <img
-                                src="{{ core()->getCurrentChannel()->logo_url ?? bagisto_asset('images/logo.svg') }}"
+                                src="{{ core()->getCurrentChannel()->logo_url ?? exygnus_asset('images/logo.svg') }}"
                                 alt="{{ config('app.name') }}"
                                 width="131"
                                 height="29"
@@ -263,7 +263,7 @@
                         <div class="grid grid-cols-[auto_1fr] items-center gap-4 rounded-xl border border-zinc-200 p-2.5">
                             <div>
                                 <img
-                                src="{{ auth()->user()?->image_url ??  bagisto_asset('images/user-placeholder.png') }}"
+                                src="{{ auth()->user()?->image_url ??  exygnus_asset('images/user-placeholder.png') }}"
                                     class="h-[60px] w-[60px] rounded-full max-md:rounded-full"
                                 >
                             </div>
@@ -292,12 +292,12 @@
                         </div>
                     </div>
 
-                    {!! view_render_event('bagisto.shop.components.layouts.header.mobile.drawer.categories.before') !!}
+                    {!! view_render_event('exygnus.shop.components.layouts.header.mobile.drawer.categories.before') !!}
 
                     <!-- Mobile category view -->
                     <v-mobile-category ref="mobileCategory"></v-mobile-category>
 
-                    {!! view_render_event('bagisto.shop.components.layouts.header.mobile.drawer.categories.after') !!}
+                    {!! view_render_event('exygnus.shop.components.layouts.header.mobile.drawer.categories.after') !!}
                 </x-slot>
 
                 <x-slot:footer>
@@ -358,7 +358,7 @@
                                                     <img
                                         src="{{ ! empty(core()->getCurrentLocale()->logo_url)
                         ? core()->getCurrentLocale()->logo_url
-                        : bagisto_asset('images/default-language.svg')
+                        : exygnus_asset('images/default-language.svg')
                                                             }}"
                                                         class="h-full"
                                                         alt="Default locale"

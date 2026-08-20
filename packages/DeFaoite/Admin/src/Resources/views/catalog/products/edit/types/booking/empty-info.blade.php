@@ -5,7 +5,7 @@
     >
         <div class="grid justify-center justify-items-center gap-3.5 px-2.5 py-10">
             <img
-                src="{{ bagisto_asset('images/icon-add-product.svg') }}"
+                src="{{ exygnus_asset('images/icon-add-product.svg') }}"
                 class="h-20 w-20 dark:mix-blend-exclusion dark:invert"
             >
 

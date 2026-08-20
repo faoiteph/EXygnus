@@ -360,13 +360,13 @@ export class SalesCreatePage extends BasePage {
         await this.page.locator('select[name="type"]').selectOption("url");
         await this.page
             .locator('input[name="url"]')
-            .fill("https://bagisto.com/en/");
+            .fill("https://exygnus.com/en/");
         await this.page
             .locator('select[name="sample_type"]')
             .selectOption("url");
         await this.page
             .locator('input[name="sample_url"]')
-            .fill("https://bagisto.com/en/");
+            .fill("https://exygnus.com/en/");
         await this.page.getByText("Link Save").click();
         await this.page
             .getByRole("button", { name: "Save", exact: true })

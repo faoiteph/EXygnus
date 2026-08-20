@@ -1,11 +1,11 @@
-{!! view_render_event('bagisto.admin.sales.order.create.types.configurable.before') !!}
+{!! view_render_event('exygnus.admin.sales.order.create.types.configurable.before') !!}
 
 <v-product-configurable-options
     :errors="errors"
     :product-options="selectedProductOptions"
 ></v-product-configurable-options>
 
-{!! view_render_event('bagisto.admin.sales.order.create.types.configurable.after') !!}
+{!! view_render_event('exygnus.admin.sales.order.create.types.configurable.after') !!}
 
 @pushOnce('scripts')
     <script

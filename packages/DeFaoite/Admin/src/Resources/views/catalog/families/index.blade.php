@@ -19,10 +19,10 @@
         </div>
     </div>
 
-    {!! view_render_event('bagisto.admin.catalog.families.list.before') !!}
+    {!! view_render_event('exygnus.admin.catalog.families.list.before') !!}
 
     <x-admin::datagrid :src="route('admin.catalog.families.index')" />
 
-    {!! view_render_event('bagisto.admin.catalog.families.list.after') !!}
+    {!! view_render_event('exygnus.admin.catalog.families.list.after') !!}
 
 </x-admin::layouts>

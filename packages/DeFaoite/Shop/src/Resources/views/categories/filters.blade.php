@@ -1,4 +1,4 @@
-{!! view_render_event('bagisto.shop.categories.view.filters.before') !!}
+{!! view_render_event('exygnus.shop.categories.view.filters.before') !!}
 
 <!-- Desktop Filters Navigation -->
 <div v-if="! isMobile">
@@ -101,7 +101,7 @@
     </x-shop::drawer>
 </div>
 
-{!! view_render_event('bagisto.shop.categories.view.filters.after') !!}
+{!! view_render_event('exygnus.shop.categories.view.filters.after') !!}
 
 @pushOnce('scripts')
     <!-- Filters Vue template -->

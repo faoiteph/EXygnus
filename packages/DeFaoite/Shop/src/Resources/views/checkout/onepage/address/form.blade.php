@@ -26,7 +26,7 @@
                 />
             </x-shop::form.control-group>
 
-            {!! view_render_event('bagisto.shop.checkout.onepage.address.form.company_name.after') !!}
+            {!! view_render_event('exygnus.shop.checkout.onepage.address.form.company_name.after') !!}
 
             <!-- First Name -->
             <div class="grid grid-cols-2 gap-x-5 max-md:grid-cols-1">
@@ -47,7 +47,7 @@
                     <x-shop::form.control-group.error ::name="controlName + '.first_name'" />
                 </x-shop::form.control-group>
 
-                {!! view_render_event('bagisto.shop.checkout.onepage.address.form.first_name.after') !!}
+                {!! view_render_event('exygnus.shop.checkout.onepage.address.form.first_name.after') !!}
 
                 <!-- Last Name -->
                 <x-shop::form.control-group>
@@ -67,7 +67,7 @@
                     <x-shop::form.control-group.error ::name="controlName + '.last_name'" />
                 </x-shop::form.control-group>
 
-                {!! view_render_event('bagisto.shop.checkout.onepage.address.form.last_name.after') !!}
+                {!! view_render_event('exygnus.shop.checkout.onepage.address.form.last_name.after') !!}
             </div>
 
             <!-- Email -->
@@ -88,7 +88,7 @@
                 <x-shop::form.control-group.error ::name="controlName + '.email'" />
             </x-shop::form.control-group>
 
-            {!! view_render_event('bagisto.shop.checkout.onepage.address.form.email.after') !!}
+            {!! view_render_event('exygnus.shop.checkout.onepage.address.form.email.after') !!}
 
             <!-- Vat ID -->
             <template v-if="controlName=='billing'">
@@ -108,7 +108,7 @@
                     <x-shop::form.control-group.error ::name="controlName + '.vat_id'" />
                 </x-shop::form.control-group>
 
-                {!! view_render_event('bagisto.shop.checkout.onepage.address.form.vat_id.after') !!}
+                {!! view_render_event('exygnus.shop.checkout.onepage.address.form.vat_id.after') !!}
             </template>
 
             <!-- Street Address -->
@@ -149,7 +149,7 @@
                 @endif
             </x-shop::form.control-group>
 
-            {!! view_render_event('bagisto.shop.checkout.onepage.address.form.address.after') !!}
+            {!! view_render_event('exygnus.shop.checkout.onepage.address.form.address.after') !!}
 
             <div class="grid grid-cols-2 gap-x-5 max-md:grid-cols-1">
                 <!-- Country -->
@@ -182,7 +182,7 @@
                     <x-shop::form.control-group.error ::name="controlName + '.country'" />
                 </x-shop::form.control-group>
 
-                {!! view_render_event('bagisto.shop.checkout.onepage.address.form.country.after') !!}
+                {!! view_render_event('exygnus.shop.checkout.onepage.address.form.country.after') !!}
 
                 <!-- State -->
                 <x-shop::form.control-group>
@@ -228,7 +228,7 @@
                     <x-shop::form.control-group.error ::name="controlName + '.state'" />
                 </x-shop::form.control-group>
 
-                {!! view_render_event('bagisto.shop.checkout.onepage.address.form.state.after') !!}
+                {!! view_render_event('exygnus.shop.checkout.onepage.address.form.state.after') !!}
             </div>
 
             <div class="grid grid-cols-2 gap-x-5 max-md:grid-cols-1">
@@ -250,7 +250,7 @@
                     <x-shop::form.control-group.error ::name="controlName + '.city'" />
                 </x-shop::form.control-group>
 
-                {!! view_render_event('bagisto.shop.checkout.onepage.address.form.city.after') !!}
+                {!! view_render_event('exygnus.shop.checkout.onepage.address.form.city.after') !!}
 
                 <!-- Postcode -->
                 <x-shop::form.control-group>
@@ -270,7 +270,7 @@
                     <x-shop::form.control-group.error ::name="controlName + '.postcode'" />
                 </x-shop::form.control-group>
 
-                {!! view_render_event('bagisto.shop.checkout.onepage.address.form.postcode.after') !!}
+                {!! view_render_event('exygnus.shop.checkout.onepage.address.form.postcode.after') !!}
             </div>
 
             <!-- Phone Number -->
@@ -291,7 +291,7 @@
                 <x-shop::form.control-group.error ::name="controlName + '.phone'" />
             </x-shop::form.control-group>
 
-            {!! view_render_event('bagisto.shop.checkout.onepage.address.form.phone.after') !!}
+            {!! view_render_event('exygnus.shop.checkout.onepage.address.form.phone.after') !!}
         </div>
     </script>
 

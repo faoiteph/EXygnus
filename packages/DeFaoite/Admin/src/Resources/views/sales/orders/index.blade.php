@@ -12,7 +12,7 @@
         <div class="flex items-center gap-x-2.5">
             <x-admin::datagrid.export src="{{ route('admin.sales.orders.index') }}" />
 
-            {!! view_render_event('bagisto.admin.sales.orders.create.before') !!}
+            {!! view_render_event('exygnus.admin.sales.orders.create.before') !!}
 
             @if (bouncer()->hasPermission('sales.orders.create'))
                 <button
@@ -23,7 +23,7 @@
                 </button>
             @endif
 
-            {!! view_render_event('bagisto.admin.sales.orders.create.after') !!}
+            {!! view_render_event('exygnus.admin.sales.orders.create.after') !!}
         </div>
     </div>
 
@@ -201,7 +201,7 @@
                                 <template v-if="isSearching">
                                     <img
                                         class="absolute top-2.5 h-5 w-5 animate-spin ltr:right-3 rtl:left-3"
-                                        src="{{ bagisto_asset('images/spinner.svg') }}"
+                                        src="{{ exygnus_asset('images/spinner.svg') }}"
                                     />
                                 </template>
 
@@ -240,7 +240,7 @@
                         >
                             <!-- Placeholder Image -->
                             <img
-                                src="{{ bagisto_asset('images/empty-placeholders/customers.svg') }}"
+                                src="{{ exygnus_asset('images/empty-placeholders/customers.svg') }}"
                                 class="h-20 w-20 dark:mix-blend-exclusion dark:invert"
                             />
 

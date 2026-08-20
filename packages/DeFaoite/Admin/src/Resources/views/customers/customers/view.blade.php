@@ -66,7 +66,7 @@
                 </div>
             </div>
 
-            {!! view_render_event('bagisto.admin.customers.customers.view.filters.before') !!}
+            {!! view_render_event('exygnus.admin.customers.customers.view.filters.before') !!}
 
             <!-- Filters -->
             <div class="mt-7 flex flex-wrap items-center gap-x-1 gap-y-2">
@@ -137,44 +137,44 @@
                 @endif
             </div>
 
-            {!! view_render_event('bagisto.admin.customers.customers.view.filters.after') !!}
+            {!! view_render_event('exygnus.admin.customers.customers.view.filters.after') !!}
 
             <!-- Content -->
             <div class="mt-3.5 flex gap-2.5 max-xl:flex-wrap">
                 <!-- Left Component -->
                 <div class="flex flex-1 flex-col gap-2 max-xl:flex-auto">
-                    {!! view_render_event('bagisto.admin.customers.customers.view.card.orders.before') !!}
+                    {!! view_render_event('exygnus.admin.customers.customers.view.card.orders.before') !!}
 
                     @include('admin::customers.customers.view.orders')
 
-                    {!! view_render_event('bagisto.admin.customers.customers.view.card.orders.after') !!}
+                    {!! view_render_event('exygnus.admin.customers.customers.view.card.orders.after') !!}
 
-                    {!! view_render_event('bagisto.admin.customers.customers.view.card.invoices.before') !!}
+                    {!! view_render_event('exygnus.admin.customers.customers.view.card.invoices.before') !!}
 
                     @include('admin::customers.customers.view.invoices')
 
-                    {!! view_render_event('bagisto.admin.customers.customers.view.card.invoices.after') !!}
+                    {!! view_render_event('exygnus.admin.customers.customers.view.card.invoices.after') !!}
 
-                    {!! view_render_event('bagisto.admin.customers.customers.view.card.reviews.before') !!}
+                    {!! view_render_event('exygnus.admin.customers.customers.view.card.reviews.before') !!}
 
                     @include('admin::customers.customers.view.reviews')
 
-                    {!! view_render_event('bagisto.admin.customers.customers.view.card.reviews.after') !!}
+                    {!! view_render_event('exygnus.admin.customers.customers.view.card.reviews.after') !!}
 
-                    {!! view_render_event('bagisto.admin.customers.customers.view.card.notes.before') !!}
+                    {!! view_render_event('exygnus.admin.customers.customers.view.card.notes.before') !!}
 
                     @include('admin::customers.customers.view.notes')
 
-                    {!! view_render_event('bagisto.admin.customers.customers.view.card.notes.after') !!}
+                    {!! view_render_event('exygnus.admin.customers.customers.view.card.notes.after') !!}
                 </div>
 
                 <!-- Right Component -->
                 <div class="flex w-[360px] max-w-full flex-col gap-2 max-sm:w-full">
 
-                    {!! view_render_event('bagisto.admin.customers.customers.view.card.accordion.customer.before') !!}
+                    {!! view_render_event('exygnus.admin.customers.customers.view.card.accordion.customer.before') !!}
 
                     <!-- Information -->
-                    {!! view_render_event('bagisto.admin.customers.customers.view.card.accordion.customer.after') !!}
+                    {!! view_render_event('exygnus.admin.customers.customers.view.card.accordion.customer.after') !!}
 
                     <template v-if="! customer">
                         <x-admin::shimmer.accordion class="h-[271px] w-[360px]"/>
@@ -225,7 +225,7 @@
                         </x-admin::accordion>
                     </template>
 
-                    {!! view_render_event('bagisto.admin.customers.customers.view.card.accordion.address.before') !!}
+                    {!! view_render_event('exygnus.admin.customers.customers.view.card.accordion.address.before') !!}
 
                     <template v-if="! customer">
                         <x-admin::shimmer.accordion class="h-[271px] w-[360px]"/>
@@ -325,7 +325,7 @@
                                     <!-- Empty Address Container -->
                                     <div class="flex items-center gap-5 py-2.5">
                                         <img
-                                            src="{{ bagisto_asset('images/settings/address.svg') }}"
+                                            src="{{ exygnus_asset('images/settings/address.svg') }}"
                                             class="h-20 w-20 dark:mix-blend-exclusion dark:invert"
                                         />
 
@@ -344,7 +344,7 @@
                         </x-admin::accordion>
                     </template>
 
-                    {!! view_render_event('bagisto.admin.customers.customers.view.card.accordion.address.after') !!}
+                    {!! view_render_event('exygnus.admin.customers.customers.view.card.accordion.address.after') !!}
                 </div>
             </div>
         </script>

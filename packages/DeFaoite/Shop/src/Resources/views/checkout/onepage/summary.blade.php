@@ -9,7 +9,7 @@
         class="flex gap-x-4 pb-5 max-md:gap-x-3 max-md:pb-4"
         v-for="item in cart.items"
     >
-        {!! view_render_event('bagisto.shop.checkout.onepage.summary.item_image.before') !!}
+        {!! view_render_event('exygnus.shop.checkout.onepage.summary.item_image.before') !!}
 
         <img
             class="h-[90px] max-h-[90px] w-[90px] max-w-[90px] rounded-xl max-md:h-20 max-md:max-h-20 max-md:max-w-20 max-md:rounded-lg"
@@ -19,16 +19,16 @@
             height="110"
         />
 
-        {!! view_render_event('bagisto.shop.checkout.onepage.summary.item_image.after') !!}
+        {!! view_render_event('exygnus.shop.checkout.onepage.summary.item_image.after') !!}
 
         <div>
-            {!! view_render_event('bagisto.shop.checkout.onepage.summary.item_name.before') !!}
+            {!! view_render_event('exygnus.shop.checkout.onepage.summary.item_name.before') !!}
 
             <p class="text-base text-navyBlue max-md:text-sm max-md:font-medium">
                 @{{ item.name }}
             </p>
 
-            {!! view_render_event('bagisto.shop.checkout.onepage.summary.item_name.after') !!}
+            {!! view_render_event('exygnus.shop.checkout.onepage.summary.item_name.after') !!}
 
             <p class="mt-2.5 flex flex-col text-lg font-medium max-md:mt-1 max-md:text-base max-md:font-normal max-sm:text-sm">
                 <template v-if="displayTax.prices == 'including_tax'">
@@ -56,7 +56,7 @@
 <!-- Cart Totals -->
 <div class="mb-8 mt-6 grid gap-4 max-md:mb-0 max-sm:mt-4 max-sm:gap-2.5">
     <!-- Sub Total -->
-    {!! view_render_event('bagisto.shop.checkout.onepage.summary.sub_total.before') !!}
+    {!! view_render_event('exygnus.shop.checkout.onepage.summary.sub_total.before') !!}
 
     <template v-if="displayTax.subtotal == 'including_tax'">
         <div class="flex justify-between text-right">
@@ -100,10 +100,10 @@
         </div>
     </template>
 
-    {!! view_render_event('bagisto.shop.checkout.onepage.summary.sub_total.after') !!}
+    {!! view_render_event('exygnus.shop.checkout.onepage.summary.sub_total.after') !!}
 
     <!-- Discount -->
-    {!! view_render_event('bagisto.shop.checkout.onepage.summary.discount_amount.before') !!}
+    {!! view_render_event('exygnus.shop.checkout.onepage.summary.discount_amount.before') !!}
 
     <template v-if="cart.discount_amount && parseFloat(cart.discount_amount) > 0">
         <!-- Single Source: Simple line. -->
@@ -170,17 +170,17 @@
         </div>
     </template>
 
-    {!! view_render_event('bagisto.shop.checkout.onepage.summary.discount_amount.after') !!}
+    {!! view_render_event('exygnus.shop.checkout.onepage.summary.discount_amount.after') !!}
 
     <!-- Apply Coupon -->
-    {!! view_render_event('bagisto.shop.checkout.onepage.summary.coupon.before') !!}
+    {!! view_render_event('exygnus.shop.checkout.onepage.summary.coupon.before') !!}
 
     @include('shop::checkout.coupon')
 
-    {!! view_render_event('bagisto.shop.checkout.onepage.summary.coupon.after') !!}
+    {!! view_render_event('exygnus.shop.checkout.onepage.summary.coupon.after') !!}
 
     <!-- Shipping Rates -->
-    {!! view_render_event('bagisto.shop.checkout.onepage.summary.delivery_charges.before') !!}
+    {!! view_render_event('exygnus.shop.checkout.onepage.summary.delivery_charges.before') !!}
         
     <template v-if="displayTax.shipping == 'including_tax'">
         <div class="flex justify-between text-right">
@@ -224,11 +224,11 @@
         </div>
     </template>
 
-    {!! view_render_event('bagisto.shop.checkout.onepage.summary.delivery_charges.after') !!}
+    {!! view_render_event('exygnus.shop.checkout.onepage.summary.delivery_charges.after') !!}
 
 
     <!-- Taxes -->
-    {!! view_render_event('bagisto.shop.checkout.onepage.summary.tax.before') !!}
+    {!! view_render_event('exygnus.shop.checkout.onepage.summary.tax.before') !!}
 
     @php
         $showTaxBreakdown = (bool) core()->getConfigData('sales.taxes.shopping_cart.show_tax_breakdown');
@@ -332,10 +332,10 @@
         </div>
     @endif
 
-    {!! view_render_event('bagisto.shop.checkout.onepage.summary.tax.after') !!}
+    {!! view_render_event('exygnus.shop.checkout.onepage.summary.tax.after') !!}
 
     <!-- Cart Grand Total -->
-    {!! view_render_event('bagisto.shop.checkout.onepage.summary.grand_total.before') !!}
+    {!! view_render_event('exygnus.shop.checkout.onepage.summary.grand_total.before') !!}
 
     <div class="flex justify-between text-right">
         <p class="text-lg font-semibold max-sm:text-sm">
@@ -347,5 +347,5 @@
         </p>
     </div>
 
-    {!! view_render_event('bagisto.shop.checkout.onepage.summary.grand_total.after') !!}
+    {!! view_render_event('exygnus.shop.checkout.onepage.summary.grand_total.after') !!}
 </div>

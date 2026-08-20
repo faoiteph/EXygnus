@@ -39,7 +39,7 @@
 
                             <template v-else>
                                 <div class="relative h-[65px] max-h-[65px] w-full max-w-[65px] overflow-hidden rounded border border-dashed border-gray-300 dark:border-gray-800 dark:mix-blend-exclusion dark:invert">
-                                    <img src="{{ bagisto_asset('images/product-placeholders/front.svg')}}">
+                                    <img src="{{ exygnus_asset('images/product-placeholders/front.svg')}}">
 
                                     <p class="absolute bottom-1.5 w-full text-center text-[6px] font-semibold text-gray-400">
                                         @lang('admin::app.dashboard.index.product-image')
@@ -88,7 +88,7 @@
                 v-else
             >
                 <div class="grid justify-center justify-items-center gap-3.5 px-2.5 py-10">
-                    <img src="{{ bagisto_asset('images/icon-add-product.svg') }}" class="h-20 w-20 dark:mix-blend-exclusion dark:invert">
+                    <img src="{{ exygnus_asset('images/icon-add-product.svg') }}" class="h-20 w-20 dark:mix-blend-exclusion dark:invert">
                     
                     <div class="flex flex-col items-center">
                         <p class="text-base font-semibold text-gray-400">

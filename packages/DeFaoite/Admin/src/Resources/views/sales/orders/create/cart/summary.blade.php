@@ -1,4 +1,4 @@
-{!! view_render_event('bagisto.admin.sales.order.create.cart.summary.before') !!}
+{!! view_render_event('exygnus.admin.sales.order.create.cart.summary.before') !!}
 
 <v-cart-summary
     :cart="cart"
@@ -6,7 +6,7 @@
     @coupon-removed="setCart"
 ></v-cart-summary>
 
-{!! view_render_event('bagisto.admin.sales.order.create.cart.summary.after') !!}
+{!! view_render_event('exygnus.admin.sales.order.create.cart.summary.after') !!}
 
 @pushOnce('scripts')
     <script
@@ -27,7 +27,7 @@
             <div class="grid w-full justify-end gap-2.5 border-b p-4 dark:border-gray-800">
                 <div class="grid gap-4">
                     <!-- Sub Total -->
-                    {!! view_render_event('bagisto.admin.sales.order.create.left_component.summary.sub_total.before') !!}
+                    {!! view_render_event('exygnus.admin.sales.order.create.left_component.summary.sub_total.before') !!}
 
                     <template v-if="displayTax.subtotal == 'including_tax'">
                         <div class="row grid grid-cols-2 grid-rows-1 justify-between gap-4 text-right">
@@ -75,11 +75,11 @@
                         </div>
                     </template>
 
-                    {!! view_render_event('bagisto.admin.sales.order.create.left_component.summary.sub_total.after') !!}
+                    {!! view_render_event('exygnus.admin.sales.order.create.left_component.summary.sub_total.after') !!}
 
 
                     <!-- Taxes -->
-                    {!! view_render_event('bagisto.admin.sales.order.create.left_component.summary.tax.before') !!}
+                    {!! view_render_event('exygnus.admin.sales.order.create.left_component.summary.tax.before') !!}
 
                     <div
                         class="row grid grid-cols-2 grid-rows-1 justify-between gap-4 text-right"
@@ -95,10 +95,10 @@
                         </p>
                     </div>
 
-                    {!! view_render_event('bagisto.admin.sales.order.create.left_component.summary.tax.after') !!}
+                    {!! view_render_event('exygnus.admin.sales.order.create.left_component.summary.tax.after') !!}
 
                     <!-- Shipping Rates -->
-                    {!! view_render_event('bagisto.admin.sales.order.create.left_component.summary.delivery_charges.before') !!}
+                    {!! view_render_event('exygnus.admin.sales.order.create.left_component.summary.delivery_charges.before') !!}
 
                     <template v-if="displayTax.shipping == 'including_tax'">
                         <div class="row grid grid-cols-2 grid-rows-1 justify-between gap-4 text-right">
@@ -148,10 +148,10 @@
 
 
 
-                    {!! view_render_event('bagisto.admin.sales.order.create.left_component.summary.delivery_charges.after') !!}
+                    {!! view_render_event('exygnus.admin.sales.order.create.left_component.summary.delivery_charges.after') !!}
 
                     <!-- Discount -->
-                    {!! view_render_event('bagisto.admin.sales.order.create.left_component.summary.discount_amount.before') !!}
+                    {!! view_render_event('exygnus.admin.sales.order.create.left_component.summary.discount_amount.before') !!}
 
                     <div
                         class="row grid grid-cols-2 grid-rows-1 justify-between gap-4 text-right"
@@ -166,11 +166,11 @@
                         </p>
                     </div>
 
-                    {!! view_render_event('bagisto.admin.sales.order.create.left_component.summary.discount_amount.after') !!}
+                    {!! view_render_event('exygnus.admin.sales.order.create.left_component.summary.discount_amount.after') !!}
 
 
                     <!-- Discount -->
-                    {!! view_render_event('bagisto.admin.sales.order.create.left_component.summary.coupon.before') !!}
+                    {!! view_render_event('exygnus.admin.sales.order.create.left_component.summary.coupon.before') !!}
 
                     <div class="row grid grid-cols-2 grid-rows-1 justify-items-end gap-4 text-right">
                         <p class="text-base font-medium text-gray-600 dark:text-gray-300">
@@ -201,12 +201,12 @@
                         </template>
                     </div>
 
-                    {!! view_render_event('bagisto.admin.sales.order.create.left_component.summary.coupon.after') !!}
+                    {!! view_render_event('exygnus.admin.sales.order.create.left_component.summary.coupon.after') !!}
 
-                    {!! view_render_event('bagisto.admin.sales.order.create.left_component.summary.coupon.after') !!}
+                    {!! view_render_event('exygnus.admin.sales.order.create.left_component.summary.coupon.after') !!}
 
                     <!-- Cart Grand Total -->
-                    {!! view_render_event('bagisto.admin.sales.order.create.left_component.summary.grand_total.before') !!}
+                    {!! view_render_event('exygnus.admin.sales.order.create.left_component.summary.grand_total.before') !!}
 
                     <div class="row grid grid-cols-2 grid-rows-1 justify-between gap-4 text-right">
                         <p class="text-lg font-semibold dark:text-white">
@@ -218,7 +218,7 @@
                         </p>
                     </div>
 
-                    {!! view_render_event('bagisto.admin.sales.order.create.left_component.summary.grand_total.after') !!}
+                    {!! view_render_event('exygnus.admin.sales.order.create.left_component.summary.grand_total.after') !!}
                 </div>
             </div>
 
@@ -240,7 +240,7 @@
             >
                 <!-- Apply coupon form -->
                 <form @submit="handleSubmit($event, applyCoupon)">
-                    {!! view_render_event('bagisto.admin.sales.order.create.left_component.summary.coupon_form_controls.before') !!}
+                    {!! view_render_event('exygnus.admin.sales.order.create.left_component.summary.coupon_form_controls.before') !!}
 
                     <!-- Apply coupon modal -->
                     <x-admin::modal ref="couponModel">
@@ -275,7 +275,7 @@
                         </x-slot>
                     </x-admin::modal>
 
-                    {!! view_render_event('bagisto.admin.sales.order.create.left_component.summary.coupon_form_controls.after') !!}
+                    {!! view_render_event('exygnus.admin.sales.order.create.left_component.summary.coupon_form_controls.after') !!}
                 </form>
             </x-admin::form>
         </div>

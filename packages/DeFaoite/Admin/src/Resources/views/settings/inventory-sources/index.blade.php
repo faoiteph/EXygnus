@@ -18,10 +18,10 @@
         @endif
     </div>
 
-    {!! view_render_event('bagisto.admin.settings.inventory_sources.list.before') !!}
+    {!! view_render_event('exygnus.admin.settings.inventory_sources.list.before') !!}
 
     <x-admin::datagrid :src="route('admin.settings.inventory_sources.index')" />
 
-    {!! view_render_event('bagisto.admin.settings.inventory_sources.list.after') !!}
+    {!! view_render_event('exygnus.admin.settings.inventory_sources.list.after') !!}
 
 </x-admin::layouts>

@@ -103,11 +103,11 @@ class Theme
     }
 
     /**
-     * Set bagisto vite.
+     * Set exygnus vite.
      *
      * @return \Illuminate\Foundation\Vite
      */
-    public function setBagistoVite(array $entryPoints)
+    public function setEXygnusVite(array $entryPoints)
     {
         return Vite::useHotFile($this->vite['hot_file'])
             ->useBuildDirectory($this->vite['build_directory'])

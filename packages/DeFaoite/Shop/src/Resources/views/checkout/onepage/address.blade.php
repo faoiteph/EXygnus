@@ -1,4 +1,4 @@
-{!! view_render_event('bagisto.shop.checkout.onepage.address.before') !!}
+{!! view_render_event('exygnus.shop.checkout.onepage.address.before') !!}
 
 <!-- Accordion Blade Component -->
 <x-shop::accordion class="mb-7 mt-8 overflow-hidden rounded-xl !border-b-0 max-md:mb-0 max-md:mt-0 max-md:rounded-lg max-md:!border-none max-md:!bg-gray-100">
@@ -25,4 +25,4 @@
     </x-slot:content>
 </x-shop::accordion>
 
-{!! view_render_event('bagisto.shop.checkout.onepage.address.after') !!}
+{!! view_render_event('exygnus.shop.checkout.onepage.address.after') !!}

@@ -22,10 +22,10 @@
         </div>
     </div>
 
-    {!! view_render_event('bagisto.admin.settings.roles.list.before') !!}
+    {!! view_render_event('exygnus.admin.settings.roles.list.before') !!}
     
     <x-admin::datagrid :src="route('admin.settings.roles.index')" />
 
-    {!! view_render_event('bagisto.admin.settings.roles.list.after') !!}
+    {!! view_render_event('exygnus.admin.settings.roles.list.after') !!}
 
 </x-admin::layouts>

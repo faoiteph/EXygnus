@@ -9,11 +9,11 @@
         </p>
     </div>
 
-    {!! view_render_event('bagisto.admin.customers.reviews.edit.before') !!}
+    {!! view_render_event('exygnus.admin.customers.reviews.edit.before') !!}
 
     <v-review-edit-drawer></v-review-edit-drawer>
 
-    {!! view_render_event('bagisto.admin.customers.groups.edit.after') !!}
+    {!! view_render_event('exygnus.admin.customers.groups.edit.after') !!}
 
     @pushOnce('scripts')
         <script
@@ -21,7 +21,7 @@
             id="v-review-edit-drawer-template"
         >
 
-            {!! view_render_event('bagisto.admin.customers.reviews.list.before') !!}
+            {!! view_render_event('exygnus.admin.customers.reviews.list.before') !!}
 
             <x-admin::datagrid
                 :src="route('admin.customers.customers.review.index')"
@@ -218,7 +218,7 @@
                 </template>
             </x-admin::datagrid>
 
-            {!! view_render_event('bagisto.admin.customers.reviews.list.after') !!}
+            {!! view_render_event('exygnus.admin.customers.reviews.list.after') !!}
 
             <!-- Drawer content -->
             <div class="flex flex-1 flex-col gap-2 max-xl:flex-auto">

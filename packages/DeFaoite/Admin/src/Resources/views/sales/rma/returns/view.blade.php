@@ -9,11 +9,11 @@
         @lang('admin::app.sales.rma.all-rma.view.title', ['id' => $rma->id])
     </x-slot>
 
-    {!! view_render_event('bagisto.admin.rma.view.before') !!}
+    {!! view_render_event('exygnus.admin.rma.view.before') !!}
     
     <v-admin-rma-view></v-admin-rma-view>
     
-    {!! view_render_event('bagisto.admin.rma.view.after') !!}
+    {!! view_render_event('exygnus.admin.rma.view.after') !!}
 
     @push('scripts')
         <script
@@ -157,7 +157,7 @@
                                         />
                                     @else
                                         <div class="relative h-[60px] max-h-[60px] w-full max-w-[60px] rounded border border-dashed border-gray-300 dark:border-gray-800 dark:mix-blend-exclusion dark:invert">
-                                            <img src="{{ bagisto_asset('images/product-placeholders/front.svg') }}">
+                                            <img src="{{ exygnus_asset('images/product-placeholders/front.svg') }}">
 
                                             <p class="absolute bottom-1.5 w-full text-center text-[6px] font-semibold text-gray-400">
                                                 @lang('admin::app.sales.invoices.view.product-image')
@@ -800,7 +800,7 @@
 
                 <!-- Modal Content -->
                 <x-slot:content>
-                    {!! view_render_event('bagisto.admin.sales.rma.requests.view.message.attachment.modal.content.before') !!}
+                    {!! view_render_event('exygnus.admin.sales.rma.requests.view.message.attachment.modal.content.before') !!}
 
                     <!-- Display Image -->
                     <img
@@ -842,7 +842,7 @@
                         <source :src="'{{ config('app.url') }}' + '/storage/' + messagePath" />
                     </video>
 
-                    {!! view_render_event('bagisto.admin.sales.rma.requests.view.message.attachment.modal.content.after') !!}
+                    {!! view_render_event('exygnus.admin.sales.rma.requests.view.message.attachment.modal.content.after') !!}
                 </x-slot>
 
                 <!-- Modal Footer -->

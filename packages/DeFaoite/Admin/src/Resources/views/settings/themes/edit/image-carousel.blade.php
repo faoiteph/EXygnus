@@ -141,7 +141,7 @@
                 >
                     <img
                         class="h-[120px] w-[120px] p-2 dark:mix-blend-exclusion dark:invert"
-                        src="{{ bagisto_asset('images/empty-placeholders/default.svg') }}"
+                        src="{{ exygnus_asset('images/empty-placeholders/default.svg') }}"
                         alt="@lang('admin::app.settings.themes.edit.slider')"
                     >
 

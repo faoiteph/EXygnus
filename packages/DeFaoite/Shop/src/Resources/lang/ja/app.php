@@ -5,7 +5,7 @@ return [
         'forgot-password' => [
             'already-sent' => 'すでにパスワードリセットメールが送信されました。',
             'back' => 'サインインに戻る？',
-            'bagisto' => 'エクシグナス',
+            'exygnus' => 'エクシグナス',
             'email' => 'メール',
             'email-not-exist' => 'そのメールアドレスを持つユーザーが見つかりません。',
             'footer' => '© 2010 - :current_year、DeFaoite Software（インドで登録）。全著作権所有。',
@@ -19,7 +19,7 @@ return [
 
         'reset-password' => [
             'back-link-title' => 'サインインに戻る',
-            'bagisto' => 'エクシグナス',
+            'exygnus' => 'エクシグナス',
             'confirm-password' => 'パスワードの確認',
             'email' => '登録済みのメール',
             'footer' => '© 2010 - :current_year、DeFaoite Software（インドで登録）。全著作権所有。',
@@ -29,7 +29,7 @@ return [
         ],
 
         'login-form' => [
-            'bagisto' => 'エクシグナス',
+            'exygnus' => 'エクシグナス',
             'button-title' => 'サインイン',
             'create-your-account' => 'アカウントを作成',
             'email' => 'メール',
@@ -49,7 +49,7 @@ return [
 
         'signup-form' => [
             'account-exists' => 'すでにアカウントをお持ちですか？',
-            'bagisto' => 'エクシグナス',
+            'exygnus' => 'エクシグナス',
             'button-title' => '登録',
             'click-here' => 'ここをクリック',
             'confirm-pass' => 'パスワードの確認',
@@ -564,7 +564,7 @@ return [
                     'bottom' => [
                         'all' => 'すべて',
                         'back-button' => 'メインメニューに戻る',
-                        'bagisto' => 'エクシグナス',
+                        'exygnus' => 'エクシグナス',
                         'categories' => 'カテゴリ',
                         'compare' => '比較',
                         'dropdown-text' => 'カート、注文、ウィッシュリストを管理',
@@ -585,7 +585,7 @@ return [
                 'mobile' => [
                     'account' => 'アカウント',
                     'back-button' => 'メインメニューに戻る',
-                    'bagisto' => 'エクシグナス',
+                    'exygnus' => 'エクシグナス',
                     'compare' => '比較',
                     'currencies' => '通貨',
                     'dropdown-text' => 'カート、注文、ウィッシュリストを管理',
@@ -1078,7 +1078,7 @@ return [
             'suspended-account-message' => 'アカウントは一時停止されました。',
 
             'index' => [
-                'bagisto' => 'エクシグナス',
+                'exygnus' => 'エクシグナス',
                 'cart' => 'カート',
                 'continue-shopping' => 'ショッピングを続ける',
                 'empty-product' => 'カートに製品がありません。',

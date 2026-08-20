@@ -3,7 +3,7 @@
         @lang('admin::app.marketing.search-seo.url-rewrites.index.title')
     </x-slot>
 
-    {!! view_render_event('bagisto.admin.marketing.search_seo.url_rewrites.create.before') !!}
+    {!! view_render_event('exygnus.admin.marketing.search_seo.url_rewrites.create.before') !!}
 
     <!-- Create Sitemap Vue Component -->
     <v-create-sitemaps>
@@ -24,7 +24,7 @@
         <x-admin::shimmer.datagrid />
     </v-create-sitemaps>
 
-    {!! view_render_event('bagisto.admin.marketing.search_seo.url_rewrites.create.after') !!}
+    {!! view_render_event('exygnus.admin.marketing.search_seo.url_rewrites.create.after') !!}
 
     @pushOnce('scripts')
         <script
@@ -47,7 +47,7 @@
                 @endif
             </div>
 
-            {!! view_render_event('bagisto.admin.marketing.search_seo.url_rewrites.list.before') !!}
+            {!! view_render_event('exygnus.admin.marketing.search_seo.url_rewrites.list.before') !!}
 
             <x-admin::datagrid
                 :src="route('admin.marketing.search_seo.url_rewrites.index')"
@@ -145,7 +145,7 @@
                 </template>
             </x-admin::datagrid>
 
-            {!! view_render_event('bagisto.admin.marketing.search_seo.url_rewrites.list.after') !!}
+            {!! view_render_event('exygnus.admin.marketing.search_seo.url_rewrites.list.after') !!}
 
             <!-- Model Form -->
             <x-admin::form

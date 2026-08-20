@@ -10,7 +10,7 @@
     <!-- Main Body -->
     <div class="grid">
         <div class="flex items-center justify-between gap-4 max-sm:flex-wrap">
-            {!! view_render_event('bagisto.admin.sales.invoice.title.before', ['order' => $order]) !!}
+            {!! view_render_event('exygnus.admin.sales.invoice.title.before', ['order' => $order]) !!}
 
             <p class="text-xl font-bold leading-6 text-gray-800 dark:text-white">
                 @lang('admin::app.sales.invoices.view.title', ['invoice_id' => $invoice->increment_id ?? $invoice->id])
@@ -20,7 +20,7 @@
                 </span>
             </p>
 
-            {!! view_render_event('bagisto.admin.sales.invoice.title.after', ['order' => $order]) !!}
+            {!! view_render_event('exygnus.admin.sales.invoice.title.after', ['order' => $order]) !!}
 
             <div class="flex items-center gap-x-2.5">
                 <!-- Back Button -->
@@ -37,7 +37,7 @@
     <!-- Filter row -->
     <div class="flex items-center justify-between gap-4 mt-7 max-md:flex-wrap">
         <div class="flex flex-wrap items-center gap-x-1 gap-y-2">
-            {!! view_render_event('bagisto.admin.sales.invoice.page_action.before', ['order' => $order]) !!}
+            {!! view_render_event('exygnus.admin.sales.invoice.page_action.before', ['order' => $order]) !!}
 
             <a
                 href="{{ route('admin.sales.invoices.print', $invoice->id) }}"
@@ -103,7 +103,7 @@
                 </x-admin::form>
             </div>
 
-            {!! view_render_event('bagisto.admin.sales.invoice.page_action.after', ['order' => $order]) !!}
+            {!! view_render_event('exygnus.admin.sales.invoice.page_action.after', ['order' => $order]) !!}
 
         </div>
     </div>
@@ -131,7 +131,7 @@
                                     >
                                 @else
                                     <div class="relative h-[60px] max-h-[60px] w-full max-w-[60px] rounded border border-dashed border-gray-300 dark:border-gray-800 dark:mix-blend-exclusion dark:invert">
-                                        <img src="{{ bagisto_asset('images/product-placeholders/front.svg') }}">
+                                        <img src="{{ exygnus_asset('images/product-placeholders/front.svg') }}">
 
                                         <p class="absolute bottom-1.5 w-full text-center text-[6px] font-semibold text-gray-400">
                                             @lang('admin::app.sales.invoices.view.product-image')
@@ -382,13 +382,13 @@
                         >
                         </p>
 
-                        {!! view_render_event('bagisto.admin.sales.invoice.customer_name.after', ['order' => $order]) !!}
+                        {!! view_render_event('exygnus.admin.sales.invoice.customer_name.after', ['order' => $order]) !!}
 
                         <p class="text-gray-600 dark:text-gray-300">
                             @lang('admin::app.sales.invoices.view.customer-email', ['email' => $invoice->order->customer_email])
                         </p>
 
-                        {!! view_render_event('bagisto.admin.sales.invoice.customer_email.after', ['order' => $order]) !!}
+                        {!! view_render_event('exygnus.admin.sales.invoice.customer_email.after', ['order' => $order]) !!}
                     </div>
 
                     @if ($order->billing_address || $order->shipping_address)
@@ -405,7 +405,7 @@
 
                                 @include ('admin::sales.address', ['address' => $order->billing_address])
 
-                                {!! view_render_event('bagisto.admin.sales.invoice.billing_address.after', ['order' => $order]) !!}
+                                {!! view_render_event('exygnus.admin.sales.invoice.billing_address.after', ['order' => $order]) !!}
                             </div>
                         @endif
 
@@ -421,7 +421,7 @@
 
                             @include ('admin::sales.address', ['address' => $order->shipping_address])
 
-                            {!! view_render_event('bagisto.admin.sales.invoice.shipping_address.after', ['order' => $order]) !!}
+                            {!! view_render_event('exygnus.admin.sales.invoice.shipping_address.after', ['order' => $order]) !!}
                         @endif
                     @endif
                 </x-slot>
@@ -451,21 +451,21 @@
                                 <a href="{{ route('admin.sales.orders.view', $order->id) }}">#{{ $order->increment_id }}</a>
                             </p>
 
-                            {!! view_render_event('bagisto.admin.sales.invoice.increment_id.after', ['order' => $order]) !!}
+                            {!! view_render_event('exygnus.admin.sales.invoice.increment_id.after', ['order' => $order]) !!}
 
                             <!-- Order Date -->
                             <p class="text-gray-600 dark:text-gray-300">
                                 {{ core()->formatDate($order->created_at) }}
                             </p>
 
-                            {!! view_render_event('bagisto.admin.sales.invoice.created_at.after', ['order' => $order]) !!}
+                            {!! view_render_event('exygnus.admin.sales.invoice.created_at.after', ['order' => $order]) !!}
 
                             <!-- Order Status -->
                             <p class="text-gray-600 dark:text-gray-300">
                                 {{ $order->status_label }}
                             </p>
 
-                            {!! view_render_event('bagisto.admin.sales.invoice.status_label.after', ['order' => $order]) !!}
+                            {!! view_render_event('exygnus.admin.sales.invoice.status_label.after', ['order' => $order]) !!}
 
                             <!-- Invoice Status -->
                             <p class="text-gray-600 dark:text-gray-300">
@@ -480,7 +480,7 @@
                                 {{ $order->channel_name }}
                             </p>
 
-                            {!! view_render_event('bagisto.admin.sales.invoice.channel_name.after', ['order' => $order]) !!}
+                            {!! view_render_event('exygnus.admin.sales.invoice.channel_name.after', ['order' => $order]) !!}
                         </div>
                     </div>
                 </x-slot>

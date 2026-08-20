@@ -21,10 +21,10 @@
         </div>
     </div>
 
-    {!! view_render_event('bagisto.admin.rma.list.before') !!}
+    {!! view_render_event('exygnus.admin.rma.list.before') !!}
 
     <x-admin::datagrid src="{{ route('admin.sales.rma.requests.index') }}" />
 
-    {!! view_render_event('bagisto.admin.rma.list.after') !!}
+    {!! view_render_event('exygnus.admin.rma.list.after') !!}
 
 </x-admin::layouts>

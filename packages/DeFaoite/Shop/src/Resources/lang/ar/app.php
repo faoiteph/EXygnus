@@ -5,7 +5,7 @@ return [
         'forgot-password' => [
             'already-sent' => 'تم بالفعل إعادة تعيين كلمة المرور للبريد المرسل.',
             'back' => 'العودة إلى تسجيل الدخول؟',
-            'bagisto' => 'اگزیگنوس',
+            'exygnus' => 'اگزیگنوس',
             'email' => 'البريد الإلكتروني',
             'email-not-exist' => 'لا يمكننا العثور على مستخدم بهذا البريد الإلكتروني',
             'footer' => '© حقوق الطبع والنشر 2010 - :current_year، DeFaoite Software (مسجلة في الهند). جميع الحقوق محفوظة.',
@@ -19,7 +19,7 @@ return [
 
         'reset-password' => [
             'back-link-title' => 'العودة إلى تسجيل الدخول',
-            'bagisto' => 'اگزیگنوس',
+            'exygnus' => 'اگزیگنوس',
             'confirm-password' => 'تأكيد كلمة المرور',
             'email' => 'البريد الإلكتروني المسجل',
             'footer' => '© حقوق الطبع والنشر 2010 - :current_year، DeFaoite Software (مسجلة في الهند). جميع الحقوق محفوظة.',
@@ -29,7 +29,7 @@ return [
         ],
 
         'login-form' => [
-            'bagisto' => 'اگزیگنوس',
+            'exygnus' => 'اگزیگنوس',
             'button-title' => 'تسجيل الدخول',
             'create-your-account' => 'إنشاء حسابك',
             'email' => 'البريد الإلكتروني',
@@ -49,7 +49,7 @@ return [
 
         'signup-form' => [
             'account-exists' => 'هل لديك حساب بالفعل؟',
-            'bagisto' => 'اگزیگنوس',
+            'exygnus' => 'اگزیگنوس',
             'button-title' => 'التسجيل',
             'click-here' => 'انقر هنا',
             'confirm-pass' => 'تأكيد كلمة المرور',
@@ -564,7 +564,7 @@ return [
                     'bottom' => [
                         'all' => 'الكل',
                         'back-button' => 'العودة إلى القائمة الرئيسية',
-                        'bagisto' => 'باجيستو',
+                        'exygnus' => 'باجيستو',
                         'categories' => 'الفئات',
                         'compare' => 'مقارنة',
                         'dropdown-text' => 'إدارة السلة، الطلبات وقائمة الرغبات',
@@ -585,7 +585,7 @@ return [
                 'mobile' => [
                     'account' => 'الحساب',
                     'back-button' => 'العودة إلى القائمة الرئيسية',
-                    'bagisto' => 'باجيستو',
+                    'exygnus' => 'باجيستو',
                     'compare' => 'مقارنة',
                     'currencies' => 'العملات',
                     'dropdown-text' => 'إدارة السلة، الطلبات وقائمة الرغبات',
@@ -1078,7 +1078,7 @@ return [
             'suspended-account-message' => 'تم تعليق حسابك.',
 
             'index' => [
-                'bagisto' => 'اگزیگنوس',
+                'exygnus' => 'اگزیگنوس',
                 'cart' => 'عربة التسوق',
                 'continue-shopping' => 'متابعة التسوق',
                 'empty-product' => 'ليس لديك منتج في سلة التسوق الخاصة بك.',

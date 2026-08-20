@@ -3,14 +3,14 @@
         @lang('admin::app.settings.inventory-sources.create.add-title')
     </x-slot>
 
-    {!! view_render_event('bagisto.admin.settings.inventory_sources.create.before') !!}
+    {!! view_render_event('exygnus.admin.settings.inventory_sources.create.before') !!}
 
     <x-admin::form 
         :action="route('admin.settings.inventory_sources.store')"
         enctype="multipart/form-data"
     >
 
-        {!! view_render_event('bagisto.admin.settings.inventory_sources.create.create_form_controls.before') !!}
+        {!! view_render_event('exygnus.admin.settings.inventory_sources.create.create_form_controls.before') !!}
 
         <div class="flex items-center justify-between gap-4 max-sm:flex-wrap">
             <p class="text-xl font-bold text-gray-800 dark:text-white">
@@ -41,7 +41,7 @@
             <!-- Left Section -->
             <div class="flex flex-1 flex-col gap-2 max-xl:flex-auto">
 
-                {!! view_render_event('bagisto.admin.settings.inventory_sources.create.card.general.before') !!}
+                {!! view_render_event('exygnus.admin.settings.inventory_sources.create.card.general.before') !!}
 
                 <!-- General -->
                 <div class="box-shadow rounded bg-white p-4 dark:bg-gray-900">
@@ -107,9 +107,9 @@
                     </x-admin::form.control-group>
                 </div>
 
-                {!! view_render_event('bagisto.admin.settings.inventory_sources.create.card.general.after') !!}
+                {!! view_render_event('exygnus.admin.settings.inventory_sources.create.card.general.after') !!}
 
-                {!! view_render_event('bagisto.admin.settings.inventory_sources.create.card.contact_info.before') !!}
+                {!! view_render_event('exygnus.admin.settings.inventory_sources.create.card.contact_info.before') !!}
 
                 <!-- Contact Information -->
                 <div class="box-shadow rounded bg-white p-4 dark:bg-gray-900">
@@ -193,21 +193,21 @@
                     </x-admin::form.control-group>
                 </div>
 
-                {!! view_render_event('bagisto.admin.settings.inventory_sources.create.card.contact_info.after') !!}
+                {!! view_render_event('exygnus.admin.settings.inventory_sources.create.card.contact_info.after') !!}
 
-                {!! view_render_event('bagisto.admin.settings.inventory_sources.create.card.address.before') !!}
+                {!! view_render_event('exygnus.admin.settings.inventory_sources.create.card.address.before') !!}
 
                 <!-- Source Address -->
                 <v-source-address></v-source-address>
 
-                {!! view_render_event('bagisto.admin.settings.inventory_sources.create.card.address.after') !!}
+                {!! view_render_event('exygnus.admin.settings.inventory_sources.create.card.address.after') !!}
 
             </div>
 
             <!-- Right Section -->
             <div class="flex w-[360px] max-w-full flex-col gap-2">
 
-                {!! view_render_event('bagisto.admin.settings.inventory_sources.create.card.accordion.settings.before') !!}
+                {!! view_render_event('exygnus.admin.settings.inventory_sources.create.card.accordion.settings.before') !!}
 
                 <!-- Settings -->
                 <x-admin::accordion>
@@ -300,16 +300,16 @@
                     </x-slot>
                 </x-admin::accordion>
 
-                {!! view_render_event('bagisto.admin.settings.inventory_sources.create.card.accordion.settings.after') !!}
+                {!! view_render_event('exygnus.admin.settings.inventory_sources.create.card.accordion.settings.after') !!}
 
             </div>
         </div>
 
-        {!! view_render_event('bagisto.admin.settings.inventory_sources.create.create_form_controls.after') !!}
+        {!! view_render_event('exygnus.admin.settings.inventory_sources.create.create_form_controls.after') !!}
 
     </x-admin::form>
 
-    {!! view_render_event('bagisto.admin.settings.inventory_sources.create.after') !!}
+    {!! view_render_event('exygnus.admin.settings.inventory_sources.create.after') !!}
 
     @pushOnce('scripts')
         <script

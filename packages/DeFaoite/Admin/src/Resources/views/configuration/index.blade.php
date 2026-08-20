@@ -50,7 +50,7 @@
                             @if ($icon = $child->getIcon())
                                 <img
                                     class="h-[60px] w-[60px] dark:mix-blend-exclusion dark:invert"
-                                    src="{{ bagisto_asset('images/' . $icon) }}"
+                                    src="{{ exygnus_asset('images/' . $icon) }}"
                                 >
                             @endif
 

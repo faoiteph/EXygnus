@@ -11,11 +11,11 @@
         <x-admin::datagrid.export src="{{ route('admin.customers.gdpr.index') }}" />
     </div>
 
-    {!! view_render_event('bagisto.admin.customers.gdpr.list.before') !!}
+    {!! view_render_event('exygnus.admin.customers.gdpr.list.before') !!}
 
     <v-create-gdpr></v-create-gdpr>
 
-    {!! view_render_event('bagisto.admin.customers.gdpr.list.after') !!}
+    {!! view_render_event('exygnus.admin.customers.gdpr.list.after') !!}
 
     @pushOnce('scripts')
         <script
@@ -92,7 +92,7 @@
                     </template>
                 </x-admin::datagrid>
 
-                {!! view_render_event('bagisto.admin.customers.groups.list.after') !!}
+                {!! view_render_event('exygnus.admin.customers.groups.list.after') !!}
 
                 <!-- Modal Form -->
                 <x-admin::form

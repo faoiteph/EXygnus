@@ -20,7 +20,7 @@
             </div>
         @endif
 
-        {!! view_render_event('bagisto.admin.customers.customers.view.edit.edit_form_controls.before', ['customer' => $customer]) !!}
+        {!! view_render_event('exygnus.admin.customers.customers.view.edit.edit_form_controls.before', ['customer' => $customer]) !!}
 
         <x-admin::form
             v-slot="{ meta, errors, handleSubmit }"
@@ -41,7 +41,7 @@
     
                     <!-- Modal Content -->
                     <x-slot:content>
-                        {!! view_render_event('bagisto.admin.customers.customers.view.edit.before', ['customer' => $customer]) !!}
+                        {!! view_render_event('exygnus.admin.customers.customers.view.edit.before', ['customer' => $customer]) !!}
 
                         <div class="flex gap-4 max-sm:flex-wrap">
                             <!--First Name -->
@@ -239,7 +239,7 @@
                             </x-admin::form.control-group>
                         </div>
                         
-                        {!! view_render_event('bagisto.admin.customers.customers.view.edit.after', ['customer' => $customer]) !!}
+                        {!! view_render_event('exygnus.admin.customers.customers.view.edit.after', ['customer' => $customer]) !!}
                     </x-slot>
 
                     <!-- Modal Footer -->
@@ -257,7 +257,7 @@
             </form>
         </x-admin::form>
 
-        {!! view_render_event('bagisto.admin.customers.customers.view.edit.edit_form_controls.after', ['customer' => $customer]) !!}
+        {!! view_render_event('exygnus.admin.customers.customers.view.edit.edit_form_controls.after', ['customer' => $customer]) !!}
     </script>
 
     <script type="module">

@@ -17,7 +17,7 @@ class TranslationsChecker extends Command
     /**
      * The name and signature of the console command.
      */
-    protected $signature = 'bagisto:translations:check
+    protected $signature = 'exygnus:translations:check
                             {--locale= : Check only a specific locale against EN.}
                             {--package= : Check only a specific package.}
                             {--details : Show detailed error information.}';
@@ -115,7 +115,7 @@ class TranslationsChecker extends Command
     {
         $this->newLine();
 
-        $this->info('🔍 Bagisto Translations Checker');
+        $this->info('🔍 EXygnus Translations Checker');
 
         $this->line('   Canonical Locale: <fg=cyan>'.Str::upper(self::BASE_LOCALE).'</>');
 

@@ -30,11 +30,11 @@
                 v-slot="{ meta, errors, handleSubmit }"
                 as="div"
             >
-                {!! view_render_event('bagisto.shop.checkout.login.before') !!}
+                {!! view_render_event('exygnus.shop.checkout.login.before') !!}
 
                 <!-- Login form -->
                 <form @submit="handleSubmit($event, login)">
-                    {!! view_render_event('bagisto.shop.checkout.login.form_controls.before') !!}
+                    {!! view_render_event('exygnus.shop.checkout.login.form_controls.before') !!}
 
                     <!-- Login modal -->
                     <x-shop::modal ref="loginModel">
@@ -111,11 +111,11 @@
                         </x-slot>
                     </x-shop::modal>
 
-                    {!! view_render_event('bagisto.shop.checkout.login.form_controls.after') !!}
+                    {!! view_render_event('exygnus.shop.checkout.login.form_controls.after') !!}
                 </form>
             </x-shop::form>
 
-            {!! view_render_event('bagisto.shop.checkout.login.after') !!}
+            {!! view_render_event('exygnus.shop.checkout.login.after') !!}
         </div>
     </script>
 

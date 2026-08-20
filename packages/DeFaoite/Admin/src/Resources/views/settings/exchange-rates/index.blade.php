@@ -3,7 +3,7 @@
         @lang('admin::app.settings.exchange-rates.index.title')
     </x-slot>
 
-    {!! view_render_event('bagisto.admin.settings.exchange_rates.create.before') !!}
+    {!! view_render_event('exygnus.admin.settings.exchange_rates.create.before') !!}
 
     <v-exchange-rates>
         <div class="flex items-center justify-between">
@@ -36,7 +36,7 @@
         <x-admin::shimmer.datagrid />
     </v-exchange-rates>
 
-    {!! view_render_event('bagisto.admin.settings.exchange_rates.create.after') !!}
+    {!! view_render_event('exygnus.admin.settings.exchange_rates.create.after') !!}
 
     @pushOnce('scripts')
         <script
@@ -152,7 +152,7 @@
 
                         <!-- Modal Content -->
                         <x-slot:content>
-                            {!! view_render_event('bagisto.admin.settings.exchangerate.create.before') !!}
+                            {!! view_render_event('exygnus.admin.settings.exchangerate.create.before') !!}
 
                             <x-admin::form.control-group.control
                                 type="hidden"

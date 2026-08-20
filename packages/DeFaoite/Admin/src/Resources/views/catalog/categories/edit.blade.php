@@ -7,7 +7,7 @@
         $currentLocale = core()->getRequestedLocale();
     @endphp
 
-    {!! view_render_event('bagisto.admin.catalog.categories.edit.before', ['category' => $category]) !!}
+    {!! view_render_event('exygnus.admin.catalog.categories.edit.before', ['category' => $category]) !!}
 
     <!-- Category Edit Form -->
     <x-admin::form
@@ -16,7 +16,7 @@
         method="PUT"
     >
 
-        {!! view_render_event('bagisto.admin.catalog.categories.edit.edit_form_controls.before', ['category' => $category]) !!}
+        {!! view_render_event('exygnus.admin.catalog.categories.edit.edit_form_controls.before', ['category' => $category]) !!}
 
         <div class="flex items-center justify-between gap-4 max-sm:flex-wrap">
             <p class="text-xl font-bold text-gray-800 dark:text-white">
@@ -91,7 +91,7 @@
             <!-- Left Section -->
             <div class="flex flex-1 flex-col gap-2 max-xl:flex-auto">
 
-                {!! view_render_event('bagisto.admin.catalog.categories.edit.card.general.before', ['category' => $category]) !!}
+                {!! view_render_event('exygnus.admin.catalog.categories.edit.card.general.before', ['category' => $category]) !!}
 
                 <!-- General -->
                 <div class="box-shadow rounded bg-white p-4 dark:bg-gray-900">
@@ -151,9 +151,9 @@
                     @endif
                 </div>
 
-                {!! view_render_event('bagisto.admin.catalog.categories.edit.card.general.after', ['category' => $category]) !!}
+                {!! view_render_event('exygnus.admin.catalog.categories.edit.card.general.after', ['category' => $category]) !!}
 
-                {!! view_render_event('bagisto.admin.catalog.categories.edit.card.description_images.before', ['category' => $category]) !!}
+                {!! view_render_event('exygnus.admin.catalog.categories.edit.card.description_images.before', ['category' => $category]) !!}
 
                 <!-- Description and images -->
                 <div class="box-shadow rounded bg-white p-4 dark:bg-gray-900">
@@ -219,9 +219,9 @@
                     </div>
                 </div>
 
-                {!! view_render_event('bagisto.admin.catalog.categories.edit.card.description_images.after', ['category' => $category]) !!}
+                {!! view_render_event('exygnus.admin.catalog.categories.edit.card.description_images.after', ['category' => $category]) !!}
 
-                {!! view_render_event('bagisto.admin.catalog.categories.edit.card.seo.before', ['category' => $category]) !!}
+                {!! view_render_event('exygnus.admin.catalog.categories.edit.card.seo.before', ['category' => $category]) !!}
 
                 <!-- SEO Details -->
                 <div class="box-shadow rounded bg-white p-4 dark:bg-gray-900">
@@ -318,14 +318,14 @@
                     </div>
                 </div>
 
-                {!! view_render_event('bagisto.admin.catalog.categories.edit.card.seo.after', ['category' => $category]) !!}
+                {!! view_render_event('exygnus.admin.catalog.categories.edit.card.seo.after', ['category' => $category]) !!}
             </div>
 
             <!-- Right Section -->
             <div class="flex w-[360px] max-w-full flex-col gap-2">
                 <!-- Settings -->
 
-                {!! view_render_event('bagisto.admin.catalog.categories.edit.card.accordion.settings.before', ['category' => $category]) !!}
+                {!! view_render_event('exygnus.admin.catalog.categories.edit.card.accordion.settings.before', ['category' => $category]) !!}
 
                 <x-admin::accordion>
                     <x-slot:header>
@@ -414,9 +414,9 @@
                     </x-slot>
                 </x-admin::accordion>
 
-                {!! view_render_event('bagisto.admin.catalog.categories.edit.card.accordion.settings.after', ['category' => $category]) !!}
+                {!! view_render_event('exygnus.admin.catalog.categories.edit.card.accordion.settings.after', ['category' => $category]) !!}
 
-                {!! view_render_event('bagisto.admin.catalog.categories.edit.card.accordion.filterable_attributes.before', ['category' => $category]) !!}
+                {!! view_render_event('exygnus.admin.catalog.categories.edit.card.accordion.filterable_attributes.before', ['category' => $category]) !!}
 
                 <!-- Filterable Attributes -->
                 <x-admin::accordion>
@@ -456,15 +456,15 @@
                     </x-slot>
                 </x-admin::accordion>
 
-                {!! view_render_event('bagisto.admin.catalog.categories.edit.card.accordion.filterable_attributes.after', ['category' => $category]) !!}
+                {!! view_render_event('exygnus.admin.catalog.categories.edit.card.accordion.filterable_attributes.after', ['category' => $category]) !!}
             </div>
         </div>
 
-        {!! view_render_event('bagisto.admin.catalog.categories.edit.edit_form_controls.after', ['category' => $category]) !!}
+        {!! view_render_event('exygnus.admin.catalog.categories.edit.edit_form_controls.after', ['category' => $category]) !!}
 
     </x-admin::form>
 
-    {!! view_render_event('bagisto.admin.catalog.categories.edit.after', ['category' => $category]) !!}
+    {!! view_render_event('exygnus.admin.catalog.categories.edit.after', ['category' => $category]) !!}
 
     @pushOnce('scripts')
         <script

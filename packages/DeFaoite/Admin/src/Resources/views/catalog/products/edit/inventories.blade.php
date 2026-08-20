@@ -1,4 +1,4 @@
-{!! view_render_event('bagisto.admin.catalog.product.edit.form.inventories.controls.before', ['product' => $product]) !!}
+{!! view_render_event('exygnus.admin.catalog.product.edit.form.inventories.controls.before', ['product' => $product]) !!}
 
 <v-inventories>
     <!-- Panel Content -->
@@ -42,7 +42,7 @@
     @endforeach
 </v-inventories>
 
-{!! view_render_event('bagisto.admin.catalog.product.edit.form.inventories.controls.after', ['product' => $product]) !!}
+{!! view_render_event('exygnus.admin.catalog.product.edit.form.inventories.controls.after', ['product' => $product]) !!}
 
 @pushOnce('scripts')
     <script

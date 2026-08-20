@@ -6,11 +6,11 @@
         ])->get();
     @endphp
 
-    {!! view_render_event('bagisto.admin.catalog.product.edit.form.types.simple.customizable-options.before', ['product' => $product]) !!}
+    {!! view_render_event('exygnus.admin.catalog.product.edit.form.types.simple.customizable-options.before', ['product' => $product]) !!}
 
     <v-customizable-options :errors="errors"></v-customizable-options>
 
-    {!! view_render_event('bagisto.admin.catalog.product.edit.form.types.simple.customizable-options.after', ['product' => $product]) !!}
+    {!! view_render_event('exygnus.admin.catalog.product.edit.form.types.simple.customizable-options.after', ['product' => $product]) !!}
 
     @pushOnce('scripts')
         <script
@@ -197,7 +197,7 @@
                 >
                     <!-- Placeholder Image -->
                     <img
-                        src="{{ bagisto_asset('images/icon-options.svg') }}"
+                        src="{{ exygnus_asset('images/icon-options.svg') }}"
                         class="h-20 w-20 rounded border border-dashed dark:border-gray-800 dark:mix-blend-exclusion dark:invert"
                     />
 
@@ -509,7 +509,7 @@
                 >
                     <!-- Placeholder Image -->
                     <img
-                        src="{{ bagisto_asset('images/icon-add-product.svg') }}"
+                        src="{{ exygnus_asset('images/icon-add-product.svg') }}"
                         class="h-20 w-20 dark:mix-blend-exclusion dark:invert"
                     />
 

@@ -153,7 +153,7 @@
                 >
                     <img
                         class="h-40 w-40 p-2 dark:mix-blend-exclusion dark:invert"
-                        src="{{ bagisto_asset('images/empty-placeholders/default.svg') }}"
+                        src="{{ exygnus_asset('images/empty-placeholders/default.svg') }}"
                         alt="@lang('admin::app.settings.themes.edit.category-carousel')"
                     >
 

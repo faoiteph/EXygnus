@@ -93,7 +93,7 @@
                     v-if="! prices.length"
                 >
                     <img
-                        src="{{ bagisto_asset('images/icon-discount.svg') }}"
+                        src="{{ exygnus_asset('images/icon-discount.svg') }}"
                         class="h-20 w-20 rounded border border-dashed border-gray-300 dark:border-gray-800 dark:mix-blend-exclusion dark:invert"
                     />
 
@@ -136,7 +136,7 @@
         
                         <!-- Modal Content -->
                         <x-slot:content>
-                            {!! view_render_event('bagisto.admin.catalog.products.create_form.general.controls.before') !!}
+                            {!! view_render_event('exygnus.admin.catalog.products.create_form.general.controls.before') !!}
 
                             <x-admin::form.control-group>
                                 <x-admin::form.control-group.label>
@@ -220,7 +220,7 @@
                                 </x-admin::form.control-group>
                             </div>
 
-                            {!! view_render_event('bagisto.admin.catalog.products.create_form.general.controls.before') !!}
+                            {!! view_render_event('exygnus.admin.catalog.products.create_form.general.controls.before') !!}
                         </x-slot>
         
                         <!-- Modal Footer -->

@@ -1,9 +1,9 @@
 @if (DeFaoite\Product\Helpers\ProductType::hasVariants($product->type))
-    {!! view_render_event('bagisto.shop.products.view.configurable-options.before', ['product' => $product]) !!}
+    {!! view_render_event('exygnus.shop.products.view.configurable-options.before', ['product' => $product]) !!}
 
     <v-product-configurable-options :errors="errors"></v-product-configurable-options>
 
-    {!! view_render_event('bagisto.shop.products.view.configurable-options.after', ['product' => $product]) !!}
+    {!! view_render_event('exygnus.shop.products.view.configurable-options.after', ['product' => $product]) !!}
 
     @push('scripts')
         <script

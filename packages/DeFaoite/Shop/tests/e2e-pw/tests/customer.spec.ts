@@ -135,7 +135,7 @@ test("should add an address", async ({ shopPage }) => {
     await customerPage.clickProfileLink("Address");
 
     await addressPage.addAddress({
-        companyName: "Webkul",
+        companyName: "De Faoite",
         firstName: generateFirstName(),
         lastName: generateLastName(),
         email: generateEmail(),
@@ -159,7 +159,7 @@ test("should edit an address", async ({ shopPage }) => {
     await customerPage.clickProfileLink("Address");
 
     await addressPage.addAddress({
-        companyName: "Webkul",
+        companyName: "De Faoite",
         firstName: generateFirstName(),
         lastName: generateLastName(),
         email: generateEmail(),
@@ -172,7 +172,7 @@ test("should edit an address", async ({ shopPage }) => {
     });
 
     await addressPage.editAddress({
-        companyName: "webkul1",
+        companyName: "defaoite1",
         firstName: "User1",
         lastName: "Demo1",
         email: generateEmail(),
@@ -196,7 +196,7 @@ test("should set the default address", async ({ shopPage }) => {
     await customerPage.clickProfileLink("Address");
 
     await addressPage.addAddress({
-        companyName: "Webkul",
+        companyName: "De Faoite",
         firstName: generateFirstName(),
         lastName: generateLastName(),
         email: generateEmail(),
@@ -222,7 +222,7 @@ test("should delete the address", async ({ shopPage }) => {
     await customerPage.clickProfileLink("Address");
 
     await addressPage.addAddress({
-        companyName: "Webkul",
+        companyName: "De Faoite",
         firstName: generateFirstName(),
         lastName: generateLastName(),
         email: generateEmail(),
@@ -266,7 +266,7 @@ test.describe("customer actions", () => {
         await customerPage.clickProfileLink("Address");
 
         await addressPage.addAddress({
-            companyName: "Webkul",
+            companyName: "De Faoite",
             firstName: generateFirstName(),
             lastName: generateLastName(),
             email: generateEmail(),
@@ -323,7 +323,7 @@ test.describe("customer actions", () => {
         await customerPage.clickProfileLink("Address");
 
         await addressPage.addAddress({
-            companyName: "Webkul",
+            companyName: "De Faoite",
             firstName: generateFirstName(),
             lastName: generateLastName(),
             email: generateEmail(),
@@ -380,7 +380,7 @@ test.describe("customer actions", () => {
         await customerPage.clickProfileLink("Address");
 
         await addressPage.addAddress({
-            companyName: "Webkul",
+            companyName: "De Faoite",
             firstName: generateFirstName(),
             lastName: generateLastName(),
             email: generateEmail(),

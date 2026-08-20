@@ -3,7 +3,7 @@
         @lang('admin::app.settings.locales.index.title')
     </x-slot>
 
-    {!! view_render_event('bagisto.admin.settings.locales.create.before') !!}
+    {!! view_render_event('exygnus.admin.settings.locales.create.before') !!}
 
     <v-locales>
         <div class="flex items-center justify-between gap-4 max-sm:flex-wrap">
@@ -27,7 +27,7 @@
         <x-admin::shimmer.datagrid />
     </v-locales>
 
-    {!! view_render_event('bagisto.admin.settings.locales.create.after') !!}
+    {!! view_render_event('exygnus.admin.settings.locales.create.after') !!}
 
     @pushOnce('scripts')
         <script
@@ -125,7 +125,7 @@
                     ref="createLocaleForm"
                 >
 
-                    {!! view_render_event('bagisto.admin.settings.locales.create_form_controls.before') !!}
+                    {!! view_render_event('exygnus.admin.settings.locales.create_form_controls.before') !!}
 
                     <x-admin::modal ref="localeUpdateOrCreateModal">
                         <!-- Modal Header -->
@@ -143,7 +143,7 @@
 
                         <!-- Modal Content -->
                         <x-slot:content>
-                            {!! view_render_event('bagisto.admin.settings.locale.create.before') !!}
+                            {!! view_render_event('exygnus.admin.settings.locale.create.before') !!}
 
                             <x-admin::form.control-group.control
                                 type="hidden"
@@ -249,7 +249,7 @@
                                 @lang('admin::app.settings.locales.index.logo-size')
                             </p>
 
-                            {!! view_render_event('bagisto.admin.settings.locale.create.after') !!}
+                            {!! view_render_event('exygnus.admin.settings.locale.create.after') !!}
                         </x-slot>
 
                         <!-- Modal Footer -->
@@ -265,7 +265,7 @@
                         </x-slot>
                     </x-admin::modal>
 
-                    {!! view_render_event('bagisto.admin.settings.locales.create_form_controls.after') !!}
+                    {!! view_render_event('exygnus.admin.settings.locales.create_form_controls.after') !!}
 
                 </form>
             </x-admin::form>

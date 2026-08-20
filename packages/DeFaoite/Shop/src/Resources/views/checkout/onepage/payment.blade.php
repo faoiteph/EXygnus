@@ -1,4 +1,4 @@
-{!! view_render_event('bagisto.shop.checkout.onepage.payment_methods.before') !!}
+{!! view_render_event('exygnus.shop.checkout.onepage.payment_methods.before') !!}
 
 <v-payment-methods
     :methods="paymentMethods"
@@ -9,7 +9,7 @@
     <x-shop::shimmer.checkout.onepage.payment-method />
 </v-payment-methods>
 
-{!! view_render_event('bagisto.shop.checkout.onepage.payment_methods.after') !!}
+{!! view_render_event('exygnus.shop.checkout.onepage.payment_methods.after') !!}
 
 @pushOnce('scripts')
     <script
@@ -23,7 +23,7 @@
             </template>
     
             <template v-else>
-                {!! view_render_event('bagisto.shop.checkout.onepage.payment_method.accordion.before') !!}
+                {!! view_render_event('exygnus.shop.checkout.onepage.payment_method.accordion.before') !!}
 
                 <!-- Accordion Blade Component -->
                 <x-shop::accordion class="overflow-hidden !border-b-0 max-md:rounded-lg max-md:!border-none max-md:!bg-gray-100">
@@ -44,7 +44,7 @@
                                 class="relative cursor-pointer max-md:max-w-full max-md:flex-auto"
                                 v-for="(payment, index) in methods"
                             >
-                                {!! view_render_event('bagisto.shop.checkout.payment-method.before') !!}
+                                {!! view_render_event('exygnus.shop.checkout.payment-method.before') !!}
 
                                 <input 
                                     type="radio" 
@@ -65,7 +65,7 @@
                                     :for="payment.method" 
                                     class="block w-[190px] cursor-pointer rounded-xl border border-zinc-200 p-5 max-md:flex max-md:w-full max-md:gap-5 max-md:rounded-lg max-sm:gap-4 max-sm:px-4 max-sm:py-2.5"
                                 >
-                                    {!! view_render_event('bagisto.shop.checkout.onepage.payment-method.image.before') !!}
+                                    {!! view_render_event('exygnus.shop.checkout.onepage.payment-method.image.before') !!}
 
                                     <img
                                         class="max-h-11 max-w-14"
@@ -76,29 +76,29 @@
                                         :title="payment.method_title"
                                     />
 
-                                    {!! view_render_event('bagisto.shop.checkout.onepage.payment-method.image.after') !!}
+                                    {!! view_render_event('exygnus.shop.checkout.onepage.payment-method.image.after') !!}
 
                                     <div>
-                                        {!! view_render_event('bagisto.shop.checkout.onepage.payment-method.title.before') !!}
+                                        {!! view_render_event('exygnus.shop.checkout.onepage.payment-method.title.before') !!}
 
                                         <p class="mt-1.5 text-sm font-semibold max-md:mt-1 max-sm:mt-0">
                                             @{{ payment.method_title }}
                                         </p>
                                         
-                                        {!! view_render_event('bagisto.shop.checkout.onepage.payment-method.title.after') !!}
+                                        {!! view_render_event('exygnus.shop.checkout.onepage.payment-method.title.after') !!}
 
-                                        {!! view_render_event('bagisto.shop.checkout.onepage.payment-method.description.before') !!}
+                                        {!! view_render_event('exygnus.shop.checkout.onepage.payment-method.description.before') !!}
 
                                         <p class="mt-2.5 text-xs font-medium text-zinc-500 max-md:mt-1 max-sm:mt-0">
                                             @{{ payment.description }}
                                         </p> 
 
-                                        {!! view_render_event('bagisto.shop.checkout.onepage.payment-method.description.after') !!}
+                                        {!! view_render_event('exygnus.shop.checkout.onepage.payment-method.description.after') !!}
     
                                     </div>
                                 </label>
 
-                                {!! view_render_event('bagisto.shop.checkout.payment-method.after') !!}
+                                {!! view_render_event('exygnus.shop.checkout.payment-method.after') !!}
 
                                 <!-- Todo implement the additionalDetails -->
                                 {{-- \DeFaoite\Payment\Payment::getAdditionalDetails($payment['method'] --}}
@@ -107,7 +107,7 @@
                     </x-slot>
                 </x-shop::accordion>
 
-                {!! view_render_event('bagisto.shop.checkout.onepage.payment_method.accordion.after') !!}
+                {!! view_render_event('exygnus.shop.checkout.onepage.payment_method.accordion.after') !!}
             </template>
         </div>
     </script>

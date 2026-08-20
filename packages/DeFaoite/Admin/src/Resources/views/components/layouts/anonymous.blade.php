@@ -29,12 +29,12 @@
     >
     <meta 
         name="generator" 
-        content="Bagisto"
+        content="EXygnus"
     >
 
     @stack('meta')
 
-    @bagistoVite(['src/Resources/assets/css/app.css', 'src/Resources/assets/js/app.js'])
+    @exygnusVite(['src/Resources/assets/css/app.css', 'src/Resources/assets/js/app.js'])
 
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
@@ -56,7 +56,7 @@
     @else
         <link
             type="image/x-icon"
-            href="{{ bagisto_asset('images/favicon.ico') }}"
+            href="{{ exygnus_asset('images/favicon.ico') }}"
             rel="shortcut icon"
             sizes="16x16"
         />
@@ -68,30 +68,30 @@
         {!! core()->getConfigData('general.content.custom_scripts.custom_css') !!}
     </style>
 
-    {!! view_render_event('bagisto.admin.layout.head') !!}
+    {!! view_render_event('exygnus.admin.layout.head') !!}
 </head>
 
 <body>
-    {!! view_render_event('bagisto.admin.layout.body.before') !!}
+    {!! view_render_event('exygnus.admin.layout.body.before') !!}
 
-    <!-- Built With Bagisto -->
+    <!-- Built With EXygnus -->
     <div id="app">
         <!-- Flash Message Blade Component -->
         <x-admin::flash-group />
 
-        {!! view_render_event('bagisto.admin.layout.content.before') !!}
+        {!! view_render_event('exygnus.admin.layout.content.before') !!}
 
         <!-- Page Content Blade Component -->
         {{ $slot }}
 
-        {!! view_render_event('bagisto.admin.layout.content.after') !!}
+        {!! view_render_event('exygnus.admin.layout.content.after') !!}
     </div>
 
-    {!! view_render_event('bagisto.admin.layout.body.after') !!}
+    {!! view_render_event('exygnus.admin.layout.body.after') !!}
 
     @stack('scripts')
 
-    {!! view_render_event('bagisto.admin.layout.vue-app-mount.before') !!}
+    {!! view_render_event('exygnus.admin.layout.vue-app-mount.before') !!}
 
     <script>
         /**
@@ -105,7 +105,7 @@
         });
     </script>
 
-    {!! view_render_event('bagisto.admin.layout.vue-app-mount.after') !!}
+    {!! view_render_event('exygnus.admin.layout.vue-app-mount.after') !!}
 
     <script type="text/javascript">
         {!! core()->getConfigData('general.content.custom_scripts.custom_javascript') !!}

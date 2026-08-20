@@ -35,7 +35,7 @@
             </div>
 
             <div class="flex gap-1.5">
-                {!! view_render_event('bagisto.shop.customers.account.orders.reorder_button.before', ['order' => $order]) !!}
+                {!! view_render_event('exygnus.shop.customers.account.orders.reorder_button.before', ['order' => $order]) !!}
 
                 @if (
                     $order->canReorder()
@@ -49,9 +49,9 @@
                     </a>
                 @endif
 
-                {!! view_render_event('bagisto.shop.customers.account.orders.reorder_button.after', ['order' => $order]) !!}
+                {!! view_render_event('exygnus.shop.customers.account.orders.reorder_button.after', ['order' => $order]) !!}
 
-                {!! view_render_event('bagisto.shop.customers.account.orders.cancel_button.before', ['order' => $order]) !!}
+                {!! view_render_event('exygnus.shop.customers.account.orders.cancel_button.before', ['order' => $order]) !!}
 
                 @if ($order->canCancel())
                     <form
@@ -77,7 +77,7 @@
                     </a>
                 @endif
 
-                {!! view_render_event('bagisto.shop.customers.account.orders.cancel_button.after', ['order' => $order]) !!}
+                {!! view_render_event('exygnus.shop.customers.account.orders.cancel_button.after', ['order' => $order]) !!}
 
                 @include('shop::customers.account.eu-withdrawals.button', ['order' => $order])
             </div>
@@ -105,7 +105,7 @@
             </div>
         @endif
 
-        {!! view_render_event('bagisto.shop.customers.account.orders.view.before', ['order' => $order]) !!}
+        {!! view_render_event('exygnus.shop.customers.account.orders.view.before', ['order' => $order]) !!}
 
         <!-- Order view tabs -->
         <div class="mt-8 max-md:mt-5 max-md:grid max-md:gap-4">
@@ -261,7 +261,7 @@
                             <div class="flex-auto">
                                 <div class="flex justify-end">
                                     <div class="grid max-w-max gap-2 text-sm">
-                                        {!! view_render_event('bagisto.shop.customers.account.orders.view.information.subtotal.before') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.orders.view.information.subtotal.before') !!}
 
                                         <!-- Sub Total -->
                                         @if (core()->getConfigData('sales.taxes.sales.display_subtotal') == 'including_tax')
@@ -298,9 +298,9 @@
                                             </div>
                                         @endif
 
-                                        {!! view_render_event('bagisto.shop.customers.account.orders.view.information.subtotal.after') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.orders.view.information.subtotal.after') !!}
 
-                                        {!! view_render_event('bagisto.shop.customers.account.orders.view.information.shipping.before') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.orders.view.information.shipping.before') !!}
 
                                         <!-- Shipping And Handling -->
                                         @if ($order->haveStockableItems())
@@ -339,9 +339,9 @@
                                             @endif
                                         @endif
 
-                                        {!! view_render_event('bagisto.shop.customers.account.orders.view.information.shipping.after') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.orders.view.information.shipping.after') !!}
 
-                                        {!! view_render_event('bagisto.shop.customers.account.orders.view.information.tax-amount.before') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.orders.view.information.tax-amount.before') !!}
 
                                         <!-- Tax Amount -->
                                         <div class="flex w-full justify-between gap-x-5">
@@ -352,9 +352,9 @@
                                             </p>
                                         </div>
 
-                                        {!! view_render_event('bagisto.shop.customers.account.orders.view.information.tax-amount.after') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.orders.view.information.tax-amount.after') !!}
 
-                                        {!! view_render_event('bagisto.shop.customers.account.orders.view.information.discount.before') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.orders.view.information.discount.before') !!}
 
                                         <!-- Discount Details -->
                                         @if ($order->base_discount_amount > 0)
@@ -373,9 +373,9 @@
                                             </div>
                                         @endif
 
-                                        {!! view_render_event('bagisto.shop.customers.account.orders.view.information.discount.after') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.orders.view.information.discount.after') !!}
 
-                                        {!! view_render_event('bagisto.shop.customers.account.orders.view.information.grand-total.before') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.orders.view.information.grand-total.before') !!}
 
                                         <!-- Grand Total -->
                                         <div class="flex w-full justify-between gap-x-5 font-semibold">
@@ -386,9 +386,9 @@
                                             </p>
                                         </div>
 
-                                        {!! view_render_event('bagisto.shop.customers.account.orders.view.information.grand-total.after') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.orders.view.information.grand-total.after') !!}
 
-                                        {!! view_render_event('bagisto.shop.customers.account.orders.view.information.total-paid.before') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.orders.view.information.total-paid.before') !!}
 
                                         <!-- Total Paid -->
                                         <div class="flex w-full justify-between gap-x-5">
@@ -399,9 +399,9 @@
                                             </p>
                                         </div>
 
-                                        {!! view_render_event('bagisto.shop.customers.account.orders.view.information.total-paid.after') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.orders.view.information.total-paid.after') !!}
 
-                                        {!! view_render_event('bagisto.shop.customers.account.orders.view.information.total-refunded.before') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.orders.view.information.total-refunded.before') !!}
 
                                         <!-- Total Refunded -->
                                         <div class="flex w-full justify-between gap-x-5">
@@ -412,9 +412,9 @@
                                             </p>
                                         </div>
 
-                                        {!! view_render_event('bagisto.shop.customers.account.orders.view.information.total-refunded.after') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.orders.view.information.total-refunded.after') !!}
 
-                                        {!! view_render_event('bagisto.shop.customers.account.orders.view.information.total-due.before') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.orders.view.information.total-due.before') !!}
 
                                         <!-- Total Due -->
                                         <div class="flex w-full justify-between gap-x-5">
@@ -439,7 +439,7 @@
                                             </p>
                                         </div>
 
-                                        {!! view_render_event('bagisto.shop.customers.account.orders.view.information.total-due.after') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.orders.view.information.total-due.after') !!}
                                     </div>
                                 </div>
                             </div>
@@ -717,7 +717,7 @@
 
                             <div class="grid gap-1.5 rounded-md rounded-t-none border border-t-0 bg-white px-4 py-3 text-xs font-medium">
 
-                                {!! view_render_event('bagisto.shop.customers.account.orders.view.information.subtotal.before') !!}
+                                {!! view_render_event('exygnus.shop.customers.account.orders.view.information.subtotal.before') !!}
 
                                 @if (core()->getConfigData('sales.taxes.sales.display_subtotal') == 'including_tax')
                                     <div class="flex w-full justify-between gap-x-5">
@@ -762,9 +762,9 @@
                                     </div>
                                 @endif
 
-                                {!! view_render_event('bagisto.shop.customers.account.orders.view.information.subtotal.after') !!}
+                                {!! view_render_event('exygnus.shop.customers.account.orders.view.information.subtotal.after') !!}
 
-                                {!! view_render_event('bagisto.shop.customers.account.orders.view.information.shipping.before') !!}
+                                {!! view_render_event('exygnus.shop.customers.account.orders.view.information.shipping.before') !!}
 
                                 @if ($order->haveStockableItems())
                                     @if (core()->getConfigData('sales.taxes.sales.display_shipping_amount') == 'including_tax')
@@ -810,9 +810,9 @@
                                     @endif
                                 @endif
 
-                                {!! view_render_event('bagisto.shop.customers.account.orders.view.information.shipping.after') !!}
+                                {!! view_render_event('exygnus.shop.customers.account.orders.view.information.shipping.after') !!}
 
-                                {!! view_render_event('bagisto.shop.customers.account.orders.view.information.tax-amount.before') !!}
+                                {!! view_render_event('exygnus.shop.customers.account.orders.view.information.tax-amount.before') !!}
 
                                 <!-- Tax Informations -->
                                 <div class="flex w-full justify-between gap-x-5">
@@ -825,9 +825,9 @@
                                     </p>
                                 </div>
 
-                                {!! view_render_event('bagisto.shop.customers.account.orders.view.information.tax-amount.after') !!}
+                                {!! view_render_event('exygnus.shop.customers.account.orders.view.information.tax-amount.after') !!}
 
-                                {!! view_render_event('bagisto.shop.customers.account.orders.view.information.discount.before') !!}
+                                {!! view_render_event('exygnus.shop.customers.account.orders.view.information.discount.before') !!}
 
                                 @if ($order->base_discount_amount > 0)
                                     <div class="flex w-full justify-between gap-x-5">
@@ -845,9 +845,9 @@
                                     </div>
                                 @endif
 
-                                {!! view_render_event('bagisto.shop.customers.account.orders.view.information.discount.after') !!}
+                                {!! view_render_event('exygnus.shop.customers.account.orders.view.information.discount.after') !!}
 
-                                {!! view_render_event('bagisto.shop.customers.account.orders.view.information.grand-total.before') !!}
+                                {!! view_render_event('exygnus.shop.customers.account.orders.view.information.grand-total.before') !!}
 
                                 <!-- Grand Total -->
                                 <div class="flex w-full justify-between gap-x-5 font-semibold">
@@ -860,9 +860,9 @@
                                     </p>
                                 </div>
 
-                                {!! view_render_event('bagisto.shop.customers.account.orders.view.information.grand-total.after') !!}
+                                {!! view_render_event('exygnus.shop.customers.account.orders.view.information.grand-total.after') !!}
 
-                                {!! view_render_event('bagisto.shop.customers.account.orders.view.information.total-paid.before') !!}
+                                {!! view_render_event('exygnus.shop.customers.account.orders.view.information.total-paid.before') !!}
 
                                 <!-- Total Paid -->
                                 <div class="flex w-full justify-between gap-x-5">
@@ -875,9 +875,9 @@
                                     </p>
                                 </div>
 
-                                {!! view_render_event('bagisto.shop.customers.account.orders.view.information.total-paid.after') !!}
+                                {!! view_render_event('exygnus.shop.customers.account.orders.view.information.total-paid.after') !!}
 
-                                {!! view_render_event('bagisto.shop.customers.account.orders.view.information.total-refunded.before') !!}
+                                {!! view_render_event('exygnus.shop.customers.account.orders.view.information.total-refunded.before') !!}
 
                                 <!-- Total Refunded -->
                                 <div class="flex w-full justify-between gap-x-5">
@@ -890,9 +890,9 @@
                                     </p>
                                 </div>
 
-                                {!! view_render_event('bagisto.shop.customers.account.orders.view.information.total-refunded.after') !!}
+                                {!! view_render_event('exygnus.shop.customers.account.orders.view.information.total-refunded.after') !!}
 
-                                {!! view_render_event('bagisto.shop.customers.account.orders.view.information.total-due.before') !!}
+                                {!! view_render_event('exygnus.shop.customers.account.orders.view.information.total-due.before') !!}
 
                                 <!-- Total Due -->
                                 <div class="flex w-full justify-between gap-x-5">
@@ -919,7 +919,7 @@
                                     </p>
                                 </div>
 
-                                {!! view_render_event('bagisto.shop.customers.account.orders.view.information.total-due.after') !!}
+                                {!! view_render_event('exygnus.shop.customers.account.orders.view.information.total-due.after') !!}
 
                             </div>
                         </div>
@@ -1072,7 +1072,7 @@
 
                                         <div class="grid gap-1.5 rounded-md rounded-t-none border border-t-0 bg-white px-4 py-3 text-xs font-medium">
 
-                                            {!! view_render_event('bagisto.shop.customers.account.orders.view.invoices.subtotal.before') !!}
+                                            {!! view_render_event('exygnus.shop.customers.account.orders.view.invoices.subtotal.before') !!}
 
                                             @if (core()->getConfigData('sales.taxes.sales.display_subtotal') == 'including_tax')
                                                 <div class="flex w-full justify-between gap-x-5">
@@ -1106,9 +1106,9 @@
                                                 </div>
                                             @endif
 
-                                            {!! view_render_event('bagisto.shop.customers.account.orders.view.invoices.subtotal.after') !!}
+                                            {!! view_render_event('exygnus.shop.customers.account.orders.view.invoices.subtotal.after') !!}
 
-                                            {!! view_render_event('bagisto.shop.customers.account.orders.view.invoices.shipping.before') !!}
+                                            {!! view_render_event('exygnus.shop.customers.account.orders.view.invoices.shipping.before') !!}
 
                                             @if (core()->getConfigData('sales.taxes.sales.display_shipping_amount') == 'including_tax')
                                                 <div class="flex w-full justify-between gap-x-5">
@@ -1152,9 +1152,9 @@
                                                 </div>
                                             @endif
 
-                                            {!! view_render_event('bagisto.shop.customers.account.orders.view.invoices.shipping.after') !!}
+                                            {!! view_render_event('exygnus.shop.customers.account.orders.view.invoices.shipping.after') !!}
 
-                                            {!! view_render_event('bagisto.shop.customers.account.orders.view.invoices.discount.before') !!}
+                                            {!! view_render_event('exygnus.shop.customers.account.orders.view.invoices.discount.before') !!}
 
                                             @if ($invoice->base_discount_amount > 0)
                                                 <div class="flex w-full justify-between gap-x-5">
@@ -1168,9 +1168,9 @@
                                                 </div>
                                             @endif
 
-                                            {!! view_render_event('bagisto.shop.customers.account.orders.view.invoices.discount.after') !!}
+                                            {!! view_render_event('exygnus.shop.customers.account.orders.view.invoices.discount.after') !!}
 
-                                            {!! view_render_event('bagisto.shop.customers.account.orders.view.invoices.tax.before') !!}
+                                            {!! view_render_event('exygnus.shop.customers.account.orders.view.invoices.tax.before') !!}
 
                                             <!-- Tax Amount -->
                                             <div class="flex w-full justify-between gap-x-5">
@@ -1183,9 +1183,9 @@
                                                 </p>
                                             </div>
 
-                                            {!! view_render_event('bagisto.shop.customers.account.orders.view.invoices.tax.after') !!}
+                                            {!! view_render_event('exygnus.shop.customers.account.orders.view.invoices.tax.after') !!}
 
-                                            {!! view_render_event('bagisto.shop.customers.account.orders.view.invoices.grand-total.before') !!}
+                                            {!! view_render_event('exygnus.shop.customers.account.orders.view.invoices.grand-total.before') !!}
 
                                             <!-- Grand Total -->
                                             <div class="flex w-full justify-between gap-x-5 font-semibold">
@@ -1198,7 +1198,7 @@
                                                 </p>
                                             </div>
 
-                                            {!! view_render_event('bagisto.shop.customers.account.orders.view.invoices.grand-total.after') !!}
+                                            {!! view_render_event('exygnus.shop.customers.account.orders.view.invoices.grand-total.after') !!}
 
                                         </div>
                                     </div>
@@ -1324,7 +1324,7 @@
                                         <div class="flex flex-auto justify-end">
                                             <div class="grid max-w-max gap-2 text-sm">
 
-                                                {!! view_render_event('bagisto.shop.customers.account.orders.view.invoices.subtotal.before') !!}
+                                                {!! view_render_event('exygnus.shop.customers.account.orders.view.invoices.subtotal.before') !!}
 
                                                 <!-- Sub Total -->
                                                 @if (core()->getConfigData('sales.taxes.sales.display_subtotal') == 'including_tax')
@@ -1361,9 +1361,9 @@
                                                     </div>
                                                 @endif
 
-                                                {!! view_render_event('bagisto.shop.customers.account.orders.view.invoices.subtotal.after') !!}
+                                                {!! view_render_event('exygnus.shop.customers.account.orders.view.invoices.subtotal.after') !!}
 
-                                                {!! view_render_event('bagisto.shop.customers.account.orders.view.invoices.shipping.before') !!}
+                                                {!! view_render_event('exygnus.shop.customers.account.orders.view.invoices.shipping.before') !!}
 
                                                 <!-- Shipping -->
                                                 @if (core()->getConfigData('sales.taxes.sales.display_shipping_amount') == 'including_tax')
@@ -1400,9 +1400,9 @@
                                                     </div>
                                                 @endif
 
-                                                {!! view_render_event('bagisto.shop.customers.account.orders.view.invoices.shipping.after') !!}
+                                                {!! view_render_event('exygnus.shop.customers.account.orders.view.invoices.shipping.after') !!}
 
-                                                {!! view_render_event('bagisto.shop.customers.account.orders.view.invoices.discount.before') !!}
+                                                {!! view_render_event('exygnus.shop.customers.account.orders.view.invoices.discount.before') !!}
 
                                                 <!-- Discount Amount -->
                                                 @if ($invoice->base_discount_amount > 0)
@@ -1415,9 +1415,9 @@
                                                     </div>
                                                 @endif
 
-                                                {!! view_render_event('bagisto.shop.customers.account.orders.view.invoices.discount.after') !!}
+                                                {!! view_render_event('exygnus.shop.customers.account.orders.view.invoices.discount.after') !!}
 
-                                                {!! view_render_event('bagisto.shop.customers.account.orders.view.invoices.tax-amount.before') !!}
+                                                {!! view_render_event('exygnus.shop.customers.account.orders.view.invoices.tax-amount.before') !!}
 
                                                 <!-- Tax Amount -->
                                                 <div class="flex w-full justify-between gap-x-5">
@@ -1428,9 +1428,9 @@
                                                     </p>
                                                 </div>
 
-                                                {!! view_render_event('bagisto.shop.customers.account.orders.view.invoices.tax-amount.after') !!}
+                                                {!! view_render_event('exygnus.shop.customers.account.orders.view.invoices.tax-amount.after') !!}
 
-                                                {!! view_render_event('bagisto.shop.customers.account.orders.view.invoices.grand-total.before') !!}
+                                                {!! view_render_event('exygnus.shop.customers.account.orders.view.invoices.grand-total.before') !!}
 
                                                 <!-- Grand Total -->
                                                 <div class="flex w-full justify-between gap-x-5 font-semibold">
@@ -1441,7 +1441,7 @@
                                                     </p>
                                                 </div>
 
-                                                {!! view_render_event('bagisto.shop.customers.account.orders.view.invoices.grand-total.after') !!}
+                                                {!! view_render_event('exygnus.shop.customers.account.orders.view.invoices.grand-total.after') !!}
 
                                             </div>
                                         </div>
@@ -1835,7 +1835,7 @@
 
                                     <div class="grid gap-1.5 rounded-md rounded-t-none border border-t-0 bg-white px-4 py-3 text-xs font-medium">
 
-                                        {!! view_render_event('bagisto.shop.customers.account.orders.view.refunds.subtotal.before') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.orders.view.refunds.subtotal.before') !!}
 
                                         @if (core()->getConfigData('sales.taxes.sales.display_subtotal') == 'including_tax')
                                             <div class="flex w-full justify-between gap-x-5">
@@ -1880,9 +1880,9 @@
                                             </div>
                                         @endif
 
-                                        {!! view_render_event('bagisto.shop.customers.account.orders.view.refunds.subtotal.after') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.orders.view.refunds.subtotal.after') !!}
 
-                                        {!! view_render_event('bagisto.shop.customers.account.orders.view.refunds.shipping.before') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.orders.view.refunds.shipping.before') !!}
 
                                         @if (core()->getConfigData('sales.taxes.sales.display_shipping_amount') == 'including_tax')
                                             <div class="flex w-full justify-between gap-x-5">
@@ -1926,9 +1926,9 @@
                                             </div>
                                         @endif
 
-                                        {!! view_render_event('bagisto.shop.customers.account.orders.view.refunds.shipping.after') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.orders.view.refunds.shipping.after') !!}
 
-                                        {!! view_render_event('bagisto.shop.customers.account.orders.view.refunds.discount.before') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.orders.view.refunds.discount.before') !!}
 
                                         <!-- Discount -->
                                         @if ($refund->discount_amount > 0)
@@ -1941,9 +1941,9 @@
                                             </div>
                                         @endif
 
-                                        {!! view_render_event('bagisto.shop.customers.account.orders.view.refunds.discount.after') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.orders.view.refunds.discount.after') !!}
 
-                                        {!! view_render_event('bagisto.shop.customers.account.orders.view.refunds.tax-amount.before') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.orders.view.refunds.tax-amount.before') !!}
 
                                         <!-- Tax Amount -->
                                         @if ($refund->tax_amount > 0)
@@ -1958,9 +1958,9 @@
                                             </div>
                                         @endif
 
-                                        {!! view_render_event('bagisto.shop.customers.account.orders.view.refunds.tax-amount.after') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.orders.view.refunds.tax-amount.after') !!}
 
-                                        {!! view_render_event('bagisto.shop.customers.account.orders.view.refunds.adjustment-refund.before') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.orders.view.refunds.adjustment-refund.before') !!}
 
                                         <!-- Adjustments Refund -->
                                         <div class="flex w-full justify-between gap-x-5">
@@ -1973,9 +1973,9 @@
                                             </p>
                                         </div>
 
-                                        {!! view_render_event('bagisto.shop.customers.account.orders.view.refunds.adjustment-refund.after') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.orders.view.refunds.adjustment-refund.after') !!}
 
-                                        {!! view_render_event('bagisto.shop.customers.account.orders.view.refunds.adjustment-fee.before') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.orders.view.refunds.adjustment-fee.before') !!}
 
                                         <!-- Adjustment fee -->
                                         <div class="flex w-full justify-between gap-x-5">
@@ -1988,9 +1988,9 @@
                                             </p>
                                         </div>
 
-                                        {!! view_render_event('bagisto.shop.customers.account.orders.view.refunds.adjustment-fee.after') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.orders.view.refunds.adjustment-fee.after') !!}
 
-                                        {!! view_render_event('bagisto.shop.customers.account.orders.view.refunds.grand-total.before') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.orders.view.refunds.grand-total.before') !!}
 
                                         <!-- Grand Total -->
                                         <div class="flex w-full justify-between gap-x-5 font-semibold">
@@ -2003,7 +2003,7 @@
                                             </p>
                                         </div>
 
-                                        {!! view_render_event('bagisto.shop.customers.account.orders.view.refunds.grand-total.after') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.orders.view.refunds.grand-total.after') !!}
 
                                     </div>
                                 </div>
@@ -2017,7 +2017,7 @@
                                 <div class="flex flex-auto justify-end">
                                     <div class="grid max-w-max gap-2 text-sm">
 
-                                        {!! view_render_event('bagisto.shop.customers.account.orders.view.refunds.subtotal.before') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.orders.view.refunds.subtotal.before') !!}
 
                                         <!-- Sub Total -->
                                         @if (core()->getConfigData('sales.taxes.sales.display_subtotal') == 'including_tax')
@@ -2054,9 +2054,9 @@
                                             </div>
                                         @endif
 
-                                        {!! view_render_event('bagisto.shop.customers.account.orders.view.refunds.subtotal.after') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.orders.view.refunds.subtotal.after') !!}
 
-                                        {!! view_render_event('bagisto.shop.customers.account.orders.view.refunds.shipping.before') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.orders.view.refunds.shipping.before') !!}
 
                                         <!-- Shipping And Handling -->
                                         @if (core()->getConfigData('sales.taxes.sales.display_shipping_amount') == 'including_tax')
@@ -2093,9 +2093,9 @@
                                             </div>
                                         @endif
 
-                                        {!! view_render_event('bagisto.shop.customers.account.orders.view.refunds.shipping.after') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.orders.view.refunds.shipping.after') !!}
 
-                                        {!! view_render_event('bagisto.shop.customers.account.orders.view.refunds.discount.before') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.orders.view.refunds.discount.before') !!}
 
                                         <!-- Discount -->
                                         @if ($refund->discount_amount > 0)
@@ -2108,9 +2108,9 @@
                                             </div>
                                         @endif
 
-                                        {!! view_render_event('bagisto.shop.customers.account.orders.view.refunds.discount.after') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.orders.view.refunds.discount.after') !!}
 
-                                        {!! view_render_event('bagisto.shop.customers.account.orders.view.refunds.tax-amount.before') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.orders.view.refunds.tax-amount.before') !!}
 
                                         <!-- Tax Amount -->
                                         @if ($refund->tax_amount > 0)
@@ -2123,9 +2123,9 @@
                                             </div>
                                         @endif
 
-                                        {!! view_render_event('bagisto.shop.customers.account.orders.view.refunds.tax-amount.after') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.orders.view.refunds.tax-amount.after') !!}
 
-                                        {!! view_render_event('bagisto.shop.customers.account.orders.view.refunds.adjustment-refund.before') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.orders.view.refunds.adjustment-refund.before') !!}
 
                                         <!-- Adjustments Refund -->
                                         <div class="flex w-full justify-between gap-x-5">
@@ -2136,9 +2136,9 @@
                                             </p>
                                         </div>
 
-                                        {!! view_render_event('bagisto.shop.customers.account.orders.view.refunds.adjustment-refund.after') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.orders.view.refunds.adjustment-refund.after') !!}
 
-                                        {!! view_render_event('bagisto.shop.customers.account.orders.view.refunds.adjustment-fee.before') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.orders.view.refunds.adjustment-fee.before') !!}
 
                                         <!-- Adjustment fee -->
                                         <div class="flex w-full justify-between gap-x-5">
@@ -2149,9 +2149,9 @@
                                             </p>
                                         </div>
 
-                                        {!! view_render_event('bagisto.shop.customers.account.orders.view.refunds.adjustment-fee.after') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.orders.view.refunds.adjustment-fee.after') !!}
 
-                                        {!! view_render_event('bagisto.shop.customers.account.orders.view.refunds.grand-total.before') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.orders.view.refunds.grand-total.before') !!}
 
                                         <!-- Grand Total -->
                                         <div class="flex w-full justify-between gap-x-5 font-semibold">
@@ -2162,7 +2162,7 @@
                                             </p>
                                         </div>
 
-                                        {!! view_render_event('bagisto.shop.customers.account.orders.view.refunds.grand-total.after') !!}
+                                        {!! view_render_event('exygnus.shop.customers.account.orders.view.refunds.grand-total.after') !!}
 
                                     </div>
                                 </div>
@@ -2192,10 +2192,10 @@
                                     @include ('shop::customers.account.orders.view.address', ['address' => $order->shipping_address])
                                 </div>
 
-                                {!! view_render_event('bagisto.shop.customers.account.orders.view.shipping_address_details.after', ['order' => $order]) !!}
+                                {!! view_render_event('exygnus.shop.customers.account.orders.view.shipping_address_details.after', ['order' => $order]) !!}
                             </div>
 
-                            {!! view_render_event('bagisto.shop.customers.account.orders.view.shipping_address.after', ['order' => $order]) !!}
+                            {!! view_render_event('exygnus.shop.customers.account.orders.view.shipping_address.after', ['order' => $order]) !!}
 
                         </div>
                     @endif
@@ -2210,11 +2210,11 @@
                                     @include ('shop::customers.account.orders.view.address', ['address' => $order->billing_address])
                                 </div>
 
-                                {!! view_render_event('bagisto.shop.customers.account.orders.view.billing_address_details.after', ['order' => $order]) !!}
+                                {!! view_render_event('exygnus.shop.customers.account.orders.view.billing_address_details.after', ['order' => $order]) !!}
 
                             </div>
 
-                            {!! view_render_event('bagisto.shop.customers.account.orders.view.billing_address.after', ['order' => $order]) !!}
+                            {!! view_render_event('exygnus.shop.customers.account.orders.view.billing_address.after', ['order' => $order]) !!}
 
                         </div>
                     @endif
@@ -2227,10 +2227,10 @@
                             <div class="mt-1 grid gap-2.5 text-xs text-gray-800">
                                 {{ $order->shipping_title }}
 
-                                {!! view_render_event('bagisto.shop.customers.account.orders.view.shipping_method_details.after', ['order' => $order]) !!}
+                                {!! view_render_event('exygnus.shop.customers.account.orders.view.shipping_method_details.after', ['order' => $order]) !!}
                             </div>
 
-                            {!! view_render_event('bagisto.shop.customers.account.orders.view.shipping_method.after', ['order' => $order]) !!}
+                            {!! view_render_event('exygnus.shop.customers.account.orders.view.shipping_method.after', ['order' => $order]) !!}
 
                         </div>
                     @endif
@@ -2248,11 +2248,11 @@
                                 </div>
                             @endif
 
-                            {!! view_render_event('bagisto.shop.customers.account.orders.view.payment_method_details.after', ['order' => $order]) !!}
+                            {!! view_render_event('exygnus.shop.customers.account.orders.view.payment_method_details.after', ['order' => $order]) !!}
 
                         </div>
 
-                        {!! view_render_event('bagisto.shop.customers.account.orders.view.payment_method.after', ['order' => $order]) !!}
+                        {!! view_render_event('exygnus.shop.customers.account.orders.view.payment_method.after', ['order' => $order]) !!}
                     </div>
                 </div>
             </div>
@@ -2275,10 +2275,10 @@
                             </p>
                         </div>
 
-                        {!! view_render_event('bagisto.shop.customers.account.orders.view.billing_address_details.after', ['order' => $order]) !!}
+                        {!! view_render_event('exygnus.shop.customers.account.orders.view.billing_address_details.after', ['order' => $order]) !!}
                     </div>
 
-                {!! view_render_event('bagisto.shop.customers.account.orders.view.billing_address.after', ['order' => $order]) !!}
+                {!! view_render_event('exygnus.shop.customers.account.orders.view.billing_address.after', ['order' => $order]) !!}
 
                 @endif
 
@@ -2295,10 +2295,10 @@
                             </p>
                         </div>
 
-                        {!! view_render_event('bagisto.shop.customers.account.orders.view.shipping_address_details.after', ['order' => $order]) !!}
+                        {!! view_render_event('exygnus.shop.customers.account.orders.view.shipping_address_details.after', ['order' => $order]) !!}
                     </div>
 
-                    {!! view_render_event('bagisto.shop.customers.account.orders.view.shipping_address.after', ['order' => $order]) !!}
+                    {!! view_render_event('exygnus.shop.customers.account.orders.view.shipping_address.after', ['order' => $order]) !!}
 
                     <!-- Shipping Method -->
                     <div class="grid max-w-[200px] place-content-baseline gap-4 max-868:w-full max-868:max-w-full max-md:max-w-full max-md:gap-2">
@@ -2310,10 +2310,10 @@
                             {{ $order->shipping_title }}
                         </p>
 
-                        {!! view_render_event('bagisto.shop.customers.account.orders.view.shipping_method_details.after', ['order' => $order]) !!}
+                        {!! view_render_event('exygnus.shop.customers.account.orders.view.shipping_method_details.after', ['order' => $order]) !!}
                     </div>
 
-                    {!! view_render_event('bagisto.shop.customers.account.orders.view.shipping_method.after', ['order' => $order]) !!}
+                    {!! view_render_event('exygnus.shop.customers.account.orders.view.shipping_method.after', ['order' => $order]) !!}
 
                 @endif
 
@@ -2333,14 +2333,14 @@
                         </div>
                     @endif
 
-                    {!! view_render_event('bagisto.shop.customers.account.orders.view.payment_method_details.after', ['order' => $order]) !!}
+                    {!! view_render_event('exygnus.shop.customers.account.orders.view.payment_method_details.after', ['order' => $order]) !!}
                 </div>
 
-                {!! view_render_event('bagisto.shop.customers.account.orders.view.payment_method.after', ['order' => $order]) !!}
+                {!! view_render_event('exygnus.shop.customers.account.orders.view.payment_method.after', ['order' => $order]) !!}
             </div>
         </div>
 
-        {!! view_render_event('bagisto.shop.customers.account.orders.view.after', ['order' => $order]) !!}
+        {!! view_render_event('exygnus.shop.customers.account.orders.view.after', ['order' => $order]) !!}
 
     </div>
 </x-shop::layouts.account>

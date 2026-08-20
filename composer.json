@@ -1,5 +1,5 @@
 {
-    "name": "bagisto/bagisto",
+    "name": "exygnus/exygnus",
     "type": "project",
     "description": "Bagisto Laravel E-Commerce",
     "keywords": [
@@ -52,7 +52,7 @@
         "web-token/jwt-framework": "^4.1"
     },
     "require-dev": {
-        "bagisto/laravel-datafaker": "2.3.*",
+        "faoiteph/laravel-datafaker": "2.3.*",
         "barryvdh/laravel-debugbar": "^3.8",
         "fakerphp/faker": "^1.23",
         "laravel/boost": "^2.1",
@@ -166,9 +166,8 @@
     "minimum-stability": "stable",
     "prefer-stable": true,
     "support": {
-        "issues": "https://github.com/bagisto/bagisto/issues",
-        "forum": "https://forums.bagisto.com",
-        "source": "https://github.com/bagisto/bagisto",
-        "docs": "https://devdocs.bagisto.com"
+        "issues": "https://github.com/faoiteph/EXygnus/issues",
+        "source": "https://github.com/faoiteph/EXygnus",
+        "docs": "https://docs.exygnus.com"
     }
 }

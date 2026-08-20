@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'name' => 'Webkul Bagisto PayGlocal',
+    'name' => 'De Faoite EXygnus PayGlocal',
     'version' => core()->version(),
 ];

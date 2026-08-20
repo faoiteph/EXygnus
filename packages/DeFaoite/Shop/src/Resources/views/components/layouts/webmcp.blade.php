@@ -1,4 +1,4 @@
-{!! view_render_event('bagisto.shop.layout.webmcp.before') !!}
+{!! view_render_event('exygnus.shop.layout.webmcp.before') !!}
 
 <!-- Declared for agents, never drawn. The tools are read with querySelectorAll and sent with form.submit(), neither of which minds being hidden; hiding the block rather than each field is what stops a form added later from surfacing a stray input. -->
 <div class="hidden">
@@ -157,4 +157,4 @@
     </script>
 @endPushOnce
 
-{!! view_render_event('bagisto.shop.layout.webmcp.after') !!}
+{!! view_render_event('exygnus.shop.layout.webmcp.after') !!}

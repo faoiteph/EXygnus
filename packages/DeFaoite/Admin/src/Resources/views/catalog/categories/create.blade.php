@@ -3,14 +3,14 @@
         @lang('admin::app.catalog.categories.create.title')
     </x-slot>
 
-    {!! view_render_event('bagisto.admin.catalog.categories.create.before') !!}
+    {!! view_render_event('exygnus.admin.catalog.categories.create.before') !!}
 
     <!-- Category Create Form -->
     <x-admin::form
         :action="route('admin.catalog.categories.store')"
         enctype="multipart/form-data"
     >
-        {!! view_render_event('bagisto.admin.catalog.categories.create.create_form_controls.before') !!}
+        {!! view_render_event('exygnus.admin.catalog.categories.create.create_form_controls.before') !!}
 
         <div class="flex items-center justify-between gap-4 max-sm:flex-wrap">
             <p class="text-xl font-bold text-gray-800 dark:text-white">
@@ -42,7 +42,7 @@
             <!-- Left Section -->
             <div class="flex flex-1 flex-col gap-2 max-xl:flex-auto">
 
-                {!! view_render_event('bagisto.admin.catalog.categories.create.card.general.before') !!}
+                {!! view_render_event('exygnus.admin.catalog.categories.create.card.general.before') !!}
 
                 <!-- General -->
                 <div class="box-shadow rounded bg-white p-4 dark:bg-gray-900">
@@ -106,9 +106,9 @@
                     </div>
                 </div>
 
-                {!! view_render_event('bagisto.admin.catalog.categories.create.card.general.after') !!}
+                {!! view_render_event('exygnus.admin.catalog.categories.create.card.general.after') !!}
 
-                {!! view_render_event('bagisto.admin.catalog.categories.create.card.description_images.before') !!}
+                {!! view_render_event('exygnus.admin.catalog.categories.create.card.description_images.before') !!}
 
                 <!-- Description and images -->
                 <div class="box-shadow rounded bg-white p-4 dark:bg-gray-900">
@@ -170,9 +170,9 @@
                     </div>
                 </div>
 
-                {!! view_render_event('bagisto.admin.catalog.categories.create.card.description_images.after') !!}
+                {!! view_render_event('exygnus.admin.catalog.categories.create.card.description_images.after') !!}
 
-                {!! view_render_event('bagisto.admin.catalog.categories.create.card.seo.before') !!}
+                {!! view_render_event('exygnus.admin.catalog.categories.create.card.seo.before') !!}
 
                 <!-- SEO Details -->
                 <div class="box-shadow rounded bg-white p-4 dark:bg-gray-900">
@@ -266,14 +266,14 @@
                     </div>
                 </div>
 
-                {!! view_render_event('bagisto.admin.catalog.categories.create.card.seo.after') !!}
+                {!! view_render_event('exygnus.admin.catalog.categories.create.card.seo.after') !!}
             </div>
 
             <!-- Right Section -->
             <div class="flex w-[360px] max-w-full flex-col gap-2">
                 <!-- Settings -->
 
-                {!! view_render_event('bagisto.admin.catalog.categories.create.card.accordion.settings.before') !!}
+                {!! view_render_event('exygnus.admin.catalog.categories.create.card.accordion.settings.before') !!}
 
                 <x-admin::accordion>
                     <x-slot:header>
@@ -350,9 +350,9 @@
                     </x-slot>
                 </x-admin::accordion>
 
-                {!! view_render_event('bagisto.admin.catalog.categories.create.card.accordion.settings.after') !!}
+                {!! view_render_event('exygnus.admin.catalog.categories.create.card.accordion.settings.after') !!}
 
-                {!! view_render_event('bagisto.admin.catalog.categories.create.card.accordion.filterable_attributes.before') !!}
+                {!! view_render_event('exygnus.admin.catalog.categories.create.card.accordion.filterable_attributes.before') !!}
 
                 <!-- Filterable Attributes -->
                 <x-admin::accordion>
@@ -390,16 +390,16 @@
                     </x-slot>
                 </x-admin::accordion>
 
-                {!! view_render_event('bagisto.admin.catalog.categories.create.card.accordion.filterable_attributes.after') !!}
+                {!! view_render_event('exygnus.admin.catalog.categories.create.card.accordion.filterable_attributes.after') !!}
 
             </div>
         </div>
 
-        {!! view_render_event('bagisto.admin.catalog.categories.create.create_form_controls.after') !!}
+        {!! view_render_event('exygnus.admin.catalog.categories.create.create_form_controls.after') !!}
 
     </x-admin::form>
 
-    {!! view_render_event('bagisto.admin.catalog.categories.create.after') !!}
+    {!! view_render_event('exygnus.admin.catalog.categories.create.after') !!}
 
     @pushOnce('scripts')
         <script

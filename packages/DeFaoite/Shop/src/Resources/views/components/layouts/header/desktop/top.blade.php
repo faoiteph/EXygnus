@@ -1,4 +1,4 @@
-{!! view_render_event('bagisto.shop.components.layouts.header.desktop.top.before') !!}
+{!! view_render_event('exygnus.shop.components.layouts.header.desktop.top.before') !!}
 
 <v-topbar>
     <!-- Shimmer Effect -->
@@ -48,7 +48,7 @@
     </div>
 </v-topbar>
 
-{!! view_render_event('bagisto.shop.components.layouts.header.desktop.top.after') !!}
+{!! view_render_event('exygnus.shop.components.layouts.header.desktop.top.after') !!}
 
 @pushOnce('scripts')
     <script
@@ -56,7 +56,7 @@
         id="v-topbar-template"
     >
         <div class="flex w-full items-center justify-between border border-b border-l-0 border-r-0 border-t-0 px-16">
-            {!! view_render_event('bagisto.shop.components.layouts.header.desktop.top.currency_switcher.before') !!}
+            {!! view_render_event('exygnus.shop.components.layouts.header.desktop.top.currency_switcher.before') !!}
 
             <!-- Currency Switcher -->
             <x-shop::dropdown position="bottom-{{ core()->getCurrentLocale()->direction === 'ltr' ? 'left' : 'right' }}">
@@ -87,7 +87,7 @@
                 </x-slot>
             </x-shop::dropdown>
 
-            {!! view_render_event('bagisto.shop.components.layouts.header.desktop.top.currency_switcher.after') !!}
+            {!! view_render_event('exygnus.shop.components.layouts.header.desktop.top.currency_switcher.after') !!}
 
             <p
                 class="py-3 text-xs font-medium"
@@ -104,7 +104,7 @@
                 </a>
             </p>
 
-            {!! view_render_event('bagisto.shop.components.layouts.header.desktop.top.locale_switcher.before') !!}
+            {!! view_render_event('exygnus.shop.components.layouts.header.desktop.top.locale_switcher.before') !!}
 
             <!-- Locales Switcher -->
             <x-shop::dropdown position="bottom-{{ core()->getCurrentLocale()->direction === 'ltr' ? 'right' : 'left' }}">
@@ -119,7 +119,7 @@
                         <img
                             src="{{ ! empty(core()->getCurrentLocale()->logo_url)
                                     ? core()->getCurrentLocale()->logo_url
-                                    : bagisto_asset('images/default-language.svg')
+                                    : exygnus_asset('images/default-language.svg')
                                 }}"
                             class="h-full"
                             alt="@lang('shop::app.components.layouts.header.desktop.top.default-locale')"
@@ -145,7 +145,7 @@
                 </x-slot>
             </x-shop::dropdown>
 
-            {!! view_render_event('bagisto.shop.components.layouts.header.desktop.top.locale_switcher.after') !!}
+            {!! view_render_event('exygnus.shop.components.layouts.header.desktop.top.locale_switcher.after') !!}
         </div>
     </script>
 
@@ -177,7 +177,7 @@
                 @click="change(locale)"                  
             >
                 <img
-                    :src="locale.logo_url || '{{ bagisto_asset('images/default-language.svg') }}'"
+                    :src="locale.logo_url || '{{ exygnus_asset('images/default-language.svg') }}'"
                     width="24"
                     height="16"
                 />

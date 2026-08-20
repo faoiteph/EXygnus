@@ -1,4 +1,4 @@
-{!! view_render_event('bagisto.shop.components.layouts.header.desktop.bottom.before') !!}
+{!! view_render_event('exygnus.shop.components.layouts.header.desktop.bottom.before') !!}
 
 <div class="flex min-h-[78px] w-full justify-between border border-b border-l-0 border-r-0 border-t-0 px-[60px] max-1180:px-8">
     <!--
@@ -7,23 +7,23 @@
     -->
     <!-- Left Nagivation Section -->
     <div class="flex items-center gap-x-10 max-[1180px]:gap-x-5">
-        {!! view_render_event('bagisto.shop.components.layouts.header.desktop.bottom.logo.before') !!}
+        {!! view_render_event('exygnus.shop.components.layouts.header.desktop.bottom.logo.before') !!}
 
         <a
             href="{{ route('shop.home.index') }}"
-            aria-label="@lang('shop::app.components.layouts.header.desktop.bottom.bagisto')"
+            aria-label="@lang('shop::app.components.layouts.header.desktop.bottom.exygnus')"
         >
             <img
-                src="{{ core()->getCurrentChannel()->logo_url ?? bagisto_asset('images/logo.svg') }}"
+                src="{{ core()->getCurrentChannel()->logo_url ?? exygnus_asset('images/logo.svg') }}"
                 width="131"
                 height="29"
                 alt="{{ config('app.name') }}"
             >
         </a>
 
-        {!! view_render_event('bagisto.shop.components.layouts.header.desktop.bottom.logo.after') !!}
+        {!! view_render_event('exygnus.shop.components.layouts.header.desktop.bottom.logo.after') !!}
 
-        {!! view_render_event('bagisto.shop.components.layouts.header.desktop.bottom.category.before') !!}
+        {!! view_render_event('exygnus.shop.components.layouts.header.desktop.bottom.category.before') !!}
 
         <v-desktop-category>
             <div class="flex items-center gap-5">
@@ -44,13 +44,13 @@
             </div>
         </v-desktop-category>
 
-        {!! view_render_event('bagisto.shop.components.layouts.header.desktop.bottom.category.after') !!}
+        {!! view_render_event('exygnus.shop.components.layouts.header.desktop.bottom.category.after') !!}
     </div>
 
     <!-- Right Nagivation Section -->
     <div class="flex items-center gap-x-9 max-[1100px]:gap-x-6 max-lg:gap-x-8">
 
-        {!! view_render_event('bagisto.shop.components.layouts.header.desktop.bottom.search_bar.before') !!}
+        {!! view_render_event('exygnus.shop.components.layouts.header.desktop.bottom.search_bar.before') !!}
 
         <!-- Search Bar Container -->
         <div class="relative w-full">
@@ -99,12 +99,12 @@
             </form>
         </div>
 
-        {!! view_render_event('bagisto.shop.components.layouts.header.desktop.bottom.search_bar.after') !!}
+        {!! view_render_event('exygnus.shop.components.layouts.header.desktop.bottom.search_bar.after') !!}
 
         <!-- Right Navigation Links -->
         <div class="mt-1.5 flex gap-x-8 max-[1100px]:gap-x-6 max-lg:gap-x-8">
 
-            {!! view_render_event('bagisto.shop.components.layouts.header.desktop.bottom.compare.before') !!}
+            {!! view_render_event('exygnus.shop.components.layouts.header.desktop.bottom.compare.before') !!}
 
             <!-- Compare -->
             @if(core()->getConfigData('catalog.products.settings.compare_option'))
@@ -119,18 +119,18 @@
                 </a>
             @endif
 
-            {!! view_render_event('bagisto.shop.components.layouts.header.desktop.bottom.compare.after') !!}
+            {!! view_render_event('exygnus.shop.components.layouts.header.desktop.bottom.compare.after') !!}
 
-            {!! view_render_event('bagisto.shop.components.layouts.header.desktop.bottom.mini_cart.before') !!}
+            {!! view_render_event('exygnus.shop.components.layouts.header.desktop.bottom.mini_cart.before') !!}
 
             <!-- Mini cart -->
             @if(core()->getConfigData('sales.checkout.shopping_cart.cart_page'))
                 @include('shop::checkout.cart.mini-cart')
             @endif
 
-            {!! view_render_event('bagisto.shop.components.layouts.header.desktop.bottom.mini_cart.after') !!}
+            {!! view_render_event('exygnus.shop.components.layouts.header.desktop.bottom.mini_cart.after') !!}
 
-            {!! view_render_event('bagisto.shop.components.layouts.header.desktop.bottom.profile.before') !!}
+            {!! view_render_event('exygnus.shop.components.layouts.header.desktop.bottom.profile.before') !!}
 
             <!-- user profile -->
             <x-shop::dropdown position="bottom-{{ core()->getCurrentLocale()->direction === 'ltr' ? 'right' : 'left' }}">
@@ -158,10 +158,10 @@
 
                         <p class="w-full mt-3 border border-zinc-200"></p>
 
-                        {!! view_render_event('bagisto.shop.components.layouts.header.desktop.bottom.customers_action.before') !!}
+                        {!! view_render_event('exygnus.shop.components.layouts.header.desktop.bottom.customers_action.before') !!}
 
                         <div class="flex gap-4 mt-6">
-                            {!! view_render_event('bagisto.shop.components.layouts.header.desktop.bottom.sign_in_button.before') !!}
+                            {!! view_render_event('exygnus.shop.components.layouts.header.desktop.bottom.sign_in_button.before') !!}
 
                             <a
                                 href="{{ route('shop.customer.session.create') }}"
@@ -177,7 +177,7 @@
                                 @lang('shop::app.components.layouts.header.desktop.bottom.sign-up')
                             </a>
 
-                            {!! view_render_event('bagisto.shop.components.layouts.header.desktop.bottom.sign_up_button.after') !!}
+                            {!! view_render_event('exygnus.shop.components.layouts.header.desktop.bottom.sign_up_button.after') !!}
                         </div>
 
                         @if (core()->getConfigData('sales.eu_withdrawal.general.enabled', core()->getCurrentChannelCode()))
@@ -189,7 +189,7 @@
                             </a>
                         @endif
 
-                        {!! view_render_event('bagisto.shop.components.layouts.header.desktop.bottom.customers_action.after') !!}
+                        {!! view_render_event('exygnus.shop.components.layouts.header.desktop.bottom.customers_action.after') !!}
                     </x-slot>
                 @endguest
 
@@ -210,7 +210,7 @@
                         <p class="w-full mt-3 border border-zinc-200"></p>
 
                         <div class="mt-2.5 grid gap-1 pb-2.5">
-                            {!! view_render_event('bagisto.shop.components.layouts.header.desktop.bottom.profile_dropdown.links.before') !!}
+                            {!! view_render_event('exygnus.shop.components.layouts.header.desktop.bottom.profile_dropdown.links.before') !!}
 
                             <a
                                 class="px-5 py-2 text-base cursor-pointer hover:bg-gray-100"
@@ -252,13 +252,13 @@
                                 </a>
                             @endauth
 
-                            {!! view_render_event('bagisto.shop.components.layouts.header.desktop.bottom.profile_dropdown.links.after') !!}
+                            {!! view_render_event('exygnus.shop.components.layouts.header.desktop.bottom.profile_dropdown.links.after') !!}
                         </div>
                     </x-slot>
                 @endauth
             </x-shop::dropdown>
 
-            {!! view_render_event('bagisto.shop.components.layouts.header.desktop.bottom.profile.after') !!}
+            {!! view_render_event('exygnus.shop.components.layouts.header.desktop.bottom.profile.after') !!}
         </div>
     </div>
 </div>
@@ -410,7 +410,7 @@
                 </div>
             </div>
 
-            <!-- Bagisto Drawer Integration -->
+            <!-- EXygnus Drawer Integration -->
             <x-shop::drawer
                 position="left"
                 width="400px"
@@ -653,4 +653,4 @@
         });
     </script>
 @endPushOnce
-{!! view_render_event('bagisto.shop.components.layouts.header.desktop.bottom.after') !!}
+{!! view_render_event('exygnus.shop.components.layouts.header.desktop.bottom.after') !!}

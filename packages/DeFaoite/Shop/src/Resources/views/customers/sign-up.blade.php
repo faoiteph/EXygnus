@@ -22,17 +22,17 @@
     </x-slot>
 
 	<div class="container mt-20 max-1180:px-5 max-md:mt-12">
-        {!! view_render_event('bagisto.shop.customers.sign-up.logo.before') !!}
+        {!! view_render_event('exygnus.shop.customers.sign-up.logo.before') !!}
 
         <!-- Company Logo -->
         <div class="flex items-center gap-x-14 max-[1180px]:gap-x-9">
             <a
                 href="{{ route('shop.home.index') }}"
                 class="m-[0_auto_20px_auto]"
-                aria-label="@lang('shop::app.customers.signup-form.bagisto')"
+                aria-label="@lang('shop::app.customers.signup-form.exygnus')"
             >
                 <img
-                    src="{{ core()->getCurrentChannel()->logo_url ?? bagisto_asset('images/logo.svg') }}"
+                    src="{{ core()->getCurrentChannel()->logo_url ?? exygnus_asset('images/logo.svg') }}"
                     alt="{{ config('app.name') }}"
                     width="131"
                     height="29"
@@ -40,7 +40,7 @@
             </a>
         </div>
 
-        {!! view_render_event('bagisto.shop.customers.sign-up.logo.before') !!}
+        {!! view_render_event('exygnus.shop.customers.sign-up.logo.before') !!}
 
         <!-- Form Container -->
 		<div class="m-auto w-full max-w-[870px] rounded-xl border border-zinc-200 p-16 px-[90px] max-md:px-8 max-md:py-8 max-sm:border-none max-sm:p-0">
@@ -54,7 +54,7 @@
 
             <div class="mt-14 rounded max-sm:mt-8">
                 <x-shop::form :action="route('shop.customers.register.store')">
-                    {!! view_render_event('bagisto.shop.customers.signup_form_controls.before') !!}
+                    {!! view_render_event('exygnus.shop.customers.signup_form_controls.before') !!}
 
                     <!-- First Name -->
                     <x-shop::form.control-group>
@@ -77,7 +77,7 @@
                         <x-shop::form.control-group.error control-name="first_name" />
                     </x-shop::form.control-group>
 
-                    {!! view_render_event('bagisto.shop.customers.signup_form.first_name.after') !!}
+                    {!! view_render_event('exygnus.shop.customers.signup_form.first_name.after') !!}
 
                     <!-- Last Name -->
                     <x-shop::form.control-group>
@@ -100,7 +100,7 @@
                         <x-shop::form.control-group.error control-name="last_name" />
                     </x-shop::form.control-group>
 
-                    {!! view_render_event('bagisto.shop.customers.signup_form.last_name.after') !!}
+                    {!! view_render_event('exygnus.shop.customers.signup_form.last_name.after') !!}
 
                     <!-- Email -->
                     <x-shop::form.control-group>
@@ -123,7 +123,7 @@
                         <x-shop::form.control-group.error control-name="email" />
                     </x-shop::form.control-group>
 
-                    {!! view_render_event('bagisto.shop.customers.signup_form.email.after') !!}
+                    {!! view_render_event('exygnus.shop.customers.signup_form.email.after') !!}
 
                     <!-- Password -->
                     <x-shop::form.control-group class="mb-6">
@@ -147,7 +147,7 @@
                         <x-shop::form.control-group.error control-name="password" />
                     </x-shop::form.control-group>
 
-                    {!! view_render_event('bagisto.shop.customers.signup_form.password.after') !!}
+                    {!! view_render_event('exygnus.shop.customers.signup_form.password.after') !!}
 
                     <!-- Confirm Password -->
                     <x-shop::form.control-group>
@@ -170,7 +170,7 @@
                         <x-shop::form.control-group.error control-name="password_confirmation" />
                     </x-shop::form.control-group>
 
-                    {!! view_render_event('bagisto.shop.customers.signup_form.password_confirmation.after') !!}
+                    {!! view_render_event('exygnus.shop.customers.signup_form.password_confirmation.after') !!}
 
                     <!-- Captcha -->
                     @if (core()->getConfigData('customer.captcha.credentials.status'))
@@ -205,7 +205,7 @@
                         </div>
                     @endif
 
-                    {!! view_render_event('bagisto.shop.customers.signup_form.newsletter_subscription.after') !!}
+                    {!! view_render_event('exygnus.shop.customers.signup_form.newsletter_subscription.after') !!}
 
                     @if(
                         core()->getConfigData('general.gdpr.settings.enabled')
@@ -252,11 +252,11 @@
                         </button>
 
                         <div class="flex flex-wrap gap-4">
-                            {!! view_render_event('bagisto.shop.customers.login_form_controls.after') !!}
+                            {!! view_render_event('exygnus.shop.customers.login_form_controls.after') !!}
                         </div>
                     </div>
 
-                    {!! view_render_event('bagisto.shop.customers.signup_form_controls.after') !!}
+                    {!! view_render_event('exygnus.shop.customers.signup_form_controls.after') !!}
 
                 </x-shop::form>
             </div>

@@ -2,12 +2,12 @@
     $bookingProduct = app('\DeFaoite\BookingProduct\Repositories\BookingProductRepository')->findOneByField('product_id', $product->id)
 @endphp
 
-{!! view_render_event('bagisto.admin.catalog.product.edit.form.types.booking.before', ['product' => $product]) !!}
+{!! view_render_event('exygnus.admin.catalog.product.edit.form.types.booking.before', ['product' => $product]) !!}
 
 <!-- Vue Component -->
 <v-booking-information></v-booking-information>
 
-{!! view_render_event('bagisto.admin.catalog.product.edit.form.types.booking.after', ['product' => $product]) !!}
+{!! view_render_event('exygnus.admin.catalog.product.edit.form.types.booking.after', ['product' => $product]) !!}
 
 @pushOnce('scripts')
     <script

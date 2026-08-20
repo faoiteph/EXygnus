@@ -1,10 +1,10 @@
-{!! view_render_event('bagisto.admin.catalog.product.edit.form.types.downloadable.before', ['product' => $product]) !!}
+{!! view_render_event('exygnus.admin.catalog.product.edit.form.types.downloadable.before', ['product' => $product]) !!}
 
 <v-downloadable-links :errors="errors"></v-downloadable-links>
 
 <v-downloadable-samples :errors="errors"></v-downloadable-samples>
 
-{!! view_render_event('bagisto.admin.catalog.product.edit.form.types.downloadable.after', ['product' => $product]) !!}
+{!! view_render_event('exygnus.admin.catalog.product.edit.form.types.downloadable.after', ['product' => $product]) !!}
 
 @pushOnce('scripts')
     <script
@@ -241,7 +241,7 @@
             >
                 <!-- Placeholder Image -->
                 <img
-                    src="{{ bagisto_asset('images/icon-add-product.svg') }}"
+                    src="{{ exygnus_asset('images/icon-add-product.svg') }}"
                     class="h-20 w-20 dark:mix-blend-exclusion dark:invert"
                 />
 
@@ -686,7 +686,7 @@
             >
                 <!-- Placeholder Image -->
                 <img
-                    src="{{ bagisto_asset('images/icon-add-product.svg') }}"
+                    src="{{ exygnus_asset('images/icon-add-product.svg') }}"
                     class="h-20 w-20 dark:mix-blend-exclusion dark:invert"
                 />
 

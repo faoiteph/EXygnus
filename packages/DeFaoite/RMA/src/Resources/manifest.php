@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'name' => 'Webkul Bagisto RMA',
+    'name' => 'De Faoite EXygnus RMA',
     'version' => core()->version(),
 ];

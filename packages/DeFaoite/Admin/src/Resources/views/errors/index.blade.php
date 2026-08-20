@@ -11,7 +11,7 @@
                 @php
                     $logoUrl = core()->getConfigData('general.design.admin_logo.logo_image') 
                                 ? Storage::url(core()->getConfigData('general.design.admin_logo.logo_image')) 
-                                : bagisto_asset('images/logo.svg');
+                                : exygnus_asset('images/logo.svg');
                 @endphp
 
                 <img
@@ -63,7 +63,7 @@
             </div>
 
             <div class="w-full">
-                <img src="{{ bagisto_asset('images/error.svg') }}" />
+                <img src="{{ exygnus_asset('images/error.svg') }}" />
             </div>
         </div>
 	</div>

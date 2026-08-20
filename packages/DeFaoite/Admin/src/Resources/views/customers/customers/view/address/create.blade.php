@@ -23,14 +23,14 @@
             </div>
         @endif
 
-        {!! view_render_event('bagisto.admin.customers.addresses.create.before') !!}
+        {!! view_render_event('exygnus.admin.customers.addresses.create.before') !!}
 
         <x-admin::form
             v-slot="{ meta, errors, handleSubmit }"
             as="div"
         >
             <form @submit="handleSubmit($event, create)">
-                {!! view_render_event('bagisto.admin.customers.addresses.create.create_form_controls.before') !!}
+                {!! view_render_event('exygnus.admin.customers.addresses.create.create_form_controls.before') !!}
 
                 <!-- Address Create Drawer -->
                 <x-admin::drawer
@@ -46,7 +46,7 @@
 
                     <!-- Drawer Content -->
                     <x-slot:content>
-                        {!! view_render_event('bagisto.admin.customers.addresses.create.before') !!}
+                        {!! view_render_event('exygnus.admin.customers.addresses.create.before') !!}
 
                         <!-- Company Name -->
                         <x-admin::form.control-group class="w-full">
@@ -307,7 +307,7 @@
 
                         <x-admin::form.control-group.error control-name="default_address" />
 
-                        {!! view_render_event('bagisto.admin.customers.create.after') !!}
+                        {!! view_render_event('exygnus.admin.customers.create.after') !!}
 
                         <!-- Modal Submission -->
                         <x-admin::button
@@ -320,12 +320,12 @@
                     </x-slot>
                 </x-admin::drawer>
 
-                {!! view_render_event('bagisto.admin.customers.addresses.create.create_form_controls.after') !!}
+                {!! view_render_event('exygnus.admin.customers.addresses.create.create_form_controls.after') !!}
 
             </form>
         </x-admin::form>
 
-        {!! view_render_event('bagisto.admin.customers.addresses.create.after') !!}
+        {!! view_render_event('exygnus.admin.customers.addresses.create.after') !!}
 
     </script>
 

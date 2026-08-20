@@ -10,7 +10,7 @@
         
         <div class="flex items-center gap-x-2.5">
             <div class="flex items-center gap-x-2.5">
-                {!! view_render_event('bagisto.admin.settings.themes.create.before') !!}
+                {!! view_render_event('exygnus.admin.settings.themes.create.before') !!}
 
                 <!-- Create Button -->
                 <v-create-theme-form>
@@ -22,16 +22,16 @@
                     </button>  
                 </v-create-theme-form>
 
-                {!! view_render_event('bagisto.admin.settings.themes.create.after') !!}
+                {!! view_render_event('exygnus.admin.settings.themes.create.after') !!}
             </div>
         </div>
     </div>
     
-    {!! view_render_event('bagisto.admin.settings.themes.list.before') !!}
+    {!! view_render_event('exygnus.admin.settings.themes.list.before') !!}
 
     <x-admin::datagrid :src="route('admin.settings.themes.index')" />
 
-    {!! view_render_event('bagisto.admin.settings.themes.list.after') !!}
+    {!! view_render_event('exygnus.admin.settings.themes.list.after') !!}
 
     @pushOnce('scripts')
         <script

@@ -1,15 +1,15 @@
-{!! view_render_event('bagisto.shop.settings.gdpr.modal.before') !!}
+{!! view_render_event('exygnus.shop.settings.gdpr.modal.before') !!}
 
 <v-cookie></v-cookie>
 
-{!! view_render_event('bagisto.shop.settings.gdpr.modal.before') !!}
+{!! view_render_event('exygnus.shop.settings.gdpr.modal.before') !!}
 
 @pushOnce('scripts')
     <script
         type="text/x-template"
         id="v-cookie-template"
     >
-        {!! view_render_event('bagisto.shop.settings.gdpr.modal.cookie.before') !!}
+        {!! view_render_event('exygnus.shop.settings.gdpr.modal.cookie.before') !!}
 
             @if (core()->getConfigData('general.gdpr.cookie.enabled'))
                 <div
@@ -68,7 +68,7 @@
                 </div>
             @endif
 
-        {!! view_render_event('bagisto.shop.settings.gdpr.modal.cookie.before') !!}
+        {!! view_render_event('exygnus.shop.settings.gdpr.modal.cookie.before') !!}
     </script>
 
     <script type="module">

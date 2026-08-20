@@ -4,13 +4,13 @@
         @lang('admin::app.settings.data-transfer.imports.create.title')
     </x-slot>
 
-    {!! view_render_event('bagisto.admin.settings.data_transfer.imports.create.before') !!}
+    {!! view_render_event('exygnus.admin.settings.data_transfer.imports.create.before') !!}
 
     <x-admin::form
         :action="route('admin.settings.data_transfer.imports.store')"
         enctype="multipart/form-data"
     >
-        {!! view_render_event('bagisto.admin.settings.data_transfer.imports.create.create_form_controls.before') !!}
+        {!! view_render_event('exygnus.admin.settings.data_transfer.imports.create.create_form_controls.before') !!}
 
         <!-- Page Header -->
         <div class="flex items-center justify-between">
@@ -52,7 +52,7 @@
         <div class="mt-3.5 flex gap-2.5 max-xl:flex-wrap">
             <!-- Left Container -->
             <div class="flex flex-1 flex-col gap-2 max-xl:flex-auto">
-                {!! view_render_event('bagisto.admin.settings.data_transfer.imports.create.card.general.before') !!}
+                {!! view_render_event('exygnus.admin.settings.data_transfer.imports.create.card.general.before') !!}
 
                 <!-- Setup Import Panel -->
                 <div class="box-shadow rounded bg-white p-4 dark:bg-gray-900">
@@ -132,12 +132,12 @@
                 <!-- Product Images -->
                 @include('admin::settings.data-transfer.imports.images')
 
-                {!! view_render_event('bagisto.admin.settings.data_transfer.imports.create.card.general.after') !!}
+                {!! view_render_event('exygnus.admin.settings.data_transfer.imports.create.card.general.after') !!}
             </div>
 
             <!-- Right Container -->
             <div class="flex w-[360px] max-w-full flex-col gap-2 max-sm:w-full">
-                {!! view_render_event('bagisto.admin.settings.data_transfer.imports.create.card.accordion.settings.before') !!}
+                {!! view_render_event('exygnus.admin.settings.data_transfer.imports.create.card.accordion.settings.before') !!}
 
                 <!-- Settings Panel -->
                 <x-admin::accordion>
@@ -246,10 +246,10 @@
                     </x-slot>
                 </x-admin::accordion>
 
-                {!! view_render_event('bagisto.admin.settings.data_transfer.imports.create.card.accordion.settings.after') !!}
+                {!! view_render_event('exygnus.admin.settings.data_transfer.imports.create.card.accordion.settings.after') !!}
             </div>
         </div>
 
-        {!! view_render_event('bagisto.admin.settings.data_transfer.imports.create.create_form_controls.after') !!}
+        {!! view_render_event('exygnus.admin.settings.data_transfer.imports.create.create_form_controls.after') !!}
     </x-admin::form>
 </x-admin::layouts>

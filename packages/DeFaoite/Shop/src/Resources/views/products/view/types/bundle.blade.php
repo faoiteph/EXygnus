@@ -1,9 +1,9 @@
 @if ($product->type == 'bundle')
-    {!! view_render_event('bagisto.shop.products.view.bundle-options.before', ['product' => $product]) !!}
+    {!! view_render_event('exygnus.shop.products.view.bundle-options.before', ['product' => $product]) !!}
 
     <v-product-bundle-options :errors="errors"></v-product-bundle-options>
 
-    {!! view_render_event('bagisto.shop.products.view.bundle-options.after', ['product' => $product]) !!}
+    {!! view_render_event('exygnus.shop.products.view.bundle-options.after', ['product' => $product]) !!}
 
     @pushOnce('scripts')
         <script

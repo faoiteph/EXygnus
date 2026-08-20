@@ -5,7 +5,7 @@ namespace DeFaoite\Core\Helpers;
 class SupportedCurrencies
 {
     /**
-     * Every currency Bagisto ships, keyed by its ISO 4217 code.
+     * Every currency EXygnus ships, keyed by its ISO 4217 code.
      *
      * The single place a currency is added. `name` is the suffix of the translation key its
      * label is read from, so the installer's console and its screens both name it the same

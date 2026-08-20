@@ -46,7 +46,7 @@
                 </div>
             </div>
 
-            {!! view_render_event('bagisto.admin.marketing.communications.events.list.before') !!}
+            {!! view_render_event('exygnus.admin.marketing.communications.events.list.before') !!}
 
             <x-admin::datagrid
                 :src="route('admin.marketing.communications.events.index')"
@@ -113,9 +113,9 @@
                 </template>
             </x-admin::datagrid>
 
-            {!! view_render_event('bagisto.admin.marketing.communications.events.list.after') !!}
+            {!! view_render_event('exygnus.admin.marketing.communications.events.list.after') !!}
 
-            {!! view_render_event('bagisto.admin.marketing.communications.events.create.before') !!}
+            {!! view_render_event('exygnus.admin.marketing.communications.events.create.before') !!}
 
             <!-- Email Events form -->
             <x-admin::form
@@ -128,7 +128,7 @@
                     ref="eventCreateForm"
                 >
 
-                    {!! view_render_event('bagisto.admin.marketing.communications.events.create_form_controls.before') !!}
+                    {!! view_render_event('exygnus.admin.marketing.communications.events.create_form_controls.before') !!}
 
                     <x-admin::modal ref="emailEvents">
                         <!-- Modal Header -->
@@ -230,12 +230,12 @@
                         </x-slot>
                     </x-admin::modal>
 
-                    {!! view_render_event('bagisto.admin.marketing.communications.events.create_form_controls.after') !!}
+                    {!! view_render_event('exygnus.admin.marketing.communications.events.create_form_controls.after') !!}
 
                 </form>
             </x-admin::form>
 
-            {!! view_render_event('bagisto.admin.marketing.communications.events.create.after') !!}
+            {!! view_render_event('exygnus.admin.marketing.communications.events.create.after') !!}
 
         </script>
 

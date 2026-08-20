@@ -5,7 +5,7 @@ return [
         'forgot-password' => [
             'already-sent' => 'כבר איפוס סיסמה נשלח דואר.',
             'back' => 'חזרה להתחברות?',
-            'bagisto' => 'אקסיגנוס',
+            'exygnus' => 'אקסיגנוס',
             'email' => 'אימייל',
             'email-not-exist' => 'אנחנו לא מוצאים משתמש עם כתובת הדוא"ל הזו.',
             'footer' => '© זכויות יוצרים 2010 - :current_year, DeFaoite Software (רשומה בהודו). כל הזכויות שמורות.',
@@ -19,7 +19,7 @@ return [
 
         'reset-password' => [
             'back-link-title' => 'חזרה להתחברות',
-            'bagisto' => 'אקסיגנוס',
+            'exygnus' => 'אקסיגנוס',
             'confirm-password' => 'אימות סיסמה',
             'email' => 'אימייל רשום',
             'footer' => '© זכויות יוצרים 2010 - :current_year, DeFaoite Software (רשומה בהודו). כל הזכויות שמורות.',
@@ -29,7 +29,7 @@ return [
         ],
 
         'login-form' => [
-            'bagisto' => 'אקסיגנוס',
+            'exygnus' => 'אקסיגנוס',
             'button-title' => 'התחברות',
             'create-your-account' => 'צור את החשבון שלך',
             'email' => 'אימייל',
@@ -49,7 +49,7 @@ return [
 
         'signup-form' => [
             'account-exists' => 'כבר יש לך חשבון?',
-            'bagisto' => 'אקסיגנוס',
+            'exygnus' => 'אקסיגנוס',
             'button-title' => 'הירשם',
             'click-here' => 'לחץ כאן',
             'confirm-pass' => 'אימות סיסמה',
@@ -564,7 +564,7 @@ return [
                     'bottom' => [
                         'all' => 'הכל',
                         'back-button' => 'חזרה לתפריט הראשי',
-                        'bagisto' => 'באגיסטו',
+                        'exygnus' => 'באגיסטו',
                         'categories' => 'קטגוריות',
                         'compare' => 'השווה',
                         'dropdown-text' => 'ניהול עגלה, הזמנות ורשימת משאלות',
@@ -585,7 +585,7 @@ return [
                 'mobile' => [
                     'account' => 'חשבון',
                     'back-button' => 'חזרה לתפריט הראשי',
-                    'bagisto' => 'באגיסטו',
+                    'exygnus' => 'באגיסטו',
                     'compare' => 'השווה',
                     'currencies' => 'מטבעות',
                     'dropdown-text' => 'ניהול עגלה, הזמנות ורשימת משאלות',
@@ -1078,7 +1078,7 @@ return [
             'suspended-account-message' => 'החשבון שלך הושבת.',
 
             'index' => [
-                'bagisto' => 'אקסיגנוס',
+                'exygnus' => 'אקסיגנוס',
                 'cart' => 'עגלת קניות',
                 'continue-shopping' => 'המשך לקנות',
                 'empty-product' => 'אין לך מוצר בעגלה שלך.',

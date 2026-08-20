@@ -3306,7 +3306,7 @@ it('should calculate tax on the discounted price when apply tax on is set to aft
 
     $cartRuleCoupon = CartRuleCoupon::factory()->create([
         'cart_rule_id' => $cartRule->id,
-        'code' => $couponCode = fake()->numerify('bagisto-########'),
+        'code' => $couponCode = fake()->numerify('exygnus-########'),
         'type' => 0,
         'is_primary' => 1,
     ]);
@@ -3447,7 +3447,7 @@ it('should calculate tax on the original price when apply tax on is set to befor
 
     $cartRuleCoupon = CartRuleCoupon::factory()->create([
         'cart_rule_id' => $cartRule->id,
-        'code' => $couponCode = fake()->numerify('bagisto-########'),
+        'code' => $couponCode = fake()->numerify('exygnus-########'),
         'type' => 0,
         'is_primary' => 1,
     ]);
@@ -3583,7 +3583,7 @@ it('should not change the inclusive-tax grand total when apply tax on is set to 
 
     $cartRuleCoupon = CartRuleCoupon::factory()->create([
         'cart_rule_id' => $cartRule->id,
-        'code' => $couponCode = fake()->numerify('bagisto-########'),
+        'code' => $couponCode = fake()->numerify('exygnus-########'),
         'type' => 0,
         'is_primary' => 1,
     ]);

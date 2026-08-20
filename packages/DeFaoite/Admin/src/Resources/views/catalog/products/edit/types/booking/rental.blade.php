@@ -1,9 +1,9 @@
-{!! view_render_event('bagisto.admin.catalog.product.edit.booking.rental.before', ['product' => $product]) !!}
+{!! view_render_event('exygnus.admin.catalog.product.edit.booking.rental.before', ['product' => $product]) !!}
 
 <!-- Vue Component -->
 <v-rental-booking></v-rental-booking>
 
-{!! view_render_event('bagisto.admin.catalog.product.edit.booking.rental.after', ['product' => $product]) !!}
+{!! view_render_event('exygnus.admin.catalog.product.edit.booking.rental.after', ['product' => $product]) !!}
 
 @pushOnce('scripts')
     <script

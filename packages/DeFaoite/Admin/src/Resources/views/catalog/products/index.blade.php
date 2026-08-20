@@ -31,7 +31,7 @@
             <!-- Export Modal -->
             <x-admin::datagrid.export :src="route('admin.catalog.products.index')" />
 
-            {!! view_render_event('bagisto.admin.catalog.products.create.before') !!}
+            {!! view_render_event('exygnus.admin.catalog.products.create.before') !!}
 
             @if (bouncer()->hasPermission('catalog.products.create'))
                 <v-create-product-form>
@@ -44,11 +44,11 @@
                 </v-create-product-form>
             @endif
 
-            {!! view_render_event('bagisto.admin.catalog.products.create.after') !!}
+            {!! view_render_event('exygnus.admin.catalog.products.create.after') !!}
         </div>
     </div>
 
-    {!! view_render_event('bagisto.admin.catalog.products.list.before') !!}
+    {!! view_render_event('exygnus.admin.catalog.products.list.before') !!}
 
     <!-- Datagrid -->
     <x-admin::datagrid
@@ -198,7 +198,7 @@
 
                                     <template v-else>
                                         <div class="relative h-12 w-12 rounded border border-dashed border-gray-300 dark:border-gray-800 dark:mix-blend-exclusion dark:invert sm:h-16 sm:w-16">
-                                            <img src="{{ bagisto_asset('images/product-placeholders/front.svg')}}" class="h-full w-full object-cover">
+                                            <img src="{{ exygnus_asset('images/product-placeholders/front.svg')}}" class="h-full w-full object-cover">
 
                                             <p class="absolute bottom-0 w-full text-center text-[6px] font-semibold text-gray-400">
                                                 @lang('admin::app.catalog.products.index.datagrid.product-image')
@@ -342,7 +342,7 @@
 
                                 <template v-else>
                                     <div class="relative h-[60px] max-h-[60px] w-full max-w-[60px] rounded border border-dashed border-gray-300 dark:border-gray-800 dark:mix-blend-exclusion dark:invert">
-                                        <img src="{{ bagisto_asset('images/product-placeholders/front.svg')}}">
+                                        <img src="{{ exygnus_asset('images/product-placeholders/front.svg')}}">
 
                                         <p class="absolute bottom-1.5 w-full text-center text-[6px] font-semibold text-gray-400">
                                             @lang('admin::app.catalog.products.index.datagrid.product-image')
@@ -433,7 +433,7 @@
         </template>
     </x-admin::datagrid>
 
-    {!! view_render_event('bagisto.admin.catalog.products.list.after') !!}
+    {!! view_render_event('exygnus.admin.catalog.products.list.after') !!}
 
     @pushOnce('scripts')
         <script
@@ -479,7 +479,7 @@
                             <!-- Modal Content -->
                             <x-slot:content>
                                 <div v-show="! attributes.length">
-                                    {!! view_render_event('bagisto.admin.catalog.products.create_form.general.controls.before') !!}
+                                    {!! view_render_event('exygnus.admin.catalog.products.create_form.general.controls.before') !!}
 
                                     <!-- Product Type -->
                                     <x-admin::form.control-group>
@@ -544,11 +544,11 @@
                                         <x-admin::form.control-group.error control-name="sku" />
                                     </x-admin::form.control-group>
 
-                                    {!! view_render_event('bagisto.admin.catalog.products.create_form.general.controls.after') !!}
+                                    {!! view_render_event('exygnus.admin.catalog.products.create_form.general.controls.after') !!}
                                 </div>
 
                                 <div v-show="attributes.length">
-                                    {!! view_render_event('bagisto.admin.catalog.products.create_form.attributes.controls.before') !!}
+                                    {!! view_render_event('exygnus.admin.catalog.products.create_form.attributes.controls.before') !!}
 
                                     <div
                                         class="mb-2.5"
@@ -576,7 +576,7 @@
                                         </div>
                                     </div>
 
-                                    {!! view_render_event('bagisto.admin.catalog.products.create_form.attributes.controls.after') !!}
+                                    {!! view_render_event('exygnus.admin.catalog.products.create_form.attributes.controls.after') !!}
                                 </div>
                             </x-slot>
 

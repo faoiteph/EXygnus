@@ -806,7 +806,7 @@ return [
         'index' => [
             'create-administrator' => [
                 'admin' => 'অ্যাডমিন',
-                'bagisto' => 'এক্সিগনাস',
+                'exygnus' => 'এক্সিগনাস',
                 'confirm-password' => 'পাসওয়ার্ড নিশ্চিত করুন',
                 'email' => 'ইমেইল',
                 'email-address' => 'admin@example.com',
@@ -821,7 +821,7 @@ return [
                 'application-name' => 'অ্যাপ্লিকেশন নাম',
                 'argentine-peso' => 'আর্জেন্টিনা পেসো (ARS)',
                 'australian-dollar' => 'অস্ট্রেলিয়ান ডলার (AUD)',
-                'bagisto' => 'এক্সিগনাস',
+                'exygnus' => 'এক্সিগনাস',
                 'bangladeshi-taka' => 'বাংলাদেশী টাকা (BDT)',
                 'bahraini-dinar' => 'বাহরাইন দিনার (BHD)',
                 'brazilian-real' => 'ব্রাজিলিয়ান রিয়েল (BRL)',
@@ -914,16 +914,16 @@ return [
             ],
 
             'installation-processing' => [
-                'bagisto' => 'ইনস্টলেশন এক্সিগনাস',
-                'bagisto-info' => 'ডাটাবেস টেবিল তৈরি করা হচ্ছে, এটি কিছুটা সময় নিতে পারে',
+                'exygnus' => 'ইনস্টলেশন এক্সিগনাস',
+                'exygnus-info' => 'ডাটাবেস টেবিল তৈরি করা হচ্ছে, এটি কিছুটা সময় নিতে পারে',
                 'title' => 'ইনস্টলেশন',
             ],
 
             'installation-completed' => [
                 'admin-panel' => 'অ্যাডমিন প্যানেল',
-                'bagisto-forums' => 'এক্সিগনাস ফোরাম',
+                'exygnus-forums' => 'এক্সিগনাস ফোরাম',
                 'customer-panel' => 'কাস্টমার প্যানেল',
-                'explore-bagisto-extensions' => 'এক্সিগনাস এক্সটেনশন অন্বেষণ করুন',
+                'explore-exygnus-extensions' => 'এক্সিগনাস এক্সটেনশন অন্বেষণ করুন',
                 'title' => 'ইনস্টলেশন সম্পন্ন',
                 'title-info' => 'এক্সিগনাস সফলভাবে আপনার সিস্টেমে ইনস্টল করা হয়েছে।',
             ],
@@ -973,9 +973,9 @@ return [
 
             'arabic' => 'আরবি',
             'back' => 'পিছনে',
-            'bagisto' => 'এক্সিগনাস',
-            'bagisto-info' => 'একটি সম্প্রদায়িক প্রকল্প দ্বারা',
-            'bagisto-logo' => 'এক্সিগনাস লোগো',
+            'exygnus' => 'এক্সিগনাস',
+            'exygnus-info' => 'একটি সম্প্রদায়িক প্রকল্প দ্বারা',
+            'exygnus-logo' => 'এক্সিগনাস লোগো',
             'bengali' => 'বাংলা',
             'catalan' => 'কাতালান',
             'chinese' => 'চীনা',
@@ -1002,7 +1002,7 @@ return [
             'title' => 'এক্সিগনাস ইনস্টলার',
             'turkish' => 'তুর্কি',
             'ukrainian' => 'ইউক্রেনীয়',
-            'webkul' => 'ডিফাওয়েট',
+            'defaoite' => 'ডিফাওয়েট',
         ],
     ],
 ];

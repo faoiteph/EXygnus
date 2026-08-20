@@ -15,13 +15,13 @@ if (! function_exists('themes')) {
     }
 }
 
-if (! function_exists('bagisto_asset')) {
+if (! function_exists('exygnus_asset')) {
     /**
-     * Bagisto asset.
+     * EXygnus asset.
      *
      * @return string
      */
-    function bagisto_asset(string $path, ?string $namespace = null)
+    function exygnus_asset(string $path, ?string $namespace = null)
     {
         return themes()->url($path, $namespace);
     }

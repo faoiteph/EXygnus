@@ -30,14 +30,14 @@
             </h2>
         </div>
     
-        {!! view_render_event('bagisto.shop.customers.account.profile.edit.before', ['customer' => $customer]) !!}
+        {!! view_render_event('exygnus.shop.customers.account.profile.edit.before', ['customer' => $customer]) !!}
 
         <!-- Profile Edit Form -->
         <x-shop::form
             :action="route('shop.customers.account.profile.update')"
             enctype="multipart/form-data"
         >
-            {!! view_render_event('bagisto.shop.customers.account.profile.edit_form_controls.before', ['customer' => $customer]) !!}
+            {!! view_render_event('exygnus.shop.customers.account.profile.edit_form_controls.before', ['customer' => $customer]) !!}
     
             <!-- Image -->
             <x-shop::form.control-group class="mt-4">
@@ -54,7 +54,7 @@
                 <x-shop::form.control-group.error control-name="image[]" />
             </x-shop::form.control-group>
 
-            {!! view_render_event('bagisto.shop.customers.account.profile.edit_form_controls.image.after') !!}
+            {!! view_render_event('exygnus.shop.customers.account.profile.edit_form_controls.image.after') !!}
 
             <!-- First Name -->
             <x-shop::form.control-group>
@@ -74,7 +74,7 @@
                 <x-shop::form.control-group.error control-name="first_name" />
             </x-shop::form.control-group>
 
-            {!! view_render_event('bagisto.shop.customers.account.profile.edit_form_controls.first_name.after') !!}
+            {!! view_render_event('exygnus.shop.customers.account.profile.edit_form_controls.first_name.after') !!}
 
             <!-- Last Name -->
             <x-shop::form.control-group>
@@ -94,7 +94,7 @@
                 <x-shop::form.control-group.error control-name="last_name" />
             </x-shop::form.control-group>
 
-            {!! view_render_event('bagisto.shop.customers.account.profile.edit_form_controls.last_name.after') !!}
+            {!! view_render_event('exygnus.shop.customers.account.profile.edit_form_controls.last_name.after') !!}
 
             <!-- Email -->
             <x-shop::form.control-group>
@@ -114,7 +114,7 @@
                 <x-shop::form.control-group.error control-name="email" />
             </x-shop::form.control-group>
 
-            {!! view_render_event('bagisto.shop.customers.account.profile.edit_form_controls.email.after') !!}
+            {!! view_render_event('exygnus.shop.customers.account.profile.edit_form_controls.email.after') !!}
 
             <!-- Phone -->
             <x-shop::form.control-group>
@@ -134,7 +134,7 @@
                 <x-shop::form.control-group.error control-name="phone" />
             </x-shop::form.control-group>
 
-            {!! view_render_event('bagisto.shop.customers.account.profile.edit_form_controls.phone.after') !!}
+            {!! view_render_event('exygnus.shop.customers.account.profile.edit_form_controls.phone.after') !!}
 
             <!-- Gender -->
             <x-shop::form.control-group>
@@ -167,7 +167,7 @@
                 <x-shop::form.control-group.error control-name="gender" />
             </x-shop::form.control-group>
 
-            {!! view_render_event('bagisto.shop.customers.account.profile.edit_form_controls.gender.after') !!}
+            {!! view_render_event('exygnus.shop.customers.account.profile.edit_form_controls.gender.after') !!}
 
             <!-- DOB -->
             <x-shop::form.control-group>
@@ -186,7 +186,7 @@
                 <x-shop::form.control-group.error control-name="date_of_birth" />
             </x-shop::form.control-group>
 
-            {!! view_render_event('bagisto.shop.customers.account.profile.edit_form_controls.date_of_birth.after') !!}
+            {!! view_render_event('exygnus.shop.customers.account.profile.edit_form_controls.date_of_birth.after') !!}
 
             <!-- Current Password -->
             <x-shop::form.control-group>
@@ -205,7 +205,7 @@
                 <x-shop::form.control-group.error control-name="current_password" />
             </x-shop::form.control-group>
 
-            {!! view_render_event('bagisto.shop.customers.account.profile.edit_form_controls.old_password.after') !!}
+            {!! view_render_event('exygnus.shop.customers.account.profile.edit_form_controls.old_password.after') !!}
 
             <!-- New Password -->
             <x-shop::form.control-group>
@@ -224,7 +224,7 @@
                 <x-shop::form.control-group.error control-name="new_password" />
             </x-shop::form.control-group>
 
-            {!! view_render_event('bagisto.shop.customers.account.profile.edit_form_controls.new_password.after') !!}
+            {!! view_render_event('exygnus.shop.customers.account.profile.edit_form_controls.new_password.after') !!}
 
             <!-- New Password Confirmation -->
             <x-shop::form.control-group>
@@ -244,7 +244,7 @@
                 <x-shop::form.control-group.error control-name="new_password_confirmation" />
             </x-shop::form.control-group>
 
-            {!! view_render_event('bagisto.shop.customers.account.profile.edit_form_controls.new_password_confirmation.after') !!}
+            {!! view_render_event('exygnus.shop.customers.account.profile.edit_form_controls.new_password_confirmation.after') !!}
 
             <div class="mb-4 flex select-none items-center gap-1.5">
                 <input
@@ -275,11 +275,11 @@
                 @lang('shop::app.customers.account.profile.edit.save')
             </button>
 
-            {!! view_render_event('bagisto.shop.customers.account.profile.edit_form_controls.after', ['customer' => $customer]) !!}
+            {!! view_render_event('exygnus.shop.customers.account.profile.edit_form_controls.after', ['customer' => $customer]) !!}
 
         </x-shop::form>
 
-        {!! view_render_event('bagisto.shop.customers.account.profile.edit.after', ['customer' => $customer]) !!}
+        {!! view_render_event('exygnus.shop.customers.account.profile.edit.after', ['customer' => $customer]) !!}
 
     </div>
 </x-shop::layouts.account>

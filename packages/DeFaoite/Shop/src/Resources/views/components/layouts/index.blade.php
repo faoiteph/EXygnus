@@ -12,7 +12,7 @@
 >
     <head>
 
-        {!! view_render_event('bagisto.shop.layout.head.before') !!}
+        {!! view_render_event('exygnus.shop.layout.head.before') !!}
 
         <title>{{ $title ?? '' }}</title>
 
@@ -41,7 +41,7 @@
         >
         <meta 
             name="generator" 
-            content="Bagisto"
+            content="EXygnus"
         >
 
         @stack('meta')
@@ -49,10 +49,10 @@
         <link
             rel="icon"
             sizes="16x16"
-            href="{{ core()->getCurrentChannel()->favicon_url ?? bagisto_asset('images/favicon.ico') }}"
+            href="{{ core()->getCurrentChannel()->favicon_url ?? exygnus_asset('images/favicon.ico') }}"
         />
 
-        @bagistoVite(['src/Resources/assets/css/app.css', 'src/Resources/assets/js/app.js'])
+        @exygnusVite(['src/Resources/assets/css/app.css', 'src/Resources/assets/js/app.js'])
 
         <link
             rel="preconnect"
@@ -88,12 +88,12 @@
             </script>
         @endif
 
-        {!! view_render_event('bagisto.shop.layout.head.after') !!}
+        {!! view_render_event('exygnus.shop.layout.head.after') !!}
 
     </head>
 
     <body>
-        {!! view_render_event('bagisto.shop.layout.body.before') !!}
+        {!! view_render_event('exygnus.shop.layout.body.before') !!}
 
         <a
             href="#main"
@@ -102,7 +102,7 @@
             Skip to main content
         </a>
 
-        <!-- Built With Bagisto -->
+        <!-- Built With EXygnus -->
         <div id="app">
             <!-- Flash Message Blade Component -->
             <x-shop::flash-group />
@@ -122,14 +122,14 @@
                 <x-shop::layouts.cookie />
             @endif
 
-            {!! view_render_event('bagisto.shop.layout.content.before') !!}
+            {!! view_render_event('exygnus.shop.layout.content.before') !!}
 
             <!-- Page Content Blade Component -->
             <main id="main" class="bg-white">
                 {{ $slot }}
             </main>
 
-            {!! view_render_event('bagisto.shop.layout.content.after') !!}
+            {!! view_render_event('exygnus.shop.layout.content.after') !!}
 
 
             <!-- Page Services Blade Component -->
@@ -143,14 +143,14 @@
             @endif
         </div>
 
-        {!! view_render_event('bagisto.shop.layout.body.after') !!}
+        {!! view_render_event('exygnus.shop.layout.body.after') !!}
 
         <!-- WebMCP Tool Registration For AI Agents -->
         <x-shop::layouts.webmcp />
 
         @stack('scripts')
 
-        {!! view_render_event('bagisto.shop.layout.vue-app-mount.before') !!}
+        {!! view_render_event('exygnus.shop.layout.vue-app-mount.before') !!}
         <script>
             /**
              * Mount the application as soon as the DOM is ready instead of waiting
@@ -171,7 +171,7 @@
             }
         </script>
 
-        {!! view_render_event('bagisto.shop.layout.vue-app-mount.after') !!}
+        {!! view_render_event('exygnus.shop.layout.vue-app-mount.after') !!}
 
         <script type="text/javascript">
             {!! core()->getConfigData('general.content.custom_scripts.custom_javascript') !!}

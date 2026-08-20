@@ -13,7 +13,7 @@ class Installer
      *
      * @var string
      */
-    protected const API_ENDPOINT = 'https://updates.bagisto.com/api/updates';
+    protected const API_ENDPOINT = 'https://updates.exygnus.com/api/updates';
 
     /**
      * Create a new listener instance.
@@ -26,7 +26,7 @@ class Installer
     ) {}
 
     /**
-     * After Bagisto is successfully installed.
+     * After EXygnus is successfully installed.
      *
      * @return void
      */

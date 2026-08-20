@@ -806,7 +806,7 @@ return [
         'index' => [
             'create-administrator' => [
                 'admin' => 'व्यवस्थापक',
-                'bagisto' => 'एक्सिग्नस',
+                'exygnus' => 'एक्सिग्नस',
                 'confirm-password' => 'पासवर्ड की पुष्टि करें',
                 'email' => 'ईमेल',
                 'email-address' => 'admin@example.com',
@@ -821,7 +821,7 @@ return [
                 'application-name' => 'एप्लिकेशन का नाम',
                 'argentine-peso' => 'अर्जेंटीनी पेसो (ARS)',
                 'australian-dollar' => 'ऑस्ट्रेलियाई डॉलर (AUD)',
-                'bagisto' => 'एक्सिग्नस',
+                'exygnus' => 'एक्सिग्नस',
                 'bangladeshi-taka' => 'बांगलादेशी टाका (BDT)',
                 'bahraini-dinar' => 'बहरीन दीनार (BHD)',
                 'brazilian-real' => 'ब्राज़ीली रियाल (BRL)',
@@ -914,16 +914,16 @@ return [
             ],
 
             'installation-processing' => [
-                'bagisto' => 'एक्सिग्नस स्थापना',
-                'bagisto-info' => 'डेटाबेस तालिकाएँ बनाने का प्रक्रियाण, इसमें कुछ क्षण लग सकते हैं',
+                'exygnus' => 'एक्सिग्नस स्थापना',
+                'exygnus-info' => 'डेटाबेस तालिकाएँ बनाने का प्रक्रियाण, इसमें कुछ क्षण लग सकते हैं',
                 'title' => 'स्थापना',
             ],
 
             'installation-completed' => [
                 'admin-panel' => 'व्यवस्थापक पैनल',
-                'bagisto-forums' => 'EXygnus फ़ोरम',
+                'exygnus-forums' => 'EXygnus फ़ोरम',
                 'customer-panel' => 'ग्राहक पैनल',
-                'explore-bagisto-extensions' => 'EXygnus एक्सटेंशन अन्वेषण करें',
+                'explore-exygnus-extensions' => 'EXygnus एक्सटेंशन अन्वेषण करें',
                 'title' => 'स्थापना पूर्ण',
                 'title-info' => 'एक्सिग्नस को आपके सिस्टम पर सफलतापूर्वक स्थापित किया गया है।',
             ],
@@ -973,9 +973,9 @@ return [
 
             'arabic' => 'अरबी',
             'back' => 'वापस',
-            'bagisto' => 'एक्सिग्नस',
-            'bagisto-info' => 'एक सामुदायिक परियोजना द्वारा',
-            'bagisto-logo' => 'एक्सिग्नस लोगो',
+            'exygnus' => 'एक्सिग्नस',
+            'exygnus-info' => 'एक सामुदायिक परियोजना द्वारा',
+            'exygnus-logo' => 'एक्सिग्नस लोगो',
             'bengali' => 'बंगाली',
             'catalan' => 'कातालान',
             'chinese' => 'चीनी',
@@ -1002,7 +1002,7 @@ return [
             'title' => 'एक्सिग्नस स्थापक',
             'turkish' => 'तुर्की',
             'ukrainian' => 'यूक्रेनी',
-            'webkul' => 'डेफाओइट',
+            'defaoite' => 'डेफाओइट',
         ],
     ],
 ];

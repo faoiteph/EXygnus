@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'name' => 'Webkul Bagisto Installer',
+    'name' => 'De Faoite EXygnus Installer',
     'version' => core()->version(),
 ];

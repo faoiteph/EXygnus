@@ -3,7 +3,7 @@
         @lang('admin::app.settings.currencies.index.title')
     </x-slot>
 
-    {!! view_render_event('bagisto.admin.settings.currencies.create.before') !!}
+    {!! view_render_event('exygnus.admin.settings.currencies.create.before') !!}
 
     <v-currencies>
         <div class="flex items-center justify-between gap-4 max-sm:flex-wrap">
@@ -28,7 +28,7 @@
         <x-admin::shimmer.datagrid />
     </v-currencies>
 
-    {!! view_render_event('bagisto.admin.settings.currencies.create.after') !!}
+    {!! view_render_event('exygnus.admin.settings.currencies.create.after') !!}
 
     @pushOnce('scripts')
         <script
@@ -142,7 +142,7 @@
 
                         <!-- Modal Content -->
                         <x-slot:content>
-                            {!! view_render_event('bagisto.admin.settings.currencies.create.before') !!}
+                            {!! view_render_event('exygnus.admin.settings.currencies.create.before') !!}
 
                             <x-admin::form.control-group.control
                                 type="hidden"
@@ -301,7 +301,7 @@
                                 <x-admin::form.control-group.error control-name="currency_position" />
                             </x-admin::form.control-group>
 
-                            {!! view_render_event('bagisto.admin.settings.currencies.create.after') !!}
+                            {!! view_render_event('exygnus.admin.settings.currencies.create.after') !!}
                         </x-slot>
 
                         <!-- Modal Footer -->

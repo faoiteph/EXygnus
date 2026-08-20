@@ -12,7 +12,7 @@
 
 @pushOnce('scripts')
     <!--
-        TODO (@devansh-webkul): Only this portion is pending; it just needs to be integrated using the Vite bundler. Currently,
+        TODO (@devansh-defaoite): Only this portion is pending; it just needs to be integrated using the Vite bundler. Currently,
         there is an issue with relative paths in the plugins. I intend to address this task at the end.
     -->
     <script
@@ -92,7 +92,7 @@
                                 <template v-if="isLoading">
                                     <img
                                         class="h-5 w-5 animate-spin"
-                                        src="{{ bagisto_asset('images/spinner.svg') }}"
+                                        src="{{ exygnus_asset('images/spinner.svg') }}"
                                     />
 
                                     @lang('admin::app.components.tinymce.ai-generation.generating')

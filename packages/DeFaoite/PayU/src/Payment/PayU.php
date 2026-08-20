@@ -95,7 +95,7 @@ class PayU extends Payment
     {
         $url = $this->getConfigData('image');
 
-        return $url ? Storage::url($url) : bagisto_asset('images/payu.png', 'shop');
+        return $url ? Storage::url($url) : exygnus_asset('images/payu.png', 'shop');
     }
 
     /**

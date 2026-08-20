@@ -1,5 +1,5 @@
 @if ($product->type == 'downloadable')
-    {!! view_render_event('bagisto.shop.products.view.downloadable.before', ['product' => $product]) !!}
+    {!! view_render_event('exygnus.shop.products.view.downloadable.before', ['product' => $product]) !!}
 
     @if ($product->downloadable_samples->count())
         <div class="sample-list mb-6 mt-8">
@@ -84,5 +84,5 @@
         </div>
     @endif
 
-    {!! view_render_event('bagisto.shop.products.view.downloadable.before', ['product' => $product]) !!}
+    {!! view_render_event('exygnus.shop.products.view.downloadable.before', ['product' => $product]) !!}
 @endif

@@ -2,11 +2,11 @@
     $inventorySources = app(\DeFaoite\Inventory\Repositories\InventorySourceRepository::class)->findWhere(['status' => 1]);
 @endphp
 
-{!! view_render_event('bagisto.admin.catalog.product.edit.form.types.configurable.before', ['product' => $product]) !!}
+{!! view_render_event('exygnus.admin.catalog.product.edit.form.types.configurable.before', ['product' => $product]) !!}
 
 <v-product-variations :errors="errors"></v-product-variations>
 
-{!! view_render_event('bagisto.admin.catalog.product.edit.form.types.configurable.after', ['product' => $product]) !!}
+{!! view_render_event('exygnus.admin.catalog.product.edit.form.types.configurable.after', ['product' => $product]) !!}
 
 @pushOnce('scripts')
     <!-- Variations Template -->
@@ -66,7 +66,7 @@
                 <div class="grid justify-center justify-items-center gap-3.5 px-2.5 py-10">
                     <!-- Placeholder Image -->
                     <img
-                        src="{{ bagisto_asset('images/icon-add-product.svg') }}"
+                        src="{{ exygnus_asset('images/icon-add-product.svg') }}"
                         class="h-20 w-20 dark:mix-blend-exclusion dark:invert"
                     />
 
@@ -795,7 +795,7 @@
                     :class="{'border border-dashed border-gray-300 dark:border-gray-800 dark:mix-blend-exclusion dark:invert': ! variant.images.length}"
                 >
                     <template v-if="! variant.images.length">
-                        <img src="{{ bagisto_asset('images/product-placeholders/front.svg') }}">
+                        <img src="{{ exygnus_asset('images/product-placeholders/front.svg') }}">
                     
                         <p class="absolute bottom-1.5 w-full text-center text-[6px] font-semibold text-gray-400">
                             @lang('admin::app.catalog.products.edit.types.configurable.image-placeholder')

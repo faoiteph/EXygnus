@@ -806,7 +806,7 @@ return [
         'index' => [
             'create-administrator' => [
                 'admin' => 'מנהל',
-                'bagisto' => 'EXygnus',
+                'exygnus' => 'EXygnus',
                 'confirm-password' => 'אשר סיסמה',
                 'email' => 'אימייל',
                 'email-address' => 'admin@example.com',
@@ -821,7 +821,7 @@ return [
                 'application-name' => 'שם היישום',
                 'argentine-peso' => 'פסו ארגנטינאי (ARS)',
                 'australian-dollar' => 'דולר אוסטרלי (AUD)',
-                'bagisto' => 'EXygnus',
+                'exygnus' => 'EXygnus',
                 'bangladeshi-taka' => 'טאקה בנגלדשי (BDT)',
                 'bahraini-dinar' => 'דינר בחרייני (BHD)',
                 'brazilian-real' => 'ריאל ברזילאי (BRL)',
@@ -914,16 +914,16 @@ return [
             ],
 
             'installation-processing' => [
-                'bagisto' => 'התקנת EXygnus',
-                'bagisto-info' => 'יצירת טבלאות מסד הנתונים, זה עשוי לקחת מספר רגעים',
+                'exygnus' => 'התקנת EXygnus',
+                'exygnus-info' => 'יצירת טבלאות מסד הנתונים, זה עשוי לקחת מספר רגעים',
                 'title' => 'התקנה',
             ],
 
             'installation-completed' => [
                 'admin-panel' => 'פנל מנהל המערכת',
-                'bagisto-forums' => 'פורום EXygnus',
+                'exygnus-forums' => 'פורום EXygnus',
                 'customer-panel' => 'פנל לקוח',
-                'explore-bagisto-extensions' => 'גלה הרחבות EXygnus',
+                'explore-exygnus-extensions' => 'גלה הרחבות EXygnus',
                 'title' => 'התקנה הושלמה',
                 'title-info' => 'EXygnus הותקן בהצלחה במערכת שלך.',
             ],
@@ -973,9 +973,9 @@ return [
 
             'arabic' => 'ערבית',
             'back' => 'חזרה',
-            'bagisto' => 'EXygnus',
-            'bagisto-info' => 'פרויקט קהילתי על ידי',
-            'bagisto-logo' => 'לוגו EXygnus',
+            'exygnus' => 'EXygnus',
+            'exygnus-info' => 'פרויקט קהילתי על ידי',
+            'exygnus-logo' => 'לוגו EXygnus',
             'bengali' => 'בנגלי',
             'catalan' => 'קטלאני',
             'chinese' => 'סיני',
@@ -1002,7 +1002,7 @@ return [
             'title' => 'מתקין EXygnus',
             'turkish' => 'טורקי',
             'ukrainian' => 'אוקראיני',
-            'webkul' => 'DeFaoite',
+            'defaoite' => 'DeFaoite',
         ],
     ],
 ];

@@ -46,6 +46,6 @@ class MoneyTransfer extends Payment
     {
         $url = $this->getConfigData('image');
 
-        return $url ? Storage::url($url) : bagisto_asset('images/money-transfer.png', 'shop');
+        return $url ? Storage::url($url) : exygnus_asset('images/money-transfer.png', 'shop');
     }
 }

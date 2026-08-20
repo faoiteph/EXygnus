@@ -4,11 +4,11 @@
         $bookingProduct = $product->booking_products()->first();
     @endphp
     
-    {!! view_render_event('bagisto.shop.products.view.booking.before', ['product' => $product]) !!}
+    {!! view_render_event('exygnus.shop.products.view.booking.before', ['product' => $product]) !!}
 
     <v-booking-information></v-booking-information>
 
-    {!! view_render_event('bagisto.shop.products.view.booking.before', ['product' => $product]) !!}
+    {!! view_render_event('exygnus.shop.products.view.booking.before', ['product' => $product]) !!}
 
     @pushOnce('scripts')
         <script

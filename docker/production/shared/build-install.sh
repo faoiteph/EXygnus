@@ -1,6 +1,6 @@
 #!/bin/bash
 # ==========================================================================
-# build-install.sh — Runs during docker build to fully install Bagisto.
+# build-install.sh — Runs during docker build to fully install EXygnus.
 #
 # Starts MySQL temporarily, runs migrations + seeding, then shuts MySQL
 # down cleanly. The populated /var/lib/mysql is baked into the image layer.
@@ -36,14 +36,14 @@ done
 echo "[build-install] Creating database and user..."
 mysql -h 127.0.0.1 -u root < /docker-entrypoint-initdb.d/init.sql
 
-# Install Bagisto
-cd /var/www/bagisto
+# Install EXygnus
+cd /var/www/exygnus
 
 echo "[build-install] Generating application key..."
 php artisan key:generate --force --no-interaction
 
-echo "[build-install] Running Bagisto installation..."
-php artisan bagisto:install --skip-env-check --skip-admin-creation --skip-github-star
+echo "[build-install] Running EXygnus installation..."
+php artisan exygnus:install --skip-env-check --skip-admin-creation --skip-github-star
 
 echo "[build-install] Running database seeders..."
 php artisan db:seed --class="DeFaoite\\Installer\\Database\\Seeders\\ProductTableSeeder"
@@ -59,4 +59,4 @@ wait $MYSQL_PID
 # Fix ownership after shutdown
 chown -R mysql:mysql /var/lib/mysql
 
-echo "[build-install] Bagisto installation complete."
+echo "[build-install] EXygnus installation complete."

@@ -2,7 +2,7 @@
     @if ($channels->count() == 1)
         <input type="hidden" name="channels[]" value="{{ $channels->first()->id }}">
     @else
-        {!! view_render_event('bagisto.admin.catalog.product.edit.form.channels.before', ['product' => $product]) !!}
+        {!! view_render_event('exygnus.admin.catalog.product.edit.form.channels.before', ['product' => $product]) !!}
 
         <!-- Panel -->
         <div class="box-shadow rounded bg-white p-4 dark:bg-gray-900">
@@ -11,7 +11,7 @@
                 @lang('admin::app.catalog.products.edit.channels.title')
             </p>
 
-            {!! view_render_event('bagisto.admin.catalog.product.edit.form.channels.controls.before', ['product' => $product]) !!}
+            {!! view_render_event('exygnus.admin.catalog.product.edit.form.channels.controls.before', ['product' => $product]) !!}
 
             <!-- Panel Content -->
             <div class="text-sm text-gray-600 dark:text-gray-300">
@@ -43,9 +43,9 @@
                 <x-admin::form.control-group.error control-name="channels[]" />
             </div>
 
-            {!! view_render_event('bagisto.admin.catalog.product.edit.form.channels.controls.after', ['product' => $product]) !!}
+            {!! view_render_event('exygnus.admin.catalog.product.edit.form.channels.controls.after', ['product' => $product]) !!}
         </div>
 
-        {!! view_render_event('bagisto.admin.catalog.product.edit.form.channels.after', ['product' => $product]) !!}
+        {!! view_render_event('exygnus.admin.catalog.product.edit.form.channels.after', ['product' => $product]) !!}
     @endif
 @endif

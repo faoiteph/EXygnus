@@ -23,7 +23,7 @@ return new class extends Migration
         });
 
         /**
-         * To Do (@devansh-webkul)
+         * To Do (@devansh-defaoite)
          *
          * - Should be in the seeder.
          */

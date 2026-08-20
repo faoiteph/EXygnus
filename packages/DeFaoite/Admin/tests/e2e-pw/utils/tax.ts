@@ -12,7 +12,7 @@ export const TAX_PRODUCT_PRICE = 199;
  * Shape of a single tax rate used across the tax e2e suite.
  *
  * `state` is intentionally optional: leaving it empty creates a rate that
- * applies to every state of the country (Bagisto treats an empty/`*` state as
+ * applies to every state of the country (EXygnus treats an empty/`*` state as
  * a wildcard), which keeps storefront tax-application tests deterministic.
  */
 export interface TaxRateData {
@@ -36,7 +36,7 @@ export interface TaxCategoryData {
 }
 
 /**
- * Region presets whose `country`/`state` line up with the address Bagisto fills
+ * Region presets whose `country`/`state` line up with the address EXygnus fills
  * during guest checkout, so a rate created for the region is guaranteed to be
  * applied on the storefront. `state` is left empty to act as a wildcard.
  */
@@ -87,7 +87,7 @@ export type TaxPricingMode = "excluding_tax" | "including_tax";
 
 /**
  * Tax applied on a net amount for the given percentage, rounded to 2 decimals
- * the same way Bagisto formats money in the storefront summary. This is the
+ * the same way EXygnus formats money in the storefront summary. This is the
  * tax-EXCLUSIVE case where the entered price is the net amount.
  */
 export function expectedTaxAmount(netAmount: number, taxPercent: number): number {
@@ -106,7 +106,7 @@ export function expectedGrandTotal(netAmount: number, taxPercent: number): numbe
 }
 
 /**
- * Tax extracted from a tax-INCLUSIVE (gross) price. Bagisto pulls the tax out of
+ * Tax extracted from a tax-INCLUSIVE (gross) price. EXygnus pulls the tax out of
  * the gross with `gross * rate / (100 + rate)`, so the customer still pays the
  * gross price as the grand total.
  */
@@ -156,7 +156,7 @@ export function appliedPercentage(grandTotal: number, tax: number): number {
 /**
  * Whether tax is calculated on the full price (`before_discount`) or on the
  * discounted price (`after_discount`). Maps to
- * `sales.taxes.calculation.apply_tax_on` (Bagisto default: `after_discount`).
+ * `sales.taxes.calculation.apply_tax_on` (EXygnus default: `after_discount`).
  */
 export type TaxApplyOnMode = "before_discount" | "after_discount";
 

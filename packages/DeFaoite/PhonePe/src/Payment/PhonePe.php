@@ -69,7 +69,7 @@ class PhonePe extends Payment
     {
         $url = $this->getConfigData('image');
 
-        return $url ? Storage::url($url) : bagisto_asset('images/phonepe.png', 'shop');
+        return $url ? Storage::url($url) : exygnus_asset('images/phonepe.png', 'shop');
     }
 
     /**

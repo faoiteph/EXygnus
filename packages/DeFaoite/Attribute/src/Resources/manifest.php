@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'name' => 'Webkul Bagisto Attributes',
+    'name' => 'De Faoite EXygnus Attributes',
     'version' => core()->version(),
 ];

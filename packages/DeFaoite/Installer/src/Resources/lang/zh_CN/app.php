@@ -806,7 +806,7 @@ return [
         'index' => [
             'create-administrator' => [
                 'admin' => '管理员',
-                'bagisto' => 'EXygnus',
+                'exygnus' => 'EXygnus',
                 'confirm-password' => '确认密码',
                 'email' => '电子邮件',
                 'email-address' => 'admin@example.com',
@@ -821,7 +821,7 @@ return [
                 'application-name' => '应用程序名称',
                 'argentine-peso' => '阿根廷比索 (ARS)',
                 'australian-dollar' => '澳大利亚元 (AUD)',
-                'bagisto' => 'EXygnus',
+                'exygnus' => 'EXygnus',
                 'bangladeshi-taka' => '孟加拉塔卡 (BDT)',
                 'bahraini-dinar' => '巴林第纳尔 (BHD)',
                 'brazilian-real' => '巴西雷亚尔 (BRL)',
@@ -914,16 +914,16 @@ return [
             ],
 
             'installation-processing' => [
-                'bagisto' => 'EXygnus 安装',
-                'bagisto-info' => '正在创建数据库表，这可能需要一些时间',
+                'exygnus' => 'EXygnus 安装',
+                'exygnus-info' => '正在创建数据库表，这可能需要一些时间',
                 'title' => '安装',
             ],
 
             'installation-completed' => [
                 'admin-panel' => '管理员面板',
-                'bagisto-forums' => 'EXygnus 论坛',
+                'exygnus-forums' => 'EXygnus 论坛',
                 'customer-panel' => '客户面板',
-                'explore-bagisto-extensions' => '探索 EXygnus 扩展',
+                'explore-exygnus-extensions' => '探索 EXygnus 扩展',
                 'title' => '安装已完成',
                 'title-info' => 'EXygnus 已成功安装在您的系统上。',
             ],
@@ -973,9 +973,9 @@ return [
 
             'arabic' => '阿拉伯语',
             'back' => '返回',
-            'bagisto' => 'EXygnus',
-            'bagisto-info' => '由 DeFaoite 社区共同开发的项目',
-            'bagisto-logo' => 'EXygnus Logo',
+            'exygnus' => 'EXygnus',
+            'exygnus-info' => '由 DeFaoite 社区共同开发的项目',
+            'exygnus-logo' => 'EXygnus Logo',
             'bengali' => '孟加拉语',
             'catalan' => '加泰罗尼亚语',
             'chinese' => '中文',
@@ -1002,7 +1002,7 @@ return [
             'title' => 'EXygnus 安装程序',
             'turkish' => '土耳其语',
             'ukrainian' => '乌克兰语',
-            'webkul' => 'DeFaoite',
+            'defaoite' => 'DeFaoite',
         ],
     ],
 ];

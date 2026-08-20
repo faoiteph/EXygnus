@@ -15,7 +15,7 @@
         @lang('shop::app.checkout.onepage.index.checkout')
     </x-slot>
 
-    {!! view_render_event('bagisto.shop.checkout.onepage.header.before') !!}
+    {!! view_render_event('exygnus.shop.checkout.onepage.header.before') !!}
 
     <!-- Page Header -->
     <div class="flex-wrap">
@@ -24,10 +24,10 @@
                 <a
                     href="{{ route('shop.home.index') }}"
                     class="flex min-h-[30px]"
-                    aria-label="@lang('shop::checkout.onepage.index.bagisto')"
+                    aria-label="@lang('shop::checkout.onepage.index.exygnus')"
                 >
                     <img
-                        src="{{ core()->getCurrentChannel()->logo_url ?? bagisto_asset('images/logo.svg') }}"
+                        src="{{ core()->getCurrentChannel()->logo_url ?? exygnus_asset('images/logo.svg') }}"
                         alt="{{ config('app.name') }}"
                         width="131"
                         height="29"
@@ -41,19 +41,19 @@
         </div>
     </div>
 
-    {!! view_render_event('bagisto.shop.checkout.onepage.header.after') !!}
+    {!! view_render_event('exygnus.shop.checkout.onepage.header.after') !!}
 
     <!-- Page Content -->
     <div class="container px-[60px] max-lg:px-8 max-sm:px-4">
 
-        {!! view_render_event('bagisto.shop.checkout.onepage.breadcrumbs.before') !!}
+        {!! view_render_event('exygnus.shop.checkout.onepage.breadcrumbs.before') !!}
 
         <!-- Breadcrumbs -->
         @if ((core()->getConfigData('general.general.breadcrumbs.shop')))
             <x-shop::breadcrumbs name="checkout" />
         @endif
 
-        {!! view_render_event('bagisto.shop.checkout.onepage.breadcrumbs.after') !!}
+        {!! view_render_event('exygnus.shop.checkout.onepage.breadcrumbs.after') !!}
 
         <!-- Checkout Vue Component -->
         <v-checkout>
@@ -110,12 +110,12 @@
                             v-if="canPlaceOrder"
                         >
                             <template v-if="(selectedPaymentMethod || cart.payment_method) == 'paypal_smart_button'">
-                                {!! view_render_event('bagisto.shop.checkout.onepage.summary.paypal_smart_button.before') !!}
+                                {!! view_render_event('exygnus.shop.checkout.onepage.summary.paypal_smart_button.before') !!}
 
                                 <!-- Paypal Smart Button Vue Component -->
                                 <v-paypal-smart-button></v-paypal-smart-button>
 
-                                {!! view_render_event('bagisto.shop.checkout.onepage.summary.paypal_smart_button.after') !!}
+                                {!! view_render_event('exygnus.shop.checkout.onepage.summary.paypal_smart_button.after') !!}
                             </template>
 
                             <template v-else>

@@ -806,7 +806,7 @@ return [
         'index' => [
             'create-administrator' => [
                 'admin' => 'පරිපාලක',
-                'bagisto' => 'එක්සිග්නස්',
+                'exygnus' => 'එක්සිග්නස්',
                 'confirm-password' => 'මුරපදය තහවුරු කරන්න',
                 'email' => 'ඊමේල්',
                 'email-address' => 'admin@example.com',
@@ -821,7 +821,7 @@ return [
                 'application-name' => 'යෙදුම් නම',
                 'argentine-peso' => 'ආර්ජෙන්ටින් පේසෝ (ARS)',
                 'australian-dollar' => 'ඕස්ට්‍රේලියානු ඩොලර (AUD)',
-                'bagisto' => 'එක්සිග්නස්',
+                'exygnus' => 'එක්සිග්නස්',
                 'bangladeshi-taka' => 'බංග්ලාදේශ ටාකා (BDT)',
                 'bahraini-dinar' => 'බහරේන් ඩිනාර් (BHD)',
                 'brazilian-real' => 'බ්‍රසීලියානු රියල් (BRL)',
@@ -914,16 +914,16 @@ return [
             ],
 
             'installation-processing' => [
-                'bagisto' => 'EXygnus ස්තුරාකුල',
-                'bagisto-info' => 'දත්ත වගකාගකක් සාදනු ඇති වී, මෙමගේ කුම වේදයන්ද කතාමතා වේදිය',
+                'exygnus' => 'EXygnus ස්තුරාකුල',
+                'exygnus-info' => 'දත්ත වගකාගකක් සාදනු ඇති වී, මෙමගේ කුම වේදයන්ද කතාමතා වේදිය',
                 'title' => 'ස්තුරාකුල',
             ],
 
             'installation-completed' => [
                 'admin-panel' => 'පරිපාල පැනල්',
-                'bagisto-forums' => 'EXygnus සංස්ථාගත',
+                'exygnus-forums' => 'EXygnus සංස්ථාගත',
                 'customer-panel' => 'ප්‍රභාණ්ඩ පැනල්',
-                'explore-bagisto-extensions' => 'EXygnus ප්‍රභාණ ව්‍යාකරණ',
+                'explore-exygnus-extensions' => 'EXygnus ප්‍රභාණ ව්‍යාකරණ',
                 'title' => 'ස්තුරාකුල සම්තුදාව',
                 'title-info' => 'EXygnus ඔබගේ පද්ධතියට සහාභයාගීත.',
             ],
@@ -973,9 +973,9 @@ return [
 
             'arabic' => 'අරාබි',
             'back' => 'ආපනය',
-            'bagisto' => 'එක්සිග්නස්',
-            'bagisto-info' => 'සමුදුසමින් ව්‍යාක්රණය',
-            'bagisto-logo' => 'EXygnus ලෝගො',
+            'exygnus' => 'එක්සිග්නස්',
+            'exygnus-info' => 'සමුදුසමින් ව්‍යාක්රණය',
+            'exygnus-logo' => 'EXygnus ලෝගො',
             'bengali' => 'බෙංගාලි',
             'catalan' => 'කැටලන්',
             'chinese' => 'චීන',
@@ -1002,7 +1002,7 @@ return [
             'title' => 'EXygnus ස්තුරාකුල',
             'turkish' => 'තුර්කි',
             'ukrainian' => 'යුක්රේනියානු',
-            'webkul' => 'ඩි ෆාඕයිට්',
+            'defaoite' => 'ඩි ෆාඕයිට්',
         ],
     ],
 ];

@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'name' => 'Webkul Bagisto Rule',
+    'name' => 'De Faoite EXygnus Rule',
     'version' => core()->version(),
 ];

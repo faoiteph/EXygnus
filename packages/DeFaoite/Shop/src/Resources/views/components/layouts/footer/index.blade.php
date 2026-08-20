@@ -1,4 +1,4 @@
-{!! view_render_event('bagisto.shop.layout.footer.before') !!}
+{!! view_render_event('exygnus.shop.layout.footer.before') !!}
 
 <!--
     The category repository is injected directly here because there is no way
@@ -87,7 +87,7 @@
             </x-slot>
         </x-shop::accordion>
 
-        {!! view_render_event('bagisto.shop.layout.footer.newsletter_subscription.before') !!}
+        {!! view_render_event('exygnus.shop.layout.footer.newsletter_subscription.before') !!}
 
         <!-- News Letter subscription -->
         @if (core()->getConfigData('customer.settings.newsletter.subscription'))
@@ -138,11 +138,11 @@
             </div>
         @endif
 
-        {!! view_render_event('bagisto.shop.layout.footer.newsletter_subscription.after') !!}
+        {!! view_render_event('exygnus.shop.layout.footer.newsletter_subscription.after') !!}
     </div>
 
     <div class="flex justify-between bg-[#F1EADF] px-[60px] py-3.5 max-md:justify-center max-sm:px-5">
-        {!! view_render_event('bagisto.shop.layout.footer.footer_text.before') !!}
+        {!! view_render_event('exygnus.shop.layout.footer.footer_text.before') !!}
 
         <p class="text-sm text-zinc-600 max-md:text-center">
             @if (core()->getConfigData('general.content.footer.copyright_content'))
@@ -152,8 +152,8 @@
             @endif
         </p>
 
-        {!! view_render_event('bagisto.shop.layout.footer.footer_text.after') !!}
+        {!! view_render_event('exygnus.shop.layout.footer.footer_text.after') !!}
     </div>
 </footer>
 
-{!! view_render_event('bagisto.shop.layout.footer.after') !!}
+{!! view_render_event('exygnus.shop.layout.footer.after') !!}

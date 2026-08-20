@@ -5,7 +5,7 @@ return [
         'forgot-password' => [
             'already-sent' => 'Już zresetuj hasło. Wiadomość została wysłana.',
             'back' => 'Powrót do logowania?',
-            'bagisto' => 'EXygnus',
+            'exygnus' => 'EXygnus',
             'email' => 'Email',
             'email-not-exist' => 'Nie możemy znaleźć użytkownika z tym adresem e-mail.',
             'footer' => '© Prawa autorskie 2010 - :current_year, DeFaoite Software (zarejestrowane w Indiach). Wszelkie prawa zastrzeżone.',
@@ -19,7 +19,7 @@ return [
 
         'reset-password' => [
             'back-link-title' => 'Powrót do logowania',
-            'bagisto' => 'EXygnus',
+            'exygnus' => 'EXygnus',
             'confirm-password' => 'Potwierdź hasło',
             'email' => 'Zarejestrowany adres e-mail',
             'footer' => '© Prawa autorskie 2010 - :current_year, DeFaoite Software (zarejestrowane w Indiach). Wszelkie prawa zastrzeżone.',
@@ -29,7 +29,7 @@ return [
         ],
 
         'login-form' => [
-            'bagisto' => 'EXygnus',
+            'exygnus' => 'EXygnus',
             'button-title' => 'Zaloguj się',
             'create-your-account' => 'Stwórz swoje konto',
             'email' => 'Email',
@@ -49,7 +49,7 @@ return [
 
         'signup-form' => [
             'account-exists' => 'Masz już konto?',
-            'bagisto' => 'EXygnus',
+            'exygnus' => 'EXygnus',
             'button-title' => 'Zarejestruj',
             'click-here' => 'Kliknij tutaj',
             'confirm-pass' => 'Potwierdź hasło',
@@ -564,7 +564,7 @@ return [
                     'bottom' => [
                         'all' => 'Wszystko',
                         'back-button' => 'Powrót do menu głównego',
-                        'bagisto' => 'EXygnus',
+                        'exygnus' => 'EXygnus',
                         'categories' => 'Kategorie',
                         'compare' => 'Porównaj',
                         'dropdown-text' => 'Zarządzaj koszykiem, zamówieniami i listą życzeń',
@@ -585,7 +585,7 @@ return [
                 'mobile' => [
                     'account' => 'Konto',
                     'back-button' => 'Powrót do menu głównego',
-                    'bagisto' => 'EXygnus',
+                    'exygnus' => 'EXygnus',
                     'compare' => 'Porównaj',
                     'currencies' => 'Waluty',
                     'dropdown-text' => 'Zarządzaj koszykiem, zamówieniami i listą życzeń',
@@ -1078,7 +1078,7 @@ return [
             'suspended-account-message' => 'Twoje konto zostało zawieszone',
 
             'index' => [
-                'bagisto' => 'EXygnus',
+                'exygnus' => 'EXygnus',
                 'cart' => 'Koszyk',
                 'continue-shopping' => 'Kontynuuj zakupy',
                 'empty-product' => 'Nie masz produktu w koszyku',

@@ -113,7 +113,7 @@ test.describe("tax application", () => {
     }
 
     /**
-     * Tax rates have no priority field in Bagisto's schema, so priority-based
+     * Tax rates have no priority field in EXygnus's schema, so priority-based
      * resolution is out of scope (requirement scoped to "if supported").
      */
 });

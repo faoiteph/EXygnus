@@ -57,7 +57,7 @@
             </div>
         </div>
 
-        {!! view_render_event('bagisto.shop.customers.account.gdpr.list.before') !!}
+        {!! view_render_event('exygnus.shop.customers.account.gdpr.list.before') !!}
 
         <!-- For Desktop View -->
         <div class="max-md:hidden">
@@ -154,7 +154,7 @@
             </x-shop::datagrid>
         </div>
 
-        {!! view_render_event('bagisto.shop.customers.account.gdpr.list.after') !!}
+        {!! view_render_event('exygnus.shop.customers.account.gdpr.list.after') !!}
     </div>
 
     <!-- GDPR Request Form -->
@@ -169,7 +169,7 @@
                 v-slot="{ meta, errors, handleSubmit }"
                 as="div"
             >
-                {!! view_render_event('bagisto.shop.customers.account.gdpr.request.form_controls.before') !!}
+                {!! view_render_event('exygnus.shop.customers.account.gdpr.request.form_controls.before') !!}
 
                 <form @submit="handleSubmit($event, store)">
                     <x-shop::modal ref="loginModel">
@@ -243,7 +243,7 @@
                     </x-shop::modal>
                 </form>
 
-                {!! view_render_event('bagisto.shop.customers.account.gdpr.request.form_controls.after') !!}
+                {!! view_render_event('exygnus.shop.customers.account.gdpr.request.form_controls.after') !!}
             </x-shop::form>
         </script>
 

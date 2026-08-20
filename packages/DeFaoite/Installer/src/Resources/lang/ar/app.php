@@ -806,7 +806,7 @@ return [
         'index' => [
             'create-administrator' => [
                 'admin' => 'مدير',
-                'bagisto' => 'EXygnus',
+                'exygnus' => 'EXygnus',
                 'confirm-password' => 'تأكيد كلمة المرور',
                 'email' => 'البريد الإلكتروني',
                 'email-address' => 'admin@example.com',
@@ -821,7 +821,7 @@ return [
                 'application-name' => 'اسم التطبيق',
                 'argentine-peso' => 'البيزو الأرجنتيني (ARS)',
                 'australian-dollar' => 'الدولار الأسترالي (AUD)',
-                'bagisto' => 'EXygnus',
+                'exygnus' => 'EXygnus',
                 'bangladeshi-taka' => 'التاكا البنغلاديشي (BDT)',
                 'bahraini-dinar' => 'دينار بحريني (BHD)',
                 'brazilian-real' => 'الريال البرازيلي (BRL)',
@@ -914,16 +914,16 @@ return [
             ],
 
             'installation-processing' => [
-                'bagisto' => 'تثبيت EXygnus',
-                'bagisto-info' => 'إنشاء جداول قاعدة البيانات، وقد يستغرق ذلك بضع دقائق',
+                'exygnus' => 'تثبيت EXygnus',
+                'exygnus-info' => 'إنشاء جداول قاعدة البيانات، وقد يستغرق ذلك بضع دقائق',
                 'title' => 'التثبيت',
             ],
 
             'installation-completed' => [
                 'admin-panel' => 'لوحة المشرف',
-                'bagisto-forums' => 'منتديات EXygnus',
+                'exygnus-forums' => 'منتديات EXygnus',
                 'customer-panel' => 'لوحة العميل',
-                'explore-bagisto-extensions' => 'استكشاف امتدادات EXygnus',
+                'explore-exygnus-extensions' => 'استكشاف امتدادات EXygnus',
                 'title' => 'اكتمال التثبيت',
                 'title-info' => 'تم تثبيت EXygnus بنجاح على نظامك.',
             ],
@@ -973,9 +973,9 @@ return [
 
             'arabic' => 'العربية',
             'back' => 'رجوع',
-            'bagisto' => 'EXygnus',
-            'bagisto-info' => 'مشروع مجتمعي من قبل',
-            'bagisto-logo' => 'شعار EXygnus',
+            'exygnus' => 'EXygnus',
+            'exygnus-info' => 'مشروع مجتمعي من قبل',
+            'exygnus-logo' => 'شعار EXygnus',
             'bengali' => 'البنغالية',
             'catalan' => 'الكاتالونية',
             'chinese' => 'الصينية',
@@ -1002,7 +1002,7 @@ return [
             'title' => 'مثبت EXygnus',
             'turkish' => 'التركية',
             'ukrainian' => 'الأوكرانية',
-            'webkul' => 'DeFaoite',
+            'defaoite' => 'DeFaoite',
         ],
     ],
 ];

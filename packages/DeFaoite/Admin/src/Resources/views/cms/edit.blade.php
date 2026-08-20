@@ -15,7 +15,7 @@
         enctype="multipart/form-data"
     >
 
-        {!! view_render_event('bagisto.admin.cms.pages.edit.create_form_controls.before', ['page' => $page]) !!}
+        {!! view_render_event('exygnus.admin.cms.pages.edit.create_form_controls.before', ['page' => $page]) !!}
 
         <div class="flex items-center justify-between gap-4 max-sm:flex-wrap">
             <p class="text-xl font-bold text-gray-800 dark:text-white">
@@ -100,7 +100,7 @@
             <!-- Left sub-component -->
             <div class="flex flex-1 flex-col gap-2 max-xl:flex-auto">
 
-                {!! view_render_event('bagisto.admin.cms.pages.edit.card.content.before', ['page' => $page]) !!}
+                {!! view_render_event('exygnus.admin.cms.pages.edit.card.content.before', ['page' => $page]) !!}
 
                 <!--Content -->
                 <div class="box-shadow rounded bg-white p-4 dark:bg-gray-900">
@@ -128,9 +128,9 @@
                     </x-admin::form.control-group>
                 </div>
 
-                {!! view_render_event('bagisto.admin.cms.pages.edit.card.content.after', ['page' => $page]) !!}
+                {!! view_render_event('exygnus.admin.cms.pages.edit.card.content.after', ['page' => $page]) !!}
 
-                {!! view_render_event('bagisto.admin.cms.pages.edit.card.seo.before', ['page' => $page]) !!}
+                {!! view_render_event('exygnus.admin.cms.pages.edit.card.seo.before', ['page' => $page]) !!}
 
                 <!-- SEO Input Fields -->
                 <div class="box-shadow rounded bg-white p-4 dark:bg-gray-900">
@@ -218,7 +218,7 @@
                     </x-admin::form.control-group>
                 </div>
 
-                {!! view_render_event('bagisto.admin.cms.pages.edit.card.seo.after', ['page' => $page]) !!}
+                {!! view_render_event('exygnus.admin.cms.pages.edit.card.seo.after', ['page' => $page]) !!}
 
             </div>
 
@@ -226,7 +226,7 @@
             <div class="flex w-[360px] max-w-full flex-col gap-2 max-sm:w-full">
                 <!-- General -->
 
-                {!! view_render_event('bagisto.admin.cms.pages.edit.card.accordion.seo.before', ['page' => $page]) !!}
+                {!! view_render_event('exygnus.admin.cms.pages.edit.card.accordion.seo.before', ['page' => $page]) !!}
 
                 <x-admin::accordion>
                     <x-slot:header>
@@ -288,12 +288,12 @@
                     </x-slot>
                 </x-admin::accordion>
 
-                {!! view_render_event('bagisto.admin.cms.pages.edit.card.accordion.seo.after', ['page' => $page]) !!}
+                {!! view_render_event('exygnus.admin.cms.pages.edit.card.accordion.seo.after', ['page' => $page]) !!}
 
             </div>
           </div>
 
-        {!! view_render_event('bagisto.admin.cms.pages.edit.create_form_controls.after', ['page' => $page]) !!}
+        {!! view_render_event('exygnus.admin.cms.pages.edit.create_form_controls.after', ['page' => $page]) !!}
 
     </x-admin::form>
 </x-admin::layouts>

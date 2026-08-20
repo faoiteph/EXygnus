@@ -1,8 +1,8 @@
-{!! view_render_event('bagisto.shop.categories.view.toolbar.before') !!}
+{!! view_render_event('exygnus.shop.categories.view.toolbar.before') !!}
 
 <v-toolbar @filter-applied='setFilters("toolbar", $event)'></v-toolbar>
 
-{!! view_render_event('bagisto.shop.categories.view.toolbar.after') !!}
+{!! view_render_event('exygnus.shop.categories.view.toolbar.after') !!}
 
 @inject('toolbar' , 'DeFaoite\Product\Helpers\Toolbar')
 
@@ -14,7 +14,7 @@
         <div>
             <!-- Desktop Toolbar -->
             <div class="flex justify-between max-md:hidden">
-                {!! view_render_event('bagisto.shop.categories.toolbar.filter.before') !!}
+                {!! view_render_event('exygnus.shop.categories.toolbar.filter.before') !!}
 
                 <!-- Product Sorting Filters -->
                 <x-shop::dropdown
@@ -45,9 +45,9 @@
                     </x-slot>
                 </x-shop::dropdown>
 
-                {!! view_render_event('bagisto.shop.categories.toolbar.filter.after') !!}
+                {!! view_render_event('exygnus.shop.categories.toolbar.filter.after') !!}
 
-                {!! view_render_event('bagisto.shop.categories.toolbar.pagination.before') !!}
+                {!! view_render_event('exygnus.shop.categories.toolbar.pagination.before') !!}
 
                 <!-- Product Pagination Limit -->
                 <div class="flex items-center gap-10">
@@ -101,7 +101,7 @@
                     </div>
                 </div>
 
-                {!! view_render_event('bagisto.shop.categories.toolbar.pagination.after') !!}
+                {!! view_render_event('exygnus.shop.categories.toolbar.pagination.after') !!}
             </div>
 
             <!-- Mobile Toolbar -->

@@ -2,7 +2,7 @@ import { test, expect } from "../../../setup";
 import { ConfigurationPage } from "../../../pages/admin/configuration/ConfigurationPage";
 
 
-const projectID = "bagisto-test-project";
+const projectID = "exygnus-test-project";
 const apiKey = "AIzaSyD-EXAMPLEKEY1234567890";
 const siteKey = "6LcEXAMPLEKEY1234567890";
 

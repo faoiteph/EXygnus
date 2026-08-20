@@ -51,7 +51,7 @@ return [
     AppServiceProvider::class,
 
     /**
-     * Webkul's service providers.
+     * De Faoite's service providers.
      */
     AdminServiceProvider::class,
     AttributeServiceProvider::class,

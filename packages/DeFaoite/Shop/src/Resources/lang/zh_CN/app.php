@@ -5,7 +5,7 @@ return [
         'forgot-password' => [
             'already-sent' => '密码重置邮件已发送。',
             'back' => '返回登录？',
-            'bagisto' => '天鹅座',
+            'exygnus' => '天鹅座',
             'email' => '电子邮件',
             'email-not-exist' => '我们找不到使用该电子邮件地址的用户。',
             'footer' => '© 版权所有 2010 - :current_year，DeFaoite Software（注册于印度）。保留所有权利。',
@@ -19,7 +19,7 @@ return [
 
         'reset-password' => [
             'back-link-title' => '返回登录',
-            'bagisto' => '天鹅座',
+            'exygnus' => '天鹅座',
             'confirm-password' => '确认密码',
             'email' => '注册电子邮件',
             'footer' => '© 版权 2010 - :current_year，DeFaoite Software（注册于印度）。保留所有权利。',
@@ -29,7 +29,7 @@ return [
         ],
 
         'login-form' => [
-            'bagisto' => '天鹅座',
+            'exygnus' => '天鹅座',
             'button-title' => '登录',
             'create-your-account' => '创建您的帐户',
             'email' => '电子邮件',
@@ -49,7 +49,7 @@ return [
 
         'signup-form' => [
             'account-exists' => '已经有账户？',
-            'bagisto' => '天鹅座',
+            'exygnus' => '天鹅座',
             'button-title' => '注册',
             'click-here' => '点击这里',
             'confirm-pass' => '确认密码',
@@ -564,7 +564,7 @@ return [
                     'bottom' => [
                         'all' => '全部',
                         'back-button' => '返回主菜单',
-                        'bagisto' => 'EXygnus',
+                        'exygnus' => 'EXygnus',
                         'categories' => '分类',
                         'compare' => '比较',
                         'dropdown-text' => '管理购物车、订单和愿望清单',
@@ -585,7 +585,7 @@ return [
                 'mobile' => [
                     'account' => '账户',
                     'back-button' => '返回主菜单',
-                    'bagisto' => 'EXygnus',
+                    'exygnus' => 'EXygnus',
                     'compare' => '比较',
                     'currencies' => '货币',
                     'dropdown-text' => '管理购物车、订单和愿望清单',
@@ -1078,7 +1078,7 @@ return [
             'suspended-account-message' => '您的帐户已被暂停。',
 
             'index' => [
-                'bagisto' => '天鹅座',
+                'exygnus' => '天鹅座',
                 'cart' => '购物车',
                 'continue-shopping' => '继续购物',
                 'empty-product' => '您的购物车中没有产品。',

@@ -1,4 +1,4 @@
-{!! view_render_event('bagisto.admin.sales.order.create.compare_items.before') !!}
+{!! view_render_event('exygnus.admin.sales.order.create.compare_items.before') !!}
 
 <!-- Vue JS Component -->
 <v-compare-items
@@ -9,7 +9,7 @@
     <x-admin::shimmer.sales.orders.create.items />
 </v-compare-items>
 
-{!! view_render_event('bagisto.admin.sales.order.create.compare_items.after') !!}
+{!! view_render_event('exygnus.admin.sales.order.create.compare_items.after') !!}
 
 
 @pushOnce('scripts')
@@ -45,7 +45,7 @@
                             :class="{'overflow-hidden rounded border border-dashed border-gray-300 dark:border-gray-800 dark:mix-blend-exclusion dark:invert': ! item.product.images.length}"
                         >
                             <template v-if="! item.product.images.length">
-                                <img src="{{ bagisto_asset('images/product-placeholders/front.svg') }}">
+                                <img src="{{ exygnus_asset('images/product-placeholders/front.svg') }}">
                             
                                 <p class="absolute bottom-1.5 w-full text-center text-[6px] font-semibold text-gray-400">
                                     @lang('admin::app.catalog.products.edit.types.grouped.image-placeholder')
@@ -99,7 +99,7 @@
                     class="grid justify-center justify-items-center gap-3.5 px-2.5 py-10"
                     v-else
                 >
-                    <img src="{{ bagisto_asset('images/icon-add-product.svg') }}" class="h-20 w-20 dark:mix-blend-exclusion dark:invert">
+                    <img src="{{ exygnus_asset('images/icon-add-product.svg') }}" class="h-20 w-20 dark:mix-blend-exclusion dark:invert">
                     
                     <div class="flex flex-col items-center gap-1.5">
                         <p class="text-base font-semibold text-gray-400">

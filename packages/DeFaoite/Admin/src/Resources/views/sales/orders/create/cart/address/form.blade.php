@@ -26,7 +26,7 @@
                 />
             </x-admin::form.control-group>
 
-            {!! view_render_event('bagisto.admin.sales.order.create.cart.address.form.company_name.after') !!}
+            {!! view_render_event('exygnus.admin.sales.order.create.cart.address.form.company_name.after') !!}
 
             <!-- VatId Name -->
             <x-admin::form.control-group>
@@ -45,7 +45,7 @@
                 <x-admin::form.control-group.error ::name="controlName + '.vat_id'" />
             </x-admin::form.control-group>
 
-            {!! view_render_event('bagisto.admin.sales.order.create.cart.address.form.vat_id.after') !!}
+            {!! view_render_event('exygnus.admin.sales.order.create.cart.address.form.vat_id.after') !!}
 
             <!-- First Name -->
             <x-admin::form.control-group>
@@ -65,7 +65,7 @@
                 <x-admin::form.control-group.error ::name="controlName + '.first_name'" />
             </x-admin::form.control-group>
 
-            {!! view_render_event('bagisto.admin.sales.order.create.cart.address.form.first_name.after') !!}
+            {!! view_render_event('exygnus.admin.sales.order.create.cart.address.form.first_name.after') !!}
 
             <!-- Last Name -->
             <x-admin::form.control-group>
@@ -85,7 +85,7 @@
                 <x-admin::form.control-group.error ::name="controlName + '.last_name'" />
             </x-admin::form.control-group>
 
-            {!! view_render_event('bagisto.admin.sales.order.create.cart.address.form.last_name.after') !!}
+            {!! view_render_event('exygnus.admin.sales.order.create.cart.address.form.last_name.after') !!}
 
             <!-- Email -->
             <x-admin::form.control-group>
@@ -105,7 +105,7 @@
                 <x-admin::form.control-group.error ::name="controlName + '.email'" />
             </x-admin::form.control-group>
 
-            {!! view_render_event('bagisto.admin.sales.order.create.cart.address.form.email.after') !!}
+            {!! view_render_event('exygnus.admin.sales.order.create.cart.address.form.email.after') !!}
 
             <!-- Street Address -->
             <x-admin::form.control-group>
@@ -146,7 +146,7 @@
                 @endif
             </x-admin::form.control-group>
 
-            {!! view_render_event('bagisto.admin.sales.order.create.cart.address.form.address.after') !!}
+            {!! view_render_event('exygnus.admin.sales.order.create.cart.address.form.address.after') !!}
 
             <!-- Country -->
             <x-admin::form.control-group class="!mb-4">
@@ -178,7 +178,7 @@
                 <x-admin::form.control-group.error ::name="controlName + '.country'" />
             </x-admin::form.control-group>
 
-            {!! view_render_event('bagisto.admin.sales.order.create.cart.address.form.country.after') !!}
+            {!! view_render_event('exygnus.admin.sales.order.create.cart.address.form.country.after') !!}
 
             <!-- State -->
             <x-admin::form.control-group>
@@ -224,7 +224,7 @@
                 <x-admin::form.control-group.error ::name="controlName + '.state'" />
             </x-admin::form.control-group>
 
-            {!! view_render_event('bagisto.admin.sales.order.create.cart.address.form.state.after') !!}
+            {!! view_render_event('exygnus.admin.sales.order.create.cart.address.form.state.after') !!}
 
             <!-- City -->
             <x-admin::form.control-group>
@@ -244,7 +244,7 @@
                 <x-admin::form.control-group.error ::name="controlName + '.city'" />
             </x-admin::form.control-group>
 
-            {!! view_render_event('bagisto.admin.sales.order.create.cart.address.form.city.after') !!}
+            {!! view_render_event('exygnus.admin.sales.order.create.cart.address.form.city.after') !!}
 
             <!-- Postcode -->
             <x-admin::form.control-group>
@@ -264,7 +264,7 @@
                 <x-admin::form.control-group.error ::name="controlName + '.postcode'" />
             </x-admin::form.control-group>
 
-            {!! view_render_event('bagisto.admin.sales.order.create.cart.address.form.postcode.after') !!}
+            {!! view_render_event('exygnus.admin.sales.order.create.cart.address.form.postcode.after') !!}
 
             <!-- Phone Number -->
             <x-admin::form.control-group>
@@ -284,7 +284,7 @@
                 <x-admin::form.control-group.error ::name="controlName + '.phone'" />
             </x-admin::form.control-group>
 
-            {!! view_render_event('bagisto.admin.sales.order.create.cart.address.form.phone.after') !!}
+            {!! view_render_event('exygnus.admin.sales.order.create.cart.address.form.phone.after') !!}
         </div>
     </script>
 

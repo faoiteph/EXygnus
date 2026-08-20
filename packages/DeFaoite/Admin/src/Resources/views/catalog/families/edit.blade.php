@@ -9,7 +9,7 @@
         :action="route('admin.catalog.families.update', $attributeFamily->id)"
     >
 
-        {!! view_render_event('bagisto.admin.catalog.families.edit.edit_form_control.before', ['attributeFamily' => $attributeFamily]) !!}
+        {!! view_render_event('exygnus.admin.catalog.families.edit.edit_form_control.before', ['attributeFamily' => $attributeFamily]) !!}
 
         <!-- Page Header -->
         <div class="flex items-center justify-between gap-4 max-sm:flex-wrap">
@@ -38,7 +38,7 @@
         <div class="mt-3.5 flex gap-2.5 max-xl:flex-wrap">
             <!-- Left Container -->
 
-            {!! view_render_event('bagisto.admin.catalog.families.edit.card.attributes-panel.before', ['attributeFamily' => $attributeFamily]) !!}
+            {!! view_render_event('exygnus.admin.catalog.families.edit.card.attributes-panel.before', ['attributeFamily' => $attributeFamily]) !!}
 
             <div class="box-shadow flex flex-1 flex-col gap-2 rounded bg-white dark:bg-gray-900 max-xl:flex-auto">
                 <v-family-attributes>
@@ -46,9 +46,9 @@
                 </v-family-attributes>
             </div>
 
-            {!! view_render_event('bagisto.admin.catalog.families.edit.card.attributes-panel.after', ['attributeFamily' => $attributeFamily]) !!}
+            {!! view_render_event('exygnus.admin.catalog.families.edit.card.attributes-panel.after', ['attributeFamily' => $attributeFamily]) !!}
 
-            {!! view_render_event('bagisto.admin.catalog.families.edit.card.accordion.general.before', ['attributeFamily' => $attributeFamily]) !!}
+            {!! view_render_event('exygnus.admin.catalog.families.edit.card.accordion.general.before', ['attributeFamily' => $attributeFamily]) !!}
     
             <!-- Right Container -->
             <div class="flex w-[360px] max-w-full select-none flex-col gap-2">
@@ -108,10 +108,10 @@
                 </x-admin::accordion>
             </div>
 
-            {!! view_render_event('bagisto.admin.catalog.families.edit.card.accordion.general.after', ['attributeFamily' => $attributeFamily]) !!}
+            {!! view_render_event('exygnus.admin.catalog.families.edit.card.accordion.general.after', ['attributeFamily' => $attributeFamily]) !!}
         </div>
 
-        {!! view_render_event('bagisto.admin.catalog.families.edit.edit_form_control.after', ['attributeFamily' => $attributeFamily]) !!}
+        {!! view_render_event('exygnus.admin.catalog.families.edit.edit_form_control.after', ['attributeFamily' => $attributeFamily]) !!}
 
     </x-admin::form>
 

@@ -44,7 +44,7 @@
         >
             <div>
                 <x-shop::form :action="route('shop.customers.account.addresses.store')">
-                    {!! view_render_event('bagisto.shop.customers.account.addresses.create_form_controls.before') !!}
+                    {!! view_render_event('exygnus.shop.customers.account.addresses.create_form_controls.before') !!}
 
                     <!--Company Name -->
                     <x-shop::form.control-group>
@@ -63,7 +63,7 @@
                         <x-shop::form.control-group.error control-name="company_name" />
                     </x-shop::form.control-group>
 
-                    {!! view_render_event('bagisto.shop.customers.account.addresses.create_form_controls.company_name.after') !!}
+                    {!! view_render_event('exygnus.shop.customers.account.addresses.create_form_controls.company_name.after') !!}
 
                     <!-- First Name -->
                     <x-shop::form.control-group>
@@ -83,7 +83,7 @@
                         <x-shop::form.control-group.error control-name="first_name" />
                     </x-shop::form.control-group>
 
-                    {!! view_render_event('bagisto.shop.customers.account.addresses.create_form_controls.first_name.after') !!}
+                    {!! view_render_event('exygnus.shop.customers.account.addresses.create_form_controls.first_name.after') !!}
 
                     <!-- Last Name  -->
                     <x-shop::form.control-group>
@@ -103,7 +103,7 @@
                         <x-shop::form.control-group.error control-name="last_name" />
                     </x-shop::form.control-group>
 
-                    {!! view_render_event('bagisto.shop.customers.account.addresses.create_form_controls.last_name.after') !!}
+                    {!! view_render_event('exygnus.shop.customers.account.addresses.create_form_controls.last_name.after') !!}
 
                     <!-- E-mail -->
                     <x-shop::form.control-group>
@@ -123,7 +123,7 @@
                         <x-shop::form.control-group.error control-name="email" />
                     </x-shop::form.control-group>
 
-                    {!! view_render_event('bagisto.shop.customers.account.addresses.create_form_controls.email.after') !!}
+                    {!! view_render_event('exygnus.shop.customers.account.addresses.create_form_controls.email.after') !!}
 
                     <!-- Vat Id -->
                     <x-shop::form.control-group>
@@ -142,7 +142,7 @@
                         <x-shop::form.control-group.error control-name="vat_id" />
                     </x-shop::form.control-group>
 
-                    {!! view_render_event('bagisto.shop.customers.account.addresses.create_form_controls.vat_id.after') !!}
+                    {!! view_render_event('exygnus.shop.customers.account.addresses.create_form_controls.vat_id.after') !!}
 
                     <!-- Street Address -->
                     <x-shop::form.control-group>
@@ -162,7 +162,7 @@
                         <x-shop::form.control-group.error control-name="address[]" />
                     </x-shop::form.control-group>
 
-                    {!! view_render_event('bagisto.shop.customers.account.addresses.create_form_controls.street_address.after') !!}
+                    {!! view_render_event('exygnus.shop.customers.account.addresses.create_form_controls.street_address.after') !!}
 
                     @if (
                         core()->getConfigData('customer.address.information.street_lines')
@@ -185,7 +185,7 @@
                         @endfor
                     @endif
 
-                    {!! view_render_event('bagisto.shop.customers.account.addresses.create_form_controls.street_address.after') !!}
+                    {!! view_render_event('exygnus.shop.customers.account.addresses.create_form_controls.street_address.after') !!}
 
                     <!-- Country List-->
                     <x-shop::form.control-group>
@@ -252,7 +252,7 @@
                         <x-shop::form.control-group.error control-name="state" />
                     </x-shop::form.control-group>
 
-                    {!! view_render_event('bagisto.shop.customers.account.addresses.create_form_controls.state.after') !!}
+                    {!! view_render_event('exygnus.shop.customers.account.addresses.create_form_controls.state.after') !!}
 
                     <!-- City -->
                     <x-shop::form.control-group>
@@ -272,7 +272,7 @@
                         <x-shop::form.control-group.error control-name="city" />
                     </x-shop::form.control-group>
 
-                    {!! view_render_event('bagisto.shop.customers.account.addresses.create_form_controls.city.after') !!}
+                    {!! view_render_event('exygnus.shop.customers.account.addresses.create_form_controls.city.after') !!}
 
                     <!-- Post Code -->
                     <x-shop::form.control-group>
@@ -292,7 +292,7 @@
                         <x-shop::form.control-group.error control-name="postcode" />
                     </x-shop::form.control-group>
 
-                    {!! view_render_event('bagisto.shop.customers.account.addresses.create_form_controls.postcode.after') !!}
+                    {!! view_render_event('exygnus.shop.customers.account.addresses.create_form_controls.postcode.after') !!}
 
                     <!-- Contact -->
                     <x-shop::form.control-group>
@@ -312,7 +312,7 @@
                         <x-shop::form.control-group.error control-name="phone" />
                     </x-shop::form.control-group>
 
-                    {!! view_render_event('bagisto.shop.customers.account.addresses.create_form_controls.phone.after') !!}
+                    {!! view_render_event('exygnus.shop.customers.account.addresses.create_form_controls.phone.after') !!}
 
                     <!-- Set As Default -->
                     <div class="text-md mb-4 flex select-none items-center gap-x-1.5 text-zinc-500">
@@ -345,9 +345,9 @@
                         @lang('shop::app.customers.account.addresses.create.save')
                     </button>
 
-                    {!! view_render_event('bagisto.shop.customers.account.addresses.create_form_controls.after') !!}
+                    {!! view_render_event('exygnus.shop.customers.account.addresses.create_form_controls.after') !!}
                 </x-shop::form>
-                {!! view_render_event('bagisto.shop.customers.account.address.create.after') !!}
+                {!! view_render_event('exygnus.shop.customers.account.address.create.after') !!}
             </div>
         </script>
     

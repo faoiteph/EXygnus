@@ -42,7 +42,7 @@
         @if (! $addresses->isEmpty())
             <!-- Address Information -->
 
-            {!! view_render_event('bagisto.shop.customers.account.addresses.list.before', ['addresses' => $addresses]) !!}
+            {!! view_render_event('exygnus.shop.customers.account.addresses.list.before', ['addresses' => $addresses]) !!}
 
             <div class="mt-[60px] grid grid-cols-2 gap-5 max-1060:grid-cols-[1fr] max-md:mt-5">
                 @foreach ($addresses as $address)
@@ -148,14 +148,14 @@
                 @endforeach
             </div>
 
-            {!! view_render_event('bagisto.shop.customers.account.addresses.list.after', ['addresses' => $addresses]) !!}
+            {!! view_render_event('exygnus.shop.customers.account.addresses.list.after', ['addresses' => $addresses]) !!}
 
         @else
             <!-- Address Empty Page -->
             <div class="grid items-center w-full py-32 m-auto text-center place-content-center justify-items-center">
                 <img 
                     class="max-md:h-[100px] max-md:w-[100px]"
-                    src="{{ bagisto_asset('images/no-address.png') }}" 
+                    src="{{ exygnus_asset('images/no-address.png') }}" 
                     alt="Empty Address" 
                     title=""
                 >

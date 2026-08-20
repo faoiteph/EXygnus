@@ -14,13 +14,13 @@
     <!-- Breadcrumb -->
     @if ((core()->getConfigData('general.general.breadcrumbs.shop')))
         <div class="mt-5 flex justify-center max-lg:hidden">
-            {!! view_render_event('bagisto.shop.customers.account.compare.breadcrumbs.before') !!}
+            {!! view_render_event('exygnus.shop.customers.account.compare.breadcrumbs.before') !!}
 
             <div class="flex items-center gap-x-2.5">
                 <x-shop::breadcrumbs name="compare" />
             </div>
 
-            {!! view_render_event('bagisto.shop.customers.account.compare.breadcrumbs.after') !!}
+            {!! view_render_event('exygnus.shop.customers.account.compare.breadcrumbs.after') !!}
         </div>
     @endif
 
@@ -38,20 +38,20 @@
             id="v-compare-template"
         >
             <div>
-                {!! view_render_event('bagisto.shop.customers.account.compare.before') !!}
+                {!! view_render_event('exygnus.shop.customers.account.compare.before') !!}
 
                 <div v-if="! isLoading">
                     <div class="flex items-center justify-between max-md:px-4">
 
-                        {!! view_render_event('bagisto.shop.customers.account.compare.title.before') !!}
+                        {!! view_render_event('exygnus.shop.customers.account.compare.title.before') !!}
 
                         <h1 class="text-2xl font-medium max-sm:text-base">
                             @lang('shop::app.compare.title')
                         </h1>
 
-                        {!! view_render_event('bagisto.shop.customers.account.compare.title.after') !!}
+                        {!! view_render_event('exygnus.shop.customers.account.compare.title.after') !!}
 
-                        {!! view_render_event('bagisto.shop.customers.account.compare.remove_all.before') !!}
+                        {!! view_render_event('exygnus.shop.customers.account.compare.remove_all.before') !!}
 
                         <div
                             class="secondary-button flex items-center gap-x-2.5 whitespace-nowrap border-zinc-200 px-5 py-3 font-normal max-md:rounded-lg max-md:px-3 max-md:text-xs max-sm:py-1.5"
@@ -63,7 +63,7 @@
                             @lang('shop::app.compare.delete-all')
                         </div>
 
-                        {!! view_render_event('bagisto.shop.customers.account.compare.remove_all.after') !!}
+                        {!! view_render_event('exygnus.shop.customers.account.compare.remove_all.after') !!}
                     </div>
 
                     <div
@@ -76,7 +76,7 @@
                                 class="flex max-w-full items-center border-b border-zinc-200"
                                 v-if="attribute.code == 'product'"
                             >
-                                {!! view_render_event('bagisto.shop.customers.account.compare.attribute_name.before') !!}
+                                {!! view_render_event('exygnus.shop.customers.account.compare.attribute_name.before') !!}
 
                                 <div class="min-w-[304px] max-w-full max-md:grid max-md:h-full max-md:min-w-40 max-md:items-center max-md:bg-gray-200 max-sm:min-w-[110px]">
                                     <p class="text-sm font-medium max-md:pl-4">
@@ -84,7 +84,7 @@
                                     </p>
                                 </div>
 
-                                {!! view_render_event('bagisto.shop.customers.account.compare.attribute_name.after') !!}
+                                {!! view_render_event('exygnus.shop.customers.account.compare.attribute_name.after') !!}
 
                                 <div class="flex gap-3 border-zinc-200 max-md:gap-0 max-md:border-0 ltr:border-l-[1px] rtl:border-r-[1px]">
                                     <div
@@ -101,7 +101,7 @@
                                 </div>
                             </div>
 
-                            {!! view_render_event('bagisto.shop.customers.account.compare.comparable_attribute.before') !!}
+                            {!! view_render_event('exygnus.shop.customers.account.compare.comparable_attribute.before') !!}
 
                             <!-- Comparable Attributes -->
                             <div
@@ -128,7 +128,7 @@
                                 </div>
                             </div>
 
-                            {!! view_render_event('bagisto.shop.customers.account.compare.comparable_attribute.after') !!}
+                            {!! view_render_event('exygnus.shop.customers.account.compare.comparable_attribute.after') !!}
                         </template>
                     </div>
 
@@ -138,7 +138,7 @@
                     >
                         <img
                             class="max-sm:h-[100px] max-sm:w-[100px]"
-                            src="{{ bagisto_asset('images/thank-you.png') }}"
+                            src="{{ exygnus_asset('images/thank-you.png') }}"
                             alt="@lang('shop::app.compare.empty-text')"
                             loading="lazy"
                             decoding="async"
@@ -158,7 +158,7 @@
                     <x-shop::shimmer.compare :attributeCount="count($comparableAttributes)" />
                 </div>
 
-                {!! view_render_event('bagisto.shop.customers.account.compare.after') !!}
+                {!! view_render_event('exygnus.shop.customers.account.compare.after') !!}
             </div>
         </script>
 

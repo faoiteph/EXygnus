@@ -15,7 +15,7 @@
             <div class="flex items-center gap-x-2.5">
                 <!-- Included customer create blade file -->
                 @if (bouncer()->hasPermission('customers.customers.create'))
-                    {!! view_render_event('bagisto.admin.customers.customers.create.before') !!}
+                    {!! view_render_event('exygnus.admin.customers.customers.create.before') !!}
 
                     @include('admin::customers.customers.index.create')
 
@@ -24,7 +24,7 @@
                         @customer-created="$refs.customerDatagrid.get()"
                     ></v-create-customer-form>
 
-                    {!! view_render_event('bagisto.admin.customers.customers.create.after') !!}
+                    {!! view_render_event('exygnus.admin.customers.customers.create.after') !!}
 
                     <button
                         class="primary-button"
@@ -37,7 +37,7 @@
         </div>
     </div>
 
-    {!! view_render_event('bagisto.admin.customers.customers.list.before') !!}
+    {!! view_render_event('exygnus.admin.customers.customers.list.before') !!}
 
     <x-admin::datagrid
         :src="route('admin.customers.customers.index')"
@@ -255,5 +255,5 @@
         </template>
     </x-admin::datagrid>
 
-    {!! view_render_event('bagisto.admin.customers.customers.list.after') !!}
+    {!! view_render_event('exygnus.admin.customers.customers.list.after') !!}
 </x-admin::layouts>

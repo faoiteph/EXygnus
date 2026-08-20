@@ -1,9 +1,9 @@
-{!! view_render_event('bagisto.admin.catalog.product.edit.booking.default.before', ['product' => $product]) !!}
+{!! view_render_event('exygnus.admin.catalog.product.edit.booking.default.before', ['product' => $product]) !!}
 
 <!-- Vue Component -->
 <v-default-booking></v-default-booking>
 
-{!! view_render_event('bagisto.admin.catalog.product.edit.booking.default.after', ['product' => $product]) !!}
+{!! view_render_event('exygnus.admin.catalog.product.edit.booking.default.after', ['product' => $product]) !!}
 
 @pushOnce('scripts')
     <script

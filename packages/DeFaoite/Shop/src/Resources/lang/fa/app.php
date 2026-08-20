@@ -5,7 +5,7 @@ return [
         'forgot-password' => [
             'already-sent' => 'از قبل بازنشانی رمز عبور ایمیل ارسال شده است.',
             'back' => 'بازگشت به صفحه ورود؟',
-            'bagisto' => 'اگزیگنوس',
+            'exygnus' => 'اگزیگنوس',
             'email' => 'ایمیل',
             'email-not-exist' => 'ما نمی‌توانیم کاربری با این آدرس ایمیل پیدا کنیم.',
             'footer' => '© حق تألیف 2010 - :current_year، نرم‌افزار وب‌کول (ثبت شده در هند). تمامی حقوق محفوظ است.',
@@ -19,7 +19,7 @@ return [
 
         'reset-password' => [
             'back-link-title' => 'بازگشت به صفحه ورود',
-            'bagisto' => 'اگزیگنوس',
+            'exygnus' => 'اگزیگنوس',
             'confirm-password' => 'تأیید رمز عبور',
             'email' => 'ایمیل ثبت‌شده',
             'footer' => '© حق تألیف 2010 - :current_year، نرم‌افزار وب‌کول (ثبت شده در هند). تمامی حقوق محفوظ است.',
@@ -29,7 +29,7 @@ return [
         ],
 
         'login-form' => [
-            'bagisto' => 'اگزیگنوس',
+            'exygnus' => 'اگزیگنوس',
             'button-title' => 'ورود',
             'create-your-account' => 'حساب کاربری خود را ایجاد کنید',
             'email' => 'ایمیل',
@@ -49,7 +49,7 @@ return [
 
         'signup-form' => [
             'account-exists' => 'قبلاً حساب دارید؟',
-            'bagisto' => 'اگزیگنوس',
+            'exygnus' => 'اگزیگنوس',
             'button-title' => 'ثبت نام',
             'click-here' => 'اینجا کلیک کنید',
             'confirm-pass' => 'تأیید رمز عبور',
@@ -564,7 +564,7 @@ return [
                     'bottom' => [
                         'all' => 'همه',
                         'back-button' => 'بازگشت به منوی اصلی',
-                        'bagisto' => 'باگیستو',
+                        'exygnus' => 'باگیستو',
                         'categories' => 'دسته‌بندی‌ها',
                         'compare' => 'مقایسه',
                         'dropdown-text' => 'مدیریت سبد خرید، سفارش‌ها و لیست علاقه‌مندی‌ها',
@@ -585,7 +585,7 @@ return [
                 'mobile' => [
                     'account' => 'حساب کاربری',
                     'back-button' => 'بازگشت به منوی اصلی',
-                    'bagisto' => 'باگیستو',
+                    'exygnus' => 'باگیستو',
                     'compare' => 'مقایسه',
                     'currencies' => 'واحدهای پول',
                     'dropdown-text' => 'مدیریت سبد خرید، سفارش‌ها و لیست علاقه‌مندی‌ها',
@@ -1078,7 +1078,7 @@ return [
             'suspended-account-message' => 'حساب کاربری شما مسدود شده است.',
 
             'index' => [
-                'bagisto' => 'اگزیگنوس',
+                'exygnus' => 'اگزیگنوس',
                 'cart' => 'سبد خرید',
                 'continue-shopping' => 'ادامه خرید',
                 'empty-product' => 'شما هیچ محصولی در سبد خرید خود ندارید.',

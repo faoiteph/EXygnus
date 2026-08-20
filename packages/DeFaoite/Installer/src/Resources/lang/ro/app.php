@@ -806,7 +806,7 @@ return [
         'index' => [
             'create-administrator' => [
                 'admin' => 'Administrator',
-                'bagisto' => 'EXygnus',
+                'exygnus' => 'EXygnus',
                 'confirm-password' => 'Confirmați parola',
                 'email' => 'E-mail',
                 'email-address' => 'admin@example.com',
@@ -821,7 +821,7 @@ return [
                 'application-name' => 'Numele aplicației',
                 'argentine-peso' => 'Peso argentinian (ARS)',
                 'australian-dollar' => 'Dolar australian (AUD)',
-                'bagisto' => 'EXygnus',
+                'exygnus' => 'EXygnus',
                 'bangladeshi-taka' => 'Taka din Bangladesh (BDT)',
                 'bahraini-dinar' => 'Dinar din Bahrain (BHD)',
                 'brazilian-real' => 'Real brazilian (BRL)',
@@ -914,16 +914,16 @@ return [
             ],
 
             'installation-processing' => [
-                'bagisto' => 'Instalare EXygnus',
-                'bagisto-info' => 'Se creează tabelele bazei de date, acest lucru poate dura câteva momente',
+                'exygnus' => 'Instalare EXygnus',
+                'exygnus-info' => 'Se creează tabelele bazei de date, acest lucru poate dura câteva momente',
                 'title' => 'Instalare',
             ],
 
             'installation-completed' => [
                 'admin-panel' => 'Panou de administrare',
-                'bagisto-forums' => 'Forum EXygnus',
+                'exygnus-forums' => 'Forum EXygnus',
                 'customer-panel' => 'Panou client',
-                'explore-bagisto-extensions' => 'Explorați extensiile EXygnus',
+                'explore-exygnus-extensions' => 'Explorați extensiile EXygnus',
                 'title' => 'Instalare finalizată',
                 'title-info' => 'EXygnus a fost instalat cu succes pe sistemul dumneavoastră.',
             ],
@@ -973,9 +973,9 @@ return [
 
             'arabic' => 'Arabă',
             'back' => 'Înapoi',
-            'bagisto' => 'EXygnus',
-            'bagisto-info' => 'un proiect comunitar realizat de',
-            'bagisto-logo' => 'Logo EXygnus',
+            'exygnus' => 'EXygnus',
+            'exygnus-info' => 'un proiect comunitar realizat de',
+            'exygnus-logo' => 'Logo EXygnus',
             'bengali' => 'Bengali',
             'catalan' => 'Catalană',
             'chinese' => 'Chineză',
@@ -1002,7 +1002,7 @@ return [
             'title' => 'Instalator EXygnus',
             'turkish' => 'Turcă',
             'ukrainian' => 'Ucraineană',
-            'webkul' => 'DeFaoite',
+            'defaoite' => 'DeFaoite',
         ],
     ],
 ];

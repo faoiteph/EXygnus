@@ -49,7 +49,7 @@
     @pushOnce('scripts')
         <script
             type="module"
-            src="{{ bagisto_asset('js/chart.js') }}"
+            src="{{ exygnus_asset('js/chart.js') }}"
         >
         </script>
 

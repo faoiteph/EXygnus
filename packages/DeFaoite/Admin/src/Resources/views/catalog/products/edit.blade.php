@@ -3,13 +3,13 @@
         @lang('admin::app.catalog.products.edit.title')
     </x-slot>
 
-    {!! view_render_event('bagisto.admin.catalog.product.edit.before', ['product' => $product]) !!}
+    {!! view_render_event('exygnus.admin.catalog.product.edit.before', ['product' => $product]) !!}
 
     <x-admin::form
         method="PUT"
         enctype="multipart/form-data"
     >
-        {!! view_render_event('bagisto.admin.catalog.product.edit.actions.before', ['product' => $product]) !!}
+        {!! view_render_event('exygnus.admin.catalog.product.edit.actions.before', ['product' => $product]) !!}
 
         <!-- Page Header -->
         <div class="grid gap-2.5">
@@ -137,10 +137,10 @@
             </div>
         </div>
 
-        {!! view_render_event('bagisto.admin.catalog.product.edit.actions.after', ['product' => $product]) !!}
+        {!! view_render_event('exygnus.admin.catalog.product.edit.actions.after', ['product' => $product]) !!}
 
         <!-- body content -->
-        {!! view_render_event('bagisto.admin.catalog.product.edit.form.before', ['product' => $product]) !!}
+        {!! view_render_event('exygnus.admin.catalog.product.edit.form.before', ['product' => $product]) !!}
 
         <div class="mt-3.5 flex gap-2.5 max-xl:flex-wrap">
             @php
@@ -150,7 +150,7 @@
             @endphp
 
             @foreach ($groupedColumns as $column => $groups)
-                {!! view_render_event("bagisto.admin.catalog.product.edit.form.column_{$column}.before", ['product' => $product]) !!}
+                {!! view_render_event("exygnus.admin.catalog.product.edit.form.column_{$column}.before", ['product' => $product]) !!}
 
                 <div class="flex flex-col gap-2 {{ $column == 1 ? 'flex-1 max-xl:flex-auto' : 'w-[360px] max-w-full max-sm:w-full' }}">
                     @foreach ($groups as $group)
@@ -179,7 +179,7 @@
                         @endif
 
                         @if ($customAttributes->isNotEmpty())
-                            {!! view_render_event("bagisto.admin.catalog.product.edit.form.{$group->code}.before", ['product' => $product]) !!}
+                            {!! view_render_event("exygnus.admin.catalog.product.edit.form.{$group->code}.before", ['product' => $product]) !!}
 
                             <div class="box-shadow relative rounded bg-white p-4 dark:bg-gray-900">
                                 <p 
@@ -194,7 +194,7 @@
                                 @endif
 
                                 @foreach ($customAttributes as $attribute)
-                                    {!! view_render_event("bagisto.admin.catalog.product.edit.form.{$group->code}.controls.before", ['product' => $product]) !!}
+                                    {!! view_render_event("exygnus.admin.catalog.product.edit.form.{$group->code}.controls.before", ['product' => $product]) !!}
 
                                     <x-admin::form.control-group class="last:!mb-0">
                                         <x-admin::form.control-group.label>
@@ -230,7 +230,7 @@
                                         <x-admin::form.control-group.error :control-name="$attribute->code . (in_array($attribute->type, ['multiselect', 'checkbox']) ? '[]' : '')" />
                                     </x-admin::form.control-group>
 
-                                    {!! view_render_event("bagisto.admin.catalog.product.edit.form.{$group->code}.controls.after", ['product' => $product]) !!}
+                                    {!! view_render_event("exygnus.admin.catalog.product.edit.form.{$group->code}.controls.after", ['product' => $product]) !!}
                                 @endforeach
 
                                 @includeWhen($group->code == 'price', 'admin::catalog.products.edit.price.group')
@@ -238,7 +238,7 @@
                                 @includeWhen($group->code === 'inventories', 'admin::catalog.products.edit.inventories')                                
                             </div>
 
-                            {!! view_render_event("bagisto.admin.catalog.product.edit.form.{$group->code}.after", ['product' => $product]) !!}
+                            {!! view_render_event("exygnus.admin.catalog.product.edit.form.{$group->code}.after", ['product' => $product]) !!}
                         @endif
                     @endforeach
 
@@ -297,12 +297,12 @@
                     </div>
                 @endif
 
-                {!! view_render_event("bagisto.admin.catalog.product.edit.form.column_{$column}.after", ['product' => $product]) !!}
+                {!! view_render_event("exygnus.admin.catalog.product.edit.form.column_{$column}.after", ['product' => $product]) !!}
             @endforeach
         </div>
 
-        {!! view_render_event('bagisto.admin.catalog.product.edit.form.after', ['product' => $product]) !!}
+        {!! view_render_event('exygnus.admin.catalog.product.edit.form.after', ['product' => $product]) !!}
     </x-admin::form>
 
-    {!! view_render_event('bagisto.admin.catalog.product.edit.after', ['product' => $product]) !!}
+    {!! view_render_event('exygnus.admin.catalog.product.edit.after', ['product' => $product]) !!}
 </x-admin::layouts>

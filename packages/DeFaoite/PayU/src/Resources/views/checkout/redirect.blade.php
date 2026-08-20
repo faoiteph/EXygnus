@@ -103,7 +103,7 @@
 
 <body>
     <div class="container">
-        {!! view_render_event('bagisto.shop.payu.redirect.before') !!}
+        {!! view_render_event('exygnus.shop.payu.redirect.before') !!}
 
         <div class="spinner"></div>
 
@@ -119,7 +119,7 @@
             {{ __('payu::app.redirect.redirect-message') }}
         </p>
 
-        {!! view_render_event('bagisto.shop.payu.redirect.after') !!}
+        {!! view_render_event('exygnus.shop.payu.redirect.after') !!}
     </div>
 
     <form action="{{ $paymentUrl }}" id="payu_payment_form" method="POST" style="display: none;">

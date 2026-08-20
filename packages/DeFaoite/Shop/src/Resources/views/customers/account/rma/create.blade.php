@@ -43,11 +43,11 @@
             </a>
         </div>
 
-        {!! view_render_event('bagisto.shop.customers.account.new-rma.list.before') !!}
+        {!! view_render_event('exygnus.shop.customers.account.new-rma.list.before') !!}
 
         <v-customer-new-rma></v-customer-new-rma>
 
-        {!! view_render_event('bagisto.shop.customers.account.new-rma.list.after') !!}
+        {!! view_render_event('exygnus.shop.customers.account.new-rma.list.after') !!}
     </div>
 
     @pushOnce('scripts')
@@ -394,7 +394,7 @@
                                 <template v-else>
                                     <img
                                         class="h-20 w-20 shrink-0 rounded-lg border border-zinc-200 object-cover"
-                                        src="{{ bagisto_asset('images/medium-product-placeholder.webp') }}"
+                                        src="{{ exygnus_asset('images/medium-product-placeholder.webp') }}"
                                         alt="medium-product-placeholder.webp"
                                     >
                                 </template>

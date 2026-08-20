@@ -671,7 +671,7 @@ it('should fails the validation error when the product id not provided add a sim
 
     $cartRuleCoupon = CartRuleCoupon::factory()->create([
         'cart_rule_id' => $cartRule->id,
-        'code' => fake()->numerify('bagisto-########'),
+        'code' => fake()->numerify('exygnus-########'),
         'type' => 0,
         'is_primary' => 1,
     ]);
@@ -770,7 +770,7 @@ it('should add a simple product to the cart with a cart rule of the specific cou
 
     $cartRuleCoupon = CartRuleCoupon::factory()->create([
         'cart_rule_id' => $cartRule->id,
-        'code' => $couponCode = fake()->numerify('bagisto-########'),
+        'code' => $couponCode = fake()->numerify('exygnus-########'),
         'type' => 0,
         'is_primary' => 1,
     ]);
@@ -876,7 +876,7 @@ it('should fails the validation error when the product id not provided add a sim
 
     $cartRuleCoupon = CartRuleCoupon::factory()->create([
         'cart_rule_id' => $cartRule->id,
-        'code' => $couponCode = fake()->numerify('bagisto-########'),
+        'code' => $couponCode = fake()->numerify('exygnus-########'),
         'type' => 0,
         'is_primary' => 1,
     ]);
@@ -968,7 +968,7 @@ it('should add a simple product to the cart with a cart rule of the specific cou
 
     $cartRuleCoupon = CartRuleCoupon::factory()->create([
         'cart_rule_id' => $cartRule->id,
-        'code' => $couponCode = fake()->numerify('bagisto-########'),
+        'code' => $couponCode = fake()->numerify('exygnus-########'),
         'type' => 0,
         'is_primary' => 1,
     ]);
@@ -1067,7 +1067,7 @@ it('should fails the validation error when the product id not provided add a sim
 
     $cartRuleCoupon = CartRuleCoupon::factory()->create([
         'cart_rule_id' => $cartRule->id,
-        'code' => $couponCode = fake()->numerify('bagisto-########'),
+        'code' => $couponCode = fake()->numerify('exygnus-########'),
         'type' => 0,
         'is_primary' => 1,
     ]);
@@ -1167,7 +1167,7 @@ it('should add a simple product to the cart with a cart rule of the specific cou
 
     $cartRuleCoupon = CartRuleCoupon::factory()->create([
         'cart_rule_id' => $cartRule->id,
-        'code' => $couponCode = fake()->numerify('bagisto-########'),
+        'code' => $couponCode = fake()->numerify('exygnus-########'),
         'type' => 0,
         'is_primary' => 1,
     ]);
@@ -1267,7 +1267,7 @@ it('should fails the validation error when the product id not provided add a sim
 
     $cartRuleCoupon = CartRuleCoupon::factory()->create([
         'cart_rule_id' => $cartRule->id,
-        'code' => $couponCode = fake()->numerify('bagisto-########'),
+        'code' => $couponCode = fake()->numerify('exygnus-########'),
         'type' => 0,
         'is_primary' => 1,
     ]);
@@ -1360,7 +1360,7 @@ it('should add a simple product to the cart with a cart rule of the specific cou
 
     $cartRuleCoupon = CartRuleCoupon::factory()->create([
         'cart_rule_id' => $cartRule->id,
-        'code' => $couponCode = fake()->numerify('bagisto-########'),
+        'code' => $couponCode = fake()->numerify('exygnus-########'),
         'type' => 0,
         'is_primary' => 1,
     ]);

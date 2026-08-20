@@ -1,5 +1,5 @@
 <!-- Estimate Tax and Shipping -->
-{!! view_render_event('bagisto.shop.checkout.cart.summary.estimate_shipping.before') !!}
+{!! view_render_event('exygnus.shop.checkout.cart.summary.estimate_shipping.before') !!}
 
 <x-shop::accordion
     class="overflow-hidden rounded-xl border max-md:rounded-lg max-md:!border-none max-md:!bg-gray-100"
@@ -17,7 +17,7 @@
     </x-slot>
 </x-shop::accordion>
 
-{!! view_render_event('bagisto.shop.checkout.cart.summary.estimate_shipping.after') !!}
+{!! view_render_event('exygnus.shop.checkout.cart.summary.estimate_shipping.after') !!}
 
 @pushOnce('scripts')
     <script type="text/x-template" id="v-estimate-tax-shipping-template">
@@ -60,7 +60,7 @@
                     <x-shop::form.control-group.error name="country" />
                 </x-shop::form.control-group>
 
-                {!! view_render_event('bagisto.shop.checkout.onepage.address.form.country.after') !!}
+                {!! view_render_event('exygnus.shop.checkout.onepage.address.form.country.after') !!}
 
                 <!-- State -->
                 <x-shop::form.control-group>
@@ -127,7 +127,7 @@
                     v-if="methods.length"
                 >
                     <template v-for="method in methods">
-                        {!! view_render_event('bagisto.shop.checkout.cart.summary.estimate_shipping.shipping_method.before') !!}
+                        {!! view_render_event('exygnus.shop.checkout.cart.summary.estimate_shipping.shipping_method.before') !!}
 
                         <div
                             class="relative select-none border-b border-zinc-200 last:border-b-0 max-md:max-w-full max-md:flex-auto"
@@ -158,7 +158,7 @@
                             </label>
                         </div>
 
-                        {!! view_render_event('bagisto.shop.checkout.cart.summary.estimate_shipping.shipping_method.after') !!}
+                        {!! view_render_event('exygnus.shop.checkout.cart.summary.estimate_shipping.shipping_method.after') !!}
                     </template>
                 </div>
             </form>                    

@@ -41,7 +41,7 @@ class InstallerServiceProvider extends ServiceProvider
 
         $this->loadTranslationsFrom(__DIR__.'/../Resources/lang', 'installer');
 
-        Event::listen('bagisto.installed', 'DeFaoite\Installer\Listeners\Installer@installed');
+        Event::listen('exygnus.installed', 'DeFaoite\Installer\Listeners\Installer@installed');
     }
 
     /**

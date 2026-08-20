@@ -267,7 +267,7 @@ class Themes
          * If a namespace is provided, it means the developer knows what they are doing and must create the
          * registry in the provided configuration. We will analyze based on that.
          */
-        $viters = config('bagisto-vite.viters');
+        $viters = config('exygnus-vite.viters');
 
         if (empty($viters[$namespace])) {
             throw new ViterNotFound($namespace);
@@ -281,12 +281,12 @@ class Themes
     }
 
     /**
-     * Set bagisto vite in current theme.
+     * Set exygnus vite in current theme.
      *
      * @param  mixed  $entryPoints
      * @return mixed
      */
-    public function setBagistoVite($entryPoints, ?string $namespace = null)
+    public function setEXygnusVite($entryPoints, ?string $namespace = null)
     {
         /**
          * If the namespace is null, it means the theming system is activated. We use the request URI to
@@ -304,14 +304,14 @@ class Themes
                 $currentTheme = $this->current();
             }
 
-            return $currentTheme->setBagistoVite($entryPoints);
+            return $currentTheme->setEXygnusVite($entryPoints);
         }
 
         /**
          * If a namespace is provided, it means the developer knows what they are doing and must create the
          * registry in the provided configuration. We will analyze based on that.
          */
-        $viters = config('bagisto-vite.viters');
+        $viters = config('exygnus-vite.viters');
 
         if (empty($viters[$namespace])) {
             throw new ViterNotFound($namespace);

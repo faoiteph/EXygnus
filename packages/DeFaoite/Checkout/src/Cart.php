@@ -1088,7 +1088,7 @@ class Cart
                     /**
                      * For tax-inclusive prices the customer always pays the (discounted)
                      * gross amount, so the "apply tax on" setting only affects how tax is
-                     * broken out of that gross - it cannot change the grand total. Bagisto's
+                     * broken out of that gross - it cannot change the grand total. EXygnus's
                      * total pipeline (sub_total + tax - discount) cannot represent an
                      * after-discount breakdown without changing what the customer pays, so
                      * the discount is intentionally not subtracted from the taxable base here.

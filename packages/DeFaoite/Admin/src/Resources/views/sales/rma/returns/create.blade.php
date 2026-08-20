@@ -24,11 +24,11 @@
         </div>
     </div>
 
-    {!! view_render_event('bagisto.admin.rma.create.list.before') !!}
+    {!! view_render_event('exygnus.admin.rma.create.list.before') !!}
 
     <v-admin-new-rma></v-admin-new-rma>
 
-    {!! view_render_event('bagisto.admin.rma.create.list.after') !!}
+    {!! view_render_event('exygnus.admin.rma.create.list.after') !!}
 
     @pushOnce('scripts')
         <script
@@ -280,7 +280,7 @@
                                 <template v-else>
                                     <img
                                         class="h-20 w-20 shrink-0 rounded-lg border border-zinc-200 object-cover dark:border-gray-800"
-                                        src="{{ bagisto_asset('images/medium-product-placeholder.webp', 'shop') }}"
+                                        src="{{ exygnus_asset('images/medium-product-placeholder.webp', 'shop') }}"
                                         alt="medium-product-placeholder.webp"
                                     >
                                 </template>

@@ -878,7 +878,7 @@
                                                         <div class="grid">
                                                             <div class="flex items-center gap-5 py-2.5">
                                                                 <img
-                                                                    src="{{ bagisto_asset('images/icon-add-product.svg') }}"
+                                                                    src="{{ exygnus_asset('images/icon-add-product.svg') }}"
                                                                     class="h-20 w-20 dark:border-gray-800 dark:mix-blend-exclusion dark:invert"
                                                                 >
 

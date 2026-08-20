@@ -157,7 +157,7 @@
                             <div class="row grid min-h-[260px] place-content-center justify-items-center gap-3 border-b px-4 py-8 text-center text-gray-600 dark:border-gray-800 dark:text-gray-300">
                                 <img
                                     class="h-[120px] w-[120px] select-none p-2 dark:mix-blend-exclusion dark:invert"
-                                    src="{{ bagisto_asset('images/empty-placeholders/default.svg') }}"
+                                    src="{{ exygnus_asset('images/empty-placeholders/default.svg') }}"
                                     alt=""
                                     aria-hidden="true"
                                 />

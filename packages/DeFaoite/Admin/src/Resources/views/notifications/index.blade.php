@@ -3,7 +3,7 @@
         @lang('admin::app.notifications.title')
     </x-slot>
 
-    {!! view_render_event('bagisto.admin.marketing.notifications.create.before') !!}
+    {!! view_render_event('exygnus.admin.marketing.notifications.create.before') !!}
 
     <!-- Vue Component -->
     <v-notification-list>
@@ -11,7 +11,7 @@
         <x-admin::shimmer.notifications />
     </v-notification-list>
 
-    {!! view_render_event('bagisto.admin.marketing.notifications.create.after') !!}
+    {!! view_render_event('exygnus.admin.marketing.notifications.create.after') !!}
 
     @pushOnce('scripts')
         <script

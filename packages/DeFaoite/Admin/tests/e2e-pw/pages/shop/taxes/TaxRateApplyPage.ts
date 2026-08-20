@@ -21,7 +21,7 @@ interface CheckoutRegion {
  * Storefront page object that drives a guest checkout and verifies tax is
  * applied for a product whose tax category matches the configured region.
  *
- * Tax is computed by Bagisto from the shipping address, which for a guest is
+ * Tax is computed by EXygnus from the shipping address, which for a guest is
  * only known once the checkout address is submitted — so the taxable subtotal
  * is asserted on the cart page and the tax / grand-total are asserted on the
  * checkout (one-page) summary.
@@ -172,7 +172,7 @@ export class TaxRateApplyPage extends BasePage {
         await this.visit("checkout/onepage");
         await this.page.waitForLoadState("networkidle");
 
-        await this.companyName.fill("Webkul");
+        await this.companyName.fill("De Faoite");
         await this.firstName.fill("Tax");
         await this.lastName.fill("Tester");
         await this.email.fill("tax.tester@example.com");

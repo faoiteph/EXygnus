@@ -31,7 +31,7 @@
                 </h2>
             </div>
 
-            {!! view_render_event('bagisto.shop.customers.account.profile.edit_button.before') !!}
+            {!! view_render_event('exygnus.shop.customers.account.profile.edit_button.before') !!}
 
             <a
                 href="{{ route('shop.customers.account.profile.edit') }}"
@@ -40,12 +40,12 @@
                 @lang('shop::app.customers.account.profile.index.edit')
             </a>
 
-            {!! view_render_event('bagisto.shop.customers.account.profile.edit_button.after') !!}
+            {!! view_render_event('exygnus.shop.customers.account.profile.edit_button.after') !!}
         </div>
 
         <!-- Profile Information -->
         <div class="grid grid-cols-1 mt-8 gap-y-6 max-md:mt-5 max-sm:gap-y-4">
-            {!! view_render_event('bagisto.shop.customers.account.profile.first_name.before') !!}
+            {!! view_render_event('exygnus.shop.customers.account.profile.first_name.before') !!}
 
             <div class="grid w-full grid-cols-[2fr_3fr] border-b border-zinc-200 px-8 py-3 max-md:px-0">
                 <p class="text-sm font-medium">
@@ -57,9 +57,9 @@
                 </p>
             </div>
 
-            {!! view_render_event('bagisto.shop.customers.account.profile.first_name.after') !!}
+            {!! view_render_event('exygnus.shop.customers.account.profile.first_name.after') !!}
 
-            {!! view_render_event('bagisto.shop.customers.account.profile.last_name.before') !!}
+            {!! view_render_event('exygnus.shop.customers.account.profile.last_name.before') !!}
 
             <div class="grid w-full grid-cols-[2fr_3fr] border-b border-zinc-200 px-8 py-3 max-md:px-0">
                 <p class="text-sm font-medium">
@@ -71,9 +71,9 @@
                 </p>
             </div>
 
-            {!! view_render_event('bagisto.shop.customers.account.profile.last_name.after') !!}
+            {!! view_render_event('exygnus.shop.customers.account.profile.last_name.after') !!}
 
-            {!! view_render_event('bagisto.shop.customers.account.profile.gender.before') !!}
+            {!! view_render_event('exygnus.shop.customers.account.profile.gender.before') !!}
 
             <div class="grid w-full grid-cols-[2fr_3fr] border-b border-zinc-200 px-8 py-3 max-md:px-0">
                 <p class="text-sm font-medium">
@@ -88,9 +88,9 @@
                 </p>
             </div>
 
-            {!! view_render_event('bagisto.shop.customers.account.profile.gender.after') !!}
+            {!! view_render_event('exygnus.shop.customers.account.profile.gender.after') !!}
 
-            {!! view_render_event('bagisto.shop.customers.account.profile.date_of_birth.before') !!}
+            {!! view_render_event('exygnus.shop.customers.account.profile.date_of_birth.before') !!}
 
             <div class="grid w-full grid-cols-[2fr_3fr] border-b border-zinc-200 px-8 py-3 max-md:px-0">
                 <p class="text-sm font-medium">
@@ -105,9 +105,9 @@
                 </p>
             </div>
 
-            {!! view_render_event('bagisto.shop.customers.account.profile.date_of_birth.after') !!}
+            {!! view_render_event('exygnus.shop.customers.account.profile.date_of_birth.after') !!}
 
-            {!! view_render_event('bagisto.shop.customers.account.profile.email.before') !!}
+            {!! view_render_event('exygnus.shop.customers.account.profile.email.before') !!}
 
             <div class="grid w-full grid-cols-[2fr_3fr] border-b border-zinc-200 px-8 py-3 max-md:px-0">
                 <p class="text-sm font-medium">
@@ -122,9 +122,9 @@
                 </p>
             </div>
             
-            {!! view_render_event('bagisto.shop.customers.account.profile.email.after') !!}
+            {!! view_render_event('exygnus.shop.customers.account.profile.email.after') !!}
 
-            {!! view_render_event('bagisto.shop.customers.account.profile.delete.before') !!}
+            {!! view_render_event('exygnus.shop.customers.account.profile.delete.before') !!}
 
             <!-- Profile Delete modal -->
             <x-shop::form action="{{ route('shop.customers.account.profile.destroy') }}">
@@ -174,7 +174,7 @@
                 </x-shop::modal>
             </x-shop::form>
 
-            {!! view_render_event('bagisto.shop.customers.account.profile.delete.after') !!}
+            {!! view_render_event('exygnus.shop.customers.account.profile.delete.after') !!}
 
         </div>
     </div>

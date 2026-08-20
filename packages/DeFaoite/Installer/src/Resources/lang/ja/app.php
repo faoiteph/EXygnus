@@ -806,7 +806,7 @@ return [
         'index' => [
             'create-administrator' => [
                 'admin' => '管理者',
-                'bagisto' => 'エクシグナス',
+                'exygnus' => 'エクシグナス',
                 'confirm-password' => 'パスワードの確認',
                 'email' => 'メール',
                 'email-address' => 'admin@example.com',
@@ -821,7 +821,7 @@ return [
                 'application-name' => 'アプリケーション名',
                 'argentine-peso' => 'アルゼンチンペソ（ARS）',
                 'australian-dollar' => 'オーストラリアドル（AUD）',
-                'bagisto' => 'エクシグナス',
+                'exygnus' => 'エクシグナス',
                 'bangladeshi-taka' => 'バングラデシュタカ（BDT）',
                 'bahraini-dinar' => 'バーレーンディナール（BHD）',
                 'brazilian-real' => 'ブラジルレアル（BRL）',
@@ -914,16 +914,16 @@ return [
             ],
 
             'installation-processing' => [
-                'bagisto' => 'エクシグナスのインストール',
-                'bagisto-info' => 'データベーステーブルの作成中、これには数分かかることがあります',
+                'exygnus' => 'エクシグナスのインストール',
+                'exygnus-info' => 'データベーステーブルの作成中、これには数分かかることがあります',
                 'title' => 'インストール',
             ],
 
             'installation-completed' => [
                 'admin-panel' => '管理パネル',
-                'bagisto-forums' => 'エクシグナスフォーラム',
+                'exygnus-forums' => 'エクシグナスフォーラム',
                 'customer-panel' => '顧客パネル',
-                'explore-bagisto-extensions' => 'エクシグナス拡張機能の探索',
+                'explore-exygnus-extensions' => 'エクシグナス拡張機能の探索',
                 'title' => 'インストールが完了しました',
                 'title-info' => 'エクシグナスがシステムに正常にインストールされました。',
             ],
@@ -973,9 +973,9 @@ return [
 
             'arabic' => 'アラビア語',
             'back' => '戻る',
-            'bagisto' => 'エクシグナス',
-            'bagisto-info' => 'コミュニティプロジェクト by',
-            'bagisto-logo' => 'エクシグナスロゴ',
+            'exygnus' => 'エクシグナス',
+            'exygnus-info' => 'コミュニティプロジェクト by',
+            'exygnus-logo' => 'エクシグナスロゴ',
             'bengali' => 'ベンガル語',
             'catalan' => 'カタルーニャ語',
             'chinese' => '中国語',
@@ -1002,7 +1002,7 @@ return [
             'title' => 'エクシグナスインストーラ',
             'turkish' => 'トルコ語',
             'ukrainian' => 'ウクライナ語',
-            'webkul' => 'DeFaoite',
+            'defaoite' => 'DeFaoite',
         ],
     ],
 ];

@@ -19,7 +19,7 @@
 
                     <!-- Modal Content -->
                     <x-slot:content>
-                        {!! view_render_event('bagisto.admin.customers.create.before') !!}
+                        {!! view_render_event('exygnus.admin.customers.create.before') !!}
 
                         <div class="flex gap-4 max-sm:flex-wrap">
                             <!-- First Name -->
@@ -197,7 +197,7 @@
                             </x-admin::form.control-group>
                         </div>
 
-                        {!! view_render_event('bagisto.admin.customers.create.after') !!}
+                        {!! view_render_event('exygnus.admin.customers.create.after') !!}
                     </x-slot>
 
                     <!-- Modal Footer -->

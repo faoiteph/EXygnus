@@ -1,5 +1,5 @@
 @if ($product->type == 'grouped')
-    {!! view_render_event('bagisto.shop.products.view.grouped_products.before', ['product' => $product]) !!}
+    {!! view_render_event('exygnus.shop.products.view.grouped_products.before', ['product' => $product]) !!}
 
     <div class="w-[455px] max-w-full max-sm:w-full">
         @php
@@ -39,5 +39,5 @@
         
     </div>
 
-    {!! view_render_event('bagisto.shop.products.view.grouped_products.before', ['product' => $product]) !!}
+    {!! view_render_event('exygnus.shop.products.view.grouped_products.before', ['product' => $product]) !!}
 @endif

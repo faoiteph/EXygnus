@@ -806,7 +806,7 @@ return [
         'index' => [
             'create-administrator' => [
                 'admin' => 'مدیر',
-                'bagisto' => 'EXygnus',
+                'exygnus' => 'EXygnus',
                 'confirm-password' => 'تأیید رمز عبور',
                 'email' => 'ایمیل',
                 'email-address' => 'admin@example.com',
@@ -821,7 +821,7 @@ return [
                 'application-name' => 'نام برنامه',
                 'argentine-peso' => 'پزوی آرژانتین (ARS)',
                 'australian-dollar' => 'دلار استرالیا (AUD)',
-                'bagisto' => 'EXygnus',
+                'exygnus' => 'EXygnus',
                 'bangladeshi-taka' => 'تاکای بنگلادش (BDT)',
                 'bahraini-dinar' => 'دینار بحرین (BHD)',
                 'brazilian-real' => 'رئال برزیل (BRL)',
@@ -914,16 +914,16 @@ return [
             ],
 
             'installation-processing' => [
-                'bagisto' => 'نصب EXygnus',
-                'bagisto-info' => 'ایجاد جداول پایگاه داده، این ممکن است چند لحظه طول بکشد',
+                'exygnus' => 'نصب EXygnus',
+                'exygnus-info' => 'ایجاد جداول پایگاه داده، این ممکن است چند لحظه طول بکشد',
                 'title' => 'نصب',
             ],
 
             'installation-completed' => [
                 'admin-panel' => 'پنل مدیریت',
-                'bagisto-forums' => 'انجمن EXygnus',
+                'exygnus-forums' => 'انجمن EXygnus',
                 'customer-panel' => 'پنل مشتریان',
-                'explore-bagisto-extensions' => 'کاوش در افزونه‌های EXygnus',
+                'explore-exygnus-extensions' => 'کاوش در افزونه‌های EXygnus',
                 'title' => 'نصب با موفقیت انجام شد',
                 'title-info' => 'EXygnus با موفقیت بر روی سیستم شما نصب شده است.',
             ],
@@ -973,9 +973,9 @@ return [
 
             'arabic' => 'عربی',
             'back' => 'بازگشت',
-            'bagisto' => 'EXygnus',
-            'bagisto-info' => 'یک پروژه جامعه‌ای توسط',
-            'bagisto-logo' => 'لوگوی EXygnus',
+            'exygnus' => 'EXygnus',
+            'exygnus-info' => 'یک پروژه جامعه‌ای توسط',
+            'exygnus-logo' => 'لوگوی EXygnus',
             'bengali' => 'بنگالی',
             'catalan' => 'کاتالان',
             'chinese' => 'چینی',
@@ -1002,7 +1002,7 @@ return [
             'title' => 'نصب‌کننده EXygnus',
             'turkish' => 'ترکی',
             'ukrainian' => 'اوکراینی',
-            'webkul' => 'DeFaoite',
+            'defaoite' => 'DeFaoite',
         ],
     ],
 ];

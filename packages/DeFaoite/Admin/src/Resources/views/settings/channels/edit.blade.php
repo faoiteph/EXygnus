@@ -10,7 +10,7 @@
         $seo = $channel->translate($currentLocale->code)['home_seo'] ?? [];
     @endphp
 
-    {!! view_render_event('bagisto.admin.settings.channels.edit.before', ['channel' => $channel]) !!}
+    {!! view_render_event('exygnus.admin.settings.channels.edit.before', ['channel' => $channel]) !!}
 
     <!-- Channel Edit Form -->
     <x-admin::form
@@ -19,7 +19,7 @@
     >
         @method('PUT')
 
-        {!! view_render_event('bagisto.admin.settings.channels.edit.edit_form_controls.before', ['channel' => $channel]) !!}
+        {!! view_render_event('exygnus.admin.settings.channels.edit.edit_form_controls.before', ['channel' => $channel]) !!}
 
         <div class="flex items-center justify-between">
             <p class="text-xl font-bold text-gray-800 dark:text-white">
@@ -85,7 +85,7 @@
             <!-- Left Component -->
             <div class="flex flex-1 flex-col gap-2 max-xl:flex-auto">
 
-                {!! view_render_event('bagisto.admin.settings.channels.edit.card.general.before', ['channel' => $channel]) !!}
+                {!! view_render_event('exygnus.admin.settings.channels.edit.card.general.before', ['channel' => $channel]) !!}
 
                 <!-- General Information -->
                 <div class="box-shadow rounded bg-white p-4 dark:bg-gray-900">
@@ -249,9 +249,9 @@
                     </x-admin::form.control-group>
                 </div>
 
-                {!! view_render_event('bagisto.admin.settings.channels.edit.card.general.after', ['channel' => $channel]) !!}
+                {!! view_render_event('exygnus.admin.settings.channels.edit.card.general.after', ['channel' => $channel]) !!}
 
-                {!! view_render_event('bagisto.admin.settings.channels.edit.card.design.before', ['channel' => $channel]) !!}
+                {!! view_render_event('exygnus.admin.settings.channels.edit.card.design.before', ['channel' => $channel]) !!}
 
                 <!-- Logo and Design -->
                 <div class="box-shadow rounded bg-white p-4 dark:bg-gray-900">
@@ -329,9 +329,9 @@
                     </div>
                 </div>
 
-                {!! view_render_event('bagisto.admin.settings.channels.edit.card.design.after', ['channel' => $channel]) !!}
+                {!! view_render_event('exygnus.admin.settings.channels.edit.card.design.after', ['channel' => $channel]) !!}
 
-                {!! view_render_event('bagisto.admin.settings.channels.edit.card.seo.before', ['channel' => $channel]) !!}
+                {!! view_render_event('exygnus.admin.settings.channels.edit.card.seo.before', ['channel' => $channel]) !!}
 
                 <!-- Home Page SEO -->
                 <div class="box-shadow rounded bg-white p-4 dark:bg-gray-900">
@@ -425,14 +425,14 @@
                     </x-admin::form.control-group>
                 </div>
 
-                {!! view_render_event('bagisto.admin.settings.channels.edit.card.seo.after', ['channel' => $channel]) !!}
+                {!! view_render_event('exygnus.admin.settings.channels.edit.card.seo.after', ['channel' => $channel]) !!}
 
             </div>
 
             <!-- Right Component -->
             <div class="flex w-[360px] max-w-full flex-col gap-2 max-sm:w-full">
 
-                {!! view_render_event('bagisto.admin.settings.channels.edit.card.accordion.currencies_and_locales.before', ['channel' => $channel]) !!}
+                {!! view_render_event('exygnus.admin.settings.channels.edit.card.accordion.currencies_and_locales.before', ['channel' => $channel]) !!}
 
                 <!-- Currencies and Locale -->
                 <x-admin::accordion>
@@ -569,9 +569,9 @@
                     </x-slot>
                 </x-admin::accordion>
 
-                {!! view_render_event('bagisto.admin.settings.channels.edit.card.accordion.currencies_and_locales.after', ['channel' => $channel]) !!}
+                {!! view_render_event('exygnus.admin.settings.channels.edit.card.accordion.currencies_and_locales.after', ['channel' => $channel]) !!}
 
-                {!! view_render_event('bagisto.admin.settings.channels.edit.card.accordion.settings.before', ['channel' => $channel]) !!}
+                {!! view_render_event('exygnus.admin.settings.channels.edit.card.accordion.settings.before', ['channel' => $channel]) !!}
 
                 <!-- Maintenance Mode -->
                 <x-admin::accordion>
@@ -646,15 +646,15 @@
                     </x-slot>
                 </x-admin::accordion>
 
-                {!! view_render_event('bagisto.admin.settings.channels.edit.card.accordion.settings.after', ['channel' => $channel]) !!}
+                {!! view_render_event('exygnus.admin.settings.channels.edit.card.accordion.settings.after', ['channel' => $channel]) !!}
 
             </div>
         </div>
 
-        {!! view_render_event('bagisto.admin.settings.channels.edit.edit_form_controls.after', ['channel' => $channel]) !!}
+        {!! view_render_event('exygnus.admin.settings.channels.edit.edit_form_controls.after', ['channel' => $channel]) !!}
 
     </x-admin::form>
 
-    {!! view_render_event('bagisto.admin.settings.channels.edit.after', ['channel' => $channel]) !!}
+    {!! view_render_event('exygnus.admin.settings.channels.edit.after', ['channel' => $channel]) !!}
 
 </x-admin::layouts>

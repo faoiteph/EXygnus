@@ -11,9 +11,9 @@ use DeFaoite\Core\Helpers\InstalledPackages;
 class ImageCacheController extends Controller
 {
     /**
-     * The Bagisto logo URL.
+     * The EXygnus logo URL.
      */
-    protected const BAGISTO_LOGO = 'https://updates.bagisto.com/bagisto.png';
+    protected const EXYGNUS_LOGO = 'https://updates.exygnus.com/exygnus.png';
 
     /**
      * The current cache template name.
@@ -95,7 +95,7 @@ class ImageCacheController extends Controller
      */
     protected function getLogoUrl(): string
     {
-        $url = self::BAGISTO_LOGO;
+        $url = self::EXYGNUS_LOGO;
 
         $packages = app(InstalledPackages::class)->all();
 

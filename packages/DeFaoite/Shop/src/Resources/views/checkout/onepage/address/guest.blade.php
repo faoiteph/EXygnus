@@ -1,4 +1,4 @@
-{!! view_render_event('bagisto.shop.checkout.onepage.address.guest.before') !!}
+{!! view_render_event('exygnus.shop.checkout.onepage.address.guest.before') !!}
 
 <!-- Guest Address Vue Component -->
 <v-checkout-address-guest
@@ -7,7 +7,7 @@
     @processed="stepProcessed"
 ></v-checkout-address-guest>
 
-{!! view_render_event('bagisto.shop.checkout.onepage.address.guest.after') !!}
+{!! view_render_event('exygnus.shop.checkout.onepage.address.guest.after') !!}
 
 @include('shop::checkout.onepage.address.form')
 
@@ -24,7 +24,7 @@
             <form @submit="handleSubmit($event, addAddress)">
                 <!-- Guest Billing Address -->
                 <div class="mb-4">
-                    {!! view_render_event('bagisto.shop.checkout.onepage.address.guest.billing.before') !!}
+                    {!! view_render_event('exygnus.shop.checkout.onepage.address.guest.billing.before') !!}
 
                     <!-- Billing Address Header -->
                     <div class="flex items-center justify-between">
@@ -62,7 +62,7 @@
                         </label>
                     </x-shop::form.control-group>
 
-                    {!! view_render_event('bagisto.shop.checkout.onepage.address.guest.billing.after') !!}
+                    {!! view_render_event('exygnus.shop.checkout.onepage.address.guest.billing.after') !!}
                 </div>
 
                 <!-- Guest Shipping Address -->
@@ -71,7 +71,7 @@
                         class="mt-8"
                         v-if="! useBillingAddressForShipping"
                     >
-                        {!! view_render_event('bagisto.shop.checkout.onepage.address.guest.shipping.before') !!}
+                        {!! view_render_event('exygnus.shop.checkout.onepage.address.guest.shipping.before') !!}
 
                         <!-- Shipping Address Header -->
                         <div class="flex items-center justify-between">
@@ -86,7 +86,7 @@
                             :address="cart.shipping_address || undefined"
                         ></v-checkout-address-form>
 
-                        {!! view_render_event('bagisto.shop.checkout.onepage.address.guest.shipping.after') !!}
+                        {!! view_render_event('exygnus.shop.checkout.onepage.address.guest.shipping.after') !!}
                     </div>
                 </template>
 

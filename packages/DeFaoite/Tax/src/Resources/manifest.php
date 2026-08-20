@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'name' => 'Webkul Bagisto Tax',
+    'name' => 'De Faoite EXygnus Tax',
     'version' => core()->version(),
 ];

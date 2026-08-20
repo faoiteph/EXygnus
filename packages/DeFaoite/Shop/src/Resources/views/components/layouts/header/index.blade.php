@@ -1,4 +1,4 @@
-{!! view_render_event('bagisto.shop.layout.header.before') !!}
+{!! view_render_event('exygnus.shop.layout.header.before') !!}
 
 @if(core()->getCurrentChannel()->locales()->count() > 1 || core()->getCurrentChannel()->currencies()->count() > 1 )
     <div class="max-lg:hidden">
@@ -139,7 +139,7 @@
     </v-header-switcher>
 </header>
 
-{!! view_render_event('bagisto.shop.layout.header.after') !!}
+{!! view_render_event('exygnus.shop.layout.header.after') !!}
 
 @pushOnce('scripts')
     <script 

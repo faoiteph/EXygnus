@@ -1,4 +1,4 @@
-{!! view_render_event('bagisto.shop.checkout.onepage.address.customer.before') !!}
+{!! view_render_event('exygnus.shop.checkout.onepage.address.customer.before') !!}
 
 <!-- Customer Address Vue Component -->
 <v-checkout-address-customer
@@ -10,7 +10,7 @@
     <x-shop::shimmer.checkout.onepage.address />
 </v-checkout-address-customer>
 
-{!! view_render_event('bagisto.shop.checkout.onepage.address.customer.after') !!}
+{!! view_render_event('exygnus.shop.checkout.onepage.address.customer.after') !!}
 
 @pushOnce('scripts')
     <script

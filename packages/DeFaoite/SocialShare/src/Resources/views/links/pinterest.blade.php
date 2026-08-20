@@ -3,7 +3,7 @@
 
     $details = [
         'url'         => route('shop.product_or_category.index', $product->url_key),
-        'media'       => $productBaseImage['medium_image_url'] ?: asset('vendor/webkul/ui/assets/images/product/meduim-product-placeholder.png'),
+        'media'       => $productBaseImage['medium_image_url'] ?: asset('vendor/defaoite/ui/assets/images/product/meduim-product-placeholder.png'),
         'description' => $message,
     ];
 

@@ -1,8 +1,8 @@
-{!! view_render_event('bagisto.admin.catalog.product.edit.booking.event.before', ['product' => $product]) !!}
+{!! view_render_event('exygnus.admin.catalog.product.edit.booking.event.before', ['product' => $product]) !!}
 
 <v-event-booking></v-event-booking>
 
-{!! view_render_event('bagisto.admin.catalog.product.edit.booking.event.after', ['product' => $product]) !!}
+{!! view_render_event('exygnus.admin.catalog.product.edit.booking.event.after', ['product' => $product]) !!}
 
 @pushOnce('scripts')
     <script

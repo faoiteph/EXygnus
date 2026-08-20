@@ -3,14 +3,14 @@
         @lang('admin::app.marketing.communications.templates.edit.title')
     </x-slot>
 
-    {!! view_render_event('bagisto.admin.marketing.communications.templates.edit.before', ['template' => $template]) !!}
+    {!! view_render_event('exygnus.admin.marketing.communications.templates.edit.before', ['template' => $template]) !!}
     <!-- Input Form -->
     <x-admin::form
         :action="route('admin.marketing.communications.email_templates.update', $template->id)"
         method="PUT"
     >
 
-        {!! view_render_event('bagisto.admin.marketing.communications.templates.edit.edit_form_controls.before', ['template' => $template]) !!}
+        {!! view_render_event('exygnus.admin.marketing.communications.templates.edit.edit_form_controls.before', ['template' => $template]) !!}
 
         <div class="flex items-center justify-between">
             <p class="text-xl font-bold text-gray-800 dark:text-white">
@@ -41,7 +41,7 @@
             <!-- Left sub-component -->
             <div class="flex flex-1 flex-col gap-2 max-xl:flex-auto">
 
-                {!! view_render_event('bagisto.admin.marketing.communications.templates.edit.card.content.before', ['template' => $template]) !!}
+                {!! view_render_event('exygnus.admin.marketing.communications.templates.edit.card.content.before', ['template' => $template]) !!}
 
                 <!--Content -->
                 <div class="box-shadow rounded bg-white p-4 dark:bg-gray-900">
@@ -68,7 +68,7 @@
                     </div>
                 </div>
 
-                {!! view_render_event('bagisto.admin.marketing.communications.templates.edit.card.content.after', ['template' => $template]) !!}
+                {!! view_render_event('exygnus.admin.marketing.communications.templates.edit.card.content.after', ['template' => $template]) !!}
 
             </div>
 
@@ -76,7 +76,7 @@
             <div class="flex w-[360px] max-w-full flex-col gap-2 max-sm:w-full">
                 <!-- General -->
 
-                {!! view_render_event('bagisto.admin.marketing.communications.templates.edit.card.accordion.general.before', ['template' => $template]) !!}
+                {!! view_render_event('exygnus.admin.marketing.communications.templates.edit.card.accordion.general.before', ['template' => $template]) !!}
 
                 <div class="box-shadow rounded bg-white dark:bg-gray-900">
                     <x-admin::accordion>
@@ -139,15 +139,15 @@
                     </x-admin::accordion>
                 </div>
 
-                {!! view_render_event('bagisto.admin.marketing.communications.templates.edit.card.accordion.general.after', ['template' => $template]) !!}
+                {!! view_render_event('exygnus.admin.marketing.communications.templates.edit.card.accordion.general.after', ['template' => $template]) !!}
 
             </div>
         </div>
 
-        {!! view_render_event('bagisto.admin.marketing.communications.templates.edit.edit_form_controls.before', ['template' => $template]) !!}
+        {!! view_render_event('exygnus.admin.marketing.communications.templates.edit.edit_form_controls.before', ['template' => $template]) !!}
 
     </x-admin::form>
 
-    {!! view_render_event('bagisto.admin.marketing.communications.templates.edit.after', ['template' => $template]) !!}
+    {!! view_render_event('exygnus.admin.marketing.communications.templates.edit.after', ['template' => $template]) !!}
 
 </x-admin::layouts>

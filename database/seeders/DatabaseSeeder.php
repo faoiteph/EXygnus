@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use DeFaoite\Installer\Database\Seeders\DatabaseSeeder as BagistoDatabaseSeeder;
+use DeFaoite\Installer\Database\Seeders\DatabaseSeeder as EXygnusDatabaseSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -14,6 +14,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(BagistoDatabaseSeeder::class);
+        $this->call(EXygnusDatabaseSeeder::class);
     }
 }

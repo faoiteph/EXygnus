@@ -1,13 +1,13 @@
 #!/bin/bash
 set -e
 
-APP_DIR="/var/www/bagisto"
+APP_DIR="/var/www/exygnus"
 
 # ==========================================================================
 # Helper: log with timestamp
 # ==========================================================================
 log() {
-    echo "[bagisto-entrypoint] $(date '+%Y-%m-%d %H:%M:%S') $*"
+    echo "[exygnus-entrypoint] $(date '+%Y-%m-%d %H:%M:%S') $*"
 }
 
 # ==========================================================================
@@ -15,9 +15,9 @@ log() {
 # ==========================================================================
 DB_HOST="${DB_HOST:-127.0.0.1}"
 DB_PORT="${DB_PORT:-3306}"
-DB_DATABASE="${DB_DATABASE:-bagisto}"
-DB_USERNAME="${DB_USERNAME:-bagisto}"
-DB_PASSWORD="${DB_PASSWORD:-bagisto}"
+DB_DATABASE="${DB_DATABASE:-exygnus}"
+DB_USERNAME="${DB_USERNAME:-exygnus}"
+DB_PASSWORD="${DB_PASSWORD:-exygnus}"
 
 use_internal_mysql() {
     [[ "$DB_HOST" == "127.0.0.1" || "$DB_HOST" == "localhost" ]]

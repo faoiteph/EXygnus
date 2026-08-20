@@ -83,7 +83,7 @@ export class TaxConfigurationPage extends BasePage {
     }
 
     /**
-     * Restore the Bagisto default (tax-exclusive) so global config state does
+     * Restore the EXygnus default (tax-exclusive) so global config state does
      * not leak into other tests.
      */
     async resetToDefault(): Promise<void> {
@@ -91,7 +91,7 @@ export class TaxConfigurationPage extends BasePage {
     }
 
     /**
-     * Restore both calculation defaults Bagisto ships with: tax-exclusive
+     * Restore both calculation defaults EXygnus ships with: tax-exclusive
      * product prices and tax applied after the discount.
      */
     async resetCalculationDefaults(): Promise<void> {

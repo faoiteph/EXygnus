@@ -1,9 +1,9 @@
-{!! view_render_event('bagisto.admin.catalog.product.edit.booking.table.before', ['product' => $product]) !!}
+{!! view_render_event('exygnus.admin.catalog.product.edit.booking.table.before', ['product' => $product]) !!}
 
 <!-- Vue Component -->
 <v-table-booking></v-table-booking>
 
-{!! view_render_event('bagisto.admin.catalog.product.edit.booking.table.after', ['product' => $product]) !!}
+{!! view_render_event('exygnus.admin.catalog.product.edit.booking.table.after', ['product' => $product]) !!}
 
 @pushOnce('scripts')
     <script

@@ -29,8 +29,8 @@ class Installer extends Command
     protected $signature = 'exygnus:install
         { --skip-env-check : Skip env check. (Deprecated: use --no-interaction) }
         { --skip-admin-creation : Skip admin creation. (Deprecated: use --no-interaction) }
-        { --skip-cloud-promotion : Skip Bagisto Cloud hosting prompt. (Deprecated: use --no-interaction) }
-        { --skip-github-star : Skip Bagisto Cloud hosting prompt. (Deprecated: use --no-interaction) }
+        { --skip-cloud-promotion : Skip EXygnus Cloud hosting prompt. (Deprecated: use --no-interaction) }
+        { --skip-github-star : Skip EXygnus Cloud hosting prompt. (Deprecated: use --no-interaction) }
         { --demo-samples : Seed demo/sample product data (useful with --no-interaction). }
     ';
 
@@ -51,7 +51,7 @@ class Installer extends Command
      *
      * @var string
      */
-    protected $description = 'Bagisto installer. Use the global --no-interaction (-n) option for an unattended install that uses the existing `.env`, creates the default admin user and skips sample products (this supersedes the deprecated --skip-* options). Add --demo-samples to also seed demo/sample product data.';
+    protected $description = 'EXygnus installer. Use the global --no-interaction (-n) option for an unattended install that uses the existing `.env`, creates the default admin user and skips sample products (this supersedes the deprecated --skip-* options). Add --demo-samples to also seed demo/sample product data.';
 
     /**
      * Environment details.
@@ -91,7 +91,7 @@ class Installer extends Command
     }
 
     /**
-     * Install and configure bagisto.
+     * Install and configure exygnus.
      */
     public function handle(): void
     {
@@ -135,7 +135,7 @@ class Installer extends Command
         $this->call('db:wipe');
         $this->call('migrate:fresh');
 
-        $this->warn('Step: Seeding basic data for Bagisto kickstart...');
+        $this->warn('Step: Seeding basic data for EXygnus kickstart...');
         $this->databaseManager->seed($this->getSeederConfiguration());
         $this->components->info('Basic data seeded successfully.');
 
@@ -213,7 +213,7 @@ class Installer extends Command
         $this->updateTextTypeEnv(
             'APP_NAME',
             'Please enter the application name',
-            $this->getEnvVariable('APP_NAME', 'Bagisto')
+            $this->getEnvVariable('APP_NAME', 'EXygnus')
         );
 
         $this->updateTextTypeEnv(
@@ -413,17 +413,17 @@ class Installer extends Command
      */
     protected function finalizeInstallation(string $adminEmail, string $adminPassword): void
     {
-        File::put(storage_path('installed'), 'Bagisto is successfully installed.');
+        File::put(storage_path('installed'), 'EXygnus is successfully installed.');
 
         $this->info('-----------------------------');
         $this->info('Congratulations!');
-        $this->info('The installation has been finished and you can now use Bagisto.');
+        $this->info('The installation has been finished and you can now use EXygnus.');
         $this->info('Go to '.$this->getEnvVariable('APP_URL').'/'.$this->getEnvVariable('APP_ADMIN_URL', 'admin').' and authenticate with:');
         $this->info('Email: '.$adminEmail);
         $this->info('Password: '.$adminPassword);
         $this->info('Cheers!');
 
-        Event::dispatch('bagisto.installed');
+        Event::dispatch('exygnus.installed');
     }
 
     /**
@@ -577,15 +577,15 @@ class Installer extends Command
     }
 
     /**
-     * Ask user to explore Bagisto Cloud hosting.
+     * Ask user to explore EXygnus Cloud hosting.
      */
     protected function askToExploreCloudHosting(): void
     {
-        if (! $this->confirm('Would you like to explore managed Bagisto Cloud hosting?', true)) {
+        if (! $this->confirm('Would you like to explore managed EXygnus Cloud hosting?', true)) {
             return;
         }
 
-        $cloudUrl = 'https://bagisto.com/en/cloud/';
+        $cloudUrl = 'https://exygnus.com/en/cloud/';
 
         if (PHP_OS_FAMILY == 'Darwin') {
             exec("open {$cloudUrl}");

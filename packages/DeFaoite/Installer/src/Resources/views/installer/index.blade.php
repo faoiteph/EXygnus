@@ -15,7 +15,7 @@
 
         @stack('meta')
 
-        @bagistoVite(['src/Resources/assets/css/app.css', 'src/Resources/assets/js/app.js'], 'installer')
+        @exygnusVite(['src/Resources/assets/css/app.css', 'src/Resources/assets/js/app.js'], 'installer')
 
         <link
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
@@ -29,7 +29,7 @@
 
         <link
             type="image/x-icon"
-            href="{{ bagisto_asset('images/installer/favicon.ico', 'installer') }}"
+            href="{{ exygnus_asset('images/installer/favicon.ico', 'installer') }}"
             rel="shortcut icon"
             sizes="16x16"
         />
@@ -67,8 +67,8 @@
                     <div class="m-auto grid h-[100vh] max-w-[362px] items-end">
                         <div class="grid gap-4">
                             <img
-                                src="{{ bagisto_asset('images/installer/logo.svg', 'installer') }}"
-                                alt="@lang('installer::app.installer.index.bagisto-logo')"
+                                src="{{ exygnus_asset('images/installer/logo.svg', 'installer') }}"
+                                alt="@lang('installer::app.installer.index.exygnus-logo')"
                             >
 
                             <div class="grid gap-1.5">
@@ -210,16 +210,16 @@
                                 class="bg-white text-blue-600 underline"
                                 href="https://exygnus.com"
                             >
-                                @lang('installer::app.installer.index.bagisto')
+                                @lang('installer::app.installer.index.exygnus')
                             </a>
 
-                            <span>@lang('installer::app.installer.index.bagisto-info')</span>
+                            <span>@lang('installer::app.installer.index.exygnus-info')</span>
 
                             <a
                                 class="bg-white text-blue-600 underline"
                                 href="https://faoite.com/"
                             >
-                                @lang('installer::app.installer.index.webkul')
+                                @lang('installer::app.installer.index.defaoite')
                             </a>
                         </p>
                     </div>
@@ -643,19 +643,19 @@
                     <div class="flex h-[484px] flex-col justify-center gap-4 overflow-y-auto px-7 py-4">
                         <div class="flex flex-col gap-4">
                             <p class="text-lg font-bold text-gray-800">
-                                @lang('installer::app.installer.index.installation-processing.bagisto')
+                                @lang('installer::app.installer.index.installation-processing.exygnus')
                             </p>
 
                             <div class="grid gap-2.5">
                                 <!-- Spinner -->
                                 <img
                                     class="text-navyBlue h-5 w-5 animate-spin"
-                                    src="{{ bagisto_asset('images/installer/spinner.svg', 'installer') }}"
+                                    src="{{ exygnus_asset('images/installer/spinner.svg', 'installer') }}"
                                     alt="Loading"
                                 />
 
                                 <p class="text-sm text-gray-600">
-                                    @lang('installer::app.installer.index.installation-processing.bagisto-info')
+                                    @lang('installer::app.installer.index.installation-processing.exygnus-info')
                                 </p>
                             </div>
                         </div>
@@ -692,10 +692,10 @@
                                     <x-installer::form.control-group.control
                                         type="text"
                                         name="app_name"
-                                        ::value="envData.app_name ?? 'Bagisto'"
+                                        ::value="envData.app_name ?? 'EXygnus'"
                                         rules="required"
                                         :label="trans('installer::app.installer.index.environment-configuration.application-name')"
-                                        :placeholder="trans('installer::app.installer.index.environment-configuration.bagisto')"
+                                        :placeholder="trans('installer::app.installer.index.environment-configuration.exygnus')"
                                     />
 
                                     <x-installer::form.control-group.error control-name="app_name" />
@@ -1010,7 +1010,7 @@
                                         rules="required"
                                         value="Admin"
                                         :label="trans('installer::app.installer.index.create-administrator.admin')"
-                                        :placeholder="trans('installer::app.installer.index.create-administrator.bagisto')"
+                                        :placeholder="trans('installer::app.installer.index.create-administrator.exygnus')"
                                     />
 
                                     <x-installer::form.control-group.error control-name="name" />
@@ -1131,17 +1131,17 @@
 
                     <div class="flex items-center justify-between px-4 py-2.5">
                         <a
-                            href="https://forums.bagisto.com"
+                            href="https://forums.exygnus.com"
                             class="cursor-pointer text-xs font-semibold text-blue-600"
                         >
-                            @lang('installer::app.installer.index.installation-completed.bagisto-forums')
+                            @lang('installer::app.installer.index.installation-completed.exygnus-forums')
                         </a>
 
                         <a
-                            href="https://bagisto.com/en/extensions"
+                            href="https://exygnus.com/en/extensions"
                             class="cursor-pointer rounded-md border border-blue-700 bg-white px-3 py-1.5 font-semibold text-blue-600 hover:opacity-90"
                         >
-                            @lang('installer::app.installer.index.installation-completed.explore-bagisto-extensions')
+                            @lang('installer::app.installer.index.installation-completed.explore-exygnus-extensions')
                         </a>
                     </div>
                 </div>
@@ -1217,7 +1217,7 @@
 
                                         this.envData = { ...this.envData, ...params };
                                     } else {
-                                        setErrors({ 'db_connection': ["Bagisto currently supports MySQL only."] });
+                                        setErrors({ 'db_connection': ["EXygnus currently supports MySQL only."] });
                                     }
                                 },
 

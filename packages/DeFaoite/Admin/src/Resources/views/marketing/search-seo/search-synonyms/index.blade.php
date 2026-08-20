@@ -3,7 +3,7 @@
         @lang('admin::app.marketing.search-seo.search-synonyms.index.title')
     </x-slot>
 
-    {!! view_render_event('bagisto.admin.marketing.search_seo.search_synonyms.create.before') !!}
+    {!! view_render_event('exygnus.admin.marketing.search_seo.search_synonyms.create.before') !!}
 
     <!-- Create Sitemap Vue Component -->
     <v-create-sitemaps>
@@ -24,7 +24,7 @@
         <x-admin::shimmer.datagrid />
     </v-create-sitemaps>
 
-    {!! view_render_event('bagisto.admin.marketing.search_seo.search_synonyms.create.after') !!}
+    {!! view_render_event('exygnus.admin.marketing.search_seo.search_synonyms.create.after') !!}
 
     @pushOnce('scripts')
         <script
@@ -47,7 +47,7 @@
                 @endif
             </div>
 
-            {!! view_render_event('bagisto.admin.marketing.search_seo.search_synonyms.list.before') !!}
+            {!! view_render_event('exygnus.admin.marketing.search_seo.search_synonyms.list.before') !!}
 
             <x-admin::datagrid
                 :src="route('admin.marketing.search_seo.search_synonyms.index')"

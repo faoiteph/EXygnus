@@ -21,7 +21,7 @@
                 />
             @else
                 <img
-                    src="{{ request()->cookie('dark_mode') ? bagisto_asset('images/dark-logo.svg') : bagisto_asset('images/logo.svg') }}"
+                    src="{{ request()->cookie('dark_mode') ? exygnus_asset('images/dark-logo.svg') : exygnus_asset('images/logo.svg') }}"
                     class="h-8 w-auto sm:h-10"
                     id="logo-image"
                     alt="{{ config('app.name') }}"
@@ -98,7 +98,7 @@
             <x-slot:content class="!p-0">
                 <div class="flex items-center gap-1.5 border border-b-gray-300 px-4 py-2 dark:border-gray-800 sm:px-5 sm:py-2.5">
                     <img
-                        src="{{ url('cache/logo/bagisto.png') }}"
+                        src="{{ url('cache/logo/exygnus.png') }}"
                         class="sm:h-6 sm:w-6"
                         width="20"
                         height="20"
@@ -156,7 +156,7 @@
                 />
             @else
                 <img
-                    src="{{ request()->cookie('dark_mode') ? bagisto_asset('images/dark-logo.svg') : bagisto_asset('images/logo.svg') }}"
+                    src="{{ request()->cookie('dark_mode') ? exygnus_asset('images/dark-logo.svg') : exygnus_asset('images/logo.svg') }}"
                     class="h-8 w-auto sm:h-10"
                     id="logo-image"
                     alt="{{ config('app.name') }}"
@@ -303,7 +303,7 @@
                                         :class="{'overflow-hidden rounded border border-dashed border-gray-300 dark:border-gray-800 dark:mix-blend-exclusion dark:invert': ! product.images.length}"
                                     >
                                         <template v-if="! product.images.length">
-                                            <img src="{{ bagisto_asset('images/product-placeholders/front.svg') }}" class="h-full w-full object-cover">
+                                            <img src="{{ exygnus_asset('images/product-placeholders/front.svg') }}" class="h-full w-full object-cover">
 
                                             <p class="absolute bottom-0.5 w-full text-center text-[4px] font-semibold text-gray-400 sm:bottom-1.5 sm:text-[6px]">
                                                 @lang('admin::app.catalog.products.edit.types.grouped.image-placeholder')
@@ -871,9 +871,9 @@
                 return {
                     isDarkMode: {{ request()->cookie('dark_mode') ?? 0 }},
 
-                    logo: "{{ bagisto_asset('images/logo.svg') }}",
+                    logo: "{{ exygnus_asset('images/logo.svg') }}",
 
-                    dark_logo: "{{ bagisto_asset('images/dark-logo.svg') }}",
+                    dark_logo: "{{ exygnus_asset('images/dark-logo.svg') }}",
                 };
             },
 

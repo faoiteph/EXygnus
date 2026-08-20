@@ -23,7 +23,7 @@
         {{ trim($category->meta_title) != "" ? $category->meta_title : $category->name }}
     </x-slot>
 
-    {!! view_render_event('bagisto.shop.categories.view.banner_path.before') !!}
+    {!! view_render_event('exygnus.shop.categories.view.banner_path.before') !!}
 
     <!-- Hero Image -->
     @if ($category->banner_path)
@@ -38,9 +38,9 @@
         </div>
     @endif
 
-    {!! view_render_event('bagisto.shop.categories.view.banner_path.after') !!}
+    {!! view_render_event('exygnus.shop.categories.view.banner_path.after') !!}
 
-    {!! view_render_event('bagisto.shop.categories.view.description.before') !!}
+    {!! view_render_event('exygnus.shop.categories.view.description.before') !!}
 
     @if (in_array($category->display_mode, [null, 'description_only', 'products_and_description']))
         @if ($category->description)
@@ -50,7 +50,7 @@
         @endif
     @endif
 
-    {!! view_render_event('bagisto.shop.categories.view.description.after') !!}
+    {!! view_render_event('exygnus.shop.categories.view.description.after') !!}
 
     @if (in_array($category->display_mode, [null, 'products_only', 'products_and_description']))
         <!-- Category Vue Component -->
@@ -88,7 +88,7 @@
                             </template>
 
                             <!-- Product Card Listing -->
-                            {!! view_render_event('bagisto.shop.categories.view.list.product_card.before') !!}
+                            {!! view_render_event('exygnus.shop.categories.view.list.product_card.before') !!}
 
                             <template v-else>
                                 <template v-if="products.length">
@@ -103,7 +103,7 @@
                                     <div class="m-auto grid w-full place-content-center items-center justify-items-center py-32 text-center">
                                         <img
                                             class="max-md:h-[100px] max-md:w-[100px]"
-                                            src="{{ bagisto_asset('images/thank-you.png') }}"
+                                            src="{{ exygnus_asset('images/thank-you.png') }}"
                                             alt="@lang('shop::app.categories.view.empty')"
                                             loading="lazy"
                                             decoding="async"
@@ -119,7 +119,7 @@
                                 </template>
                             </template>
 
-                            {!! view_render_event('bagisto.shop.categories.view.list.product_card.after') !!}
+                            {!! view_render_event('exygnus.shop.categories.view.list.product_card.after') !!}
                         </div>
 
                         <!-- Product Grid Card Container -->
@@ -131,7 +131,7 @@
                                 </div>
                             </template>
 
-                            {!! view_render_event('bagisto.shop.categories.view.grid.product_card.before') !!}
+                            {!! view_render_event('exygnus.shop.categories.view.grid.product_card.before') !!}
 
                             <!-- Product Card Listing -->
                             <template v-else>
@@ -149,7 +149,7 @@
                                     <div class="m-auto grid w-full place-content-center items-center justify-items-center py-32 text-center">
                                         <img
                                             class="max-md:h-[100px] max-md:w-[100px]"
-                                            src="{{ bagisto_asset('images/thank-you.png') }}"
+                                            src="{{ exygnus_asset('images/thank-you.png') }}"
                                             alt="@lang('shop::app.categories.view.empty')"
                                             loading="lazy"
                                             decoding="async"
@@ -165,10 +165,10 @@
                                 </template>
                             </template>
 
-                            {!! view_render_event('bagisto.shop.categories.view.grid.product_card.after') !!}
+                            {!! view_render_event('exygnus.shop.categories.view.grid.product_card.after') !!}
                         </div>
 
-                        {!! view_render_event('bagisto.shop.categories.view.load_more_button.before') !!}
+                        {!! view_render_event('exygnus.shop.categories.view.load_more_button.before') !!}
 
                         <!-- Load More Button -->
                         <button
@@ -186,12 +186,12 @@
                             <!-- Spinner -->
                             <img
                                 class="h-5 w-5 animate-spin text-navyBlue"
-                                src="{{ bagisto_asset('images/spinner.svg') }}"
+                                src="{{ exygnus_asset('images/spinner.svg') }}"
                                 alt="Loading"
                             />
                         </button>
 
-                        {!! view_render_event('bagisto.shop.categories.view.grid.load_more_button.after') !!}
+                        {!! view_render_event('exygnus.shop.categories.view.grid.load_more_button.after') !!}
                     </div>
                 </div>
             </div>

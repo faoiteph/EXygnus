@@ -1,4 +1,4 @@
-{!! view_render_event('bagisto.shop.products.view.reviews.after', ['product' => $product]) !!}
+{!! view_render_event('exygnus.shop.products.view.reviews.after', ['product' => $product]) !!}
 
 <v-product-reviews>
     <div class="container max-1180:px-5">
@@ -6,7 +6,7 @@
     </div>
 </v-product-reviews>
 
-{!! view_render_event('bagisto.shop.products.view.reviews.after', ['product' => $product]) !!}
+{!! view_render_event('exygnus.shop.products.view.reviews.after', ['product' => $product]) !!}
 
 @pushOnce('scripts')
     <!-- Product Review Template -->
@@ -244,7 +244,7 @@
                         <div class="m-auto grid h-[476px] w-full place-content-center items-center justify-items-center text-center max-md:h-60">
                             <img
                                 class="max-md:h-32 max-md:w-32 max-sm:h-[100px] max-sm:w-[100px]"
-                                src="{{ bagisto_asset('images/review.png') }}"
+                                src="{{ exygnus_asset('images/review.png') }}"
                                 alt=""
                                 title=""
                             >
@@ -339,7 +339,7 @@
                         <template v-if="isLoading">
                             <img
                                 class="h-5 w-5 animate-spin text-blue-600"
-                                src="{{ bagisto_asset('images/spinner.svg') }}"
+                                src="{{ exygnus_asset('images/spinner.svg') }}"
                             />
 
                             @lang('shop::app.products.view.reviews.translating')
@@ -458,7 +458,7 @@
                             <template v-if="isLoading">
                                 <img
                                     class="h-5 w-5 animate-spin text-blue-600"
-                                    src="{{ bagisto_asset('images/spinner.svg') }}"
+                                    src="{{ exygnus_asset('images/spinner.svg') }}"
                                 />
 
                                 @lang('shop::app.products.view.reviews.translating')

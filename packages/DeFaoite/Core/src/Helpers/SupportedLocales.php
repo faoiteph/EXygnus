@@ -5,7 +5,7 @@ namespace DeFaoite\Core\Helpers;
 class SupportedLocales
 {
     /**
-     * Every locale Bagisto ships, keyed by its code.
+     * Every locale EXygnus ships, keyed by its code.
      *
      * The single place a locale is added. `name` is the suffix of the translation key its
      * label is read from, so the installer's console and its screens both name it the same

@@ -11,7 +11,7 @@
                     hide-view-selector
                     :watchRealTime="true"
                     :twelveHour="true"
-                    :class="'w-full h-full bagisto-calendar'"
+                    :class="'w-full h-full exygnus-calendar'"
                     :disable-views="['years', 'year', 'month', 'day']"
                     :events="events"
                     @ready="getBookings"
@@ -308,25 +308,25 @@
 @pushOnce('styles')
     <style>
         /* ============================================
-           Bagisto Booking Calendar — modern theme
+           EXygnus Booking Calendar — modern theme
            ============================================ */
         .calendar-container {
             min-height: 640px;
         }
 
-        .bagisto-calendar.vuecal {
+        .exygnus-calendar.vuecal {
             box-shadow: none;
             border-radius: 0.5rem;
             background: transparent;
             color: #1F2937;
         }
 
-        .dark .bagisto-calendar.vuecal {
+        .dark .exygnus-calendar.vuecal {
             color: #E5E7EB;
         }
 
         /* Title bar */
-        .bagisto-calendar .vuecal__title-bar {
+        .exygnus-calendar .vuecal__title-bar {
             background-color: transparent;
             border-bottom: 1px solid #E5E7EB;
             color: #1F2937;
@@ -334,12 +334,12 @@
             min-height: 52px;
         }
 
-        .dark .bagisto-calendar .vuecal__title-bar {
+        .dark .exygnus-calendar .vuecal__title-bar {
             border-bottom-color: #374151;
             color: #F3F4F6;
         }
 
-        .bagisto-calendar .vuecal__title-bar .vuecal__title {
+        .exygnus-calendar .vuecal__title-bar .vuecal__title {
             width: fit-content;
             font-size: 1rem;
             font-weight: 600;
@@ -347,12 +347,12 @@
         }
 
         /* Heading row (weekdays) */
-        .bagisto-calendar .vuecal__heading {
+        .exygnus-calendar .vuecal__heading {
             height: 100%;
             border: none;
         }
 
-        .bagisto-calendar .weekday-label {
+        .exygnus-calendar .weekday-label {
             display: grid;
             height: fit-content;
             justify-content: left;
@@ -361,9 +361,9 @@
             row-gap: 2px;
         }
 
-        .bagisto-calendar .weekday-label .full,
-        .bagisto-calendar .weekday-label .small,
-        .bagisto-calendar .weekday-label .xsmall {
+        .exygnus-calendar .weekday-label .full,
+        .exygnus-calendar .weekday-label .small,
+        .exygnus-calendar .weekday-label .xsmall {
             font-size: 11px;
             font-weight: 600;
             color: #6B7280;
@@ -371,13 +371,13 @@
             letter-spacing: 0.05em;
         }
 
-        .dark .bagisto-calendar .weekday-label .full,
-        .dark .bagisto-calendar .weekday-label .small,
-        .dark .bagisto-calendar .weekday-label .xsmall {
+        .dark .exygnus-calendar .weekday-label .full,
+        .dark .exygnus-calendar .weekday-label .small,
+        .dark .exygnus-calendar .weekday-label .xsmall {
             color: #9CA3AF;
         }
 
-        .bagisto-calendar .weekday-label span {
+        .exygnus-calendar .weekday-label span {
             font-size: 22px;
             font-weight: 600;
             text-transform: uppercase;
@@ -385,77 +385,77 @@
             letter-spacing: -0.02em;
         }
 
-        .dark .bagisto-calendar .weekday-label span {
+        .dark .exygnus-calendar .weekday-label span {
             color: #F3F4F6;
         }
 
         /* Today highlighting */
-        .bagisto-calendar .vuecal__cell--today,
-        .bagisto-calendar .vuecal__cell--current {
+        .exygnus-calendar .vuecal__cell--today,
+        .exygnus-calendar .vuecal__cell--current {
             background-color: rgba(59, 130, 246, 0.04);
         }
 
-        .dark .bagisto-calendar .vuecal__cell--today,
-        .dark .bagisto-calendar .vuecal__cell--current {
+        .dark .exygnus-calendar .vuecal__cell--today,
+        .dark .exygnus-calendar .vuecal__cell--current {
             background-color: rgba(59, 130, 246, 0.08);
         }
 
-        .bagisto-calendar .vuecal__heading.today .weekday-label span {
+        .exygnus-calendar .vuecal__heading.today .weekday-label span {
             color: #2563EB;
         }
 
-        .dark .bagisto-calendar .vuecal__heading.today .weekday-label span {
+        .dark .exygnus-calendar .vuecal__heading.today .weekday-label span {
             color: #60A5FA;
         }
 
         /* Time column */
-        .bagisto-calendar .vuecal__time-column {
+        .exygnus-calendar .vuecal__time-column {
             color: #9CA3AF;
             font-size: 11px;
         }
 
-        .dark .bagisto-calendar .vuecal__time-column {
+        .dark .exygnus-calendar .vuecal__time-column {
             color: #6B7280;
         }
 
         /* Cell borders */
-        .bagisto-calendar .vuecal__cell,
-        .bagisto-calendar .vuecal__cell-split {
+        .exygnus-calendar .vuecal__cell,
+        .exygnus-calendar .vuecal__cell-split {
             border-color: #F3F4F6;
         }
 
-        .dark .bagisto-calendar .vuecal__cell,
-        .dark .bagisto-calendar .vuecal__cell-split {
+        .dark .exygnus-calendar .vuecal__cell,
+        .dark .exygnus-calendar .vuecal__cell-split {
             border-color: #374151;
         }
 
-        .bagisto-calendar .vuecal__time-cell-line:before {
+        .exygnus-calendar .vuecal__time-cell-line:before {
             border-color: #F3F4F6;
         }
 
-        .dark .bagisto-calendar .vuecal__time-cell-line:before {
+        .dark .exygnus-calendar .vuecal__time-cell-line:before {
             border-color: #374151;
         }
 
-        .bagisto-calendar .vuecal__weekdays-headings {
+        .exygnus-calendar .vuecal__weekdays-headings {
             border-bottom: 1px solid #E5E7EB;
         }
 
-        .dark .bagisto-calendar .vuecal__weekdays-headings {
+        .dark .exygnus-calendar .vuecal__weekdays-headings {
             border-bottom-color: #374151;
         }
 
         /* Now line */
-        .bagisto-calendar .vuecal__now-line {
+        .exygnus-calendar .vuecal__now-line {
             color: #EF4444;
         }
 
-        .bagisto-calendar .vuecal__now-line:before {
+        .exygnus-calendar .vuecal__now-line:before {
             border-top-color: #EF4444;
         }
 
         /* Event reset (we use our own styled slot) */
-        .bagisto-calendar .vuecal__event {
+        .exygnus-calendar .vuecal__event {
             background: transparent;
             box-shadow: none;
             color: inherit;
@@ -463,12 +463,12 @@
             overflow: hidden;
         }
 
-        .bagisto-calendar .vuecal__event:focus {
+        .exygnus-calendar .vuecal__event:focus {
             outline: none;
         }
 
         /* Arrow buttons spacing */
-        .bagisto-calendar .vuecal__arrow {
+        .exygnus-calendar .vuecal__arrow {
             cursor: pointer;
         }
     </style>

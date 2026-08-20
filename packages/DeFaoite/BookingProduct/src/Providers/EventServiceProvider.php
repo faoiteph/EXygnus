@@ -18,7 +18,7 @@ class EventServiceProvider extends ServiceProvider
             [Order::class, 'afterPlaceOrder'],
         ],
 
-        'bagisto.shop.products.price.after' => [
+        'exygnus.shop.products.price.after' => [
             [PriceNote::class, 'addNote'],
         ],
     ];

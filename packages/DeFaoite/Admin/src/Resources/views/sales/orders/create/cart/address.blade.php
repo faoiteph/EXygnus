@@ -1,4 +1,4 @@
-{!! view_render_event('bagisto.admin.sales.order.create.cart.address.before') !!}
+{!! view_render_event('exygnus.admin.sales.order.create.cart.address.before') !!}
 
 <!-- Vue JS Component -->
 <v-cart-addresses
@@ -7,7 +7,7 @@
     @processed="stepProcessed"
 ></v-cart-addresses>
 
-{!! view_render_event('bagisto.admin.sales.order.create.cart.address.after') !!}
+{!! view_render_event('exygnus.admin.sales.order.create.cart.address.after') !!}
 
 @include('admin::sales.orders.create.cart.address.form')
 

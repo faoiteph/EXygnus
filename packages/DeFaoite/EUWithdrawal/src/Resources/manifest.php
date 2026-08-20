@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'name' => 'Webkul Bagisto EUWithdrawal',
+    'name' => 'De Faoite EXygnus EUWithdrawal',
     'version' => core()->version(),
 ];

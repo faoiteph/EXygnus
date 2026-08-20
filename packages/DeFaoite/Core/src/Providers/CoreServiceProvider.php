@@ -10,7 +10,7 @@ use Illuminate\Foundation\Console\UpCommand;
 use Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\ServiceProvider;
-use DeFaoite\Core\Console\Commands\BagistoVersion;
+use DeFaoite\Core\Console\Commands\EXygnusVersion;
 use DeFaoite\Core\Console\Commands\ExchangeRateUpdate;
 use DeFaoite\Core\Console\Commands\InvoiceOverdueCron;
 use DeFaoite\Core\Console\Commands\TranslationsChecker;
@@ -44,11 +44,11 @@ class CoreServiceProvider extends ServiceProvider
 
         $this->loadViewsFrom(__DIR__.'/../Resources/views', 'core');
 
-        Event::listen('bagisto.shop.layout.body.after', static function (ViewRenderEventManager $viewRenderEventManager) {
+        Event::listen('exygnus.shop.layout.body.after', static function (ViewRenderEventManager $viewRenderEventManager) {
             $viewRenderEventManager->addTemplate('core::blade.tracer.style');
         });
 
-        Event::listen('bagisto.admin.layout.head', static function (ViewRenderEventManager $viewRenderEventManager) {
+        Event::listen('exygnus.admin.layout.head', static function (ViewRenderEventManager $viewRenderEventManager) {
             $viewRenderEventManager->addTemplate('core::blade.tracer.style');
         });
 
@@ -69,7 +69,7 @@ class CoreServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->commands([
-                BagistoVersion::class,
+                EXygnusVersion::class,
                 ExchangeRateUpdate::class,
                 InvoiceOverdueCron::class,
                 TranslationsChecker::class,

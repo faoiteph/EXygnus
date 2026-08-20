@@ -4,11 +4,11 @@
         @lang('admin::app.settings.roles.create.title')
     </x-slot>
 
-    {!! view_render_event('bagisto.admin.settings.roles.create.before') !!}
+    {!! view_render_event('exygnus.admin.settings.roles.create.before') !!}
 
     <x-admin::form :action="route('admin.settings.roles.store')">
 
-        {!! view_render_event('bagisto.admin.settings.roles.create.create_form_controls.before') !!}
+        {!! view_render_event('exygnus.admin.settings.roles.create.create_form_controls.before') !!}
 
         <div class="flex items-center justify-between">
             <p class="text-xl font-bold text-gray-800 dark:text-white">
@@ -39,7 +39,7 @@
             <!-- Left sub-component -->
             <div class="flex flex-1 flex-col gap-2 max-xl:flex-auto">
 
-                {!! view_render_event('bagisto.admin.settings.roles.create.card.access_control.before') !!}
+                {!! view_render_event('exygnus.admin.settings.roles.create.card.access_control.before') !!}
 
                 <!-- Access Control Input Fields -->
                 <div class="box-shadow rounded bg-white p-4 dark:bg-gray-900">
@@ -61,14 +61,14 @@
                     </v-access-control>
                 </div>
 
-                {!! view_render_event('bagisto.admin.settings.roles.create.card.access_control.after') !!}
+                {!! view_render_event('exygnus.admin.settings.roles.create.card.access_control.after') !!}
 
             </div>
 
             <!-- Right sub-component -->
             <div class="flex w-[360px] max-w-full flex-col gap-2 max-sm:w-full">
 
-                {!! view_render_event('bagisto.admin.settings.roles.create.card.accordion.general.before') !!}
+                {!! view_render_event('exygnus.admin.settings.roles.create.card.accordion.general.before') !!}
 
                 <x-admin::accordion>
                     <x-slot:header>
@@ -120,16 +120,16 @@
                     </x-slot>
                 </x-admin::accordion>
 
-                {!! view_render_event('bagisto.admin.settings.roles.create.card.accordion.general.after') !!}
+                {!! view_render_event('exygnus.admin.settings.roles.create.card.accordion.general.after') !!}
 
             </div>
         </div>
 
-        {!! view_render_event('bagisto.admin.settings.roles.create.create_form_controls.after') !!}
+        {!! view_render_event('exygnus.admin.settings.roles.create.create_form_controls.after') !!}
 
     </x-admin::form>
 
-    {!! view_render_event('bagisto.admin.settings.roles.create.after') !!}
+    {!! view_render_event('exygnus.admin.settings.roles.create.after') !!}
 
     @pushOnce('scripts')
         <script

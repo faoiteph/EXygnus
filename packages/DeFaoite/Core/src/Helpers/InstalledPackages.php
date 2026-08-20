@@ -5,7 +5,7 @@ namespace DeFaoite\Core\Helpers;
 class InstalledPackages
 {
     /**
-     * Where Bagisto's packages live, relative to the project root. Every directory
+     * Where EXygnus's packages live, relative to the project root. Every directory
      * directly inside it is one package.
      *
      * @var string
@@ -54,7 +54,7 @@ class InstalledPackages
      *
      * Its own composer name is preferred, because that is what a module is
      * published and talked about as. Not every package carries a composer.json
-     * though — several of Bagisto's own do not — so the directory name stands in
+     * though — several of EXygnus's own do not — so the directory name stands in
      * for those, which is at least stable and unique within the directory.
      */
     protected function identify(string $directory): string

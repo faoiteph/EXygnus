@@ -806,7 +806,7 @@ return [
         'index' => [
             'create-administrator' => [
                 'admin' => 'Administrator',
-                'bagisto' => 'EXygnus',
+                'exygnus' => 'EXygnus',
                 'confirm-password' => 'Passwort bestätigen',
                 'email' => 'E-Mail',
                 'email-address' => 'admin@example.com',
@@ -821,7 +821,7 @@ return [
                 'application-name' => 'Anwendungsname',
                 'argentine-peso' => 'Argentinischer Peso (ARS)',
                 'australian-dollar' => 'Australischer Dollar (AUD)',
-                'bagisto' => 'EXygnus',
+                'exygnus' => 'EXygnus',
                 'bangladeshi-taka' => 'Bangladeschischer Taka (BDT)',
                 'bahraini-dinar' => 'Bahreinse Dinar (BHD)',
                 'brazilian-real' => 'Brasilianischer Real (BRL)',
@@ -914,16 +914,16 @@ return [
             ],
 
             'installation-processing' => [
-                'bagisto' => 'Installation EXygnus',
-                'bagisto-info' => 'Erstellung der Datenbanktabellen, dies kann einige Momente dauern',
+                'exygnus' => 'Installation EXygnus',
+                'exygnus-info' => 'Erstellung der Datenbanktabellen, dies kann einige Momente dauern',
                 'title' => 'Installation',
             ],
 
             'installation-completed' => [
                 'admin-panel' => 'Admin-Panel',
-                'bagisto-forums' => 'EXygnus Forum',
+                'exygnus-forums' => 'EXygnus Forum',
                 'customer-panel' => 'Kundenpanel',
-                'explore-bagisto-extensions' => 'Erkunden Sie EXygnus-Erweiterungen',
+                'explore-exygnus-extensions' => 'Erkunden Sie EXygnus-Erweiterungen',
                 'title' => 'Installation abgeschlossen',
                 'title-info' => 'EXygnus wurde erfolgreich auf Ihrem System installiert.',
             ],
@@ -973,9 +973,9 @@ return [
 
             'arabic' => 'Arabisch',
             'back' => 'Zurück',
-            'bagisto' => 'EXygnus',
-            'bagisto-info' => 'Ein Gemeinschaftsprojekt von',
-            'bagisto-logo' => 'EXygnus Logo',
+            'exygnus' => 'EXygnus',
+            'exygnus-info' => 'Ein Gemeinschaftsprojekt von',
+            'exygnus-logo' => 'EXygnus Logo',
             'bengali' => 'Bengalisch',
             'catalan' => 'Katalanisch',
             'chinese' => 'Chinesisch',
@@ -1002,7 +1002,7 @@ return [
             'title' => 'EXygnus Installer',
             'turkish' => 'Türkisch',
             'ukrainian' => 'Ukrainisch',
-            'webkul' => 'DeFaoite',
+            'defaoite' => 'DeFaoite',
         ],
     ],
 ];

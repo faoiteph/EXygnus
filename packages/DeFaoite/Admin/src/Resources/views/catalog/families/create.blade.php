@@ -6,7 +6,7 @@
     <!-- Input Form -->
     <x-admin::form :action="route('admin.catalog.families.store')">
 
-        {!! view_render_event('bagisto.admin.catalog.families.create.create_form_controls.before') !!}
+        {!! view_render_event('exygnus.admin.catalog.families.create.create_form_controls.before') !!}
 
         <!-- Page Header -->
         <div class="flex items-center justify-between gap-4 max-sm:flex-wrap">
@@ -93,7 +93,7 @@
             </div>
         </div>
 
-        {!! view_render_event('bagisto.admin.catalog.families.create.create_form_controls.after') !!}
+        {!! view_render_event('exygnus.admin.catalog.families.create.create_form_controls.after') !!}
 
     </x-admin::form>
 

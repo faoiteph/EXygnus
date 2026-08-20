@@ -11,18 +11,18 @@
 	<!-- Page content -->
 	<div class="container mt-8 px-[60px] max-lg:px-8">
 		<div class="grid place-items-center gap-y-5 max-md:gap-y-2.5">
-			{{ view_render_event('bagisto.shop.checkout.success.image.before', ['order' => $order]) }}
+			{{ view_render_event('exygnus.shop.checkout.success.image.before', ['order' => $order]) }}
 
 			<img
 				class="max-md:h-[100px] max-md:w-[100px]"
-				src="{{ bagisto_asset('images/thank-you.png') }}"
+				src="{{ exygnus_asset('images/thank-you.png') }}"
 				alt="@lang('shop::app.checkout.success.thanks')"
 				title="@lang('shop::app.checkout.success.thanks')"
                 loading="lazy"
                 decoding="async"
 			>
 
-			{{ view_render_event('bagisto.shop.checkout.success.image.after', ['order' => $order]) }}
+			{{ view_render_event('exygnus.shop.checkout.success.image.after', ['order' => $order]) }}
 
 			<p class="text-xl max-md:text-sm">
 				@if (auth()->guard('customer')->user())
@@ -46,7 +46,7 @@
 				@endif
 			</p>
 
-			{{ view_render_event('bagisto.shop.checkout.success.continue-shopping.before', ['order' => $order]) }}
+			{{ view_render_event('exygnus.shop.checkout.success.continue-shopping.before', ['order' => $order]) }}
 
 			<a href="{{ route('shop.home.index') }}">
 				<div class="w-max cursor-pointer rounded-2xl bg-navyBlue px-11 py-3 text-center text-base font-medium text-white max-md:rounded-lg max-md:px-6 max-md:py-1.5">
@@ -54,7 +54,7 @@
 				</div>
 			</a>
 
-			{{ view_render_event('bagisto.shop.checkout.success.continue-shopping.after', ['order' => $order]) }}
+			{{ view_render_event('exygnus.shop.checkout.success.continue-shopping.after', ['order' => $order]) }}
 		</div>
 	</div>
 </x-shop::layouts>

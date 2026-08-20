@@ -81,7 +81,7 @@
                         config('responsecache.enabled') 
                         && $isResponseCacheMiddlwareActive
                     )
-                        let flashes = '<bagisto-response-cache-session-flashes>';
+                        let flashes = '<exygnus-response-cache-session-flashes>';
                     @else
                         let flashes = @json($flashes);
                     @endif
