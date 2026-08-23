@@ -21,7 +21,6 @@ use DeFaoite\GDPR\Providers\GDPRServiceProvider;
 use DeFaoite\ImageCache\Providers\ImageCacheServiceProvider;
 use DeFaoite\Installer\Providers\InstallerServiceProvider;
 use DeFaoite\Inventory\Providers\InventoryServiceProvider;
-use DeFaoite\MagicAI\Providers\MagicAIServiceProvider;
 use DeFaoite\Marketing\Providers\MarketingServiceProvider;
 use DeFaoite\Notification\Providers\NotificationServiceProvider;
 use DeFaoite\PayGlocal\Providers\PayGlocalServiceProvider;
@@ -73,7 +72,6 @@ return [
     ImageCacheServiceProvider::class,
     InstallerServiceProvider::class,
     InventoryServiceProvider::class,
-    MagicAIServiceProvider::class,
     MarketingServiceProvider::class,
     NotificationServiceProvider::class,
     PayGlocalServiceProvider::class,
