@@ -4,7 +4,6 @@ namespace DeFaoite\Shop\Http\Controllers;
 
 use Illuminate\Http\JsonResponse;
 use Illuminate\View\View;
-use DeFaoite\MagicAI\Facades\MagicAI;
 use DeFaoite\Marketing\Repositories\SearchTermRepository;
 use DeFaoite\Product\Repositories\SearchRepository;
 
@@ -80,27 +79,10 @@ class SearchController extends Controller
 
         $imageUrl = $this->searchRepository->uploadSearchImage(request()->all());
 
-        $keywords = '';
-
-        $useAi = core()->getConfigData('magic_ai.general.settings.enabled')
-            && core()->getConfigData('magic_ai.storefront_features.image_search.enabled');
-
-        if ($useAi) {
-            try {
-                $keywords = MagicAI::analyzeImage(
-                    request()->file('image')->getRealPath()
-                );
-            } catch (\Exception $e) {
-                report($e);
-
-                $useAi = false;
-            }
-        }
-
         return response()->json([
             'image_url' => $imageUrl,
-            'keywords' => $keywords,
-            'engine' => $useAi ? 'ai' : 'tensorflow',
+            'keywords' => '',
+            'engine' => 'tensorflow',
         ]);
     }
 }

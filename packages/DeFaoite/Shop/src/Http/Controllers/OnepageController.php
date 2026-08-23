@@ -6,7 +6,6 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Event;
 use Illuminate\View\View;
 use DeFaoite\Checkout\Facades\Cart;
-use DeFaoite\MagicAI\Facades\MagicAI;
 use DeFaoite\Sales\Repositories\OrderRepository;
 
 class OnepageController extends Controller
@@ -78,16 +77,6 @@ class OnepageController extends Controller
     {
         if (! $order = $orderRepository->find(session('order_id'))) {
             return redirect()->route('shop.checkout.cart.index');
-        }
-
-        if (
-            core()->getConfigData('magic_ai.general.settings.enabled')
-            && core()->getConfigData('magic_ai.storefront_features.checkout_message.enabled')
-        ) {
-            try {
-                $order->checkout_message = MagicAI::checkoutMessage($order);
-            } catch (\Exception $e) {
-            }
         }
 
         return view('shop::checkout.success', compact('order'));

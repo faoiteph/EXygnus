@@ -30,8 +30,6 @@ class Bouncer
         'admin.datagrid.saved_filters.store',
         'admin.datagrid.saved_filters.update',
         'admin.datagrid.saved_filters.destroy',
-        'admin.magic_ai.content',
-        'admin.magic_ai.image',
         'admin.tinymce.upload',
     ];
 

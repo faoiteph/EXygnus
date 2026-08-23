@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Route;
 use DeFaoite\Admin\Http\Controllers\DashboardController;
 use DeFaoite\Admin\Http\Controllers\DataGrid\DataGridController;
 use DeFaoite\Admin\Http\Controllers\DataGrid\SavedFilterController;
-use DeFaoite\Admin\Http\Controllers\MagicAIController;
 use DeFaoite\Admin\Http\Controllers\TinyMCEController;
 use DeFaoite\Admin\Http\Controllers\User\AccountController;
 use DeFaoite\Admin\Http\Controllers\User\SessionController;
@@ -40,15 +39,6 @@ Route::controller(DataGridController::class)->prefix('datagrid')->group(function
  * Tinymce file upload handler.
  */
 Route::post('tinymce/upload', [TinyMCEController::class, 'upload'])->name('admin.tinymce.upload');
-
-/**
- * AI Routes
- */
-Route::controller(MagicAIController::class)->prefix('magic-ai')->group(function () {
-    Route::post('content', 'content')->name('admin.magic_ai.content');
-
-    Route::post('image', 'image')->name('admin.magic_ai.image');
-});
 
 /**
  * Admin profile routes.

@@ -5,7 +5,6 @@ namespace DeFaoite\Shop\Http\Controllers\API;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Support\Facades\Event;
-use DeFaoite\MagicAI\Facades\MagicAI;
 use DeFaoite\Product\Repositories\ProductRepository;
 use DeFaoite\Product\Repositories\ProductReviewAttachmentRepository;
 use DeFaoite\Product\Repositories\ProductReviewRepository;
@@ -108,15 +107,9 @@ class ReviewController extends APIController
             ], 400);
         }
 
-        try {
-            return new JsonResponse([
-                'content' => MagicAI::translate($review->comment, core()->getCurrentLocale()->name),
-            ]);
-        } catch (\Exception $e) {
-            return new JsonResponse([
-                'message' => trans('shop::app.errors.500.title'),
-            ], 500);
-        }
+        return new JsonResponse([
+            'message' => trans('shop::app.errors.500.title'),
+        ], 500);
     }
 
     /**
