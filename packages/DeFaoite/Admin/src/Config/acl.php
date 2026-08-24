@@ -79,7 +79,16 @@ return [
         'name' => 'admin::app.acl.invoices',
         'route' => 'admin.sales.invoices.index',
         'sort' => 2,
-    ], [
+    ], 
+     
+     [
+        'key' => 'sales.orders.deliver-digital',        
+        'name' => 'admin::app.acl.edit',
+        'route' => 'admin.sales.orders.deliver-digital',
+        'sort' => 5,
+    ],
+
+    [
         'key' => 'sales.invoices.view',
         'name' => 'admin::app.acl.view',
         'route' => [

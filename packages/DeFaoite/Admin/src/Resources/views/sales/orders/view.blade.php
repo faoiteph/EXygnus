@@ -1,4 +1,4 @@
-<x-admin::layouts>
+    <x-admin::layouts>
     <x-slot:title>
         @lang('admin::app.sales.orders.view.title', ['order_id' => $order->increment_id])
     </x-slot>
@@ -498,6 +498,95 @@
                     </div>
                 </div>
 
+                        @php
+                    $digitalDeliveryItems = $order->items->filter(fn ($item) =>
+                        $item->type === 'virtual'
+                        && $item->qty_ordered > $item->qty_canceled + $item->qty_refunded
+                    );
+                @endphp
+
+                @if ($digitalDeliveryItems->isNotEmpty() && bouncer()->hasPermission('sales.orders.deliver-digital'))
+                    <div class="box-shadow rounded bg-white dark:bg-gray-900">
+                        <div class="p-4">
+                            <p class="text-base font-semibold text-gray-800 dark:text-white">
+                                Digital Delivery
+                            </p>
+
+                            <p class="mt-1 text-sm text-gray-600 dark:text-gray-300">
+                                Deliver a protected file or URL for a specific virtual order item.
+                            </p>
+                        </div>
+
+                        @foreach ($digitalDeliveryItems as $item)
+                            <div class="border-t border-slate-300 p-4 dark:border-gray-800">
+                                <p class="font-semibold text-gray-800 dark:text-white">
+                                    {{ $item->name }}
+                                </p>
+
+                                <p class="mt-1 text-sm text-gray-600 dark:text-gray-300">
+                                    Virtual Product: {{ $item->name }} · SKU: {{ $item->sku }}
+                                </p>
+
+                                @if ($item->downloadable_link_purchased->isNotEmpty())
+                                    <div class="mt-3 space-y-1 text-sm text-gray-600 dark:text-gray-300">
+                                        @foreach ($item->downloadable_link_purchased as $delivery)
+                                            <p>{{ $delivery->name }} <span class="text-xs">({{ $delivery->status }})</span></p>
+                                        @endforeach
+                                    </div>
+                                @endif
+
+                                <form
+                                    method="POST"
+                                    action="{{ route('admin.sales.orders.deliver-digital', $order->id) }}"
+                                    enctype="multipart/form-data"
+                                    class="mt-4 grid gap-3"
+                                >
+                                    @csrf
+
+                                    <input type="hidden" name="order_item_id" value="{{ $item->id }}">
+
+                                    <div class="grid gap-3">
+                                        <input
+                                            type="text"
+                                            name="title"
+                                            required
+                                            placeholder="Delivered file title"
+                                            class="w-full rounded border border-gray-300 px-3 py-2 text-sm dark:border-gray-700 dark:bg-gray-800"
+                                        >
+
+                                    </div>
+
+                                    {{-- <select name="type" class="w-full rounded border border-gray-300 px-3 py-2 text-sm dark:border-gray-700 dark:bg-gray-800">
+                                        <option value="file">Upload file</option>
+                                        <option value="url">Downloadable URL</option>
+                                    </select> --}}
+
+                                    <input type="hidden" name="type" value="{{ "file" }}">
+
+                                    <input
+                                        type="file"
+                                        name="file"
+                                        class="w-full rounded border border-gray-300 px-3 py-2 text-sm dark:border-gray-700 dark:bg-gray-800"
+                                    >
+
+                                    {{-- <input
+                                        type="url"
+                                        name="url"
+                                        placeholder="https://example.com/delivery-file"
+                                        class="w-full rounded border border-gray-300 px-3 py-2 text-sm dark:border-gray-700 dark:bg-gray-800"
+                                    > --}}
+
+                                    <div>
+                                        <button type="submit" class="secondary-button">
+                                            Deliver
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        @endforeach
+                    </div>
+                @endif
+       
                 <!-- Customer's comment form -->
                 <div class="box-shadow rounded bg-white dark:bg-gray-900">
                     <p class="p-4 pb-0 text-base font-semibold text-gray-800 dark:text-white">

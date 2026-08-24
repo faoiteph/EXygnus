@@ -2,6 +2,7 @@
 
 namespace DeFaoite\Shop\Http\Controllers\Customer\Account;
 
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\View\View;
@@ -9,6 +10,7 @@ use DeFaoite\Sales\Repositories\DownloadableLinkPurchasedRepository;
 use DeFaoite\Shop\DataGrids\DownloadableProductDataGrid;
 use DeFaoite\Shop\Http\Controllers\Controller;
 use DeFaoite\Shop\Traits\ValidatesExternalUrl;
+use Symfony\Component\HttpFoundation\StreamedResponse;
 
 class DownloadableProductController extends Controller
 {
@@ -41,14 +43,17 @@ class DownloadableProductController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function download($id)
+        public function download($id): Response|RedirectResponse|StreamedResponse
     {
         $downloadableLinkPurchased = $this->downloadableLinkPurchasedRepository->findOneByField([
             'id' => $id,
             'customer_id' => auth()->guard('customer')->user()->id,
         ]);
 
-        if ($downloadableLinkPurchased->status == 'pending') {
+         if (
+            $downloadableLinkPurchased->status == 'pending'
+            && $downloadableLinkPurchased->order_item->type !== 'virtual'
+            ) {
             abort(403);
         }
 
@@ -63,9 +68,12 @@ class DownloadableProductController extends Controller
         $orderedQty = $downloadableLinkPurchased->order->total_qty_ordered;
         $totalInvoiceQty = $totalInvoiceQty * ($downloadableLinkPurchased->download_bought / $orderedQty);
 
-        if (
-            $downloadableLinkPurchased->download_used == $totalInvoiceQty
-            || $downloadableLinkPurchased->download_used > $totalInvoiceQty
+        if(
+            $downloadableLinkPurchased->download_bought
+            && (
+                $downloadableLinkPurchased->download_used == $totalInvoiceQty
+                || $downloadableLinkPurchased->download_used > $totalInvoiceQty
+            )
         ) {
             session()->flash('warning', trans('shop::app.customers.account.downloadable-products.download-error'));
 

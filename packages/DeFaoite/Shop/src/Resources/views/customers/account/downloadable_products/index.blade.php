@@ -91,6 +91,7 @@
                                         </p>
 
                                         <p><span class="text-neutral-500">@lang('Remaining Downloads'):</span> <span class="font-medium">@{{ record.remaining_downloads }}</span></p>
+                                        <div class="mt-3" v-html="record.download"></div>
                                     </div>
                                 </div>
                             </template>
@@ -107,4 +108,5 @@
         {!! view_render_event('exygnus.shop.customers.account.downloadable_products.list.after') !!}
 
     </div>
-</x-shop::layouts.account>
+
+    </x-shop::layouts.account>

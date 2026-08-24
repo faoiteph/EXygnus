@@ -16,6 +16,7 @@ use DeFaoite\Product\Repositories\ProductBundleOptionProductRepository;
 use DeFaoite\Product\Repositories\ProductCustomerGroupPriceRepository;
 use DeFaoite\Product\Repositories\ProductCustomizableOptionPriceRepository;
 use DeFaoite\Product\Repositories\ProductCustomizableOptionRepository;
+use DeFaoite\Product\Repositories\ProductDownloadableLinkRepository;
 use DeFaoite\Product\Repositories\ProductGroupedProductRepository;
 use DeFaoite\Product\Repositories\ProductImageRepository;
 use DeFaoite\Product\Repositories\ProductInventoryRepository;
@@ -71,6 +72,7 @@ class Virtual extends AbstractType
         protected ProductBundleOptionProductRepository $productBundleOptionProductRepository,
         protected ProductCustomizableOptionRepository $productCustomizableOptionRepository,
         protected ProductCustomizableOptionPriceRepository $productCustomizableOptionPriceRepository,
+        protected ProductDownloadableLinkRepository $productDownloadableLinkRepository,
     ) {
         parent::__construct(
             $customerRepository,
@@ -100,6 +102,8 @@ class Virtual extends AbstractType
         }
 
         $this->productCustomizableOptionRepository->saveCustomizableOptions($data, $product);
+
+        $this->productDownloadableLinkRepository->saveLinks($data, $product);
 
         return $product;
     }
@@ -378,6 +382,12 @@ class Virtual extends AbstractType
     public function getTypeValidationRules()
     {
         return [
+            'downloadable_links.*.type' => 'required',
+            'downloadable_links.*.file' => 'required_if:type,==,file',
+            'downloadable_links.*.file_name' => 'required_if:type,==,file',
+            'downloadable_links.*.url' => 'required_if:type,==,url',
+            'downloadable_links.*.downloads' => 'required|integer|min:0',
+            'downloadable_links.*.sort_order' => 'required|integer',
             'customizable_options' => [
                 'array',
                 function ($attribute, $value, $fail) {

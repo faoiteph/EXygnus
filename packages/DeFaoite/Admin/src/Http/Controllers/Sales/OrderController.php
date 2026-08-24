@@ -3,10 +3,12 @@
 namespace DeFaoite\Admin\Http\Controllers\Sales;
 
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Event;
+use DeFaoite\Sales\Repositories\DownloadableLinkPurchasedRepository;
 use Illuminate\View\View;
 use DeFaoite\Admin\DataGrids\Sales\OrderDataGrid;
 use DeFaoite\Admin\Http\Controllers\Controller;
@@ -29,6 +31,7 @@ class OrderController extends Controller
     public function __construct(
         protected OrderRepository $orderRepository,
         protected OrderCommentRepository $orderCommentRepository,
+        protected DownloadableLinkPurchasedRepository $downloadableLinkPurchasedRepository,
         protected CartRepository $cartRepository,
         protected CustomerGroupRepository $customerGroupRepository,
     ) {}
@@ -218,6 +221,39 @@ class OrderController extends Controller
         return redirect()->route('admin.sales.orders.view', $id);
     }
 
+    /**
+     * Deliver a protected file or URL for one purchased virtual product.
+     */
+    public function deliverDigital(int $id): RedirectResponse
+    {
+        $validated = request()->validate([
+            'order_item_id' => ['required', 'integer'],
+            'title' => ['required', 'string', 'max:255'],
+            'type' => ['required', 'in:file,url'],
+            'file' => ['required_if:type,file', 'file'],
+            'url' => ['required_if:type,url', 'url', 'max:2048'],
+        ]);
+
+        $order = $this->orderRepository->findOrFail($id);
+
+        $orderItem = $order->items()
+            ->whereKey($validated['order_item_id'])
+            ->firstOrFail();
+
+        if (
+            $order->is_guest
+            || $orderItem->type !== 'virtual'
+            || $orderItem->qty_ordered <= $orderItem->qty_canceled + $orderItem->qty_refunded
+        ) {
+            abort(422, 'This order item is not eligible for digital delivery.');            abort(422, 'This order item is not eligible for digital delivery.');
+        }
+
+        $this->downloadableLinkPurchasedRepository->deliver($orderItem, $validated);
+
+        session()->flash('success', 'Digital delivery saved.');        session()->flash('success', 'Digital delivery saved.');
+
+        return redirect()->route('admin.sales.orders.view', $order->id);
+    }
     /**
      * Result of search product.
      *

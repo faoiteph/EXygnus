@@ -2,7 +2,9 @@
 
 <v-downloadable-links :errors="errors"></v-downloadable-links>
 
-<v-downloadable-samples :errors="errors"></v-downloadable-samples>
+@if ($showDownloadableSamples ?? true)
+    <v-downloadable-samples :errors="errors"></v-downloadable-samples>    <v-downloadable-samples :errors="errors"></v-downloadable-samples>
+@endif
 
 {!! view_render_event('exygnus.admin.catalog.product.edit.form.types.downloadable.after', ['product' => $product]) !!}
 

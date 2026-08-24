@@ -32,8 +32,9 @@ class DownloadableProductDataGrid extends DataGrid
         $queryBuilder = DB::table('downloadable_link_purchased')
             ->distinct()
             ->leftJoin('orders', 'downloadable_link_purchased.order_id', '=', 'orders.id')
+                        ->leftJoin('order_items', 'downloadable_link_purchased.order_item_id', '=', 'order_items.id')
             ->leftJoin('invoices', 'downloadable_link_purchased.order_id', '=', 'invoices.order_id')
-            ->addSelect('downloadable_link_purchased.*', 'invoices.state as invoice_state', 'orders.increment_id')
+            ->addSelect('downloadable_link_purchased.*', 'invoices.state as invoice_state', 'orders.increment_id', 'order_items.type as order_item_type')
             ->addSelect(DB::raw('('.DB::getTablePrefix().'downloadable_link_purchased.download_bought - '.DB::getTablePrefix().'downloadable_link_purchased.download_canceled - '.DB::getTablePrefix().'downloadable_link_purchased.download_used) as remaining_downloads'))
             ->where('downloadable_link_purchased.customer_id', auth()->guard('customer')->user()->id);
 
@@ -66,17 +67,7 @@ class DownloadableProductDataGrid extends DataGrid
             'searchable' => true,
             'filterable' => true,
             'sortable' => true,
-            'closure' => function ($row) {
-                if (
-                    $row->status == 'pending'
-                    || $row->status == 'expired'
-                    || $row->invoice_state !== 'paid'
-                ) {
-                    return $row->product_name;
-                }
-
-                return '<a class="text-blue-600" href="'.route('shop.customers.account.downloadable_products.download', $row->id).'" target="_blank">'.$row->product_name.'</a>';
-            },
+            'closure' => fn ($row) => $this->getProductTitle($row),
         ]);
 
         $this->addColumn([
@@ -86,6 +77,21 @@ class DownloadableProductDataGrid extends DataGrid
             'filterable' => true,
             'filterable_type' => 'date_range',
             'sortable' => true,
+        ]);
+        $this->addColumn([
+            'index' => 'download',            'index' => 'download',
+            'label' => 'Download',            'label' => 'Download',
+            'type' => 'string',
+            'closure' => function ($row) {
+                if (
+                    $row->status === self::STATUS_EXPIRED
+                    || ($row->status !== self::STATUS_AVAILABLE && $row->order_item_type !== 'virtual')
+                ) {
+                    return '';
+                }
+
+                return '<a class="secondary-button" href="'.route('shop.customers.account.downloadable_products.download', $row->id).'" target="_blank">Download</a>';                return '<a class="secondary-button" href="'.route('shop.customers.account.downloadable_products.download', $row->id).'" target="_blank">Download</a>';
+            },
         ]);
 
         $this->addColumn([
@@ -138,4 +144,17 @@ class DownloadableProductDataGrid extends DataGrid
             },
         ]);
     }
+   /**
+     * Keep the established downloadable-product label while identifying a     * Keep the established downloadable-product label while identifying a
+     * virtual-product delivery by its supplied title.
+     */
+    private function getProductTitle(object $row): string
+    {
+        if ($row->order_item_type === 'virtual' && $row->name) {
+            return $row->product_name.' — '.$row->name;
+        }
+
+        return $row->product_name;
+    }
+
 }
