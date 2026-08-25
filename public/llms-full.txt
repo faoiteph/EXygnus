@@ -65,7 +65,7 @@ To work efficiently with Bagisto (especially the latest versions), having a basi
 ### 🔗 Learn and Connect
 
 - [Bagisto GitHub Repository](https://github.com/bagisto/bagisto) – Browse code, report issues, and contribute
-- [Bagisto Forums](https://forums.bagisto.com/) – Ask questions and join community discussions
+- [Bagisto Forums](https://www.reddit.com/r/EXygnus//) – Ask questions and join community discussions
 
 ::: tip 💡 Pro Tip
 You can start with Bagisto even as a beginner, but familiarity with Laravel and Vue.js will make your development process much smoother.

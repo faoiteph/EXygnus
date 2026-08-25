@@ -1,7 +1,7 @@
 {
     "name": "exygnus/exygnus",
     "type": "project",
-    "description": "Bagisto Laravel E-Commerce",
+    "description": "EXygnus Online Store",
     "keywords": [
         "framework",
         "laravel"
@@ -52,7 +52,6 @@
         "web-token/jwt-framework": "^4.1"
     },
     "require-dev": {
-        "bagisto/laravel-datafaker": "2.3.*",
         "barryvdh/laravel-debugbar": "^3.8",
         "fakerphp/faker": "^1.23",
         "laravel/boost": "^2.1",
