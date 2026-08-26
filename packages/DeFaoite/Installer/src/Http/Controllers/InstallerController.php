@@ -115,40 +115,6 @@ class InstallerController extends Controller
 
         return response()->json(['seeded' => false], 500);
     }
-
-    /**
-     * Seed sample products.
-     *
-     * @return JsonResponse
-     */
-    public function seedSampleProducts()
-    {
-        $defaultLocale = config('app.locale');
-
-        $allowedLocales = array_values(array_unique(array_merge(
-            [$defaultLocale],
-            (array) request()->input('selectedLocales', [])
-        )));
-
-        $defaultCurrency = config('app.currency');
-
-        $allowedCurrencies = array_values(array_unique(array_merge(
-            [$defaultCurrency],
-            (array) request()->input('selectedCurrencies', [])
-        )));
-
-        $isSeeded = $this->databaseManager->seedSampleProducts([
-            'default_locale' => $defaultLocale,
-            'allowed_locales' => $allowedLocales,
-            'default_currency' => $defaultCurrency,
-            'allowed_currencies' => $allowedCurrencies,
-        ]);
-
-        return $isSeeded
-            ? response()->json(['sample_products_seeded' => true])
-            : response()->json(['sample_products_seeded' => false], 500);
-    }
-
     /**
      * Create admin user.
      *

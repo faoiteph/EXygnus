@@ -22,8 +22,6 @@ Route::middleware([
 
                     Route::post('run-seeder', 'runSeeder')->name('installer.run_seeder');
 
-                    Route::post('seed-sample-products', 'seedSampleProducts')->name('installer.seed_sample_products');
-
                     Route::post('create-admin-user', 'createAdminUser')->name('installer.create_admin_user');
                 });
         });

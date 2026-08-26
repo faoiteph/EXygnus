@@ -905,13 +905,7 @@ return [
                 'zambian-kwacha' => 'Kwacha zambiană (ZMW)',
             ],
 
-            'sample-products' => [
-                'no' => 'Nu',
-                'note' => 'Note: Indexing time depends on the number of locales selected. This process may take up to 2 minutes to complete. If you add more locales, try to increase the max execution time in your server and PHP settings, or you can use our CLI installer to avoid request timeout.',
-                'sample-products' => 'Produse demonstrative',
-                'title' => 'Produse demonstrative',
-                'yes' => 'Da',
-            ],
+            
 
             'installation-processing' => [
                 'exygnus' => 'Instalare EXygnus',

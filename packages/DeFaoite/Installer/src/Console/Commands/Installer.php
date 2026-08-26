@@ -31,7 +31,7 @@ class Installer extends Command
         { --skip-admin-creation : Skip admin creation. (Deprecated: use --no-interaction) }
         { --skip-cloud-promotion : Skip EXygnus Cloud hosting prompt. (Deprecated: use --no-interaction) }
         { --skip-github-star : Skip EXygnus Cloud hosting prompt. (Deprecated: use --no-interaction) }
-        { --demo-samples : Seed demo/sample product data (useful with --no-interaction). }
+        
     ';
 
     /**
@@ -51,7 +51,7 @@ class Installer extends Command
      *
      * @var string
      */
-    protected $description = 'EXygnus installer. Use the global --no-interaction (-n) option for an unattended install that uses the existing `.env`, creates the default admin user and skips sample products (this supersedes the deprecated --skip-* options). Add --demo-samples to also seed demo/sample product data.';
+    
 
     /**
      * Environment details.
@@ -98,8 +98,7 @@ class Installer extends Command
         /**
          * When Laravel's global `--no-interaction` (`-n`) option is used, the
          * installer runs unattended: it asks nothing, relies on the existing
-         * `.env` for configuration, creates the default admin user and skips the
-         * sample product data.
+         * `.env` for configuration, and creates the default admin user.
          */
         $noInteraction = (bool) $this->option('no-interaction');
 
@@ -146,9 +145,6 @@ class Installer extends Command
             $this->warn('Step: Create admin credentials...');
             $this->askForAdminDetails();
         } elseif ($this->databaseManager->createAdminUser()) {
-            if ($this->option('demo-samples')) {
-                $this->installSampleProducts();
-            }
 
             $this->finalizeInstallation(
                 DatabaseManager::DEFAULT_ADMIN_EMAIL,
@@ -366,13 +362,6 @@ class Installer extends Command
             }
         );
 
-        $sampleProduct = select(
-            label   : 'Please select if you want some sample products after installation.',
-            options : ['true', 'false'],
-            default : 'false',
-            hint    : 'The action will create products after installation.',
-        );
-
         try {
             $this->databaseManager->createAdminUser([
                 'name' => $adminName,
@@ -380,32 +369,10 @@ class Installer extends Command
                 'password' => $adminPassword,
             ]);
 
-            if ($sampleProduct === 'true' || $this->option('demo-samples')) {
-                $this->installSampleProducts();
-            }
-
             $this->finalizeInstallation($adminEmail, $adminPassword);
         } catch (\Exception $e) {
             return $this->error($e->getMessage());
         }
-    }
-
-    /**
-     * Seed the demo/sample product data and index it.
-     */
-    protected function installSampleProducts(): void
-    {
-        $this->warn('Step: Seeding sample product data. Please Wait...');
-
-        $this->components->info('Seeding time depends on the number of locales selected. This process may take up to 2 minutes to complete.');
-
-        $this->databaseManager->seedSampleProducts($this->getSeederConfiguration());
-
-        $this->components->info('Now Indexing data...');
-
-        $this->call('indexer:index', ['--mode' => ['full']]);
-
-        $this->components->success('Sample product data seeded successfully.');
     }
 
     /**

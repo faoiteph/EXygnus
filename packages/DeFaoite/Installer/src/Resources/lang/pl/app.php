@@ -905,13 +905,7 @@ return [
                 'zambian-kwacha' => 'Kwacha Zambijska (ZMW)',
             ],
 
-            'sample-products' => [
-                'no' => 'Nie',
-                'note' => 'Uwaga: czas indeksowania zależy od liczby wybranych języków. Proces ten może potrwać do 2 minut. Jeśli dodasz więcej języków, spróbuj zwiększyć maksymalny czas wykonywania w ustawieniach serwera i PHP lub skorzystaj z naszego instalatora CLI, aby uniknąć przekroczenia limitu czasu żądania.',
-                'sample-products' => 'Produkty próbne',
-                'title' => 'Produkty próbne',
-                'yes' => 'Tak',
-            ],
+            
 
             'installation-processing' => [
                 'exygnus' => 'Instalacja EXygnus',

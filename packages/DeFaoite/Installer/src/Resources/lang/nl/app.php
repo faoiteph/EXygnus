@@ -905,13 +905,7 @@ return [
                 'zambian-kwacha' => 'Zambiaanse Kwacha (ZMW)',
             ],
 
-            'sample-products' => [
-                'no' => 'Nee',
-                'note' => 'Opmerking: De indexeringstijd is afhankelijk van het aantal geselecteerde talen. Dit proces kan tot 2 minuten duren om te voltooien. Als je meer talen toevoegt, probeer dan de maximale uitvoeringstijd in je server- en PHP-instellingen te verhogen, of gebruik onze CLI-installatie om time-outs van verzoeken te voorkomen.',
-                'sample-products' => 'Voorbeeldproducten',
-                'title' => 'Voorbeeldproducten',
-                'yes' => 'Ja',
-            ],
+            
 
             'installation-processing' => [
                 'exygnus' => 'EXygnus installatie',

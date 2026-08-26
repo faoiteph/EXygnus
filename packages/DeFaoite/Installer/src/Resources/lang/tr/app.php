@@ -905,13 +905,7 @@ return [
                 'zambian-kwacha' => 'Zambiya Kvaçası (ZMW)',
             ],
 
-            'sample-products' => [
-                'no' => 'Hayır',
-                'note' => 'Not: Dizin oluşturma süresi seçilen dil sayısına bağlıdır. Bu işlem tamamlanması 2 dakikaya kadar sürebilir. Daha fazla dil eklerseniz, sunucu ve PHP ayarlarınızda maksimum yürütme süresini artırmayı deneyin veya istek zaman aşımını önlemek için CLI yükleyicimizi kullanabilirsiniz.',
-                'sample-products' => 'Örnek Ürünler',
-                'title' => 'Örnek Ürünler',
-                'yes' => 'Evet',
-            ],
+            
 
             'installation-processing' => [
                 'exygnus' => 'EXygnus Kurulumu',

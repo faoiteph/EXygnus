@@ -152,23 +152,6 @@
                                     <p>@lang('installer::app.installer.index.ready-for-installation.title')</p>
                                 </div>
 
-                                <!-- Create Sample Product -->
-                                <div :class="[stepStates.createSampleProducts == 'active' ? 'font-bold' : '']">
-                                    <template v-if="stepStates.createSampleProducts !== 'complete'">
-                                        <span
-                                            class="text-xl"
-                                            :class="stepStates.createSampleProducts === 'pending' ? 'icon-checkbox-normal' : 'icon-right'"
-                                        >
-                                        </span>
-                                    </template>
-
-                                    <template v-else>
-                                        <span class="icon-tick text-green-500"></span>
-                                    </template>
-
-                                    <p>@lang('installer::app.installer.index.sample-products.title')</p>
-                                </div>
-
                                 <!-- Create Admin Configuration -->
                                 <div :class="[stepStates.createAdmin == 'active' ? 'font-bold' : '']">
                                     <template v-if="stepStates.createAdmin !== 'complete'">
@@ -915,68 +898,6 @@
                     </x-installer::form>
                 </div>
 
-                <!-- Create Sample Products -->
-                <div
-                    class="w-full max-w-[568px] rounded-lg border border-gray-300 bg-white shadow-[0px_8px_10px_0px_rgba(0,0,0,0.05)]"
-                    v-if="currentStep == 'createSampleProducts'"
-                >
-                    <x-installer::form
-                        v-slot="{ meta, errors, handleSubmit }"
-                        as="div"
-                        ref="createSampleProducts"
-                    >
-                        <form
-                            @submit.prevent="handleSubmit($event, formSubmit)"
-                            enctype="multipart/form-data"
-                        >
-                            <div class="flex items-center justify-between gap-2.5 border-b border-gray-300 px-4 py-3">
-                                <p class="text-xl font-bold text-gray-800">
-                                    @lang('installer::app.installer.index.sample-products.title')
-                                </p>
-                            </div>
-
-                            <div class="flex h-[484px] flex-col gap-3 overflow-y-auto border-b border-gray-300 px-7 py-4">
-                                <!-- Sample Products -->
-                                <x-admin::form.control-group.label>
-                                    @lang("installer::app.installer.index.sample-products.sample-products")
-                                </x-admin::form.control-group.label>
-
-                                <x-installer::form.control-group.control
-                                    type="select"
-                                    id="sample_products"
-                                    name="sample_products"
-                                    for="sample_products"
-                                    :value="0"
-                                >
-                                    <option value="1">
-                                        @lang('installer::app.installer.index.sample-products.yes')
-                                    </option>
-
-                                    <option value="0">
-                                        @lang('installer::app.installer.index.sample-products.no')
-                                    </option>
-                                </x-installer::form.control-group.control>
-
-                                <!-- Indexing Note -->
-                                <p class="text-xs text-blue-600 mt-2">
-                                    @lang('installer::app.installer.index.sample-products.note')
-                                </p>
-                            </div>
-
-                            <div class="flex items-center justify-end px-4 py-2.5">
-                                <x-installer::button
-                                    button-type="submit"
-                                    class="primary-button"
-                                    :title="trans('installer::app.installer.index.continue')"
-                                    tabindex="0"
-                                    ::loading="isLoading"
-                                    ::disabled="isLoading"
-                                />
-                             </div>
-                        </form>
-                    </x-installer::form>
-                </div>
-
                 <!-- Create Administrator -->
                 <div
                     class="w-full max-w-[568px] rounded-lg border border-gray-300 bg-white shadow-[0px_8px_10px_0px_rgba(0,0,0,0.05)]"
@@ -1173,7 +1094,6 @@
                                 envDatabase: 'pending',
                                 readyForInstallation: 'pending',
                                 envConfiguration: 'pending',
-                                createSampleProducts: 'pending',
                                 createAdmin: 'pending',
                                 installationCompleted: 'pending',
                             },
@@ -1185,7 +1105,6 @@
                                 'readyForInstallation',
                                 'installProgress',
                                 'envConfiguration',
-                                'createSampleProducts',
                                 'createAdmin',
                                 'installationCompleted',
                             ],
@@ -1223,10 +1142,6 @@
 
                                 readyForInstallation: (params, setErrors) => {
                                     this.startMigration(params, setErrors);
-                                },
-
-                                createSampleProducts: (params, setErrors) => {
-                                    this.createSampleProducts(params, setErrors);
                                 },
 
                                 createAdmin: (params, setErrors) => {
