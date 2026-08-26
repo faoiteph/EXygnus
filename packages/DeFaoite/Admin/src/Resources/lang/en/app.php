@@ -1277,8 +1277,8 @@ return [
                             'add-btn' => 'Add Option',
                             'empty-info' => 'To create customizable options on a go.',
                             'empty-title' => 'Add Option',
-                            'info' => 'This will customize the simple product.',
-                            'title' => 'Customizable Item',
+                            'info' => 'Configure your Art Commission Offer.',
+                            'title' => 'Commission Form',
 
                             'update-create' => [
                                 'is-required' => 'Is Required',
