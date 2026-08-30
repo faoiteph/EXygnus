@@ -41,12 +41,8 @@ return [
             'offers' => 'Buy :qty for :price each and save :discount',
         ],
 
-        'bundle' => 'Bundle',
-        'booking' => 'Booking',
-        'configurable' => 'Configurable',
+        'virtual' => 'Digital Art Commission',
         'downloadable' => 'Downloadable',
-        'grouped' => 'Grouped',
         'simple' => 'Simple',
-        'virtual' => 'Virtual',
     ],
 ];
