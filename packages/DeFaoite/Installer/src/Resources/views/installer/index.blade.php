@@ -1254,45 +1254,6 @@
                                 });
                         },
 
-                        createSampleProducts(params, setErrors) {
-                            if (params.sample_products == 1){
-                                this.isLoading = true;
-
-                                this.$axios.post("{{ route('installer.seed_sample_products') }}",{
-                                    'selectedLocales': this.locales.allowed,
-                                    'selectedCurrencies': this.currencies.allowed,
-                                })
-                                    .then((response) => {
-                                        this.isLoading = false;
-
-                                        if (response.data.sample_products_seeded) {
-                                            this.completeStep('createSampleProducts', 'createAdmin', 'active', 'complete');
-
-                                            this.currentStep = 'createAdmin';
-                                        }
-                                    })
-                                    .catch(error => {
-                                        this.isLoading = false;
-
-                                        if (error.response && error.response.data) {
-                                            if (error.response.data.errors) {
-                                                setErrors(error.response.data.errors);
-                                            } else if (error.response.data.message) {
-                                                alert(error.response.data.message);
-                                            } else {
-                                                alert('Seeding sample products failed.');
-                                            }
-                                        } else {
-                                            alert('Seeding sample products failed.');
-                                        }
-                                    });
-                            } else {
-                                this.completeStep('createSampleProducts', 'createAdmin', 'active', 'complete');
-
-                                this.currentStep = 'createAdmin';
-                            }
-                        },
-
                         saveAdmin(params, setErrors) {
                             this.isLoading = true;
 
